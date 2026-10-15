@@ -963,6 +963,24 @@ html[lang="ja"] #philosophy .cs-hero h1 .cs-title-en em,html[lang="ja"] #cs-mobi
 
 /* Desktop: shorter chapter 02. */
 @media(min-width:821px){#philosophy #cs-beat-2{--cs-chapter-height:280svh}}
+
+/* Motion is always on: hide the on/off switch. */
+#philosophy .cs-motion{display:none!important}
+
+/* Philosophy label matches the other tabs' heading label */
+#philosophy .cs-hero .cs-eyebrow,#cs-mobile-reader .cs-eyebrow{display:inline-flex;align-items:center;gap:14px;font:700 15px/1.4 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--sun-ink);margin:0 0 22px}
+html[lang="ja"] #philosophy .cs-hero .cs-eyebrow,html[lang="ja"] #cs-mobile-reader .cs-eyebrow{font-family:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.18em}
+#philosophy .cs-hero .cs-eyebrow::before,#philosophy .cs-hero .cs-eyebrow::after,#cs-mobile-reader .cs-eyebrow::before,#cs-mobile-reader .cs-eyebrow::after{content:"";width:32px;height:1.5px;background:var(--sun);opacity:.6}
+
+/* two paragraphs in one reading block */
+#philosophy .cs-reading-content p+p,#cs-mobile-reader .cs-reading-content p+p{margin-top:16px}
+
+/* phones: sizes chosen by the page so each card fits its screen */
+#philosophy{--cs-fit-max:17.5}
+html[lang="ja"] #philosophy{--cs-fit-max:16.5}
+#cs-mobile-reader[data-fit="true"] p{font-size:var(--cs-p)!important;line-height:1.78!important}
+#cs-mobile-reader[data-fit="true"] h2{font-size:var(--cs-h2)!important;margin-bottom:16px!important}
+#cs-mobile-reader[data-fit="true"] .cs-chapter-number{font-size:11px}
 </style>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600&amp;family=Noto+Serif+JP:wght@400;500;600&amp;display=swap"></noscript>
 </head>
@@ -1342,11 +1360,10 @@ html[lang="ja"] #philosophy .cs-hero h1 .cs-title-en em,html[lang="ja"] #cs-mobi
 <div class="cs-passage" style="--cs-passage-share:0.57"><div class="cs-reading-content"><h2 id="cs-chapter-title-2"><span class="cs-chapter-number">02 /</span><span><span class="cs-nw">自分の価値観で、</span><span class="cs-nw">成功を定義</span></span></h2><p data-paragraph="2-1">しかし、塾や家庭教師の多くは、名門大学への進学のみを最終目標とし、社会的な「成功」に向けた学力の向上を盲目的に追い求める傾向があるように感じています。</p></div></div>
 <div class="cs-passage" style="--cs-passage-share:0.43"><div class="cs-reading-content"><p data-paragraph="2-2">私も同じでした — 自分にとって成功とは何なのかを問い始めるまで</p></div></div>
 </div>
-</article><article aria-labelledby="cs-chapter-title-3" class="cs-step" data-beat="2" id="cs-beat-3" style="--cs-passage-count:3">
+</article><article aria-labelledby="cs-chapter-title-3" class="cs-step" data-beat="2" id="cs-beat-3" style="--cs-passage-count:2">
 <div class="cs-copy">
 <div class="cs-passage" style="--cs-passage-share:0.38"><div class="cs-reading-content"><h2 id="cs-chapter-title-3"><span class="cs-chapter-number">03 /</span><span><span class="cs-nw">志や興味を、</span><span class="cs-nw">学ぶ原動力に</span></span></h2><p data-paragraph="3-1">学力を高める努力はもちろん大切です。ただ、その出発点にあるべきなのは、<span class="cs-hl">生徒自身の志や興味</span>。自分が本当に目指したいものを見つけたとき、それが原動力となり、学ぶ意欲も自然と生まれてきます。</p></div></div>
-<div class="cs-passage" style="--cs-passage-share:0.27"><div class="cs-reading-content"><p data-paragraph="3-2">私自身も、自分にとって本当に大切なものを見つめ直す中で、高校時代から続けていた<span class="cs-hl">家庭教師の仕事に立ち返りました</span>。</p></div></div>
-<div class="cs-passage" style="--cs-passage-share:0.35"><div class="cs-reading-content"><p data-paragraph="3-3">生徒が理解できた喜びを見せてくれる瞬間や、卒業後もご家族から届く近況は、私にほかでは得られない充実感と活力を与えてくれます。</p></div></div>
+<div class="cs-passage" style="--cs-passage-share:0.62"><div class="cs-reading-content"><p data-paragraph="3-2">私自身も、自分にとって本当に大切なものを見つめ直す中で、高校時代から続けていた<span class="cs-hl">家庭教師の仕事に立ち返りました</span>。</p><p data-paragraph="3-3">生徒が理解できた喜びを見せてくれる瞬間や、卒業後もご家族から届く近況は、私にほかでは得られない充実感と活力を与えてくれます。</p></div></div>
 </div>
 </article><article aria-labelledby="cs-chapter-title-4" class="cs-step" data-beat="3" id="cs-beat-4" style="--cs-passage-count:2">
 <div class="cs-copy">
@@ -2793,7 +2810,7 @@ window.__caminoPhilosophyInit=function () {
   // This preserves their exact wording and avoids duplicated text or headings.
   const nodes=[heroCopy,...tab.querySelectorAll('.cs-reading-content')];
   const textHomes=nodes.map(n=>({node:n,parent:n.parentNode,next:n.nextSibling,style:n.getAttribute('style')}));
-  const intervals=[[0,1],[1,1.60],[1.60,2],[2,2.46],[2.46,2.74],[2.74,3],[3,3.33],[3.33,4]];
+  const intervals=[[0,1],[1,1.60],[1.60,2],[2,2.46],[2.46,3],[3,3.33],[3.33,4]];
   let mobileMode=false,phoneBase=null;
   let reduced=rm.matches,userMotion=null,current=0,target=0,raf=0,last=0,geometry=null,needsLayout=true,activeIndex=-1;
   let loaded=false;
@@ -2821,7 +2838,7 @@ window.__caminoPhilosophyInit=function () {
     const im=new Image();im.src=A[name];if(im.decode)im.decode().catch(()=>{}).then(resolve);else{im.onload=resolve;im.onerror=resolve;}
   }))).then(()=>{loaded=true;request();});
   function updateMotion(){
-    reduced=userMotion===null?rm.matches:!userMotion;
+    reduced=false;
     page.classList.toggle('cs-reduced',reduced);reader.classList.toggle('cs-reader-static',reduced);
     motionButton.setAttribute('aria-pressed',String(!reduced));motionButton.setAttribute('aria-label',reduced?"スクロールアニメーションを有効にする":"スクロールアニメーションを抑える");
     motionText.textContent=reduced?"動きなし":"動きあり";request();
@@ -2847,6 +2864,15 @@ window.__caminoPhilosophyInit=function () {
       reader.style.top=readerTop+'px';reader.style.height=readerH+'px';
       reader.dataset.compact=String(readerH<265);reader.dataset.small=String(readerH<225);
       if(Math.max(...nodes.slice(1).map(n=>n.offsetHeight))>readerH-12)reader.dataset.small='true';
+      // Pick the biggest body/title size that keeps every text card inside its screen.
+      reader.dataset.fit='true';
+      const maxP=parseFloat(getComputedStyle(tab).getPropertyValue('--cs-fit-max'))||17;
+      let fitP=13;
+      for(let fp=maxP;fp>=13;fp-=.5){
+        reader.style.setProperty('--cs-p',fp+'px');reader.style.setProperty('--cs-h2',Math.round(fp*1.8)+'px');
+        if(Math.max(...nodes.slice(1).map(n=>n.offsetHeight))<=readerH-14){fitP=fp;break;}
+      }
+      reader.style.setProperty('--cs-p',fitP+'px');reader.style.setProperty('--cs-h2',Math.round(fitP*1.8)+'px');
       // Natural native scrolling supplies the clock; only the text cards move.
       const introLength=baseH*.80;
       const lengths=[baseH*1.04,baseH*2.35,baseH*2.25,baseH*3.85];
