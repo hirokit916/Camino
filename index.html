@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>インター生・帰国子女向け家庭教師×メンタリング｜神戸・大阪・芦屋・西宮｜Camino</title>
 <meta name="description" content="インター生・帰国子女向けの家庭教師×メンタリング。神戸のインター卒業生×外資コンサル出身の講師が、宿題・課題サポートからIB・AP対策、英検・TOEFL対策、進路相談まで日英バイリンガルでマンツーマン指導。神戸・大阪・芦屋・西宮は対面、全国オンライン対応。無料体験60分。">
@@ -275,10 +276,10 @@ body:not(.lang-ja) .af-name{font-family:var(--serif)}
 }
 .stop-photo:hover{transform:scale(1.015);box-shadow:0 10px 26px rgba(20,40,80,.14)}
 /* problem statements: reveal one-by-one to hook attention */
-.wb-q{opacity:0;transform:translateY(16px)}
+.js .wb-q{opacity:0;transform:translateY(16px)}
 .wb-q.qseen{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .wb-q.qseen .wb-qt{position:relative}
-@media(prefers-reduced-motion:reduce){.wb-q{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.js .wb-q{opacity:1;transform:none}}
 .rise{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .rise.seen{opacity:1;transform:none}
 .rise.d1{transition-delay:.06s}.rise.d2{transition-delay:.12s}.rise.d3{transition-delay:.18s}.rise.d4{transition-delay:.24s}.rise.d5{transition-delay:.3s}
@@ -719,176 +720,277 @@ body.lang-ja .brand-tag{white-space:nowrap;max-width:none}
   .navlinks button.tablink.active::after{display:none}
 }
 </style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Camino Private Tutor",
-  "alternateName": ["Camino", "カミノ"],
-  "url": "https://caminotutor.com/"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Camino Private Tutor",
-  "alternateName": [
-    "Camino",
-    "カミノ",
-    "Camino（カミノ）"
-  ],
-  "description": "インター生・帰国子女向けの家庭教師×メンタリング。神戸のインター卒業生×外資コンサル出身の講師が、宿題・課題サポートからIB・AP対策、英検・TOEFL対策、進路相談まで日英バイリンガルでマンツーマン指導。神戸・大阪・芦屋・西宮は対面、全国オンライン対応。無料体験60分。",
-  "url": "https://caminotutor.com/",
-  "image": "https://caminotutor.com/og-image.jpg",
-  "logo": "https://caminotutor.com/logo.png",
-  "inLanguage": "ja",
-  "founder": {
-    "@type": "Person",
-    "name": "高島 宏樹",
-    "alternateName": "Hiroki Takashima",
-    "jobTitle": "代表・講師",
-    "alumniOf": [
-      {
-        "@type": "EducationalOrganization",
-        "name": "Canadian Academy"
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "早稲田大学"
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "University College London"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://caminotutor.com/#website",
+      "url": "https://caminotutor.com/",
+      "name": "Camino Private Tutor",
+      "alternateName": [
+        "Camino",
+        "カミノ"
+      ],
+      "inLanguage": [
+        "ja",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://caminotutor.com/#organization"
       }
-    ],
-    "knowsLanguage": [
-      "ja",
-      "en",
-      "es"
-    ]
-  },
-  "priceRange": "¥3,000〜¥15,000",
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "神戸市",
-      "alternateName": "Kobe"
     },
     {
-      "@type": "City",
-      "name": "大阪市",
-      "alternateName": "Osaka"
+      "@type": "EducationalOrganization",
+      "@id": "https://caminotutor.com/#organization",
+      "name": "Camino Private Tutor",
+      "alternateName": [
+        "Camino",
+        "カミノ",
+        "Camino（カミノ）"
+      ],
+      "description": "インター生・帰国子女向けの家庭教師×メンタリング。神戸のインター卒業生×外資コンサル出身の講師が、宿題・課題サポートからIB・AP対策、英検・TOEFL対策、進路相談まで日英バイリンガルでマンツーマン指導。神戸・大阪・芦屋・西宮は対面、全国オンライン対応。無料体験60分。",
+      "url": "https://caminotutor.com/",
+      "image": "https://caminotutor.com/og-image.jpg",
+      "logo": "https://caminotutor.com/logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "高島 宏樹",
+        "alternateName": "Hiroki Takashima",
+        "jobTitle": "代表・講師",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Canadian Academy"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "早稲田大学"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University College London"
+          }
+        ],
+        "knowsLanguage": [
+          "ja",
+          "en",
+          "es"
+        ],
+        "@id": "https://caminotutor.com/#founder",
+        "worksFor": {
+          "@id": "https://caminotutor.com/#organization"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "神戸市",
+          "alternateName": "Kobe"
+        },
+        {
+          "@type": "City",
+          "name": "大阪市",
+          "alternateName": "Osaka"
+        },
+        {
+          "@type": "City",
+          "name": "芦屋市",
+          "alternateName": "Ashiya"
+        },
+        {
+          "@type": "City",
+          "name": "西宮市",
+          "alternateName": "Nishinomiya"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "関西",
+          "alternateName": "Kansai"
+        },
+        {
+          "@type": "Country",
+          "name": "日本",
+          "alternateName": "Japan"
+        }
+      ],
+      "knowsAbout": [
+        "インターナショナルスクールの宿題・課題サポート",
+        "IB（国際バカロレア）対策",
+        "AP対策",
+        "英検・TOEFL・TOEIC・IELTS対策",
+        "エッセイ・プレゼンテーション指導",
+        "進路相談・大学進学サポート",
+        "帰国子女の学習支援",
+        "オンライン英会話"
+      ],
+      "knowsLanguage": [
+        "ja",
+        "en"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://lin.ee/Sa8iYET",
+        "availableLanguage": [
+          "Japanese",
+          "English"
+        ]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "家庭教師プラン",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://caminotutor.com/",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "無料体験レッスン（60分）",
+              "provider": {
+                "@id": "https://caminotutor.com/#organization"
+              },
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student",
+                "audienceType": "インターナショナルスクール生・帰国子女"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://caminotutor.com/",
+            "price": "8000",
+            "priceCurrency": "JPY",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "家庭教師（小学生・60分）",
+              "provider": {
+                "@id": "https://caminotutor.com/#organization"
+              },
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student",
+                "audienceType": "インターナショナルスクール生・帰国子女"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://caminotutor.com/",
+            "price": "10000",
+            "priceCurrency": "JPY",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "家庭教師（中学生・60分）",
+              "provider": {
+                "@id": "https://caminotutor.com/#organization"
+              },
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student",
+                "audienceType": "インターナショナルスクール生・帰国子女"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://caminotutor.com/",
+            "price": "12000",
+            "priceCurrency": "JPY",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "家庭教師（高校生・60分）",
+              "provider": {
+                "@id": "https://caminotutor.com/#organization"
+              },
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student",
+                "audienceType": "インターナショナルスクール生・帰国子女"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://caminotutor.com/",
+            "price": "10000",
+            "priceCurrency": "JPY",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "資格対策（英検・TOEFL・TOEIC・IELTS・90分）",
+              "provider": {
+                "@id": "https://caminotutor.com/#organization"
+              },
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student",
+                "audienceType": "インターナショナルスクール生・帰国子女"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://caminotutor.com/",
+            "price": "15000",
+            "priceCurrency": "JPY",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "家庭教師（高校生 IB・AP科目・60分）",
+              "provider": {
+                "@id": "https://caminotutor.com/#organization"
+              },
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student",
+                "audienceType": "インターナショナルスクール生・帰国子女"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://caminotutor.com/",
+            "price": "3000",
+            "priceCurrency": "JPY",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "オンライン英会話（25分）",
+              "provider": {
+                "@id": "https://caminotutor.com/#organization"
+              },
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student",
+                "audienceType": "インターナショナルスクール生・帰国子女"
+              }
+            }
+          }
+        ]
+      }
     },
     {
-      "@type": "City",
-      "name": "芦屋市",
-      "alternateName": "Ashiya"
-    },
-    {
-      "@type": "City",
-      "name": "西宮市",
-      "alternateName": "Nishinomiya"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "関西",
-      "alternateName": "Kansai"
-    },
-    {
-      "@type": "Country",
-      "name": "日本",
-      "alternateName": "Japan"
+      "@type": "WebPage",
+      "@id": "https://caminotutor.com/#webpage",
+      "url": "https://caminotutor.com/",
+      "name": "インター生・帰国子女向け家庭教師×メンタリング｜神戸・大阪・芦屋・西宮｜Camino",
+      "description": "インター生・帰国子女向けの家庭教師×メンタリング。神戸のインター卒業生×外資コンサル出身の講師が、宿題・課題サポートからIB・AP対策、英検・TOEFL対策、進路相談まで日英バイリンガルでマンツーマン指導。神戸・大阪・芦屋・西宮は対面、全国オンライン対応。無料体験60分。",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://caminotutor.com/#website"
+      },
+      "about": {
+        "@id": "https://caminotutor.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://caminotutor.com/og-image.jpg"
+      }
     }
-  ],
-  "audience": {
-    "@type": "EducationalAudience",
-    "educationalRole": "student",
-    "audienceType": "インターナショナルスクール生・帰国子女"
-  },
-  "knowsAbout": [
-    "インターナショナルスクールの宿題・課題サポート",
-    "IB（国際バカロレア）対策",
-    "AP対策",
-    "英検・TOEFL・TOEIC・IELTS対策",
-    "エッセイ・プレゼンテーション指導",
-    "進路相談・大学進学サポート",
-    "帰国子女の学習支援",
-    "オンライン英会話"
-  ],
-  "knowsLanguage": [
-    "ja",
-    "en"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "url": "https://lin.ee/Sa8iYET",
-    "availableLanguage": [
-      "Japanese",
-      "English"
-    ]
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "家庭教師プラン",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "無料体験レッスン（60分）"
-        },
-        "price": "0",
-        "priceCurrency": "JPY"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "家庭教師（小学生・60分）"
-        },
-        "price": "8000",
-        "priceCurrency": "JPY"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "家庭教師（中学生・60分）"
-        },
-        "price": "10000",
-        "priceCurrency": "JPY"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "家庭教師（高校生・60分）"
-        },
-        "price": "12000",
-        "priceCurrency": "JPY"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "家庭教師（高校生 IB・AP科目・60分）"
-        },
-        "price": "15000",
-        "priceCurrency": "JPY"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "オンライン英会話（25分）"
-        },
-        "price": "3000",
-        "priceCurrency": "JPY"
-      }
-    ]
-  }
+  ]
 }
 </script>
 <style id="camino-philosophy-css">
@@ -1129,7 +1231,7 @@ html[lang="ja"] #philosophy{--cs-fit-max:16.5}
 body.cs-philosophy-active #cs-progress{display:flex}
 #cs-progress .cs-pg-seg{flex:1 1 0;height:3px;border-radius:3px;background:rgba(194,90,38,.16);overflow:hidden}
 #cs-progress .cs-pg-seg i{display:block;width:100%;height:100%;background:#c25a26;transform-origin:left center;transform:scaleX(0)}
-#cs-progress .cs-pg-label{flex:none;margin-left:8px;font:600 11px/1 'Instrument Sans',system-ui,sans-serif;letter-spacing:.06em;color:#c25a26;font-variant-numeric:tabular-nums;background:rgba(245,242,232,.85);padding:2px 4px;border-radius:4px}
+#cs-progress .cs-pg-label{flex:none;margin-left:8px;font:600 11px/1 'Instrument Sans',system-ui,sans-serif;letter-spacing:.06em;color:#c25a26;font-variant-numeric:tabular-nums;background:rgba(250,248,244,.85);padding:2px 4px;border-radius:4px}
 @media(max-width:820px){#cs-progress{padding-top:5px;gap:4px}#cs-progress .cs-pg-label{font-size:10px;margin-left:6px}}
 </style>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600&amp;family=Noto+Serif+JP:wght@400;500;600&amp;display=swap"></noscript>
@@ -1285,6 +1387,108 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 #why.cw-tab .cw-eyebrow::before,#why.cw-tab .cw-eyebrow::after{content:"";width:32px;height:1.5px;background:var(--sun);opacity:.6}
 @media (max-width:720px){#why.cw-tab .cw-eyebrow{font-size:15px;margin-bottom:18px}}
 #why.cw-tab .cw-nw{display:inline-block}
+
+/* ===== tab design unification (all tabs except Home) ===== */
+/* background: same as Why Camino */
+body:has(.tab.active:not(#home)){background:#faf8f4}
+#philosophy,#fees,#profile,#contact{background:transparent}
+/* headers: same eyebrow + large serif title as Why Camino */
+.tab-head{padding-top:0;margin-bottom:34px}
+.tab-head .th-eyebrow{font-size:15px;margin-bottom:18px}
+.tab-head h2.why-h2{font-size:clamp(28px,3.25vw,42px);line-height:1.5;font-weight:600;letter-spacing:-.015em;text-wrap:balance}
+body.lang-ja .tab-head h2.why-h2{letter-spacing:.01em}
+.tab-head .th-accent{color:#c55524}
+.tab-head .th-nw{white-space:nowrap}
+body.lang-ja .tab-head h2.why-h2{font-family:'Noto Serif JP','Noto Serif CJK JP','Hiragino Mincho ProN','Yu Mincho',serif}
+/* line headers up with Why Camino */
+#fees .tab-head,#profile .tab-head,#contact .tab-head{margin-top:-31px}
+/* Contact: centre the column under the centred header */
+#contact > section > *{margin-left:auto;margin-right:auto}
+#contact .tab-head .th-sub{margin-top:14px;font-size:15px;line-height:1.9;color:var(--ink-soft)}
+@media(max-width:720px){
+  .tab-head h2.why-h2{font-size:clamp(25px,6.4vw,34px);line-height:1.6}
+  body:not(.lang-ja) .tab-head h2.why-h2{font-size:30px;line-height:1.3}
+  .tab-head{margin-bottom:26px}
+  #fees .tab-head,#profile .tab-head,#contact .tab-head{margin-top:-49px}
+}
+/* Why Camino: larger 01-05 menu and card labels */
+#why.cw-tab .cw-nav a{font-size:15px}
+#why.cw-tab .cw-nw2{display:inline-block;white-space:nowrap}
+@media(max-width:600px){.ch-desc-br{display:none}}
+#why.cw-tab .cw-nav-num{font-size:12.5px}
+#why.cw-tab .cw-number{width:38px;height:38px;font-size:15px}
+#why.cw-tab .cw-category{font-size:12px}
+@media(max-width:720px){
+  #why.cw-tab .cw-nav a{font-size:12px;line-height:1.35}
+  #why.cw-tab .cw-nav-num{font-size:12px}
+  #why.cw-tab .cw-number{width:32px;height:32px;font-size:13px}
+  #why.cw-tab .cw-category{font-size:10.5px}
+}
+/* Our Philosophy (phone): allow slightly larger text; it still shrinks to fit each screen */
+html body #philosophy.tab{--cs-fit-max:19;--cs-paper:#faf8f4}
+html[lang="ja"] body #philosophy.tab{--cs-fit-max:18}
+#philosophy,#cs-paper-layer,#cs-mobile-reader{--paper:#faf8f4}
+
+/* Our Philosophy: vertical trail meter (replaces the top bar) */
+#cs-progress{right:auto;left:max(12px,calc((100vw - 1180px)/2 - 92px));bottom:30px;width:28px;padding:0;gap:0;flex-direction:column;align-items:center}
+body.cs-philosophy-active #cs-progress{display:flex}
+#cs-progress .cs-pg-label{margin:6px 0 8px;padding:2px 0;background:none;font:600 10.5px/1 'Instrument Sans',system-ui,sans-serif;letter-spacing:.04em;color:#c25a26;white-space:nowrap;writing-mode:horizontal-tb}
+#cs-progress svg.cs-trail{display:block;flex:1 1 auto;overflow:visible}
+#cs-progress .cs-trail-bg{fill:none;stroke:rgba(194,90,38,.38);stroke-width:2;stroke-linecap:round;stroke-dasharray:.5 7}
+#cs-progress .cs-trail-fg{fill:none;stroke:#c25a26;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+#cs-progress .cs-trail-pt{fill:#faf8f4;stroke:rgba(194,90,38,.5);stroke-width:1.5;transition:fill .3s,stroke .3s}
+#cs-progress .cs-trail-pt.is-on{fill:#c25a26;stroke:#c25a26}
+#cs-progress .cs-trail-me{fill:#c25a26}
+#cs-progress .cs-trail-halo{fill:rgba(194,90,38,.2);transform-box:fill-box;transform-origin:center;animation:csHalo 2.4s ease-in-out infinite}
+#cs-progress.is-done .cs-trail-halo{animation:none;opacity:0}
+@keyframes csHalo{0%,100%{transform:scale(.75);opacity:.95}50%{transform:scale(1.45);opacity:.3}}
+@media(max-width:820px){
+  #cs-progress{left:0;width:22px;bottom:70px}
+  #cs-progress{align-items:flex-start}
+  #cs-progress .cs-pg-label{font-size:9.5px;margin:5px 0 6px 6px;letter-spacing:0}
+  #cs-progress svg.cs-trail{transform:scale(.8);transform-origin:top center}
+}
+@media(prefers-reduced-motion:reduce){#cs-progress .cs-trail-halo{animation:none}}
+
+/* Plans: sticky jump bar (all screen sizes, same style as Why Camino) */
+#fees .pl-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:sticky;top:var(--pl-top,78px);z-index:40;
+  margin:0 0 28px;padding:10px 0 14px;background:rgba(250,248,244,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid #e9e0d5}
+#fees .pl-nav a{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:6px 10px;
+  color:#71695f;text-decoration:none;text-align:center;font-size:15px;line-height:1.35;font-weight:500;-webkit-tap-highlight-color:transparent}
+#fees .pl-nav a+a{border-left:1px solid #e9e0d5}
+#fees .pl-nav .pl-num{font:700 12.5px/1.2 'Instrument Sans',system-ui,sans-serif;letter-spacing:.04em;color:#c55524}
+#fees .pl-nav .pl-nw{display:inline-block;white-space:nowrap}
+#fees .pl-nav .pl-price{font-size:15px;line-height:1.35;font-weight:700;color:#302d29;font-variant-numeric:tabular-nums;white-space:nowrap}
+#fees .pl-nav a::after{content:'';position:absolute;left:calc(50% - 12px);bottom:-15px;width:24px;height:2px;background:#c55524;transform:scaleX(0);transition:transform .25s}
+#fees .pl-nav a:hover,#fees .pl-nav a.is-on{color:#c55524}
+#fees .pl-nav a.is-on::after{transform:scaleX(1)}
+#fees .pl-nav a.pl-free .pl-num{display:inline-block;padding:2px 8px;border-radius:99px;background:#c55524;color:#fff;font-size:10.5px;letter-spacing:.08em}
+#fees .pl-nav a.pl-free .pl-lbl{color:#c55524;font-weight:700}
+#fees .pv2-grid{position:relative;z-index:1}
+#fees .pv2-grid-trial{grid-template-columns:1fr;margin-top:24px}
+#fees .pv2-trial{--c:#e2672e;--tint:#fdf0e6}
+#fees .pv2-trial .pv2-trial-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:34px;align-items:start;flex:1}
+#fees .pv2-trial .pv2-trial-main{display:flex;flex-direction:column;height:100%}
+#fees .pv2-trial .pv2-start{font-weight:700;color:var(--c);margin-bottom:6px}
+#fees .pv2-trial .pv2-btn{margin-top:14px}
+#fees .pv2-flow-h{font-size:13px;font-weight:700;color:var(--c);margin:2px 0 10px;letter-spacing:.02em}
+#fees .pv2-trial .pv2-table{margin:0}
+#fees .pv2-trial .pv2-lbl{display:flex;flex-direction:column;gap:1px;white-space:normal}
+#fees .pv2-trial .pl-nw{display:inline-block;white-space:nowrap}
+#fees .pv2-who{font-size:12px;font-weight:400;color:var(--ink-soft)}
+#fees .pv2-chips{margin:-4px 0 14px}
+#fees .pv2-card{transition:box-shadow .35s ease,transform .25s}
+#fees .pl-flash{box-shadow:0 0 0 3px rgba(197,85,36,.55),0 14px 34px rgba(120,95,45,.16)!important}
+@media(max-width:900px){
+  #fees .pl-nav{margin:-8px calc(50% - 50vw) 22px;padding:8px max(10px,calc(50vw - 330px)) 12px}
+  #fees .pl-nav a{flex-direction:column;gap:3px;min-height:52px;padding:4px 3px;font-size:12px}
+  #fees .pl-nav .pl-num{font-size:12px}
+  #fees .pl-nav .pl-price{font-size:12px}
+  #fees .pl-nav a::after{bottom:-12px;width:22px;left:calc(50% - 11px)}
+  #fees .pl-nav a.pl-free .pl-num{padding:1px 7px;font-size:10px}
+  #fees .pv2-trial .pv2-trial-cols{grid-template-columns:1fr;gap:18px}
+  #fees .pv2-grid-trial{margin-top:18px}
+}
 </style>
 </head>
 <body class="lang-ja">
@@ -1360,7 +1564,7 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
           <span class="ch-line ch-orange">インター生・帰国子女向け</span>
           <span class="ch-line">家庭教師<span class="ch-x">×</span>メンタリング</span>
         </span></h1>
-        <p class="ch-desc"><span data-inl class="ja">豊富な指導経験を活かしたマンツーマンの対話と指導を通じて、生徒自身が納得できる「学ぶ目的」を共に見つけ、心から進みたいと思える道を切り拓いていきます。</span></p>
+        <p class="ch-desc"><span data-inl class="ja">豊富な指導経験を活かしたマンツーマンの対話と指導を通じ、<br class="ch-desc-br">生徒自身が心から進みたいと思える道を切り拓いていきます</span></p>
       </div>
 
       <!-- PHOTO: upload your photo to the site as /hero.jpg (same folder as tutor.jpg). The fade is done in CSS. -->
@@ -1439,7 +1643,7 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
         <div class="impact-schools-label"><span data-inl class="ja">支援してきた生徒の学校の例</span></div>
       </div>
       <div class="mq-viewport" aria-hidden="false">
-        <div class="mq-track"><div class="mq-school"><span class="mq-nm">Keio Academy of New York</span></div><div class="mq-school"><span class="mq-nm">Osaka International School</span></div><div class="mq-school"><span class="mq-nm">Marist Brothers International School</span></div><div class="mq-school"><span class="mq-nm">Canadian Academy</span></div><div class="mq-school"><span class="mq-nm">British International School</span></div><div class="mq-school"><span class="mq-nm">Keio Academy of New York</span></div><div class="mq-school"><span class="mq-nm">Osaka International School</span></div><div class="mq-school"><span class="mq-nm">Marist Brothers International School</span></div><div class="mq-school"><span class="mq-nm">Canadian Academy</span></div><div class="mq-school"><span class="mq-nm">British International School</span></div></div>
+        <div class="mq-track"><div class="mq-school"><span class="mq-nm">Keio Academy of New York</span></div><div class="mq-school"><span class="mq-nm">Laurus International School</span></div><div class="mq-school"><span class="mq-nm">Marist Brothers International School</span></div><div class="mq-school"><span class="mq-nm">Canadian Academy</span></div><div class="mq-school"><span class="mq-nm">British School in Tokyo</span></div><div class="mq-school"><span class="mq-nm">One World International School</span></div><div class="mq-school"><span class="mq-nm">K. International School Tokyo</span></div><div class="mq-school"><span class="mq-nm">Keio Academy of New York</span></div><div class="mq-school"><span class="mq-nm">Laurus International School</span></div><div class="mq-school"><span class="mq-nm">Marist Brothers International School</span></div><div class="mq-school"><span class="mq-nm">Canadian Academy</span></div><div class="mq-school"><span class="mq-nm">British School in Tokyo</span></div><div class="mq-school"><span class="mq-nm">One World International School</span></div><div class="mq-school"><span class="mq-nm">K. International School Tokyo</span></div></div>
       </div>
     </section>
 
@@ -1688,20 +1892,20 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 
 </div>
 <nav aria-label="Caminoの5つの強み" class="cw-nav">
-<a aria-current="location" data-cw-jump="cw-point-01" href="#cw-point-01"><span class="cw-nav-num">01</span><span>授業設計</span></a>
-<a data-cw-jump="cw-point-02" href="#cw-point-02"><span class="cw-nav-num">02</span><span>個別指導</span></a>
+<a aria-current="location" data-cw-jump="cw-point-01" href="#cw-point-01"><span class="cw-nav-num">01</span><span><span class="cw-nw2">インター</span><span class="cw-nw2">卒講師</span></span></a>
+<a data-cw-jump="cw-point-02" href="#cw-point-02"><span class="cw-nav-num">02</span><span><span class="cw-nw2">オーダー</span><span class="cw-nw2">メイド</span></span></a>
 <a data-cw-jump="cw-point-03" href="#cw-point-03"><span class="cw-nav-num">03</span><span>進路支援</span></a>
 <a data-cw-jump="cw-point-04" href="#cw-point-04"><span class="cw-nav-num">04</span><span>日英対応</span></a>
-<a data-cw-jump="cw-point-05" href="#cw-point-05"><span class="cw-nav-num">05</span><span>思考力</span></a>
+<a data-cw-jump="cw-point-05" href="#cw-point-05"><span class="cw-nav-num">05</span><span><span class="cw-nw2">思考力</span><span class="cw-nw2">強化</span></span></a>
 </nav>
 <div class="cw-cards" id="cw-strengths">
 <article aria-labelledby="cw-title-01" class="cw-card" id="cw-point-01">
 <div class="cw-row">
 <div class="cw-heading">
-<div class="cw-kicker"><span class="cw-number">01</span><span class="cw-category">LEARNING DESIGN</span></div>
+<div class="cw-kicker"><span class="cw-number">01</span><span class="cw-category">インター卒講師</span></div>
 <h3 id="cw-title-01" tabindex="-1"><span class="cw-nw">インター卒業生による</span><span class="cw-nw">授業設計</span></h3>
 </div>
-<figure class="cw-visual"><img alt="エッセイ、対話、プレゼンテーションを通じた学びを表すイラスト" decoding="async" height="477" loading="lazy" src="/why-01.webp" width="824"/></figure>
+<figure class="cw-visual"><img alt="エッセイ、対話、プレゼンテーションを通じた学びを表すイラスト" decoding="async" height="640" loading="lazy" src="/why1.webp" width="960"/></figure>
 <div class="cw-description"><p class="cw-summary">エッセイ・ディスカッション・プレゼンテーションなど、インターで求められる力を理解した講師が、<strong>今の課題から将来に必要な力まで見据えて</strong>授業を設計します。</p></div>
 </div>
 <details class="cw-details">
@@ -1712,10 +1916,10 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 <article aria-labelledby="cw-title-02" class="cw-card" id="cw-point-02">
 <div class="cw-row">
 <div class="cw-heading">
-<div class="cw-kicker"><span class="cw-number">02</span><span class="cw-category">MADE FOR YOU</span></div>
+<div class="cw-kicker"><span class="cw-number">02</span><span class="cw-category">オーダーメイド</span></div>
 <h3 id="cw-title-02" tabindex="-1">完全オーダーメイド指導</h3>
 </div>
-<figure class="cw-visual"><img alt="学習プランに合わせてノートとパソコンで学ぶ生徒のイラスト" decoding="async" height="259" loading="lazy" src="/why-02.webp" width="414"/></figure>
+<figure class="cw-visual"><img alt="学習プランに合わせてノートとパソコンで学ぶ生徒のイラスト" decoding="async" height="640" loading="lazy" src="/why2.webp" width="960"/></figure>
 <div class="cw-description"><p class="cw-summary">授業内容も、進め方も、一人ひとりに合わせて。科目の優先度や学習ペースを柔軟に変え、<strong>スケジュールも可能な限り調整します。</strong></p></div>
 </div>
 <details class="cw-details">
@@ -1726,10 +1930,10 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 <article aria-labelledby="cw-title-03" class="cw-card" id="cw-point-03">
 <div class="cw-row">
 <div class="cw-heading">
-<div class="cw-kicker"><span class="cw-number">03</span><span class="cw-category">FUTURE PATHWAYS</span></div>
+<div class="cw-kicker"><span class="cw-number">03</span><span class="cw-category">進路支援</span></div>
 <h3 id="cw-title-03" tabindex="-1"><span class="cw-nw">卒業を見据えた</span><span class="cw-nw">進路支援</span></h3>
 </div>
-<figure class="cw-visual"><img alt="国内外の進学先やキャリアの選択肢を考える生徒のイラスト" decoding="async" height="263" loading="lazy" src="/why-03.webp" width="414"/></figure>
+<figure class="cw-visual"><img alt="国内外の進学先やキャリアの選択肢を考える生徒のイラスト" decoding="async" height="640" loading="lazy" src="/why3.webp" width="960"/></figure>
 <div class="cw-description"><p class="cw-summary">今の学びを、将来につなげる。国内外の大学・大学院からその先のキャリアまで、<strong>一人ひとりの選択肢を広げるサポート</strong>をします。</p></div>
 </div>
 <details class="cw-details">
@@ -1740,10 +1944,10 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 <article aria-labelledby="cw-title-04" class="cw-card" id="cw-point-04">
 <div class="cw-row">
 <div class="cw-heading">
-<div class="cw-kicker"><span class="cw-number">04</span><span class="cw-category">TWO LANGUAGES</span></div>
+<div class="cw-kicker"><span class="cw-number">04</span><span class="cw-category">日英対応</span></div>
 <h3 id="cw-title-04" tabindex="-1">日英バイリンガル対応</h3>
 </div>
-<figure class="cw-visual"><img alt="日本語と英語を使い分けながら学ぶ講師と生徒のイラスト" decoding="async" height="245" loading="lazy" src="/why-04.webp" width="423"/></figure>
+<figure class="cw-visual"><img alt="日本語と英語を使い分けながら学ぶ講師と生徒のイラスト" decoding="async" height="640" loading="lazy" src="/why4.webp" width="960"/></figure>
 <div class="cw-description"><p class="cw-summary"><strong>日本語でも、英語でも。</strong>理解度や英語力に合わせて柔軟に使い分け、無理なく英語での学習へ移行できるよう支えます。</p></div>
 </div>
 <details class="cw-details">
@@ -1754,10 +1958,10 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 <article aria-labelledby="cw-title-05" class="cw-card" id="cw-point-05">
 <div class="cw-row">
 <div class="cw-heading">
-<div class="cw-kicker"><span class="cw-number">05</span><span class="cw-category">THINKING FOR LIFE</span></div>
+<div class="cw-kicker"><span class="cw-number">05</span><span class="cw-category">思考力強化</span></div>
 <h3 id="cw-title-05" tabindex="-1"><span class="cw-nw">楽しく</span><span class="cw-nw">思考力を養う</span></h3>
 </div>
-<figure class="cw-visual"><img alt="疑問を整理し、筋道を立てて考える生徒のイラスト" decoding="async" height="220" loading="lazy" src="/why-05.webp" width="414"/></figure>
+<figure class="cw-visual"><img alt="疑問を整理し、筋道を立てて考える生徒のイラスト" decoding="async" height="640" loading="lazy" src="/why5.webp" width="960"/></figure>
 <div class="cw-description"><p class="cw-summary">「なぜ？」を出発点に、問いを立て、考えを整理し、解決策を導く。外資系コンサル出身の講師が、<strong>一生使える「思考の道具」</strong>を伝えます。</p></div>
 </div>
 <details class="cw-details">
@@ -1775,53 +1979,13 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
   <section>
     <div class="tab-head">
       <div class="th-eyebrow"><span data-inl class="ja">プラン</span></div>
-      <h2 class="why-h2"><span data-inl class="ja">目的に合わせて選べる学びのプラン</span></h2>
+      <h2 class="why-h2"><span data-inl class="ja"><span class="th-nw">目的に合わせて選べる</span><span class="th-accent th-nw">学びのプラン</span></span></h2>
       <div class="plan-topnotes"><span data-inl class="ja">料金は税込 ｜ 授業料以外の入会金・解約金・月額利用料は不要（対面授業の交通費・教材費は別途）</span></div>
     </div>
 
-    <div class="trial-block">
-      <div class="tb-head">
-        <div class="tb-headtxt">
-          <div class="tb-tag"><span data-inl class="ja">まずはここから</span></div>
-          <h3><span data-inl class="ja">無料体験レッスン（60分）</span></h3>
-          <p class="tb-fee-note"><span data-inl class="ja">※交通費のみ頂戴いたします</span></p>
-        </div>
-        <a class="btn tablink apply" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span></a>
-      </div>
-      <div class="tb-cols">
-        <div class="tb-alloc">
-          <div class="tb-alloc-h"><span data-inl class="ja">時間配分のイメージ</span></div>
-          <div class="alloc-flow">
-            <div class="af-step">
-              <div class="af-min">10<span><span data-inl class="ja">分</span></span></div>
-              <div class="af-txt">
-                <div class="af-name"><span data-inl class="ja">ヒアリング</span></div>
-                <div class="af-who"><span data-inl class="ja">保護者＋生徒</span></div>
-              </div>
-            </div>
-            <div class="af-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-            <div class="af-step af-step-main">
-              <div class="af-min">40<span><span data-inl class="ja">分</span></span></div>
-              <div class="af-txt">
-                <div class="af-name"><span data-inl class="ja">体験授業</span></div>
-                <div class="af-who"><span data-inl class="ja">生徒（保護者：任意参加）</span></div>
-              </div>
-            </div>
-            <div class="af-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-            <div class="af-step">
-              <div class="af-min">10<span><span data-inl class="ja">分</span></span></div>
-              <div class="af-txt">
-                <div class="af-name"><span data-inl class="ja">今後の進め方</span></div>
-                <div class="af-who"><span data-inl class="ja">保護者＋生徒</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <nav class="pl-nav" aria-label="プラン一覧"><a href="#plan-tutor" data-pl="plan-tutor"><span class="pl-num">01</span><span class="pl-lbl">家庭教師</span></a><a href="#plan-test" data-pl="plan-test"><span class="pl-num">02</span><span class="pl-lbl">資格対策</span></a><a href="#plan-eng" data-pl="plan-eng"><span class="pl-num">03</span><span class="pl-lbl"><span class="pl-nw">オンライン</span><span class="pl-nw">英会話</span></span></a><a href="#plan-trial" data-pl="plan-trial" class="pl-free"><span class="pl-num">FREE</span><span class="pl-lbl">無料体験</span></a></nav>
     <div class="pv2-grid">
-      <article class="pv2-card pv2-tutor">
+      <article class="pv2-card pv2-tutor" id="plan-tutor">
         <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M8 7h8M8 11h6"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 01</span></div><h3><span data-inl class="ja">家庭教師</span></h3></div></header>
         <div class="pv2-body">
           <p class="pv2-lead"><span data-inl class="ja">全科目対応。IB科目は対応科目を要相談。</span></p>
@@ -1836,18 +2000,18 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
         </div>
       </article>
 
-      <article class="pv2-card pv2-test">
+      <article class="pv2-card pv2-test" id="plan-test">
         <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 02</span></div><h3><span data-inl class="ja">資格対策</span></h3></div></header>
         <div class="pv2-body">
-          <div class="pv2-chips"><span><span data-inl class="ja">英検</span></span><span>TOEFL</span><span>TOEIC</span><span>IELTS</span></div>
           <div class="pv2-price">¥10,000<i><span data-inl class="ja">/ 90分</span></i></div>
+          <div class="pv2-chips"><span><span data-inl class="ja">英検</span></span><span>TOEFL</span><span>TOEIC</span><span>IELTS</span></div>
           <p class="pv2-text"><span data-inl class="ja">マンツーマンだからこそ、Listening・Writingなど、<strong>一人ひとりの苦手な領域をピンポイントで見極めて改善</strong>。</span></p>
           <p class="pv2-text"><span data-inl class="ja">参考書だけでは気づきにくい改善点も、その場で具体的にお伝えします。</span></p>
           <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
-      <article class="pv2-card pv2-eng">
+      <article class="pv2-card pv2-eng" id="plan-eng">
         <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 03</span></div><h3><span data-inl class="ja">オンライン英会話</span></h3></div></header>
         <div class="pv2-body">
           <div class="pv2-price">¥3,000<i><span data-inl class="ja">/ 25分</span></i></div>
@@ -1856,6 +2020,15 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
           <div class="pv2-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><span><span data-inl class="ja">最大3レッスン（75分）まで連続受講可能</span></span></div>
           <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
+      </article>
+    </div>
+    <div class="pv2-grid pv2-grid-trial">
+      <article class="pv2-card pv2-trial" id="plan-trial">
+        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8" width="17" height="12.5" rx="2"/><path d="M2.5 8h19v4h-19zM12 8v12.5M12 8c-1.6-3.4-6.2-3.6-6.2-1.2C5.8 8 8.4 8 12 8zm0 0c1.6-3.4 6.2-3.6 6.2-1.2C18.2 8 15.6 8 12 8z"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">FREE TRIAL</span></div><h3><span data-inl class="ja">無料体験レッスン<span class="pl-nw">（60分）</span></span></h3></div></header>
+        <div class="pv2-body"><div class="pv2-trial-cols">
+          <div class="pv2-trial-main"><p class="pv2-lead pv2-start"><span data-inl class="ja">まずはここから</span></p><div class="pv2-price">¥0<i><span data-inl class="ja">/ 60分</span></i></div><p class="pv2-text"><span data-inl class="ja">※交通費のみ頂戴いたします</span></p><a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="pv2-trial-flow"><div class="pv2-flow-h"><span data-inl class="ja">時間配分のイメージ</span></div><ul class="pv2-table"><li><span class="pv2-lbl"><span data-inl class="ja">ヒアリング</span><small class="pv2-who"><span data-inl class="ja">保護者＋生徒</span></small></span><span class="pv2-amt">10<i><span data-inl class="ja">分</span></i></span></li><li><span class="pv2-lbl"><span data-inl class="ja">体験授業</span><small class="pv2-who"><span data-inl class="ja">生徒（保護者：任意参加）</span></small></span><span class="pv2-amt">40<i><span data-inl class="ja">分</span></i></span></li><li><span class="pv2-lbl"><span data-inl class="ja">今後の進め方</span><small class="pv2-who"><span data-inl class="ja">保護者＋生徒</span></small></span><span class="pv2-amt">10<i><span data-inl class="ja">分</span></i></span></li></ul></div>
+        </div></div>
       </article>
     </div>
         <ul class="plan-notes plan-notes-wide" style="display:none"></ul>
@@ -2009,8 +2182,7 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 <!-- CONTACT -->
 <div class="tab" id="contact">
   <section>
-    <h2><span data-inl class="ja">お問い合わせ</span></h2>
-    <p class="lead-p" style="margin-top:12px"><span data-inl class="ja">ご質問・無料体験レッスンのお申し込みなど、お気軽にご連絡ください</span></p>
+    <div class="tab-head"><div class="th-eyebrow"><span data-inl class="ja">Contact</span></div><h2 class="why-h2"><span data-inl class="ja">お問い合わせ</span></h2><p class="th-sub"><span data-inl class="ja">ご質問・無料体験レッスンのお申し込みなど、お気軽にご連絡ください</span></p></div>
 
     <div class="line-card">
       <a class="line-qr" href="https://lin.ee/Sa8iYET" target="_blank" rel="noopener" aria-label="LINE"><img src="data:image/png;base64,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" alt="LINE QR" width="180" height="180" decoding="async"></a>
@@ -2215,23 +2387,39 @@ body:has(#why.cw-tab.active) { background: #faf8f4; }
 </footer>
 
 <script>
-  function showTab(id){
-    if(!document.getElementById(id)) return;
-    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+  // Opens a tab by id. Also accepts the id of something inside a tab
+  // (e.g. #cw-point-04): that tab opens and the page scrolls to it.
+  // The address bar follows the visible tab, and Back/Forward work.
+  function showTab(id, fromHistory){
+    var el=id && document.getElementById(id);
+    var tab=el && (el.classList.contains('tab') ? el : el.closest('.tab'));
+    if(!tab) return;
+    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t===tab));
     document.querySelectorAll('.navlinks .tablink[data-tab]').forEach(b=>{
-      if(b.tagName==='BUTTON') b.classList.toggle('active', b.dataset.tab===id);
+      if(b.tagName==='BUTTON') b.classList.toggle('active', b.dataset.tab===tab.id);
     });
-    window.scrollTo({top:0,behavior:'smooth'});
+    if(!fromHistory){
+      var want = tab.id==='home' ? '' : '#'+tab.id;
+      if(location.hash!==want) history.pushState(null,'', want || (location.pathname+location.search));
+    }
+    if(el!==tab){
+      setTimeout(function(){
+        var hd=document.querySelector('body > header'), off=(hd?hd.offsetHeight:0)+16;
+        window.scrollTo({top:Math.max(0, el.getBoundingClientRect().top+window.scrollY-off)});
+      },80);
+    } else {
+      window.scrollTo({top:0,behavior:fromHistory?'auto':'smooth'});
+    }
   }
   document.querySelectorAll('.tablink').forEach(b=>b.addEventListener('click',function(e){
     // anchors carry a real href so search engines can crawl them;
     // intercept the click so the SPA-style tabs still work.
-    if(this.tagName==='A'){ e.preventDefault(); history.replaceState(null,'','#'+this.dataset.tab); }
+    if(this.tagName==='A') e.preventDefault();
     showTab(this.dataset.tab);
   }));
   // deep link support: caminotutor.com/#fees opens the Plans tab directly
-  (function(){ var h=location.hash.replace('#',''); if(h) showTab(h); })();
+  (function(){ var h=decodeURIComponent(location.hash.replace('#','')); if(h) showTab(h, true); })();
+  window.addEventListener('popstate',function(){ showTab(decodeURIComponent(location.hash.replace('#',''))||'home', true); });
 
   function setLang(lang){
     document.body.classList.toggle('lang-ja', lang==='ja');
@@ -3130,13 +3318,35 @@ window.__caminoPhilosophyInit=function () {
   const reader=document.createElement('div');reader.id='cs-mobile-reader';reader.setAttribute('role','region');reader.setAttribute('aria-label',"私たちの理念の物語");
   document.body.appendChild(reader);
   const meter=document.createElement('div');meter.id='cs-progress';meter.setAttribute('aria-hidden','true');
-  meter.innerHTML='<span class="cs-pg-seg"><i></i></span>'.repeat(count)+'<span class="cs-pg-label"></span>';
+  meter.innerHTML='<span class="cs-pg-label"></span><svg class="cs-trail" aria-hidden="true"><path class="cs-trail-bg"/><path class="cs-trail-fg"/><g class="cs-trail-pts"></g><circle class="cs-trail-halo" r="9"/><circle class="cs-trail-me" r="4.5"/></svg>';
   document.body.appendChild(meter);
-  const meterFills=Array.from(meter.querySelectorAll('i')),meterLabel=meter.querySelector('.cs-pg-label');
-  function updateMeter(t){meterFills.forEach((f,i)=>{f.style.transform='scaleX('+round(clamp(t-i))+')';});
+  const meterLabel=meter.querySelector('.cs-pg-label');
+  // Vertical "path" meter: a winding dotted trail down the left edge. The walked part fills in,
+  // a dot marks where the reader is, and the dotted path below shows there is more to come.
+  const trail={svg:meter.querySelector('svg'),bg:meter.querySelector('.cs-trail-bg'),fg:meter.querySelector('.cs-trail-fg'),pts:meter.querySelector('.cs-trail-pts'),me:meter.querySelector('.cs-trail-me'),halo:meter.querySelector('.cs-trail-halo'),H:0,L:0,marks:[]};
+  function buildTrail(){
+    const H=Math.round(trail.svg.getBoundingClientRect().height);if(!(H>=80)||H===trail.H)return;trail.H=H;trail.L=0;
+    const W=28,amp=5;let d='';
+    for(let y=6;y<=H-4;y+=4){const x=W/2+amp*Math.sin((y/H)*Math.PI*3);d+=(d?'L':'M')+x.toFixed(1)+' '+y;}
+    trail.svg.setAttribute('viewBox','0 0 '+W+' '+H);trail.svg.setAttribute('width',W);trail.svg.setAttribute('height',H);
+    trail.bg.setAttribute('d',d);trail.fg.setAttribute('d',d);
+    const L=trail.fg.getTotalLength();if(!(L>0))return;trail.L=L;trail.fg.style.strokeDasharray=L+' '+L;
+    trail.pts.innerHTML='';trail.marks=[];
+    for(let i=0;i<count;i++){const pt=trail.fg.getPointAtLength(trail.L*i/count);const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',pt.x);c.setAttribute('cy',pt.y);c.setAttribute('r',3.6);c.setAttribute('class','cs-trail-pt');trail.pts.appendChild(c);trail.marks.push(c);}
+  }
+  function updateMeter(t){try{
+    buildTrail();if(!trail.L)return;
+    const p=clamp(t/count),pt=trail.fg.getPointAtLength(trail.L*p);
+    trail.fg.style.strokeDashoffset=String(trail.L*(1-p));
+    trail.me.setAttribute('cx',pt.x);trail.me.setAttribute('cy',pt.y);trail.halo.setAttribute('cx',pt.x);trail.halo.setAttribute('cy',pt.y);
+    trail.marks.forEach((m,i)=>m.classList.toggle('is-on',t>=i-.001));
     const c=Math.min(count,Math.floor(t)+1);meterLabel.textContent=String(c).padStart(2,'0')+' / '+String(count).padStart(2,'0');
-    meter.querySelectorAll('.cs-pg-seg').forEach((s,i)=>s.classList.toggle('is-on',i<c));}
-  // Move the original semantic nodes into a separate reading viewport on phones.
+    meter.classList.toggle('is-done',p>=.995);
+  }catch(e){}}
+  window.addEventListener('resize',()=>{trail.H=0;},{passive:true});
+  
+// Move the original semantic nodes into a separate reading viewport on phones.
   // This preserves their exact wording and avoids duplicated text or headings.
   const nodes=[heroCopy,...tab.querySelectorAll('.cs-reading-content')];
   const textHomes=nodes.map(n=>({node:n,parent:n.parentNode,next:n.nextSibling,style:n.getAttribute('style')}));
@@ -3431,6 +3641,32 @@ if(window.MutationObserver){mo=new MutationObserver(go);mo.observe(t,{attributes
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { sizeHeader(); queueUpdate(); });
 })();
 
+</script>
+<script>
+(function(){
+  var nav=document.querySelector('#fees .pl-nav'); if(!nav) return;
+  var links=[].slice.call(nav.querySelectorAll('a'));
+  var header=document.querySelector('body > header'), picked=null;
+  function top(){ var h=header?Math.ceil(header.getBoundingClientRect().height):0; nav.style.setProperty('--pl-top',h+'px'); document.getElementById('fees').style.setProperty('--pl-top',h+'px'); return h; }
+  function spy(){
+    if(!nav.offsetParent) return;
+    var line=top()+nav.offsetHeight+40, cur=null, rowTop=null;
+    links.forEach(function(a){ var el=document.getElementById(a.dataset.pl); if(!el) return; var t=el.getBoundingClientRect().top; if(t<=line){ cur=a; rowTop=t; } });
+    if(cur){ // plans side by side (desktop): keep the one that was clicked, else the first in that row
+      var row=links.filter(function(a){ var el=document.getElementById(a.dataset.pl); return el && Math.abs(el.getBoundingClientRect().top-rowTop)<6; });
+      if(row.length>1) cur=(row.indexOf(picked)>=0)?picked:row[0];
+    }
+    links.forEach(function(a){ a.classList.toggle('is-on', a===cur); });
+  }
+  links.forEach(function(a){ a.addEventListener('click',function(e){
+    var el=document.getElementById(a.dataset.pl); if(!el) return; e.preventDefault(); picked=a;
+    el.classList.add('pl-flash'); setTimeout(function(){ el.classList.remove('pl-flash'); },1200);
+    var y=el.getBoundingClientRect().top+window.scrollY-top()-nav.offsetHeight-16;
+    window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); setTimeout(spy,700);
+  }); });
+  window.addEventListener('scroll',spy,{passive:true}); window.addEventListener('resize',spy);
+  top(); spy();
+})();
 </script>
 </body>
 </html>
