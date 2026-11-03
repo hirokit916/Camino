@@ -1489,7 +1489,9 @@ body.cs-philosophy-active #cs-progress{display:flex}
 /* ===== About tab redesign (scoped to #profile) ===== */
 #profile .ab{--ab-navy:#16294d;--ab-or:#c55524;--ab-or2:#e87038;--ab-tint:#fdece2;--ab-line:#e9e0d5;--ab-card:#fffdfa;--ab-muted:#71695f}
 #profile .ab-h{font-family:var(--serif);font-weight:600;color:var(--ink);letter-spacing:-.01em}
+#ab-cs-pop .ab-h{font-family:var(--serif);font-weight:600;color:var(--ink);letter-spacing:-.01em}
 body.lang-ja #profile .ab-h{font-family:var(--jpserif);letter-spacing:.01em}
+body.lang-ja #ab-cs-pop .ab-h{font-family:var(--jpserif);letter-spacing:.01em}
 /* hero */
 #profile .ab-hero{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:center;max-width:1040px;margin:0 auto}
 #profile .ab-photo{position:relative;margin:0 18px 18px 0}
@@ -1593,29 +1595,51 @@ body.lang-ja #profile .ab-h{font-family:var(--jpserif);letter-spacing:.01em}
 /* consulting section */
 #profile .ab-cs{max-width:1040px;margin:0 auto;background:var(--ab-card);border:1px solid var(--ab-line);border-radius:24px;padding:40px 44px;box-shadow:0 12px 32px -24px rgba(22,41,77,.3)}
 #profile .ab-cs-intro{font-size:15.5px;line-height:1.95;color:var(--ink-soft);margin:0 0 18px;max-width:none}
+#ab-cs-pop .ab-cs-intro{font-size:15.5px;line-height:1.95;color:var(--ink-soft);margin:0 0 18px;max-width:none}
 #profile .ab-cs-intro b{color:var(--ink);font-weight:700}
+#ab-cs-pop .ab-cs-intro b{color:var(--ink);font-weight:700}
 #profile .ab-cs-what{border:1px solid var(--ab-line);border-radius:14px;background:#faf8f4;margin:0 0 28px}
+#ab-cs-pop .ab-cs-what{border:1px solid var(--ab-line);border-radius:14px;background:#faf8f4;margin:0 0 28px}
 #profile .ab-cs-what summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 18px;font-size:14.5px;font-weight:700;color:var(--ab-navy)}
+#ab-cs-pop .ab-cs-what summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 18px;font-size:14.5px;font-weight:700;color:var(--ab-navy)}
 #profile .ab-cs-what summary::-webkit-details-marker{display:none}
+#ab-cs-pop .ab-cs-what summary::-webkit-details-marker{display:none}
 #profile .ab-cs-what summary::before{content:"?";flex:none;width:24px;height:24px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800}
+#ab-cs-pop .ab-cs-what summary::before{content:"?";flex:none;width:24px;height:24px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800}
 #profile .ab-cs-what summary::after{content:"＋";margin-left:auto;color:var(--ab-or);font-weight:700}
+#ab-cs-pop .ab-cs-what summary::after{content:"＋";margin-left:auto;color:var(--ab-or);font-weight:700}
 #profile .ab-cs-what[open] summary::after{content:"−"}
+#ab-cs-pop .ab-cs-what[open] summary::after{content:"−"}
 #profile .ab-cs-what p{margin:0;padding:0 18px 18px 52px;font-size:14px;line-height:1.9;color:var(--ink-soft)}
+#ab-cs-pop .ab-cs-what p{margin:0;padding:0 18px 18px 52px;font-size:14px;line-height:1.9;color:var(--ink-soft)}
 #profile .ab-cs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+#ab-cs-pop .ab-cs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
 #profile .ab-cs-grid li{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:16px;background:#fff;border:1px solid var(--ab-line)}
+#ab-cs-pop .ab-cs-grid li{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:16px;background:#fff;border:1px solid var(--ab-line)}
 #profile .ab-cs-ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--ab-tint);color:var(--ab-or);display:grid;place-items:center}
+#ab-cs-pop .ab-cs-ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--ab-tint);color:var(--ab-or);display:grid;place-items:center}
 #profile .ab-cs-ic svg{width:23px;height:23px}
+#ab-cs-pop .ab-cs-ic svg{width:23px;height:23px}
 #profile .ab-cs-grid h4{font-size:16.5px;line-height:1.45;margin:2px 0 6px}
+#ab-cs-pop .ab-cs-grid h4{font-size:16.5px;line-height:1.45;margin:2px 0 6px}
 #profile .ab-cs-grid p{font-size:13.5px;line-height:1.8;color:var(--ink-soft);margin:0}
+#ab-cs-pop .ab-cs-grid p{font-size:13.5px;line-height:1.8;color:var(--ink-soft);margin:0}
 #profile .ab-cs-more{font-size:14px;color:var(--ink-soft);margin:18px 0 0;line-height:1.8}
+#ab-cs-pop .ab-cs-more{font-size:14px;color:var(--ink-soft);margin:18px 0 0;line-height:1.8}
 #profile .ab-cs-quote{margin:24px 0 0;padding:18px 22px;border-left:3px solid var(--ab-or2);background:var(--ab-tint);border-radius:0 12px 12px 0;font-size:15px;line-height:1.85;color:var(--ink);font-weight:500}
+#ab-cs-pop .ab-cs-quote{margin:24px 0 0;padding:18px 22px;border-left:3px solid var(--ab-or2);background:var(--ab-tint);border-radius:0 12px 12px 0;font-size:15px;line-height:1.85;color:var(--ink);font-weight:500}
 body.lang-ja #profile .ab-cs-quote{font-family:var(--jpserif)}
+body.lang-ja #ab-cs-pop .ab-cs-quote{font-family:var(--jpserif)}
 body:not(.lang-ja) #profile .ab-cs-quote{font-family:var(--serif);font-style:italic}
+body:not(.lang-ja) #ab-cs-pop .ab-cs-quote{font-family:var(--serif);font-style:italic}
 @media(max-width:700px){
   #profile .ab-cs{padding:26px 20px;border-radius:20px}
   #profile .ab-cs-grid{grid-template-columns:1fr}
+  #ab-cs-pop .ab-cs-grid{grid-template-columns:1fr}
   #profile .ab-cs-grid li{padding:16px}
+  #ab-cs-pop .ab-cs-grid li{padding:16px}
   #profile .ab-cs-what p{padding-left:18px}
+  #ab-cs-pop .ab-cs-what p{padding-left:18px}
 }
 
 /* IB guide link */
@@ -1650,21 +1674,34 @@ footer .ft-links a{font-weight:600}
 <style id="camino-foot">footer .ft-name{margin-top:2px;font-size:13px;color:var(--ink-soft);letter-spacing:.04em}</style>
 <style id="camino-cs-pop">
 #profile .ab-pop-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:7px 14px 7px 10px;border-radius:999px;border:1.5px solid var(--ab-or2);background:#fff;color:var(--ab-or);font:700 13px/1.2 inherit;cursor:pointer;transition:background .2s}
+#home .ab-pop-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:7px 14px 7px 10px;border-radius:999px;border:1.5px solid var(--ab-or2);background:#fff;color:var(--ab-or);font:700 13px/1.2 inherit;cursor:pointer;transition:background .2s}
 #profile .ab-pop-btn:hover{background:var(--ab-tint)}
+#home .ab-pop-btn:hover{background:var(--ab-tint)}
 #profile .ab-pop-dot{position:relative;width:20px;height:20px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:12px;flex:none}
+#home .ab-pop-dot{position:relative;width:20px;height:20px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:12px;flex:none}
 #profile .ab-pop-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--ab-or2);animation:abPulse 1.6s ease-out infinite}
+#home .ab-pop-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--ab-or2);animation:abPulse 1.6s ease-out infinite}
 @keyframes abPulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.6);opacity:0}}
-@media (prefers-reduced-motion:reduce){#profile .ab-pop-dot::after{animation:none;opacity:0}}
+@media (prefers-reduced-motion:reduce){#profile .ab-pop-dot::after{animation:none;opacity:0}#home .ab-pop-dot::after{animation:none;opacity:0}}
 #profile dialog.ab-pop{position:fixed;inset:0;margin:auto;width:min(760px,calc(100vw - 32px));max-height:86vh;overflow:auto;padding:0;border:none;border-radius:22px;background:var(--ab-card);box-shadow:0 30px 80px -20px rgba(22,41,77,.45)}
+dialog#ab-cs-pop{position:fixed;inset:0;margin:auto;width:min(760px,calc(100vw - 32px));max-height:86vh;overflow:auto;padding:0;border:none;border-radius:22px;background:var(--ab-card);box-shadow:0 30px 80px -20px rgba(22,41,77,.45)}
 #profile dialog.ab-pop::backdrop{background:rgba(22,41,77,.45)}
+dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 #profile .ab-pop-in{padding:34px 34px 30px}
+#ab-cs-pop .ab-pop-in{padding:34px 34px 30px}
 #profile .ab-pop-x{position:sticky;top:0;float:right;margin:-18px -16px 0 0;width:36px;height:36px;border-radius:50%;border:1px solid var(--ab-line);background:#fff;font-size:20px;line-height:1;cursor:pointer;color:var(--ink-soft)}
+#ab-cs-pop .ab-pop-x{position:sticky;top:0;float:right;margin:-18px -16px 0 0;width:36px;height:36px;border-radius:50%;border:1px solid var(--ab-line);background:#fff;font-size:20px;line-height:1;cursor:pointer;color:var(--ink-soft)}
 #profile .ab-pop-h{font-size:22px;margin:0 0 14px}
+#ab-cs-pop .ab-pop-h{font-size:22px;margin:0 0 14px}
 #profile .ab-pop .ab-cs-q{border:1px solid var(--ab-line);border-radius:14px;background:#faf8f4;padding:14px 18px;margin:0 0 22px}
+#ab-cs-pop .ab-cs-q{border:1px solid var(--ab-line);border-radius:14px;background:#faf8f4;padding:14px 18px;margin:0 0 22px}
 #profile .ab-pop .ab-cs-q h4{display:flex;align-items:center;gap:10px;font-size:14.5px;margin:0 0 6px}
+#ab-cs-pop .ab-cs-q h4{display:flex;align-items:center;gap:10px;font-size:14.5px;margin:0 0 6px}
 #profile .ab-pop .ab-cs-q h4::before{content:"?";flex:none;width:24px;height:24px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:13px}
+#ab-cs-pop .ab-cs-q h4::before{content:"?";flex:none;width:24px;height:24px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:13px}
 #profile .ab-pop .ab-cs-q p{margin:0;padding-left:34px;font-size:14px;line-height:1.9;color:var(--ink-soft)}
-@media(max-width:640px){#profile .ab-pop-in{padding:26px 18px 22px}#profile .ab-pop .ab-cs-grid{grid-template-columns:1fr}#profile .ab-pop .ab-cs-q p{padding-left:0}}
+#ab-cs-pop .ab-cs-q p{margin:0;padding-left:34px;font-size:14px;line-height:1.9;color:var(--ink-soft)}
+@media(max-width:640px){#profile .ab-pop-in{padding:26px 18px 22px}#ab-cs-pop .ab-pop-in{padding:26px 18px 22px}#profile .ab-pop .ab-cs-grid{grid-template-columns:1fr}#ab-cs-pop .ab-cs-grid{grid-template-columns:1fr}#profile .ab-pop .ab-cs-q p{padding-left:0}#ab-cs-pop .ab-cs-q p{padding-left:0}}
 </style>
 <style id="camino-trial-flow">
 @media(min-width:861px){
@@ -1696,16 +1733,26 @@ footer .ft-links a{font-weight:600}
 <style id="camino-fix-1434">.navlinks a.nav-ext{text-rendering:auto;font-kerning:auto}.pv2-card .pv2-text.pv2-fine{background:none !important;padding:0 !important;border-radius:0 !important;margin-top:10px !important}</style>
 <style id="camino-cs-firms">
 #profile .ab-pop .ab-cs-intro+.ab-cs-intro{margin-top:-8px}
+#ab-cs-pop .ab-cs-intro+.ab-cs-intro{margin-top:-8px}
 #profile .ab-pop .ab-cs-q p+p{margin-top:8px}
+#ab-cs-pop .ab-cs-q p+p{margin-top:8px}
 #profile .ab-pop .ab-pop-sh{font-size:17px;margin:26px 0 12px;padding-left:12px;border-left:3px solid var(--ab-or2)}
+#ab-cs-pop .ab-pop-sh{font-size:17px;margin:26px 0 12px;padding-left:12px;border-left:3px solid var(--ab-or2)}
 #profile .ab-firms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+#ab-cs-pop .ab-firms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
 #profile .ab-firm{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:16px;background:#fff;border:1px solid var(--ab-line)}
+#ab-cs-pop .ab-firm{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:16px;background:#fff;border:1px solid var(--ab-line)}
 #profile .ab-firm-logo{height:56px;display:flex;align-items:center}
+#ab-cs-pop .ab-firm-logo{height:56px;display:flex;align-items:center}
 #profile .ab-firm-logo img{max-height:52px;max-width:100%;width:auto;height:auto;display:block}
+#ab-cs-pop .ab-firm-logo img{max-height:52px;max-width:100%;width:auto;height:auto;display:block}
 #profile .ab-firm h4{font-size:15px;margin:0}
+#ab-cs-pop .ab-firm h4{font-size:15px;margin:0}
 #profile .ab-firm p{font-size:13px;line-height:1.8;color:var(--ink-soft);margin:0}
-@media(max-width:640px){#profile .ab-firms{grid-template-columns:1fr}#profile .ab-firm-logo{height:46px}#profile .ab-firm-logo img{max-height:42px}}
+#ab-cs-pop .ab-firm p{font-size:13px;line-height:1.8;color:var(--ink-soft);margin:0}
+@media(max-width:640px){#profile .ab-firms{grid-template-columns:1fr}#ab-cs-pop .ab-firms{grid-template-columns:1fr}#profile .ab-firm-logo{height:46px}#ab-cs-pop .ab-firm-logo{height:46px}#profile .ab-firm-logo img{max-height:42px}#ab-cs-pop .ab-firm-logo img{max-height:42px}}
 </style>
+<style id="camino-pop-vars">#ab-cs-pop,#home .hp-pop{--ab-navy:#16294d;--ab-or:#c55524;--ab-or2:#e87038;--ab-tint:#fdece2;--ab-line:#e9e0d5;--ab-card:#fffdfa;--ab-muted:#71695f}#home .hp-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}#home .hp-pop{margin-top:0}</style>
 </head>
 <body class="lang-ja">
 
@@ -1822,7 +1869,7 @@ footer .ft-links a{font-weight:600}
       <div class="hp-name"><span data-inl class="ja">高島 宏樹</span></div>
       <div class="hp-cred"><span data-inl class="ja">− 米国教員資格 −</span></div>
       <p class="hp-bio"><span data-inl class="ja">小学校から高校まで神戸のインターナショナルスクール<b>Marist Brothers International School</b>と<b>Canadian Academy</b>で過ごし、<b>ユニバーシティカレッジロンドン</b>（都市計画学科）を修了。外資系コンサルティングファーム（<b>マッキンゼー</b>・<b>ローランドベルガー</b>・<b>PwC</b>）を経て、Caminoを設立</span></p>
-      <span class="hp-link tablink" data-tab="profile"><span data-inl class="ja">講師について詳しく →</span></span>
+      <span class="hp-links"><span class="hp-link tablink" data-tab="profile"><span data-inl class="ja">講師について詳しく →</span></span><button class="ab-pop-btn hp-pop" type="button" data-ab-pop="ab-cs-pop" aria-haspopup="dialog"><span class="ab-pop-dot" aria-hidden="true">?</span>コンサルとは？</button></span>
     </div>
     <button type="button" class="hp-photo-btn tablink" data-tab="profile" aria-label="講師プロフィールを見る / View tutor profile"><div class="hp-photo" style="background-image:url(tutor.jpg)"></div></button>
   </section>
@@ -2321,7 +2368,7 @@ footer .ft-links a{font-weight:600}
         <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14M3 18V4.6a2 2 0 0 1 2.1-2C8 2.7 10.1 3.5 12 5c1.9-1.5 4-2.3 6.9-2.4A2 2 0 0 1 21 4.6V18c-3.9-.4-6.9.4-9 3-2.1-2.6-5.1-3.4-9-3Z"/></svg></span><div class="ab-card"><span class="ab-ch">小学生〜高校生</span><h4 class="ab-h">IB（国際バカロレア）で学ぶ</h4><p>小学校から高校までインターで学び、IBではHLでMath・Physics・Economics・Japanese、SLでLanguage and Literature・Chemistryを履修。多様な文化や価値観に触れ、広い視野を育む</p></div></li>
         <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6"/></svg></span><div class="ab-card"><span class="ab-ch">ロンドン</span><h4 class="ab-h">UCL（ロンドン大学）で都市計画を学ぶ</h4><p>ロンドンに渡り、UCLで都市計画を学ぶ。オーストリアのまちづくり課と連携し、「女性が歩きやすい街の作り方」をテーマに論文を執筆。その過程で研究をサポートしてくれたロンドンの建築会社でのインターンも経験する。次第に、都市をデザインすること以上に、都市が抱える「課題を解決すること」への関心が強くなり、多様な視点やアプローチから取り組みたいと考え、コンサルティングの道を志す</p></div></li>
         <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2Z"/></svg></span><div class="ab-card has-media"><div><span class="ab-ch">旅</span><h4 class="ab-h">世界を旅する</h4><p>学生時代や転職の合間を活用し、ヨーロッパや南米などをバックパッカーとして巡る。世界各地の街並みを見て回ったり、学生時代の友人に会いに行ったりすることを楽しみに、今もさまざまな場所を訪れている</p></div><img src="travel.png" alt="世界各地を旅した写真" loading="lazy" decoding="async"></div></li>
-        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div class="ab-card"><span class="ab-ch">キャリア</span><h4 class="ab-h">コンサルティング</h4><p>欧州系・米系の外資系戦略コンサルティングファームで約7年間、国や自治体、国内外の大手企業とともに、自動運転やスマートシティなど「これからの街づくり」に関わる課題に取り組む</p><button class="ab-pop-btn" type="button" data-ab-pop="ab-cs-pop" aria-haspopup="dialog"><span class="ab-pop-dot" aria-hidden="true">?</span>コンサルって何？</button></div></li>
+        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div class="ab-card"><span class="ab-ch">キャリア</span><h4 class="ab-h">コンサルティング</h4><p>欧州系・米系の外資系戦略コンサルティングファームで約7年間、国や自治体、国内外の大手企業とともに、自動運転やスマートシティなど「これからの街づくり」に関わる課題に取り組む</p><button class="ab-pop-btn" type="button" data-ab-pop="ab-cs-pop" aria-haspopup="dialog"><span class="ab-pop-dot" aria-hidden="true">?</span>コンサルとは？</button></div></li>
         <li class="ab-stop is-now"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div class="ab-card"><span class="ab-ch">現在</span><h4 class="ab-h">Camino を設立 ― コンサル × 教育で、新しい学びを</h4><p>一度は志した教師の原点に立ち返り、米国の教員資格を取得。コンサルティングで培った、論理的に考え、問いを立て、答えを導く力を、学生が自身の進みたい道を切り拓くための力として伝えていきたい。そんな想いから、スペイン語で旅路を意味する Camino と名付け、設立</p></div></li>
       </ol>
     </div>
@@ -2351,18 +2398,7 @@ footer .ft-links a{font-weight:600}
       <a class="ab-more tablink" data-tab="why" href="#why">Caminoの5つの強みを見る →</a>
     </div>
 
-    <dialog class="ab-pop" id="ab-cs-pop" aria-labelledby="ab-cs-pop-h">
-      <div class="ab-pop-in">
-        <button class="ab-pop-x" type="button" aria-label="閉じる">×</button>
-        <h3 class="ab-h ab-pop-h" id="ab-cs-pop-h">コンサルタントとしての仕事</h3>
-        <p class="ab-cs-intro"><b>PwC、ローランド・ベルガー、マッキンゼー</b>といった世界的なコンサルティングファームで、<b>日本と海外の大手企業や国・自治体</b>が抱える重要な課題に取り組んできました</p><p class="ab-cs-intro">中でも力を注いだのは、大学で学んだ都市計画ともつながる<b>「これからの街づくり」</b>です。新しい技術を暮らしに届けるための計画づくりから、国の支援制度の設計、地域の新しい事業づくりまで、幅広いテーマに携わってきました</p>
-        <div class="ab-cs-q"><h4 class="ab-h">コンサルタントとは？</h4><p>企業や国が、将来を左右する重要な決断をするときに、専門的な立場から支える仕事です</p><p>「次の成長に向けて、どのような事業を始めるか」「新しい技術を社会にどう広めるか」「将来の街をどうつくるか」。こうした簡単には答えの出ない課題について、調査・分析を重ね、経営者や政策担当者とともに具体的な解決策を考えます</p></div>
-        <h4 class="ab-h ab-pop-sh">経験を積んだコンサルティングファーム</h4>
-        <ul class="ab-firms"><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-pwc.png" alt="PwC" loading="lazy" decoding="async"></div><h4 class="ab-h">PwC</h4><p>英国・ロンドンを拠点に、世界で36万人超の人材を擁し、監査・税務・コンサルティングを手がける世界4大会計事務所「Big4」の一つ</p></li><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-rolandberger.png" alt="Roland Berger" loading="lazy" decoding="async"></div><h4 class="ab-h">ローランド・ベルガー</h4><p>ドイツ・ミュンヘンに本社を置き、世界を代表する企業の経営改革を支える、欧州最大級の戦略コンサルティングファーム</p></li><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-mckinsey.png" alt="McKinsey &amp; Company" loading="lazy" decoding="async"></div><h4 class="ab-h">マッキンゼー・アンド・カンパニー</h4><p>米国発の名門として、世界の大企業や政府の重要課題に取り組む、世界最高峰と評される戦略コンサルティングファームの一つ</p></li></ul>
-        <h4 class="ab-h ab-pop-sh">これまでに取り組んだ仕事</h4>
-        <ul class="ab-cs-grid"><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 8 3M20 21 16 3M12 4v3M12 11v3M12 18v3"/></svg></span><div><h4 class="ab-h">新しい技術を、街や暮らしへ</h4><p>自動運転やドローンを実際の街で活用できるよう、実現までの段階的な計画を策定しました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9a3 3 0 0 0-2.8-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2A3 3 0 0 1 9.2 15M12 6v1.5M12 16.5V18"/></svg></span><div><h4 class="ab-h">国の支援を届ける、補助金のしくみづくり</h4><p>国の支援をどの取り組みに届けるかを判断するため、専門家とともに補助金の評価基準を設計しました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16M8.5 6h7"/></svg></span><div><h4 class="ab-h">地域の力をつなぐ、新しい事業づくり</h4><p>自治体や企業など、地域のさまざまな関係者をつなぎ、新しいサービスが事業として成り立つしくみづくりに取り組みました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3v16M10 21V10h9v11M13 13h3M13 16.5h3M7.5 10v.01M7.5 13v.01M7.5 16v.01"/></svg></span><div><h4 class="ab-h">自動運転時代の、未来の街を描く</h4><p>自動運転が当たり前になる社会を見据え、道路や駐車場の役割、街全体のあり方がどう変わるかを検討しました</p></div></li></ul>
-      </div>
-    </dialog>
+    
   </section>
 </div>
 
@@ -3511,6 +3547,21 @@ if(window.MutationObserver){mo=new MutationObserver(go);mo.observe(t,{attributes
   top(); spy();
 })();
 </script>
+<dialog class="ab-pop" id="ab-cs-pop" aria-labelledby="ab-cs-pop-h">
+      <div class="ab-pop-in">
+        <button class="ab-pop-x" type="button" aria-label="閉じる">×</button>
+        <h3 class="ab-h ab-pop-h" id="ab-cs-pop-h">コンサルタントとしての仕事</h3>
+        <div class="ab-cs-q"><h4 class="ab-h">コンサルタントとは？</h4><p>大企業や政府であっても、自分たちだけでは答えを出すことが難しい問題があります。そんなときに専門的な立場から解決を支えるのが、複雑な問題を整理し、解決策を導き出す「問題解決の専門家」であるコンサルタントです</p></div>
+        <p class="ab-cs-intro">私は、そうした大企業や政府を支える世界有数のコンサルティングファーム、<b>PwC、ローランド・ベルガー、マッキンゼー</b>で、<b>日本や海外の大手企業、国・自治体</b>のさまざまなプロジェクトに携わってきました</p>
+        <p class="ab-cs-intro">中でも力を注いだのは、大学で学んだ都市計画ともつながる<b>「これからの街づくり」</b>です。新しい技術を暮らしに届けるための計画づくりから、国の支援制度の設計、地域の新しい事業づくりまで、幅広いテーマに携わってきました</p>
+        
+        
+        <h4 class="ab-h ab-pop-sh">経験を積んだコンサルティングファーム</h4>
+        <ul class="ab-firms"><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-pwc.png" alt="PwC" loading="lazy" decoding="async"></div><h4 class="ab-h">PwC</h4><p>英国・ロンドンを拠点に、世界で36万人超の人材を擁し、監査・税務・コンサルティングを手がける世界4大会計事務所「Big4」の一つ</p></li><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-rolandberger.png" alt="Roland Berger" loading="lazy" decoding="async"></div><h4 class="ab-h">ローランド・ベルガー</h4><p>ドイツ・ミュンヘンに本社を置き、世界を代表する企業の経営改革を支える、欧州最大級の戦略コンサルティングファーム</p></li><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-mckinsey.png" alt="McKinsey &amp; Company" loading="lazy" decoding="async"></div><h4 class="ab-h">マッキンゼー・アンド・カンパニー</h4><p>米国発の名門として、世界の大企業や政府の重要課題に取り組む、世界最高峰と評される戦略コンサルティングファームの一つ</p></li></ul>
+        <h4 class="ab-h ab-pop-sh">これまでに取り組んだ仕事</h4>
+        <ul class="ab-cs-grid"><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 8 3M20 21 16 3M12 4v3M12 11v3M12 18v3"/></svg></span><div><h4 class="ab-h">新しい技術を、街や暮らしへ</h4><p>自動運転やドローンを実際の街で活用できるよう、実現までの段階的な計画を策定しました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9a3 3 0 0 0-2.8-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2A3 3 0 0 1 9.2 15M12 6v1.5M12 16.5V18"/></svg></span><div><h4 class="ab-h">国の支援を届ける、補助金のしくみづくり</h4><p>国の支援をどの取り組みに届けるかを判断するため、専門家とともに補助金の評価基準を設計しました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16M8.5 6h7"/></svg></span><div><h4 class="ab-h">地域の力をつなぐ、新しい事業づくり</h4><p>自治体や企業など、地域のさまざまな関係者をつなぎ、新しいサービスが事業として成り立つしくみづくりに取り組みました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3v16M10 21V10h9v11M13 13h3M13 16.5h3M7.5 10v.01M7.5 13v.01M7.5 16v.01"/></svg></span><div><h4 class="ab-h">自動運転時代の、未来の街を描く</h4><p>自動運転が当たり前になる社会を見据え、道路や駐車場の役割、街全体のあり方がどう変わるかを検討しました</p></div></li></ul>
+      </div>
+    </dialog>
 <script>
 (function(){
   document.querySelectorAll('[data-ab-pop]').forEach(function(b){
