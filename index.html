@@ -1666,6 +1666,24 @@ footer .ft-links a{font-weight:600}
 #profile .ab-pop .ab-cs-q p{margin:0;padding-left:34px;font-size:14px;line-height:1.9;color:var(--ink-soft)}
 @media(max-width:640px){#profile .ab-pop-in{padding:26px 18px 22px}#profile .ab-pop .ab-cs-grid{grid-template-columns:1fr}#profile .ab-pop .ab-cs-q p{padding-left:0}}
 </style>
+<style id="camino-trial-flow">
+@media(min-width:861px){
+#fees .pv2-trial .pv2-trial-cols{grid-template-columns:minmax(0,280px) minmax(0,1fr) !important;gap:36px !important;align-items:center !important}
+#fees .pv2-trial .pv2-table{display:flex !important;flex-direction:row !important;gap:0 !important;border-radius:14px;overflow:hidden}
+#fees .pv2-trial .pv2-table li{flex:1 1 0;display:flex !important;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:10px;margin:0 !important;border-radius:0 !important;padding:14px 16px !important;position:relative}
+#fees .pv2-trial .pv2-table li:nth-child(2){flex-grow:2;background:var(--tint) !important}
+#fees .pv2-trial .pv2-table li+li{border-left:2px solid #fff}
+#fees .pv2-trial .pv2-table li+li::before{content:"";position:absolute;left:-8px;top:50%;width:12px;height:12px;margin-top:-6px;background:inherit;border-top:2px solid #fff;border-right:2px solid #fff;transform:rotate(45deg);z-index:1}
+#fees .pv2-trial .pv2-amt{align-self:flex-start}
+}
+</style>
+<style id="camino-nav-sep">
+.navlinks .nav-ic{vertical-align:-2px;margin-right:5px}
+@media(min-width:941px){
+.navlinks > *{position:relative}
+.navlinks > * + *::before{content:"";position:absolute;left:-1px;top:50%;width:1px;height:13px;margin-top:-6.5px;background:#e3d8cc;pointer-events:none}
+}
+</style>
 </head>
 <body class="lang-ja">
 
@@ -1691,9 +1709,9 @@ footer .ft-links a{font-weight:600}
       <button class="tablink" data-tab="philosophy"><span data-inl class="ja">私たちの理念</span></button>
       <button class="tablink" data-tab="why"><span data-inl class="ja">Why Camino?</span></button>
       <button class="tablink" data-tab="fees"><span data-inl class="ja">プラン</span></button>
-      <button class="tablink" data-tab="profile"><span data-inl class="ja">講師について</span></button>
+      <button class="tablink" data-tab="profile"><span data-inl class="ja">講師</span></button>
       <a class="nav-ext" href="/column/">コラム</a>
-      <button class="tablink" data-tab="contact"><span data-inl class="ja">お問い合わせ</span></button>
+      <button class="tablink" data-tab="contact"><svg class="nav-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg><span data-inl class="ja">お問い合わせ</span></button>
     </div>
     <div class="nav-actions">
       <a class="lang-globe" id="lang-globe" href="/en/" hreflang="en" aria-label="Switch to English">
@@ -2168,8 +2186,8 @@ footer .ft-links a{font-weight:600}
         <div class="pv2-body">
           <div class="pv2-price">¥10,000<i><span data-inl class="ja">/ 90分</span></i></div>
           <div class="pv2-chips"><span><span data-inl class="ja">英検</span></span><span>TOEFL</span><span>TOEIC</span><span>IELTS</span></div>
-          <p class="pv2-text"><span data-inl class="ja">マンツーマンだからこそ、Listening・Writingなど、<strong>一人ひとりの苦手な領域をピンポイントで見極めて改善</strong>。</span></p>
-          <p class="pv2-text"><span data-inl class="ja">参考書だけでは気づきにくい改善点も、その場で具体的にお伝えします。</span></p>
+          <p class="pv2-text"><span data-inl class="ja">マンツーマンだからこそ、Listening・Writingなど、<strong>一人ひとりの苦手な領域をピンポイントで見極めて改善</strong></span></p>
+          <p class="pv2-text"><span data-inl class="ja">参考書だけでは気づきにくい改善点も、その場で具体的にお伝えします</span></p>
           <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -2178,11 +2196,11 @@ footer .ft-links a{font-weight:600}
         <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 03</span></div><h3><span data-inl class="ja">オンライン英会話</span></h3></div></header>
         <div class="pv2-body">
           <div class="pv2-price">¥3,000<i><span data-inl class="ja">/ 25分</span></i></div>
-          <p class="pv2-lead"><span data-inl class="ja"><strong>英語初心者の方や、気軽に英会話を始めたい方に。</strong></span></p>
-          <p class="pv2-text"><span data-inl class="ja">インターナショナルスクールへの入学を考えているお子さまから、英語を一から学びたい・学び直したい大人の方まで、幅広くご利用いただけます。</span></p>
-          <p class="pv2-text"><span data-inl class="ja">日常会話を中心に、英語で話すことに慣れるためのレッスンです。入学前の簡単な受け答えや、面接を意識した会話練習にも対応します。</span></p>
+          <p class="pv2-lead"><span data-inl class="ja"><strong>英語初心者の方や、気軽に英会話を始めたい方に</strong></span></p>
+          <p class="pv2-text"><span data-inl class="ja">インターナショナルスクールへの入学を考えているお子さまから、英語を一から学びたい・学び直したい大人の方まで、幅広くご利用いただけます</span></p>
+          <p class="pv2-text"><span data-inl class="ja">日常会話を中心に、英語で話すことに慣れるためのレッスンです。入学前の簡単な受け答えや、面接を意識した会話練習にも対応します</span></p>
           <div class="pv2-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><span><span data-inl class="ja">50分・75分のレッスンも、同一時間単価で受講可能</span></span></div>
-          <p class="pv2-text pv2-fine"><span data-inl class="ja">※ インターナショナルスクール在校生の授業・宿題・IB科目などの学習サポートは、オンラインでの受講も含め、PLAN 01「家庭教師」の対象となります。</span></p>
+          <p class="pv2-text pv2-fine"><span data-inl class="ja">※ インターナショナルスクール在校生の授業・宿題・IB科目などの学習サポートは、オンラインでの受講も含め、PLAN 01「家庭教師」の対象となります</span></p>
           <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -2192,7 +2210,7 @@ footer .ft-links a{font-weight:600}
         <div class="pv2-body">
           <div class="pv2-price">¥5,000<i><span data-inl class="ja">/ 60分</span></i></div>
           
-          <p class="pv2-text"><span data-inl class="ja"><a class="pv2-iblink" href="/column/">コラム</a>だけではわからない、お子さま一人ひとりの状況に合わせたIBのご相談に、IBを学んだインター卒業生の講師がお答えします。</span></p>
+          <p class="pv2-text"><span data-inl class="ja"><a class="pv2-iblink" href="/column/">コラム</a>だけではわからない、お子さま一人ひとりの状況に合わせたIBのご相談に、IBを学んだインター卒業生の講師がお答えします</span></p>
           <div class="pv2-ib-h"><span data-inl class="ja">ご相談の例</span></div>
           <ul class="pv2-ib-list"><li><span data-inl class="ja">IBの課題やテストに向けた、家庭での学習の進め方</span></li><li><span data-inl class="ja">HL・SLの科目選びと、進路との関係</span></li><li><span data-inl class="ja">EE（課題論文）・TOK（知の理論）の準備の進め方</span></li><li><span data-inl class="ja">大学進学を見据えて、今からできること</span></li></ul>
           <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
