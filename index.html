@@ -1694,6 +1694,18 @@ footer .ft-links a{font-weight:600}
 </style>
 <style id="camino-pa-one">.parents .pa-sub{white-space:nowrap}@media(max-width:560px){.parents .pa-sub{font-size:min(15px,3.5vw)}}</style>
 <style id="camino-fix-1434">.navlinks a.nav-ext{text-rendering:auto;font-kerning:auto}.pv2-card .pv2-text.pv2-fine{background:none !important;padding:0 !important;border-radius:0 !important;margin-top:10px !important}</style>
+<style id="camino-cs-firms">
+#profile .ab-pop .ab-cs-intro+.ab-cs-intro{margin-top:-8px}
+#profile .ab-pop .ab-cs-q p+p{margin-top:8px}
+#profile .ab-pop .ab-pop-sh{font-size:17px;margin:26px 0 12px;padding-left:12px;border-left:3px solid var(--ab-or2)}
+#profile .ab-firms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+#profile .ab-firm{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:16px;background:#fff;border:1px solid var(--ab-line)}
+#profile .ab-firm-logo{height:56px;display:flex;align-items:center}
+#profile .ab-firm-logo img{max-height:52px;max-width:100%;width:auto;height:auto;display:block}
+#profile .ab-firm h4{font-size:15px;margin:0}
+#profile .ab-firm p{font-size:13px;line-height:1.8;color:var(--ink-soft);margin:0}
+@media(max-width:640px){#profile .ab-firms{grid-template-columns:1fr}#profile .ab-firm-logo{height:46px}#profile .ab-firm-logo img{max-height:42px}}
+</style>
 </head>
 <body class="lang-ja">
 
@@ -2343,15 +2355,12 @@ footer .ft-links a{font-weight:600}
       <div class="ab-pop-in">
         <button class="ab-pop-x" type="button" aria-label="閉じる">×</button>
         <h3 class="ab-h ab-pop-h" id="ab-cs-pop-h">コンサルタントとしての仕事</h3>
-        <p class="ab-cs-intro">外資系戦略コンサルティングファームで、<b>日本と海外の大手企業や政府・自治体</b>とともに、さまざまな課題に取り組んできました。中でも力を注いだのは、大学で学んだ都市計画とつながる<b>「これからの街づくり」</b>です</p>
-        <div class="ab-cs-q"><h4 class="ab-h">コンサルって、何をする仕事？</h4><p>企業や国が抱える大きな課題について、調査・分析をもとに「これからどうするか」を考え、提案する仕事です。マッキンゼー、ローランド・ベルガー、PwCは、世界の大手企業や政府機関を主なクライアントとするコンサルティングファームです</p></div>
-        <ul class="ab-cs-grid">
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 8 3M20 21 16 3M12 4v3M12 11v3M12 18v3"/></svg></span><div><h4 class="ab-h">新しい技術を街へ届ける道筋づくり</h4><p>自動運転やドローンを、実際の街で使えるようにするためのロードマップを描く</p></div></li>
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9a3 3 0 0 0-2.8-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2A3 3 0 0 1 9.2 15M12 6v1.5M12 16.5V18"/></svg></span><div><h4 class="ab-h">補助金のしくみづくり</h4><p>国の支援をどの取り組みに届けるか、評価の基準を専門家とともに設計する</p></div></li>
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16M8.5 6h7"/></svg></span><div><h4 class="ab-h">地域をつなぐ事業づくり</h4><p>自治体や企業など、地域のさまざまな関係者をつなぎ、新しいサービスの事業モデルをつくる</p></div></li>
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3v16M10 21V10h9v11M13 13h3M13 16.5h3M7.5 10v.01M7.5 13v.01M7.5 16v.01"/></svg></span><div><h4 class="ab-h">未来の街を描く</h4><p>自動運転が当たり前になった時、街や駐車場の役割がどう変わるかを考える</p></div></li>
-        </ul>
-        <p class="ab-cs-more">そのほか、EV・資源・医療・飲料など、幅広い業界の企業とも仕事をしてきました</p>
+        <p class="ab-cs-intro"><b>PwC、ローランド・ベルガー、マッキンゼー</b>といった世界的なコンサルティングファームで、<b>日本と海外の大手企業や国・自治体</b>が抱える重要な課題に取り組んできました</p><p class="ab-cs-intro">中でも力を注いだのは、大学で学んだ都市計画ともつながる<b>「これからの街づくり」</b>です。新しい技術を暮らしに届けるための計画づくりから、国の支援制度の設計、地域の新しい事業づくりまで、幅広いテーマに携わってきました</p>
+        <div class="ab-cs-q"><h4 class="ab-h">コンサルタントとは？</h4><p>企業や国が、将来を左右する重要な決断をするときに、専門的な立場から支える仕事です</p><p>「次の成長に向けて、どのような事業を始めるか」「新しい技術を社会にどう広めるか」「将来の街をどうつくるか」。こうした簡単には答えの出ない課題について、調査・分析を重ね、経営者や政策担当者とともに具体的な解決策を考えます</p></div>
+        <h4 class="ab-h ab-pop-sh">経験を積んだコンサルティングファーム</h4>
+        <ul class="ab-firms"><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-pwc.png" alt="PwC" loading="lazy" decoding="async"></div><h4 class="ab-h">PwC</h4><p>英国・ロンドンを拠点に、世界で36万人超の人材を擁し、監査・税務・コンサルティングを手がける世界4大会計事務所「Big4」の一つ</p></li><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-rolandberger.png" alt="Roland Berger" loading="lazy" decoding="async"></div><h4 class="ab-h">ローランド・ベルガー</h4><p>ドイツ・ミュンヘンに本社を置き、世界を代表する企業の経営改革を支える、欧州最大級の戦略コンサルティングファーム</p></li><li class="ab-firm"><div class="ab-firm-logo"><img src="/logo-mckinsey.png" alt="McKinsey &amp; Company" loading="lazy" decoding="async"></div><h4 class="ab-h">マッキンゼー・アンド・カンパニー</h4><p>米国発の名門として、世界の大企業や政府の重要課題に取り組む、世界最高峰と評される戦略コンサルティングファームの一つ</p></li></ul>
+        <h4 class="ab-h ab-pop-sh">これまでに取り組んだ仕事</h4>
+        <ul class="ab-cs-grid"><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 8 3M20 21 16 3M12 4v3M12 11v3M12 18v3"/></svg></span><div><h4 class="ab-h">新しい技術を、街や暮らしへ</h4><p>自動運転やドローンを実際の街で活用できるよう、実現までの段階的な計画を策定しました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9a3 3 0 0 0-2.8-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2A3 3 0 0 1 9.2 15M12 6v1.5M12 16.5V18"/></svg></span><div><h4 class="ab-h">国の支援を届ける、補助金のしくみづくり</h4><p>国の支援をどの取り組みに届けるかを判断するため、専門家とともに補助金の評価基準を設計しました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16M8.5 6h7"/></svg></span><div><h4 class="ab-h">地域の力をつなぐ、新しい事業づくり</h4><p>自治体や企業など、地域のさまざまな関係者をつなぎ、新しいサービスが事業として成り立つしくみづくりに取り組みました</p></div></li><li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3v16M10 21V10h9v11M13 13h3M13 16.5h3M7.5 10v.01M7.5 13v.01M7.5 16v.01"/></svg></span><div><h4 class="ab-h">自動運転時代の、未来の街を描く</h4><p>自動運転が当たり前になる社会を見据え、道路や駐車場の役割、街全体のあり方がどう変わるかを検討しました</p></div></li></ul>
       </div>
     </dialog>
   </section>
