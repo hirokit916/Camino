@@ -763,10 +763,6 @@ body.lang-ja .brand-tag{white-space:nowrap;max-width:none}
           },
           {
             "@type": "CollegeOrUniversity",
-            "name": "Waseda University"
-          },
-          {
-            "@type": "CollegeOrUniversity",
             "name": "University College London"
           }
         ],
@@ -1436,7 +1432,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
 @media(prefers-reduced-motion:reduce){#cs-progress .cs-trail-halo{animation:none}}
 
 /* Plans: sticky jump bar (all screen sizes, same style as Why Camino) */
-#fees .pl-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:sticky;top:var(--pl-top,78px);z-index:40;
+#fees .pl-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:sticky;top:var(--pl-top,78px);z-index:40;
   margin:0 0 28px;padding:10px 0 14px;background:rgba(250,248,244,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid #e9e0d5}
 #fees .pl-nav a{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:6px 10px;
   color:#71695f;text-decoration:none;text-align:center;font-size:15px;line-height:1.35;font-weight:500;-webkit-tap-highlight-color:transparent}
@@ -1474,6 +1470,158 @@ body.cs-philosophy-active #cs-progress{display:flex}
   #fees .pv2-trial .pv2-trial-cols{grid-template-columns:1fr;gap:18px}
   #fees .pv2-grid-trial{margin-top:18px}
 }
+</style>
+<style id="camino-about-css">
+/* ===== About tab redesign (scoped to #profile) ===== */
+#profile .ab{--ab-navy:#16294d;--ab-or:#c55524;--ab-or2:#e87038;--ab-tint:#fdece2;--ab-line:#e9e0d5;--ab-card:#fffdfa;--ab-muted:#71695f}
+#profile .ab-h{font-family:var(--serif);font-weight:600;color:var(--ink);letter-spacing:-.01em}
+body.lang-ja #profile .ab-h{font-family:var(--jpserif);letter-spacing:.01em}
+/* hero */
+#profile .ab-hero{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:center;max-width:1040px;margin:0 auto}
+#profile .ab-photo{position:relative;margin:0 18px 18px 0}
+#profile .ab-photo::before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:30px;background:linear-gradient(140deg,#f7dcbb,var(--ab-tint));z-index:0}
+#profile .ab-photo-img{position:relative;z-index:1;aspect-ratio:4/5;border-radius:30px;background-size:cover;background-position:center top;box-shadow:0 18px 40px -18px rgba(22,41,77,.35)}
+#profile .ab-photo figcaption{position:absolute;z-index:2;left:-14px;bottom:26px;background:var(--ab-navy);color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.06em;padding:9px 16px;border-radius:999px;box-shadow:0 8px 20px -8px rgba(22,41,77,.5)}
+#profile .ab-kicker{font-family:'Instrument Sans',system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ab-or);margin:0 0 10px}
+#profile .ab-name{font-size:clamp(36px,4.6vw,52px);line-height:1.1;margin:0}
+#profile .ab-name-sub{font-size:15px;color:var(--ab-muted);margin:8px 0 22px;letter-spacing:.06em}
+#profile .ab-lead{font-size:15.5px;line-height:1.95;color:var(--ink-soft);margin:0 0 22px}
+#profile .ab-lead b{color:var(--ink);font-weight:700}
+#profile .ab-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 18px;padding:0}
+#profile .ab-chips li{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--ab-line);font-size:13.5px;font-weight:600;color:var(--ab-navy)}
+#profile .ab-chips svg{width:16px;height:16px;flex:none;color:var(--ab-or)}
+#profile .ab-langs{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ink);line-height:1.6;margin:0}
+#profile .ab-langs svg{width:18px;height:18px;flex:none;color:var(--ab-or);margin-top:2px}
+#profile .ab-langs b{font-weight:700}
+/* fact strip */
+#profile .ab-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:1040px;margin:64px auto 0;background:#fff;border:1px solid var(--ab-line);border-radius:22px;box-shadow:0 12px 32px -22px rgba(22,41,77,.3)}
+#profile .ab-fact{padding:26px 18px;text-align:center}
+#profile .ab-fact+.ab-fact{border-left:1px solid var(--ab-line)}
+#profile .ab-fact-n{font-family:'Instrument Sans',system-ui,sans-serif;font-weight:800;font-size:clamp(26px,3vw,34px);line-height:1.1;color:var(--ab-or2);white-space:nowrap;letter-spacing:-.01em}
+#profile .ab-fact-l{font-size:13px;color:var(--ab-muted);margin-top:8px;line-height:1.5}
+/* section heads */
+#profile .ab-block{margin-top:96px}
+#profile .ab-sec-head{text-align:center;max-width:680px;margin:0 auto 40px}
+#profile .ab-eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:'Instrument Sans',system-ui,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ab-or);margin-bottom:14px}
+#profile .ab-eyebrow::before,#profile .ab-eyebrow::after{content:"";width:26px;height:1.5px;background:var(--ab-or2);opacity:.55}
+#profile .ab-sec-head h3{font-size:clamp(24px,3vw,32px);line-height:1.45;margin:0}
+#profile .ab-sec-head p{margin:12px 0 0;font-size:15px;line-height:1.85;color:var(--ink-soft)}
+/* journey path */
+#profile .ab-path{position:relative;max-width:840px;margin:0 auto;padding-left:72px;list-style:none}
+#profile .ab-path::before{content:"";position:absolute;left:25px;top:24px;bottom:24px;width:2px;background:repeating-linear-gradient(to bottom,var(--ab-or2) 0 8px,transparent 8px 16px);opacity:.55}
+#profile .ab-stop{position:relative;margin:0 0 22px}
+#profile .ab-stop:last-child{margin-bottom:0}
+#profile .ab-mk{position:absolute;left:-72px;top:22px;width:52px;height:52px;border-radius:50%;background:var(--ab-card);border:2px solid var(--ab-or2);display:grid;place-items:center;color:var(--ab-or);box-shadow:0 0 0 6px #faf8f4}
+#profile .ab-mk svg{width:22px;height:22px}
+#profile .ab-card{background:var(--ab-card);border:1px solid var(--ab-line);border-radius:20px;padding:26px 30px;box-shadow:0 4px 14px rgba(78,59,36,.03)}
+#profile .ab-card.has-media{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:28px;align-items:center}
+#profile .ab-card img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 10px 24px -12px rgba(20,40,80,.3)}
+#profile .ab-ch{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--ab-or);background:var(--ab-tint);border-radius:999px;padding:4px 13px;margin-bottom:10px}
+#profile .ab-card h4{font-size:clamp(18px,2.1vw,21px);line-height:1.45;margin:0 0 8px}
+#profile .ab-card p{font-size:14px;line-height:1.95;color:var(--ink-soft);margin:0}
+#profile .ab-stop.is-now .ab-mk{background:var(--ab-or2);color:#fff;border-color:var(--ab-or2)}
+#profile .ab-stop.is-now .ab-card{background:var(--ab-navy);border-color:var(--ab-navy);box-shadow:0 18px 40px -20px rgba(22,41,77,.6)}
+#profile .ab-stop.is-now .ab-card h4{color:#fff}
+#profile .ab-stop.is-now .ab-card p{color:#d7dcea}
+#profile .ab-stop.is-now .ab-ch{background:var(--ab-or2);color:#fff}
+/* what I bring */
+#profile .ab-bring{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1040px;margin:0 auto}
+#profile .ab-b{background:var(--ab-card);border:1px solid var(--ab-line);border-radius:20px;padding:28px 26px;display:flex;flex-direction:column}
+#profile .ab-b-from{display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--ab-muted);margin-bottom:14px}
+#profile .ab-b-ic{width:40px;height:40px;border-radius:12px;background:var(--ab-tint);color:var(--ab-or);display:grid;place-items:center;flex:none}
+#profile .ab-b-ic svg{width:21px;height:21px}
+#profile .ab-b-arrow{color:var(--ab-or2);font-weight:700}
+#profile .ab-b h4{font-size:18px;line-height:1.5;margin:0 0 10px}
+#profile .ab-b p{font-size:14px;line-height:1.9;color:var(--ink-soft);margin:0}
+#profile .ab-more{display:block;width:fit-content;margin:26px auto 0;font-size:14px;font-weight:600;color:var(--ab-or);border-bottom:1.5px solid #f3cdb5;padding-bottom:2px;text-decoration:none}
+/* closing CTA */
+#profile .ab-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;max-width:1040px;margin:96px auto 0;padding:40px 44px;border-radius:26px;background:linear-gradient(150deg,#1f345c,#16294d);color:#fff;position:relative;overflow:hidden}
+#profile .ab-cta::after{content:"";position:absolute;right:-90px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(232,112,56,.28),transparent 68%);pointer-events:none}
+#profile .ab-cta h3{color:#fff;font-size:clamp(22px,2.6vw,28px);line-height:1.45;margin:0 0 8px}
+#profile .ab-cta p{color:#cfd6e6;font-size:14.5px;line-height:1.85;margin:0}
+#profile .ab-cta-btns{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
+#profile .ab-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .2s,filter .2s}
+#profile .ab-btn:hover{transform:translateY(-2px)}
+#profile .ab-btn svg{width:17px;height:17px}
+#profile .ab-btn-primary{background:linear-gradient(110deg,#FA8635,#EB5A15);color:#fff;box-shadow:0 10px 22px -8px rgba(235,90,21,.6)}
+#profile .ab-btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+#profile .ab-btn-ghost:hover{background:rgba(255,255,255,.08)}
+/* responsive */
+@media(max-width:900px){
+  #profile .ab-hero{grid-template-columns:1fr;gap:40px}
+  #profile .ab-photo{max-width:250px;margin:0 auto 18px;width:calc(100% - 18px)}
+  #profile .ab-intro{text-align:center}
+  #profile .ab-chips{justify-content:center}
+  #profile .ab-langs{justify-content:center;text-align:left}
+  #profile .ab-lead{text-align:left}
+  #profile .ab-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #profile .ab-fact:nth-child(3){border-left:none}
+  #profile .ab-fact:nth-child(n+3){border-top:1px solid var(--ab-line)}
+  #profile .ab-bring{grid-template-columns:1fr;max-width:620px}
+  #profile .ab-cta{grid-template-columns:1fr;padding:32px 28px;text-align:center}
+  #profile .ab-cta-btns{flex-direction:column}
+}
+@media(max-width:640px){
+  #profile .ab-block{margin-top:72px}
+  #profile .ab-facts{margin-top:48px}
+  #profile .ab-path{padding-left:48px}
+  #profile .ab-path::before{left:15px}
+  #profile .ab-mk{left:-48px;top:20px;width:32px;height:32px;box-shadow:0 0 0 4px #faf8f4}
+  #profile .ab-mk svg{width:16px;height:16px}
+  #profile .ab-card{padding:22px 20px}
+  #profile .ab-card.has-media{grid-template-columns:1fr;gap:16px}
+  #profile .ab-card p{font-size:13.5px}
+  #profile .ab-fact{padding:22px 12px}
+  #profile .ab-cta{margin-top:72px;padding:28px 20px}
+  #profile .ab-btn{width:100%}
+}
+
+/* consulting section */
+#profile .ab-cs{max-width:1040px;margin:0 auto;background:var(--ab-card);border:1px solid var(--ab-line);border-radius:24px;padding:40px 44px;box-shadow:0 12px 32px -24px rgba(22,41,77,.3)}
+#profile .ab-cs-intro{font-size:15.5px;line-height:1.95;color:var(--ink-soft);margin:0 0 18px;max-width:none}
+#profile .ab-cs-intro b{color:var(--ink);font-weight:700}
+#profile .ab-cs-what{border:1px solid var(--ab-line);border-radius:14px;background:#faf8f4;margin:0 0 28px}
+#profile .ab-cs-what summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 18px;font-size:14.5px;font-weight:700;color:var(--ab-navy)}
+#profile .ab-cs-what summary::-webkit-details-marker{display:none}
+#profile .ab-cs-what summary::before{content:"?";flex:none;width:24px;height:24px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800}
+#profile .ab-cs-what summary::after{content:"＋";margin-left:auto;color:var(--ab-or);font-weight:700}
+#profile .ab-cs-what[open] summary::after{content:"−"}
+#profile .ab-cs-what p{margin:0;padding:0 18px 18px 52px;font-size:14px;line-height:1.9;color:var(--ink-soft)}
+#profile .ab-cs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+#profile .ab-cs-grid li{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:16px;background:#fff;border:1px solid var(--ab-line)}
+#profile .ab-cs-ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--ab-tint);color:var(--ab-or);display:grid;place-items:center}
+#profile .ab-cs-ic svg{width:23px;height:23px}
+#profile .ab-cs-grid h4{font-size:16.5px;line-height:1.45;margin:2px 0 6px}
+#profile .ab-cs-grid p{font-size:13.5px;line-height:1.8;color:var(--ink-soft);margin:0}
+#profile .ab-cs-more{font-size:14px;color:var(--ink-soft);margin:18px 0 0;line-height:1.8}
+#profile .ab-cs-quote{margin:24px 0 0;padding:18px 22px;border-left:3px solid var(--ab-or2);background:var(--ab-tint);border-radius:0 12px 12px 0;font-size:15px;line-height:1.85;color:var(--ink);font-weight:500}
+body.lang-ja #profile .ab-cs-quote{font-family:var(--jpserif)}
+body:not(.lang-ja) #profile .ab-cs-quote{font-family:var(--serif);font-style:italic}
+@media(max-width:700px){
+  #profile .ab-cs{padding:26px 20px;border-radius:20px}
+  #profile .ab-cs-grid{grid-template-columns:1fr}
+  #profile .ab-cs-grid li{padding:16px}
+  #profile .ab-cs-what p{padding-left:18px}
+}
+</style>
+<style id="camino-ib-plan">
+.pv2-card.pv2-ib{--c:#2f5d9e;--tint:#e9eef8}
+.pv2-ib .pv2-trial-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:34px;align-items:start;flex:1}
+.pv2-ib .pv2-ib-main{display:flex;flex-direction:column;height:100%}
+
+.pv2-ib .pv2-ib-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pv2-ib .pv2-ib-list li{display:flex;gap:10px;align-items:flex-start;background:var(--tint);border-radius:10px;padding:10px 14px;font-size:14px;line-height:1.6;color:#2a2620}
+.pv2-ib .pv2-ib-list li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--c);margin-top:.6em}
+.pv2-ib .pv2-flow-h{margin-bottom:10px}
+.pv2-ib .pv2-text a{color:var(--c);font-weight:700;text-decoration:underline;text-underline-offset:3px;padding:0;background:none}
+@media(max-width:820px){.pv2-ib .pv2-trial-cols{grid-template-columns:1fr;gap:18px}}
+</style>
+<style id="camino-plan-layout">
+@media(min-width:861px){#fees .pv2-grid:not(.pv2-grid-trial){grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:20px !important}}
+@media(max-width:860px){#fees .pv2-grid:not(.pv2-grid-trial){grid-template-columns:1fr !important}}
+.pv2-card .pv2-text.pv2-fine{font-size:12.5px;line-height:1.75;color:#7a7068;background:var(--tint);border-radius:10px;padding:10px 12px;margin-bottom:16px}
+.pv2-ib .pv2-ib-h{font-size:13px;font-weight:700;color:var(--c);margin:4px 0 8px}
+.pv2-ib .pv2-ib-list{margin-bottom:18px}
 </style>
 </head>
 <body>
@@ -1590,7 +1738,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
       <div class="hp-role"><span data-inl class="en">Founder &amp; Tutor</span></div>
       <div class="hp-name"><span data-inl class="en">Hiroki Takashima</span></div>
       <div class="hp-cred"><span data-inl class="en">− US teaching certification −</span></div>
-      <p class="hp-bio"><span data-inl class="en">Studied at <b>Marist Brothers International School</b> and <b>Canadian Academy</b>, international schools in Kobe, from elementary through high school, graduated from <b>Waseda University</b>, and earned a master's at <b>University College London</b>. Worked at <b>McKinsey</b>, <b>Roland Berger</b>, and <b>PwC</b> before founding Camino.</span></p>
+      <p class="hp-bio"><span data-inl class="en">Studied at <b>Marist Brothers International School</b> and <b>Canadian Academy</b>, international schools in Kobe, from elementary through high school, and earned a master's at <b>University College London</b>. Worked at <b>McKinsey</b>, <b>Roland Berger</b>, and <b>PwC</b> before founding Camino.</span></p>
       <span class="hp-link tablink" data-tab="profile"><span data-inl class="en">More about the tutor →</span></span>
     </div>
     <button type="button" class="hp-photo-btn tablink" data-tab="profile" aria-label="講師プロフィールを見る / View tutor profile"><div class="hp-photo" style="background-image:url(/tutor.jpg)"></div></button>
@@ -1955,7 +2103,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
       <div class="plan-topnotes"><span data-inl class="en">All prices include tax ｜ No enrollment, cancellation, or monthly fees. Transportation for in-person lessons and any required materials are charged separately.</span></div>
     </div>
 
-    <nav class="pl-nav" aria-label="Plans"><a href="#plan-tutor" data-pl="plan-tutor"><span class="pl-num">01</span><span class="pl-lbl">Private Tutoring</span></a><a href="#plan-test" data-pl="plan-test"><span class="pl-num">02</span><span class="pl-lbl">Test Prep</span></a><a href="#plan-eng" data-pl="plan-eng"><span class="pl-num">03</span><span class="pl-lbl">Online English</span></a><a href="#plan-trial" data-pl="plan-trial" class="pl-free"><span class="pl-num">FREE</span><span class="pl-lbl">Free Trial</span></a></nav>
+    <nav class="pl-nav" aria-label="Plans"><a href="#plan-tutor" data-pl="plan-tutor"><span class="pl-num">01</span><span class="pl-lbl">Private Tutoring</span></a><a href="#plan-test" data-pl="plan-test"><span class="pl-num">02</span><span class="pl-lbl">Test Prep</span></a><a href="#plan-eng" data-pl="plan-eng"><span class="pl-num">03</span><span class="pl-lbl">Online English</span></a><a href="#plan-ib" data-pl="plan-ib" class="pl-ib"><span class="pl-num">04</span><span class="pl-lbl">IB Consult</span></a><a href="#plan-trial" data-pl="plan-trial" class="pl-free"><span class="pl-num">FREE</span><span class="pl-lbl">Free Trial</span></a></nav>
     <div class="pv2-grid">
       <article class="pv2-card pv2-tutor" id="plan-tutor">
         <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M8 7h8M8 11h6"/></svg></span><div><div class="pv2-kicker"><span data-inl class="en">PLAN 01</span></div><h3><span data-inl class="en">Private Tutoring</span></h3></div></header>
@@ -1987,16 +2135,31 @@ body.cs-philosophy-active #cs-progress{display:flex}
         <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></span><div><div class="pv2-kicker"><span data-inl class="en">PLAN 03</span></div><h3><span data-inl class="en">Online English Lesson</span></h3></div></header>
         <div class="pv2-body">
           <div class="pv2-price">¥3,000<i><span data-inl class="en">/ 25 min</span></i></div>
-          <p class="pv2-text"><span data-inl class="en"><strong>Open to all ages and levels, including adults.</strong> Lessons are tailored to each learner’s individual goals and needs.</span></p>
-          <p class="pv2-text"><span data-inl class="en">We also support <strong>students preparing to enter or transfer to an international school</strong>, with English conversation practice and interview-focused speaking exercises.</span></p>
-          <div class="pv2-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><span><span data-inl class="en">Book up to 3 consecutive lessons (75 minutes total)</span></span></div>
+          <p class="pv2-lead"><span data-inl class="en"><strong>For English beginners, or anyone who wants an easy start with English conversation.</strong></span></p>
+          <p class="pv2-text"><span data-inl class="en">Suitable for a wide range of learners, from children planning to enter an international school to adults who want to learn English from scratch or start again.</span></p>
+          <p class="pv2-text"><span data-inl class="en">Lessons focus on everyday conversation, so you get used to speaking English. We can also practise simple Q&amp;A before school entry and interview-style conversation.</span></p>
+          <div class="pv2-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><span><span data-inl class="en">50- and 75-minute lessons are also available at the same rate per minute</span></span></div>
+          <p class="pv2-text pv2-fine"><span data-inl class="en">* Learning support for current international-school students (classes, homework, IB subjects, etc.), including online lessons, falls under PLAN 01 “Private Tutoring”.</span></p>
           <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="en">Apply</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
+
+      <article class="pv2-card pv2-ib" id="plan-ib">
+        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg></span><div><div class="pv2-kicker"><span data-inl class="en">PLAN 04 | FOR PARENTS</span></div><h3><span data-inl class="en">IB Consultation</span></h3></div></header>
+        <div class="pv2-body">
+          <div class="pv2-price">¥5,000<i><span data-inl class="en">/ 60 min</span></i></div>
+          
+          <p class="pv2-text"><span data-inl class="en">Questions about the International Baccalaureate that go beyond general information, answered for your child's situation by a tutor who studied the IB at an international school.</span></p>
+          <div class="pv2-ib-h"><span data-inl class="en">Example topics</span></div>
+          <ul class="pv2-ib-list"><li><span data-inl class="en">How to study at home for IB assignments and exams</span></li><li><span data-inl class="en">Choosing HL and SL subjects with future plans in mind</span></li><li><span data-inl class="en">How to prepare for the Extended Essay (EE) and Theory of Knowledge (TOK)</span></li><li><span data-inl class="en">What you can start now with university in mind</span></li></ul>
+          <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="en">Apply</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
     </div>
-    <div class="pv2-grid pv2-grid-trial">
+        <div class="pv2-grid pv2-grid-trial">
       <article class="pv2-card pv2-trial" id="plan-trial">
-        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8" width="17" height="12.5" rx="2"/><path d="M2.5 8h19v4h-19zM12 8v12.5M12 8c-1.6-3.4-6.2-3.6-6.2-1.2C5.8 8 8.4 8 12 8zm0 0c1.6-3.4 6.2-3.6 6.2-1.2C18.2 8 15.6 8 12 8z"/></svg></span><div><div class="pv2-kicker"><span data-inl class="en">FREE TRIAL</span></div><h3><span data-inl class="en">Free Trial Lesson <span class="pl-nw">(60 min)</span></span></h3></div></header>
+        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8" width="17" height="12.5" rx="2"/><path d="M2.5 8h19v4h-19zM12 8v12.5M12 8c-1.6-3.4-6.2-3.6-6.2-1.2C5.8 8 8.4 8 12 8zm0 0c1.6-3.4 6.2-3.6 6.2-1.2C18.2 8 15.6 8 12 8z"/></svg></span><div><div class="pv2-kicker"><span data-inl class="en">FREE TRIAL</span></div><h3><span data-inl class="en">Free Trial Lesson</span></h3></div></header>
         <div class="pv2-body"><div class="pv2-trial-cols">
           <div class="pv2-trial-main"><p class="pv2-lead pv2-start"><span data-inl class="en">Start here</span></p><div class="pv2-price">¥0<i><span data-inl class="en">/ 60 min</span></i></div><p class="pv2-text"><span data-inl class="en">* Transportation costs only.</span></p><a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="en">Apply</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
           <div class="pv2-trial-flow"><div class="pv2-flow-h"><span data-inl class="en">Typical trial lesson flow</span></div><ul class="pv2-table"><li><span class="pv2-lbl"><span data-inl class="en">Introduction</span><small class="pv2-who"><span data-inl class="en">parent + student</span></small></span><span class="pv2-amt">10<i><span data-inl class="en">min</span></i></span></li><li><span class="pv2-lbl"><span data-inl class="en">Trial lesson</span><small class="pv2-who"><span data-inl class="en">student (parent optional)</span></small></span><span class="pv2-amt">40<i><span data-inl class="en">min</span></i></span></li><li><span class="pv2-lbl"><span data-inl class="en">Next steps</span><small class="pv2-who"><span data-inl class="en">parent + student</span></small></span><span class="pv2-amt">10<i><span data-inl class="en">min</span></i></span></li></ul></div>
@@ -2046,103 +2209,99 @@ body.cs-philosophy-active #cs-progress{display:flex}
 
 <!-- PROFILE -->
 <div class="tab" id="profile">
-  <section>
+  <section class="ab">
     <div class="tab-head">
-      <div class="th-eyebrow"><span data-inl class="en">About the tutor</span></div>
+      <div class="th-eyebrow">About the tutor</div>
+      <h2 class="why-h2">From international school, through consulting, <span class="th-accent">back to teaching</span></h2>
     </div>
 
-    <!-- PROFILE HEADER -->
-    <div class="pf-header">
-      <div class="pf-photo-wrap">
-        <div class="pf-photo-lg" aria-label="Hiroki Takashima" style="background-image:url(/tutor.jpg)"></div>
-      </div>
-      <div class="pf-intro">
-        <div class="pf-name-row">
-          <h2 class="pf-name"><span data-inl class="en">Hiroki Takashima</span></h2>
-        </div>
-        <p class="pf-lead"><span data-inl class="en">From elementary through high school, I studied at <b>Marist Brothers International School</b> and <b>Canadian Academy</b>, international schools in Kobe, then went on to <b>Waseda University</b> and <b>UCL (University College London)</b>, where I studied urban planning. After about seven years of consulting at <b>McKinsey</b>, <b>Roland Berger</b>, and <b>PwC</b>, I founded Camino.</span></p>
-        <div class="pf-facts">
-          <div class="pf-fact"><span class="pf-fact-ic" aria-hidden="true">🎓</span><span data-inl class="en"><b>Certification:</b> US teaching certification</span></div>
-          <div class="pf-fact"><span class="pf-fact-ic" aria-hidden="true">🗣️</span><span data-inl class="en"><b>Languages:</b> English (native) · Japanese (native) · Spanish (conversational)</span></div>
-        </div>
+    <div class="ab-hero">
+      <figure class="ab-photo">
+        <div class="ab-photo-img" role="img" aria-label="Tutor Hiroki Takashima" style="background-image:url(/tutor.jpg)"></div>
+        <figcaption>Founder &amp; Tutor, Camino</figcaption>
+      </figure>
+      <div class="ab-intro">
+        <h3 class="ab-name ab-h">Hiroki Takashima</h3>
+        <p class="ab-name-sub">高島 宏樹</p>
+        <p class="ab-lead">From elementary through high school, I studied at <b>Marist Brothers International School</b> and <b>Canadian Academy</b>, international schools in Kobe, where I studied the IB (International Baccalaureate). I then earned a master's in urban planning at <b>UCL (University College London)</b>. After about seven years of consulting at <b>McKinsey</b>, <b>Roland Berger</b>, and <b>PwC</b>, I founded Camino.</p>
+        <ul class="ab-chips"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 21l5-2.5L17 21l-1.5-8"/></svg>US teaching certification</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 10 10-5 10 5-10 5L2 10Z"/><path d="M6 12v5c3.5 2.6 8.5 2.6 12 0v-5"/></svg>IB (International Baccalaureate) alumnus</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6"/></svg>Master's, UCL</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>~7 years in global consulting</li></ul>
+        <p class="ab-langs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span><b>English &amp; Japanese</b> (native) · <b>Spanish</b> (conversational)</span></p>
       </div>
     </div>
 
-    <!-- TIMELINE -->
-    <div class="road-intro">
-      <span data-inl class="en">My journey so far</span>
+    <div class="ab-facts"><div class="ab-fact"><div class="ab-fact-n">G1–G12</div><div class="ab-fact-l">Support across every grade</div></div><div class="ab-fact"><div class="ab-fact-n">50+</div><div class="ab-fact-l">Students taught in Japan &amp; abroad</div></div><div class="ab-fact"><div class="ab-fact-n">~7 yrs</div><div class="ab-fact-l">In global strategy consulting</div></div><div class="ab-fact"><div class="ab-fact-n">3</div><div class="ab-fact-l">Languages: EN · JA · ES</div></div></div>
+
+    <div class="ab-block">
+      <div class="ab-sec-head">
+        <div class="ab-eyebrow">My Journey</div>
+        <h3 class="ab-h">My journey so far</h3>
+        <p>International school, London, consulting. Every step, including the detours, shapes how I teach today.</p>
+      </div>
+      <ol class="ab-path">
+        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12C12 7 8 4 4 4c0 5 3 8 8 8ZM12 14c0-4 3-7 8-7 0 4-3 7-8 7Z"/></svg></span><div class="ab-card"><span class="ab-ch">Where it began</span><h4 class="ab-h">Discovering international school</h4><p>While attending a Japanese kindergarten, I had the opportunity to join a summer program at an international school. Drawn to its new learning environment and perspectives, I enrolled at Marist Brothers International School in Kobe and later transferred to Canadian Academy. That experience sparked my curiosity about the wider world.</p></div></li>
+        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14M3 18V4.6a2 2 0 0 1 2.1-2C8 2.7 10.1 3.5 12 5c1.9-1.5 4-2.3 6.9-2.4A2 2 0 0 1 21 4.6V18c-3.9-.4-6.9.4-9 3-2.1-2.6-5.1-3.4-9-3Z"/></svg></span><div class="ab-card"><span class="ab-ch">Elementary to high school</span><h4 class="ab-h">Studying the IB</h4><p>I spent my entire elementary and secondary education at an international school. Through the International Baccalaureate (IB) Diploma Programme, I studied Math, Physics, Economics, and Japanese at Higher Level, and Language and Literature and Chemistry at Standard Level. Being surrounded by people from different cultures and perspectives helped me develop a broader view of the world.</p></div></li>
+        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6"/></svg></span><div class="ab-card"><span class="ab-ch">London</span><h4 class="ab-h">Studying urban planning at UCL</h4><p>I moved to London to study Urban Planning at UCL. For my dissertation, I worked with a department responsible for urban development in Austria on the theme of “How can we create cities that are easier and more comfortable for women to navigate on foot?” During this time, I also interned at an architecture firm in London that supported my research. Through these experiences, I became more interested not only in designing cities, but in solving the broader challenges that cities face. I wanted to approach problems from multiple perspectives rather than through design alone, which ultimately led me to pursue a career in consulting.</p></div></li>
+        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2Z"/></svg></span><div class="ab-card has-media"><div><span class="ab-ch">A journey</span><h4 class="ab-h">Travelling the world</h4><p>I have travelled as a backpacker through Europe, South America, and beyond, making the most of breaks between my studies and careers. I still enjoy visiting new places, exploring cities around the world, and catching up with friends I met during my student years.</p></div><img src="/travel.png" alt="Photos from travels around the world" loading="lazy" decoding="async"></div></li>
+        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div class="ab-card"><span class="ab-ch">Career</span><h4 class="ab-h">Consulting</h4><p>For around seven years at European and American strategy consulting firms, I worked with governments and leading companies in Japan and abroad, much of it on the future of cities, from autonomous driving to smart cities.</p></div></li>
+        <li class="ab-stop is-now"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div class="ab-card"><span class="ab-ch">Now</span><h4 class="ab-h">Founding Camino: consulting × education</h4><p>I returned to an ambition I had held earlier in life: becoming a teacher. I obtained a US teaching certification and decided to bring together my consulting experience and my passion for education. Through consulting, I learned to think logically, ask the right questions, and work toward solutions to complex problems. I want to pass these skills on to students, not simply to help them succeed academically, but to give them the confidence and ability to carve their own path. That is why I named the business Camino, meaning “path” in Spanish.</p></div></li>
+      </ol>
     </div>
 
-    <div class="timeline">
-      <!-- 1 -->
-      <div class="tl-row">
-        <!-- photo removed for now (canadian_academy.png kept on server) -->
-        <div class="tl-side tl-media tl-media-empty" aria-hidden="true"></div>
-        <div class="tl-center"><span class="tl-dot"></span></div>
-        <div class="tl-side tl-text">
-          <span class="tl-chapter"><span data-inl class="en">Where it began</span></span>
-          <h4><span data-inl class="en">Discovering international school</span></h4>
-          <p><span data-inl class="en">While attending a Japanese kindergarten, I had the opportunity to join a summer program at an international school. Drawn to its new learning environment and perspectives, I enrolled at Marist Brothers International School in Kobe and later transferred to Canadian Academy. That experience sparked my curiosity about the wider world.</span></p>
-        </div>
+    <div class="ab-block" id="ab-consulting">
+      <div class="ab-sec-head">
+        <div class="ab-eyebrow">Consulting</div>
+        <h3 class="ab-h">My work as a consultant</h3>
       </div>
-
-      <!-- 2 -->
-      <div class="tl-row tl-reverse">
-        <div class="tl-side tl-text">
-          <span class="tl-chapter"><span data-inl class="en">Elementary to high school</span></span>
-          <h4><span data-inl class="en">Studying the IB</span></h4>
-          <p><span data-inl class="en">I spent my entire elementary and secondary education at an international school. Through the International Baccalaureate (IB) Diploma Programme, I studied Math, Physics, Economics, and Japanese at Higher Level, and Language and Literature and Chemistry at Standard Level. Being surrounded by people from different cultures and perspectives helped me develop a broader view of the world.</span></p>
-        </div>
-        <div class="tl-center"><span class="tl-dot"></span></div>
-        <div class="tl-side tl-media tl-media-empty" aria-hidden="true"></div>
+      <div class="ab-cs">
+        <p class="ab-cs-intro">At global strategy consulting firms, I worked with <b>leading companies and governments in Japan and abroad</b> on a wide range of challenges. The work I put the most into was <b>shaping the future of cities</b>, closely tied to the urban planning I studied.</p>
+        <details class="ab-cs-what">
+          <summary>What does a consultant actually do?</summary>
+          <p>Consultants help companies and governments with their biggest challenges: researching and analyzing the situation, then working out and proposing what to do next. McKinsey, Roland Berger, and PwC are consulting firms whose clients are mainly leading global companies and government bodies.</p>
+        </details>
+        <ul class="ab-cs-grid">
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 8 3M20 21 16 3M12 4v3M12 11v3M12 18v3"/></svg></span><div><h4 class="ab-h">Bringing new technology to real streets</h4><p>Drawing roadmaps to put autonomous vehicles and drones to work in real cities</p></div></li>
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9a3 3 0 0 0-2.8-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2A3 3 0 0 1 9.2 15M12 6v1.5M12 16.5V18"/></svg></span><div><h4 class="ab-h">Designing subsidy schemes</h4><p>Working with experts to decide which projects national funding should support</p></div></li>
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16M8.5 6h7"/></svg></span><div><h4 class="ab-h">Building regional businesses</h4><p>Bringing together local governments, companies, and other regional players to create business models for new services</p></div></li>
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3v16M10 21V10h9v11M13 13h3M13 16.5h3M7.5 10v.01M7.5 13v.01M7.5 16v.01"/></svg></span><div><h4 class="ab-h">Imagining the cities of the future</h4><p>Thinking through how cities and parking will change once self-driving cars are everywhere</p></div></li>
+        </ul>
+        <p class="ab-cs-more">I also worked with companies across many industries, including EVs, natural resources, healthcare, and beverages.</p>
+        <p class="ab-cs-quote">Every topic started with knowing very little. Research, ask, organize, explain. That cycle is exactly how students learn, too.</p>
       </div>
+    </div>
 
-      <!-- 3 -->
-      <div class="tl-row">
-        <div class="tl-side tl-media">
-          <div class="tl-collage"><img src="/waseda_ucl.png" alt="Waseda University to UCL" loading="lazy"></div>
-        </div>
-        <div class="tl-center"><span class="tl-dot"></span></div>
-        <div class="tl-side tl-text">
-          <span class="tl-chapter"><span data-inl class="en">University</span></span>
-          <h4><span data-inl class="en">Waseda University → UCL, London</span></h4>
-          <p><span data-inl class="en">I studied in the International Course at Waseda University’s Faculty of Science and Engineering before moving to London to study Urban Planning at UCL. For my undergraduate dissertation, I worked with a department responsible for urban development in Austria on the theme of “How can we create cities that are easier and more comfortable for women to navigate on foot?” During this time, I also interned at an architecture firm in London, where I received support for my research. Through these experiences, I gradually became more interested not only in designing cities, but in solving the broader challenges that cities face. I wanted to approach problems from multiple perspectives rather than through design alone, which ultimately led me to pursue a career in consulting.</span></p>
-        </div>
+    <div class="ab-block">
+      <div class="ab-sec-head">
+        <div class="ab-eyebrow">In the Classroom</div>
+        <h3 class="ab-h">How my background shapes each lesson</h3>
       </div>
-
-      <!-- 4 (travel) -->
-      <div class="tl-row tl-reverse">
-        <div class="tl-side tl-text">
-          <span class="tl-chapter"><span data-inl class="en">A journey</span></span>
-          <h4><span data-inl class="en">Travelling the world</span></h4>
-          <p><span data-inl class="en">I have travelled as a backpacker through Europe, South America, and beyond, making the most of breaks between my studies and careers. I still enjoy visiting new places, exploring cities around the world, and catching up with friends I met during my student years.</span></p>
-        </div>
-        <div class="tl-center tl-center-loop"><span class="tl-dot tl-dot-loop"></span></div>
-        <div class="tl-side tl-media">
-          <div class="tl-collage tl-collage-framed"><img src="/travel.png" alt="A world of experiences" loading="lazy"></div>
-        </div>
+      <div class="ab-bring">
+      <article class="ab-b">
+        <div class="ab-b-from"><span class="ab-b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 10 10-5 10 5-10 5L2 10Z"/><path d="M6 12v5c3.5 2.6 8.5 2.6 12 0v-5"/></svg></span><span>International school &amp; IB</span><span class="ab-b-arrow" aria-hidden="true">→</span></div>
+        <h4 class="ab-h">Lessons built around what international schools expect</h4>
+        <p>Essays, discussions, presentations. Having learned and been assessed the international school way myself, including the IB, I can anticipate where students tend to get stuck and support them ahead of time.</p>
+      </article>
+      <article class="ab-b">
+        <div class="ab-b-from"><span class="ab-b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v3a2 2 0 1 0 4 0V4h6v6h-3a2 2 0 1 0 0 4h3v6h-6v-3a2 2 0 1 0-4 0v3H4v-6h3a2 2 0 1 0 0-4H4Z"/></svg></span><span>Consulting</span><span class="ab-b-arrow" aria-hidden="true">→</span></div>
+        <h4 class="ab-h">Asking good questions and organizing ideas</h4>
+        <p>Breaking a problem down and reasoning step by step. I translate consulting thinking methods into tools students can use across every subject.</p>
+      </article>
+      <article class="ab-b">
+        <div class="ab-b-from"><span class="ab-b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg></span><span>Life abroad &amp; career</span><span class="ab-b-arrow" aria-hidden="true">→</span></div>
+        <h4 class="ab-h">Conversations that widen future options</h4>
+        <p>Drawing on student life in London and exposure to many industries, I help students explore real options, from universities in Japan and abroad to the careers beyond them.</p>
+      </article>
       </div>
+      <a class="ab-more tablink" data-tab="why" href="#why">See what makes Camino unique →</a>
+    </div>
 
-      <!-- 5 -->
-      <div class="tl-row">
-        <div class="tl-side tl-media tl-media-empty" aria-hidden="true"></div>
-        <div class="tl-center"><span class="tl-dot"></span></div>
-        <div class="tl-side tl-text">
-          <span class="tl-chapter"><span data-inl class="en">Career</span></span>
-          <h4><span data-inl class="en">Consulting</span></h4>
-          <p><span data-inl class="en">I went on to work at international strategy consulting firms, working on projects ranging from government initiatives in smart cities to private-sector projects in autonomous driving and mobility. My work also brought me back to my long-standing interest in cities and urban development. Over the course of around seven years, I worked across both European and American consulting firms.</span></p>
-        </div>
+    <div class="ab-cta">
+      <div>
+        <h3 class="ab-h">Start with a free 60-minute trial</h3>
+        <p>We'll talk about your child's learning and goals, then try a real lesson together. Available in person (Osaka, Kobe, Ashiya, Nishinomiya) and online.</p>
       </div>
-
-      <!-- 6 -->
-      <div class="tl-row tl-reverse">
-        <div class="tl-side tl-text">
-          <span class="tl-chapter tl-chapter-now"><span data-inl class="en">Now — Founding Camino</span></span>
-          <h4><span data-inl class="en">Consulting × education, a new kind of learning</span></h4>
-          <p><span data-inl class="en">I eventually returned to an ambition I had once considered earlier in my life: becoming a teacher. I obtained a US teaching certification and decided to bring together my experience in consulting and my passion for education. Through consulting, I developed the ability to think logically, ask the right questions, and work toward solutions to complex problems. I want to pass these skills on to students—not simply to help them succeed academically, but to give them the confidence and ability to carve their own path. That is why I named the business Camino, meaning “journey” or “path” in Spanish.</span></p>
-        </div>
-        <div class="tl-center"><span class="tl-dot tl-dot-now"></span></div>
-        <div class="tl-side tl-media tl-media-empty" aria-hidden="true"></div>
+      <div class="ab-cta-btns">
+        <a class="ab-btn ab-btn-primary tablink" data-tab="contact" href="#contact">Book a free trial lesson<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="ab-btn ab-btn-ghost tablink" data-tab="fees" href="#fees">View plans</a>
       </div>
     </div>
   </section>
