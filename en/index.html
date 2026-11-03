@@ -1624,6 +1624,24 @@ body:not(.lang-ja) #profile .ab-cs-quote{font-family:var(--serif);font-style:ita
 .pv2-ib .pv2-ib-list{margin-bottom:18px}
 </style>
 <style id="camino-foot">footer .ft-name{margin-top:2px;font-size:13px;color:var(--ink-soft);letter-spacing:.04em}</style>
+<style id="camino-cs-pop">
+#profile .ab-pop-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:7px 14px 7px 10px;border-radius:999px;border:1.5px solid var(--ab-or2);background:#fff;color:var(--ab-or);font:700 13px/1.2 inherit;cursor:pointer;transition:background .2s}
+#profile .ab-pop-btn:hover{background:var(--ab-tint)}
+#profile .ab-pop-dot{position:relative;width:20px;height:20px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:12px;flex:none}
+#profile .ab-pop-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--ab-or2);animation:abPulse 1.6s ease-out infinite}
+@keyframes abPulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){#profile .ab-pop-dot::after{animation:none;opacity:0}}
+#profile dialog.ab-pop{position:fixed;inset:0;margin:auto;width:min(760px,calc(100vw - 32px));max-height:86vh;overflow:auto;padding:0;border:none;border-radius:22px;background:var(--ab-card);box-shadow:0 30px 80px -20px rgba(22,41,77,.45)}
+#profile dialog.ab-pop::backdrop{background:rgba(22,41,77,.45)}
+#profile .ab-pop-in{padding:34px 34px 30px}
+#profile .ab-pop-x{position:sticky;top:0;float:right;margin:-18px -16px 0 0;width:36px;height:36px;border-radius:50%;border:1px solid var(--ab-line);background:#fff;font-size:20px;line-height:1;cursor:pointer;color:var(--ink-soft)}
+#profile .ab-pop-h{font-size:22px;margin:0 0 14px}
+#profile .ab-pop .ab-cs-q{border:1px solid var(--ab-line);border-radius:14px;background:#faf8f4;padding:14px 18px;margin:0 0 22px}
+#profile .ab-pop .ab-cs-q h4{display:flex;align-items:center;gap:10px;font-size:14.5px;margin:0 0 6px}
+#profile .ab-pop .ab-cs-q h4::before{content:"?";flex:none;width:24px;height:24px;border-radius:50%;background:var(--ab-or2);color:#fff;display:grid;place-items:center;font-size:13px}
+#profile .ab-pop .ab-cs-q p{margin:0;padding-left:34px;font-size:14px;line-height:1.9;color:var(--ink-soft)}
+@media(max-width:640px){#profile .ab-pop-in{padding:26px 18px 22px}#profile .ab-pop .ab-cs-grid{grid-template-columns:1fr}#profile .ab-pop .ab-cs-q p{padding-left:0}}
+</style>
 </head>
 <body>
 
@@ -2224,48 +2242,24 @@ body:not(.lang-ja) #profile .ab-cs-quote{font-family:var(--serif);font-style:ita
         <h3 class="ab-name ab-h">Hiroki Takashima</h3>
         <p class="ab-name-sub">高島 宏樹</p>
         <p class="ab-lead">From elementary through high school, I studied at <b>Marist Brothers International School</b> and <b>Canadian Academy</b>, international schools in Kobe, where I studied the IB (International Baccalaureate). I then earned a master's in urban planning at <b>UCL (University College London)</b>. After about seven years of consulting at <b>McKinsey</b>, <b>Roland Berger</b>, and <b>PwC</b>, I founded Camino.</p>
-        <ul class="ab-chips"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 21l5-2.5L17 21l-1.5-8"/></svg>US teaching certification</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 10 10-5 10 5-10 5L2 10Z"/><path d="M6 12v5c3.5 2.6 8.5 2.6 12 0v-5"/></svg>IB (International Baccalaureate) alumnus</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6"/></svg>Master's, UCL</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>~7 years in global consulting</li></ul>
+        <ul class="ab-chips"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 21l5-2.5L17 21l-1.5-8"/></svg>US teaching certification</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 10 10-5 10 5-10 5L2 10Z"/><path d="M6 12v5c3.5 2.6 8.5 2.6 12 0v-5"/></svg>IB (International Baccalaureate) alumnus</li></ul>
         <p class="ab-langs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span><b>English &amp; Japanese</b> (native) · <b>Spanish</b> (conversational)</span></p>
       </div>
     </div>
-
-    <div class="ab-facts"><div class="ab-fact"><div class="ab-fact-n">G1–G12</div><div class="ab-fact-l">Support across every grade</div></div><div class="ab-fact"><div class="ab-fact-n">50+</div><div class="ab-fact-l">Students taught in Japan &amp; abroad</div></div><div class="ab-fact"><div class="ab-fact-n">~7 yrs</div><div class="ab-fact-l">In global strategy consulting</div></div><div class="ab-fact"><div class="ab-fact-n">3</div><div class="ab-fact-l">Languages: EN · JA · ES</div></div></div>
 
     <div class="ab-block">
       <div class="ab-sec-head">
         <div class="ab-eyebrow">My Journey</div>
         <h3 class="ab-h">My journey so far</h3>
-        <p>International school, London, consulting. Every step, including the detours, shapes how I teach today.</p>
       </div>
       <ol class="ab-path">
         <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12C12 7 8 4 4 4c0 5 3 8 8 8ZM12 14c0-4 3-7 8-7 0 4-3 7-8 7Z"/></svg></span><div class="ab-card"><span class="ab-ch">Where it began</span><h4 class="ab-h">Discovering international school</h4><p>While attending a Japanese kindergarten, I had the opportunity to join a summer program at an international school. Drawn to its new learning environment and perspectives, I enrolled at Marist Brothers International School in Kobe and later transferred to Canadian Academy. That experience sparked my curiosity about the wider world.</p></div></li>
         <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14M3 18V4.6a2 2 0 0 1 2.1-2C8 2.7 10.1 3.5 12 5c1.9-1.5 4-2.3 6.9-2.4A2 2 0 0 1 21 4.6V18c-3.9-.4-6.9.4-9 3-2.1-2.6-5.1-3.4-9-3Z"/></svg></span><div class="ab-card"><span class="ab-ch">Elementary to high school</span><h4 class="ab-h">Studying the IB</h4><p>I spent my entire elementary and secondary education at an international school. Through the International Baccalaureate (IB) Diploma Programme, I studied Math, Physics, Economics, and Japanese at Higher Level, and Language and Literature and Chemistry at Standard Level. Being surrounded by people from different cultures and perspectives helped me develop a broader view of the world.</p></div></li>
         <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6"/></svg></span><div class="ab-card"><span class="ab-ch">London</span><h4 class="ab-h">Studying urban planning at UCL</h4><p>I moved to London to study Urban Planning at UCL. For my dissertation, I worked with a department responsible for urban development in Austria on the theme of “How can we create cities that are easier and more comfortable for women to navigate on foot?” During this time, I also interned at an architecture firm in London that supported my research. Through these experiences, I became more interested not only in designing cities, but in solving the broader challenges that cities face. I wanted to approach problems from multiple perspectives rather than through design alone, which ultimately led me to pursue a career in consulting.</p></div></li>
         <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2Z"/></svg></span><div class="ab-card has-media"><div><span class="ab-ch">A journey</span><h4 class="ab-h">Travelling the world</h4><p>I have travelled as a backpacker through Europe, South America, and beyond, making the most of breaks between my studies and careers. I still enjoy visiting new places, exploring cities around the world, and catching up with friends I met during my student years.</p></div><img src="/travel.png" alt="Photos from travels around the world" loading="lazy" decoding="async"></div></li>
-        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div class="ab-card"><span class="ab-ch">Career</span><h4 class="ab-h">Consulting</h4><p>For around seven years at European and American strategy consulting firms, I worked with governments and leading companies in Japan and abroad, much of it on the future of cities, from autonomous driving to smart cities.</p></div></li>
+        <li class="ab-stop"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div class="ab-card"><span class="ab-ch">Career</span><h4 class="ab-h">Consulting</h4><p>For around seven years at European and American strategy consulting firms, I worked with governments and leading companies in Japan and abroad, much of it on the future of cities, from autonomous driving to smart cities.</p><button class="ab-pop-btn" type="button" data-ab-pop="ab-cs-pop" aria-haspopup="dialog"><span class="ab-pop-dot" aria-hidden="true">?</span>What is consulting?</button></div></li>
         <li class="ab-stop is-now"><span class="ab-mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div class="ab-card"><span class="ab-ch">Now</span><h4 class="ab-h">Founding Camino: consulting × education</h4><p>I returned to an ambition I had held earlier in life: becoming a teacher. I obtained a US teaching certification and decided to bring together my consulting experience and my passion for education. Through consulting, I learned to think logically, ask the right questions, and work toward solutions to complex problems. I want to pass these skills on to students, not simply to help them succeed academically, but to give them the confidence and ability to carve their own path. That is why I named the business Camino, meaning “path” in Spanish.</p></div></li>
       </ol>
-    </div>
-
-    <div class="ab-block" id="ab-consulting">
-      <div class="ab-sec-head">
-        <div class="ab-eyebrow">Consulting</div>
-        <h3 class="ab-h">My work as a consultant</h3>
-      </div>
-      <div class="ab-cs">
-        <p class="ab-cs-intro">At global strategy consulting firms, I worked with <b>leading companies and governments in Japan and abroad</b> on a wide range of challenges. The work I put the most into was <b>shaping the future of cities</b>, closely tied to the urban planning I studied.</p>
-        <details class="ab-cs-what">
-          <summary>What does a consultant actually do?</summary>
-          <p>Consultants help companies and governments with their biggest challenges: researching and analyzing the situation, then working out and proposing what to do next. McKinsey, Roland Berger, and PwC are consulting firms whose clients are mainly leading global companies and government bodies.</p>
-        </details>
-        <ul class="ab-cs-grid">
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 8 3M20 21 16 3M12 4v3M12 11v3M12 18v3"/></svg></span><div><h4 class="ab-h">Bringing new technology to real streets</h4><p>Drawing roadmaps to put autonomous vehicles and drones to work in real cities</p></div></li>
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9a3 3 0 0 0-2.8-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2A3 3 0 0 1 9.2 15M12 6v1.5M12 16.5V18"/></svg></span><div><h4 class="ab-h">Designing subsidy schemes</h4><p>Working with experts to decide which projects national funding should support</p></div></li>
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16M8.5 6h7"/></svg></span><div><h4 class="ab-h">Building regional businesses</h4><p>Bringing together local governments, companies, and other regional players to create business models for new services</p></div></li>
-          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3v16M10 21V10h9v11M13 13h3M13 16.5h3M7.5 10v.01M7.5 13v.01M7.5 16v.01"/></svg></span><div><h4 class="ab-h">Imagining the cities of the future</h4><p>Thinking through how cities and parking will change once self-driving cars are everywhere</p></div></li>
-        </ul>
-        <p class="ab-cs-more">I also worked with companies across many industries, including EVs, natural resources, healthcare, and beverages.</p>
-      </div>
     </div>
 
     <div class="ab-block">
@@ -2293,6 +2287,21 @@ body:not(.lang-ja) #profile .ab-cs-quote{font-family:var(--serif);font-style:ita
       <a class="ab-more tablink" data-tab="why" href="#why">See what makes Camino unique →</a>
     </div>
 
+    <dialog class="ab-pop" id="ab-cs-pop" aria-labelledby="ab-cs-pop-h">
+      <div class="ab-pop-in">
+        <button class="ab-pop-x" type="button" aria-label="Close">×</button>
+        <h3 class="ab-h ab-pop-h" id="ab-cs-pop-h">My work as a consultant</h3>
+        <p class="ab-cs-intro">At global strategy consulting firms, I worked with <b>leading companies and governments in Japan and abroad</b> on a wide range of challenges. The work I put the most into was <b>shaping the future of cities</b>, closely tied to the urban planning I studied.</p>
+        <div class="ab-cs-q"><h4 class="ab-h">What does a consultant actually do?</h4><p>Consultants help companies and governments with their biggest challenges: researching and analyzing the situation, then working out and proposing what to do next. McKinsey, Roland Berger, and PwC are consulting firms whose clients are mainly leading global companies and government bodies.</p></div>
+        <ul class="ab-cs-grid">
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21 8 3M20 21 16 3M12 4v3M12 11v3M12 18v3"/></svg></span><div><h4 class="ab-h">Bringing new technology to real streets</h4><p>Drawing roadmaps to put autonomous vehicles and drones to work in real cities</p></div></li>
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9a3 3 0 0 0-2.8-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2A3 3 0 0 1 9.2 15M12 6v1.5M12 16.5V18"/></svg></span><div><h4 class="ab-h">Designing subsidy schemes</h4><p>Working with experts to decide which projects national funding should support</p></div></li>
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5 10.5 16M16 7.5 13.5 16M8.5 6h7"/></svg></span><div><h4 class="ab-h">Building regional businesses</h4><p>Bringing together local governments, companies, and other regional players to create business models for new services</p></div></li>
+          <li><span class="ab-cs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3v16M10 21V10h9v11M13 13h3M13 16.5h3M7.5 10v.01M7.5 13v.01M7.5 16v.01"/></svg></span><div><h4 class="ab-h">Imagining the cities of the future</h4><p>Thinking through how cities and parking will change once self-driving cars are everywhere</p></div></li>
+        </ul>
+        <p class="ab-cs-more">I also worked with companies across many industries, including EVs, natural resources, healthcare, and beverages.</p>
+      </div>
+    </dialog>
   </section>
 </div>
 
@@ -3439,6 +3448,15 @@ if(window.MutationObserver){mo=new MutationObserver(go);mo.observe(t,{attributes
   }); });
   window.addEventListener('scroll',spy,{passive:true}); window.addEventListener('resize',spy);
   top(); spy();
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('[data-ab-pop]').forEach(function(b){
+    var d=document.getElementById(b.getAttribute('data-ab-pop')); if(!d||!d.showModal) return;
+    b.addEventListener('click',function(){d.showModal();});
+    d.addEventListener('click',function(e){ if(e.target===d||e.target.closest('.ab-pop-x')) d.close(); });
+  });
 })();
 </script>
 </body>
