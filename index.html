@@ -1767,6 +1767,19 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 @media(max-width:640px){#ab-cs-pop .ab-fs{padding-left:42px}#ab-cs-pop .ab-fs-n{width:28px;height:28px;font-size:13px}#ab-cs-pop .ab-fs::before{left:13px;top:30px}#ab-cs-pop .ab-fs-h{font-size:16.5px;margin-top:2px}}
 </style>
 <style id="camino-no-chapter-num">#cs-progress .cs-pg-label,.cs-chapter-number{display:none !important}h2:has(> .cs-chapter-number){grid-template-columns:minmax(0,1fr) !important;column-gap:0 !important}</style>
+<style id="camino-burger-all">
+@media(min-width:941px){
+  .nav{position:relative}
+  .hamburger{display:flex !important}
+  .navlinks{display:none !important;position:absolute;top:100%;right:32px;left:auto;width:300px;flex-direction:column;align-items:stretch;gap:0;background:var(--paper-2,#fffdfa);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh-lg,0 18px 40px -16px rgba(22,41,77,.3));padding:8px;margin-top:8px;flex-wrap:nowrap !important;z-index:60}
+  .navlinks.open{display:flex !important}
+  .navlinks > * + *::before{display:none !important}
+  .navlinks button.tablink,.navlinks a.nav-ext{width:100%;text-align:left;font-size:15px !important;padding:13px 16px !important;border-radius:10px;white-space:nowrap}
+  .navlinks button.tablink:hover,.navlinks a.nav-ext:hover{background:rgba(0,0,0,.035)}
+  .navlinks button.tablink.active{background:var(--sun-soft)}
+  .navlinks button.tablink.active::after{display:none}
+}
+</style>
 </head>
 <body class="lang-ja">
 
