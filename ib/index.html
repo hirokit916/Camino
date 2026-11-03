@@ -763,7 +763,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .cmp .nw{white-space:nowrap}.nx b .nw{white-space:nowrap;font-size:.92em}.nx b{overflow-wrap:normal}
 </style>
 <style>.spec small{display:block;font-size:11.5px;font-weight:400;color:var(--muted);margin-top:3px}.cmp td small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}</style>
-<style>.hd-nav a .hd-ic{vertical-align:-2px;margin-right:5px}@media(min-width:761px){.hd-nav a{position:relative}.hd-nav a+a:not(.hd-en)::before{content:"";position:absolute;left:-1px;top:50%;width:1px;height:13px;margin-top:-6.5px;background:#e3d8cc}.hd-nav a.hd-en{margin-left:10px}}</style>
+<style>.hd-nav a .hd-ic{vertical-align:-2px;margin-right:5px}.hd-nav a.hd-en{display:inline-flex !important;align-items:center;gap:5px;color:#e87038 !important;font-weight:600 !important}.hd-nav a.hd-en .hd-globe{flex:none}@media(min-width:761px){.hd-nav a{position:relative}.hd-nav a+a:not(.hd-en)::before{content:"";position:absolute;left:-1px;top:50%;width:1px;height:13px;margin-top:-6.5px;background:#e3d8cc}.hd-nav a.hd-en{margin-left:10px}}</style>
 </head>
 <body>
 
@@ -778,7 +778,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
       <a href="/#profile">講師</a>
       <a class="on" href="/column/" aria-current="true">コラム</a>
       <a class="hd-cta" href="/#contact"><svg class="hd-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>お問い合わせ</a>
-      <a class="hd-en" href="/en/" hreflang="en" lang="en">EN</a>
+      <a class="hd-en" href="/en/" hreflang="en" lang="en" aria-label="Switch to English"><svg class="hd-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>EN</a>
     </nav>
   </div>
 </header>
@@ -791,9 +791,9 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     <div class="hero-grid">
       <div>
         <div class="kicker">IB GUIDE</div>
-        <h1><span class="nw">国際バカロレア（IB）の</span><span class="nw">全体像を、</span><span class="nw">わかりやすく。</span></h1>
-        <p class="hero-lead"><b>PYP・MYP・DP・CPの4つのプログラムから、TOK・EE・CASなどの重要な用語まで。</b></p><p class="hero-lead">国際バカロレア（International Baccalaureate）の教育体系は幅広く、初めて触れる方には全体像を把握しにくい部分もあります。</p><p class="hero-lead">本ガイドでは、IB公式情報に基づき、保護者の方が知っておきたい制度の基本や各プログラムの特徴を、わかりやすく整理しました。</p>
-        <p class="hero-note">※ 本ページはIB公式サイトの情報をもとにCaminoが作成したものです。<br>最新情報は <a class="olink" href="https://www.ibo.org/" target="_blank" rel="noopener">IB公式サイト（ibo.org）<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a> をご確認ください。</p>
+        <h1><span class="nw">国際バカロレア（IB）の</span><span class="nw">全体像を、</span><span class="nw">わかりやすく</span></h1>
+        <p class="hero-lead"><b>PYP・MYP・DP・CPの4つのプログラムから、TOK・EE・CASなどの重要な用語まで</b></p><p class="hero-lead">国際バカロレア（International Baccalaureate）の教育体系は幅広く、初めて触れる方には全体像を把握しにくい部分もあります</p><p class="hero-lead">本ガイドでは、IB公式情報に基づき、保護者の方が知っておきたい制度の基本や各プログラムの特徴を、わかりやすく整理しました</p>
+        <p class="hero-note">※ 本ページはIB公式サイトの情報をもとにCaminoが作成したものです。<br>最新情報は <a class="olink" href="https://www.ibo.org/" target="_blank" rel="noopener">IB公式サイト（ibo.org）<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a> をご確認ください</p>
       </div>
       <div class="cloud" aria-label="IBでよく使われる用語">
         <p class="cloud-h">IBでよく使われる用語</p>
@@ -823,14 +823,14 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 
 <section class="sec" id="basics">
   <div class="wrap">
-    <div class="sec-h"><div class="eyebrow">01 · IBの基礎</div><h2>国際バカロレア（IB）とは？</h2><p>まず押さえておきたい、3つの基本的な特徴をご紹介します。</p></div>
+    <div class="sec-h"><div class="eyebrow">01 · IBの基礎</div><h2>国際バカロレア（IB）とは？</h2><p>まず押さえておきたい、3つの基本的な特徴をご紹介します</p></div>
     <div class="g3 rise">
       <div class="card"><span class="no">1</span><h3>3〜19歳を対象とする国際教育プログラム</h3><p>国際バカロレア（IB）は、3〜19歳を対象に4つの教育プログラムを提供しています。最初のプログラムであるDPは、1968年にジュネーブのインターナショナルスクールの教師たちによって創設されました</p></div>
       <div class="card"><span class="no">2</span><h3>IB認定校で提供される教育</h3><p>IBのプログラムを提供できるのは、国際バカロレア機構の認定を受けた「IBワールドスクール」です。認定後も5年ごとに評価が行われ、IBの基準を継続して満たしているかが確認されます</p></div>
       <div class="card"><span class="no">3</span><h3>知識の習得だけでなく、学びの過程を重視</h3><p>IBでは、教科の知識に加え、主体的に学ぶ力の育成を重視しています。自ら問いを立て、教科を横断して考え、自分の学習に責任を持つ。こうした姿勢を、各プログラムを通じて育むことを目指しています</p></div>
     </div>
     <div class="mission rise">
-      <div><q>探究心、知識、思いやりを備えた若者を育み、異文化への理解と尊重を通じて、よりよく平和な世界の実現を目指す。</q><small>IBのミッション（要約）</small></div>
+      <div><q>探究心、知識、思いやりを備えた若者を育み、異文化への理解と尊重を通じて、よりよく平和な世界の実現を目指す</q><small>IBのミッション（要約）</small></div>
       <a class="btn btn-ghost" href="https://www.ibo.org/" target="_blank" rel="noopener">IB公式サイトを見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
     </div>
   </div>
@@ -838,7 +838,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 
 <section class="sec sec-alt" id="programmes">
   <div class="wrap">
-    <div class="sec-h"><div class="eyebrow">02 · プログラムの比較</div><h2>国際バカロレア（IB）の4つのプログラム</h2><p>IBには、対象年齢や教育段階に応じた4つのプログラムがあります。それぞれの特徴を、対象年齢・学習内容・評価方法の3つの観点から比較します。</p></div>
+    <div class="sec-h"><div class="eyebrow">02 · プログラムの比較</div><h2>国際バカロレア（IB）の4つのプログラム</h2><p>IBには、対象年齢や教育段階に応じた4つのプログラムがあります。それぞれの特徴を、対象年齢・学習内容・評価方法の3つの観点から比較します</p></div>
     <div class="agemap rise" role="img" aria-label="対象年齢：PYP 3〜12歳、MYP 11〜16歳、DP 16〜19歳、CP 16〜19歳">
       <p class="agemap-h">対象年齢の比較</p>
       <div class="ages">
@@ -872,11 +872,11 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 
 <section class="sec" id="learner">
   <div class="wrap">
-    <div class="sec-h c"><div class="eyebrow">03 · IBに共通する教育の考え方</div><h2>すべてのプログラムに共通する学びの基盤</h2><p>IBの教育を理解するうえで重要なのが、ATL（学習のアプローチ）とIBの学習者像です。</p></div>
-    <div class="step"><span class="step-n">1</span><div><h3>ATL：学びを支える5つのスキル</h3><p class="step-sub">ATL（Approaches to Learning）は、学習者が主体的に学びを進めるためのスキルです。自ら課題を設定し、目標に向かって取り組み、学びを振り返る力を育みます。</p></div></div>
+    <div class="sec-h c"><div class="eyebrow">03 · IBに共通する教育の考え方</div><h2>すべてのプログラムに共通する学びの基盤</h2><p>IBの教育を理解するうえで重要なのが、ATL（学習のアプローチ）とIBの学習者像です</p></div>
+    <div class="step"><span class="step-n">1</span><div><h3>ATL：学びを支える5つのスキル</h3><p class="step-sub">ATL（Approaches to Learning）は、学習者が主体的に学びを進めるためのスキルです。自ら課題を設定し、目標に向かって取り組み、学びを振り返る力を育みます</p></div></div>
     <div class="rise"><div class="radial r-atl keep"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="36" /></svg><div class="rc"><small>ATL</small><b>5つの<br>スキル</b><span>Approaches to Learning</span></div><div class="rn" style="left:50.00%;top:14.00%"><div class="rbub" style="--k:#e0913a"><span class="bub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg></span><b>思考スキル</b></div></div><div class="rn" style="left:84.24%;top:38.88%"><div class="rbub" style="--k:#3f8a6e"><span class="bub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><path d="m20 20-5-5"/></svg></span><b>リサーチスキル</b></div></div><div class="rn" style="left:71.16%;top:79.12%"><div class="rbub" style="--k:#2f5d9e"><span class="bub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span><b>自己管理スキル</b></div></div><div class="rn" style="left:28.84%;top:79.12%"><div class="rbub" style="--k:#86569a"><span class="bub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M15 14.6c2.9-.3 6 1.4 6 4.9"/></svg></span><b>社会性スキル</b></div></div><div class="rn" style="left:15.76%;top:38.88%"><div class="rbub" style="--k:#c55524"><span class="bub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span><b>コミュニケーションスキル</b></div></div></div></div>
     <ol class="legend rise"><li><span class="no" style="background:#e0913a">1</span><div><b>思考スキル</b><span>物事を批判的・創造的・倫理的に考える力</span></div></li><li><span class="no" style="background:#3f8a6e">2</span><div><b>リサーチスキル</b><span>情報を収集・比較・検証し、適切に活用する力</span></div></li><li><span class="no" style="background:#2f5d9e">3</span><div><b>自己管理スキル</b><span>時間や課題、感情、モチベーションを管理する力</span></div></li><li><span class="no" style="background:#86569a">4</span><div><b>社会性スキル</b><span>他者との関係を築き、協力しながら課題に取り組む力</span></div></li><li><span class="no" style="background:#c55524">5</span><div><b>コミュニケーションスキル</b><span>相手の話を理解し、自分の考えを適切に伝える力</span></div></li></ol>
-    <div class="step"><span class="step-n">2</span><div><h3>IBの学習者像：10の人物像</h3><p class="step-sub">IBでは、学力や知識だけでなく、探究心、他者への理解、思いやりなども重視しています。その教育理念を具体的に示したものが、すべてのプログラムに共通する「IBの学習者像」です。</p></div></div>
+    <div class="step"><span class="step-n">2</span><div><h3>IBの学習者像：10の人物像</h3><p class="step-sub">IBでは、学力や知識だけでなく、探究心、他者への理解、思いやりなども重視しています。その教育理念を具体的に示したものが、すべてのプログラムに共通する「IBの学習者像」です</p></div></div>
     <div class="rise"><div class="radial r-lp"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" /></svg><div class="rc"><small>IB Learner Profile</small><b>10の<br>人物像</b><span>すべてのプログラムに共通</span></div><div class="rn" style="left:50.00%;top:10.00%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">1</span><b>探究する人</b><small>Inquirers</small></div></div><div class="rn" style="left:73.51%;top:17.64%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">2</span><b>知識のある人</b><small>Knowledgeable</small></div></div><div class="rn" style="left:88.04%;top:37.64%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">3</span><b>考える人</b><small>Thinkers</small></div></div><div class="rn" style="left:88.04%;top:62.36%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">4</span><b>コミュニケーションができる人</b><small>Communicators</small></div></div><div class="rn" style="left:73.51%;top:82.36%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">5</span><b>信念をもつ人</b><small>Principled</small></div></div><div class="rn" style="left:50.00%;top:90.00%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">6</span><b>心を開く人</b><small>Open-minded</small></div></div><div class="rn" style="left:26.49%;top:82.36%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">7</span><b>思いやりのある人</b><small>Caring</small></div></div><div class="rn" style="left:11.96%;top:62.36%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">8</span><b>挑戦する人</b><small>Risk-takers</small></div></div><div class="rn" style="left:11.96%;top:37.64%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">9</span><b>バランスのとれた人</b><small>Balanced</small></div></div><div class="rn" style="left:26.49%;top:17.64%"><div class="rpill" style="--k:var(--navy)"><span class="no" style="background:var(--navy)">10</span><b>振り返りができる人</b><small>Reflective</small></div></div></div></div>
   </div>
 </section>
@@ -885,15 +885,15 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
   <div class="wrap">
     <div class="sec-h c"><div class="eyebrow">04 · よくある質問</div><h2>国際バカロレア（IB）についてよくあるご質問</h2></div>
     <div class="faq">
-      <details><summary>国際バカロレア（IB）とは何ですか？</summary><div class="a">IB（International Baccalaureate）は、3〜19歳を対象に、PYP・MYP・DP・CPの4つの教育プログラムを提供している国際的な教育機関です。知識だけでなく「学び方」を重視し、探究心があり、思いやりのある若者を育てることをめざしています。</div></details>
-      <details><summary>IBのプログラムは何歳から受けられますか？</summary><div class="a">PYPは3〜12歳、MYPは11〜16歳、DPとCPは16〜19歳が対象です。DPとCPは同じ年齢層向けで、どちらかを学びます。</div></details>
-      <details><summary>IBのプログラムは、どこで学べますか？</summary><div class="a">IBの認定を受けた「IBワールドスクール」で学ぶことができます。認定を受けた学校も、5年ごとにIBの評価を受け、基準を満たし続けているかが確認されます。</div></details>
+      <details><summary>国際バカロレア（IB）とは何ですか？</summary><div class="a">IB（International Baccalaureate）は、3〜19歳を対象に、PYP・MYP・DP・CPの4つの教育プログラムを提供している国際的な教育機関です。知識だけでなく「学び方」を重視し、探究心があり、思いやりのある若者を育てることをめざしています</div></details>
+      <details><summary>IBのプログラムは何歳から受けられますか？</summary><div class="a">PYPは3〜12歳、MYPは11〜16歳、DPとCPは16〜19歳が対象です。DPとCPは同じ年齢層向けで、どちらかを学びます</div></details>
+      <details><summary>IBのプログラムは、どこで学べますか？</summary><div class="a">IBの認定を受けた「IBワールドスクール」で学ぶことができます。認定を受けた学校も、5年ごとにIBの評価を受け、基準を満たし続けているかが確認されます</div></details>
     </div>
   </div>
 </section>
 <section class="sec sec-alt" id="next">
   <div class="wrap">
-    <div class="sec-h"><div class="eyebrow">プログラム別ガイド</div><h2>IBの各プログラムについて詳しく知る</h2><p>IBの基本を理解したうえで、各プログラムの学習内容や特徴をさらに詳しくご覧いただけます。</p></div>
+    <div class="sec-h"><div class="eyebrow">プログラム別ガイド</div><h2>IBの各プログラムについて詳しく知る</h2><p>IBの基本を理解したうえで、各プログラムの学習内容や特徴をさらに詳しくご覧いただけます</p></div>
     <div class="nx rise"><a href="/ib/pyp/" class="" style="--k:var(--pyp)"><span class="nb">PYP</span><b>PYP<br><span class="nw">初等教育プログラム</span></b><span class="d"><em>対象年齢：3〜12歳（Pre-K〜Grade 5）</em>6つのテーマを軸に、教科の枠を越えた探究型の学習を行います</span><span class="go">詳しく見る →</span></a><a href="/ib/myp/" class="" style="--k:var(--myp)"><span class="nb">MYP</span><b>MYP<br><span class="nw">中等教育プログラム</span></b><span class="d"><em>対象年齢：11〜16歳（Grade 6〜10）</em>8つの教科グループを通じて、学んだ知識を実社会と結びつける力を育みます</span><span class="go">詳しく見る →</span></a><a href="/ib/dp/" class="" style="--k:var(--dp)"><span class="nb">DP</span><b>DP<br><span class="nw">ディプロマ・プログラム</span></b><span class="d"><em>対象年齢：16〜19歳（Grade 11〜12）</em>6つの科目グループとTOK・EE・CASで構成される、45点満点の評価制度を解説します</span><span class="go">詳しく見る →</span></a><a href="/ib/cp/" class="" style="--k:var(--cp)"><span class="nb">CP</span><b>CP<br><span class="nw">キャリア関連プログラム</span></b><span class="d"><em>対象年齢：16〜19歳（Grade 11〜12）</em>DP科目とキャリア関連学習を組み合わせたプログラムの特徴を紹介します</span><span class="go">詳しく見る →</span></a><a href="/ib/university/" class="" style="--k:var(--uni)"><span class="nb">大学</span><b>IBと大学進学</b><span class="d"><em>IBスコアを活用した<span class="nw">大学出願</span></em>大学・学部ごとのIBスコア要件やその調べ方、Predicted Gradeについて解説します</span><span class="go">詳しく見る →</span></a></div>
   </div>
 </section>
@@ -903,7 +903,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     <div class="cta rise">
       <div>
         <h2>IBについて、個別に相談したい方へ</h2>
-        <p>コラムに載っていない情報や、お子さまの状況に合わせたIBの進め方については、「IBに関する相談（60分・オンライン）」でご相談いただけます。</p>
+        <p>コラムに載っていない情報や、お子さまの状況に合わせたIBの進め方については、「IBに関する相談（60分・オンライン）」でご相談いただけます</p>
       </div>
       <div class="cta-btns">
         <a class="btn btn-or" href="/#plan-ib">相談を申し込む<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -915,7 +915,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 <section class="sec" style="padding:48px 0">
   <div class="wrap src">
     <h2>出典・参考資料</h2>
-    <p>本ページは、国際バカロレア機構（IBO）の公式サイトおよび公式資料をもとに、Caminoが日本語で要約・編集したものです。Caminoは国際バカロレア機構と提携していません。制度や要件に関する最新の情報は、IB公式サイトをご確認ください。</p>
+    <p>本ページは、国際バカロレア機構（IBO）の公式サイトおよび公式資料をもとに、Caminoが日本語で要約・編集したものです。Caminoは国際バカロレア機構と提携していません。制度や要件に関する最新の情報は、IB公式サイトをご確認ください</p>
     <ul>
       <li><a href="https://www.ibo.org/" target="_blank" rel="noopener">International Baccalaureate（ibo.org）</a></li>
       <li><a href="https://www.ibo.org/programmes/primary-years-programme/" target="_blank" rel="noopener">Primary Years Programme</a></li>

@@ -1660,6 +1660,14 @@ body:not(.lang-ja) #profile .ab-cs-quote{font-family:var(--serif);font-style:ita
 .navlinks > * + *::before{content:"";position:absolute;left:-1px;top:50%;width:1px;height:13px;margin-top:-6.5px;background:#e3d8cc;pointer-events:none}
 }
 </style>
+<style id="camino-fix-1428">
+#profile .ab-stop.is-now::after{content:"";position:absolute;left:-72px;width:52px;top:74px;bottom:-40px;background:#faf8f4;pointer-events:none}
+@media(max-width:640px){#profile .ab-stop.is-now::after{left:-48px;width:32px;top:52px}}
+@media(min-width:861px){
+#fees .pv2-trial .pv2-table li{flex-direction:row !important;align-items:center !important;gap:12px !important;padding:12px 16px !important}
+#fees .pv2-trial .pv2-table li .pv2-amt{align-self:center !important;white-space:nowrap}
+}
+</style>
 </head>
 <body>
 
