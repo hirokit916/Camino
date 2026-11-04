@@ -1778,6 +1778,8 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 <style id="camino-en-copy-fit">.stats-3 .stat-cap{white-space:normal!important;max-width:16em;margin:0 auto}@media(min-width:900px){.ch-avail{flex-wrap:wrap;row-gap:10px;max-width:min(580px,46vw)}.ch-avail .ch-avail-div{display:none}.ch-avail .ch-avail-item{white-space:nowrap}}</style>
 <style id="camino-en-tag-2lines">body:not(.lang-ja) .brand-tag{max-width:none !important;white-space:nowrap !important}@media(max-width:700px){body:not(.lang-ja) .brand-tag .bt-nw{display:block}}</style>
 <style id="camino-form-pace">.field-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field-pair .field{margin-bottom:20px}@media(max-width:560px){.field-pair{grid-template-columns:1fr;gap:0}}</style>
+<style id="camino-form-price">.field-note.plan-price{color:#16294d;font-size:13.5px}.field-note.plan-price b{color:#c55524}.field select{padding-right:42px}.field-note .nw{display:inline-block}</style>
+<style id="camino-form-sections">.form-sec-note{margin:-8px 0 20px;padding:11px 14px;border-radius:10px;background:#fdece2;color:#8a3f18;font-size:13.5px;line-height:1.6}.form-sec-note b{color:#c55524}#enquiry #trial-fields:not([hidden]){margin-bottom:20px}#enquiry button[type=submit]{margin-top:22px}.form-sec{display:flex;align-items:center;gap:10px;margin:0 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:16.5px;font-weight:700;color:#16294d;letter-spacing:.02em}.form-sec.form-sec-next{margin-top:38px}.form-sec .n{flex:none;width:26px;height:26px;border-radius:50%;background:#e87038;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--sans,inherit)}</style>
 </head>
 <body>
 
@@ -2448,21 +2450,46 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
     <p class="line-or"><span data-inl class="en">Or use the contact form below.</span></p>
 
     <form class="form" id="enquiry">
-      <div class="field"><label><span data-inl class="en">Type of Enquiry</span></label>
-        <select id="f-type">
-          <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
-          <option data-jaopt="質問" data-enopt="Question">Question</option>
-          <option data-jaopt="無料体験レッスン申し込み" data-enopt="Free Trial Lesson Application">Free Trial Lesson Application</option>
-        </select></div>
+      <div class="form-sec"><span class="n">1</span><span data-inl class="en">Your Details</span></div>
+      <div class="field"><label><span data-inl class="en">Name<small class="lbl-sub"> (for Private Tutoring or Test Preparation, please enter a parent's name)</small></span></label><input type="text" id="f-name"></div>
+      <div class="field"><label><span data-inl class="en">Email Address</span></label><input type="email" id="f-email"></div>
 
+      <div class="field"><label><span data-inl class="en">Student's Grade</span></label>
+        <select id="f-grade">
+          <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
+          <option data-jaopt="小学1年 (G1)" data-enopt="G1">G1</option>
+          <option data-jaopt="小学2年 (G2)" data-enopt="G2">G2</option>
+          <option data-jaopt="小学3年 (G3)" data-enopt="G3">G3</option>
+          <option data-jaopt="小学4年 (G4)" data-enopt="G4">G4</option>
+          <option data-jaopt="小学5年 (G5)" data-enopt="G5">G5</option>
+          <option data-jaopt="小学6年 (G6)" data-enopt="G6">G6</option>
+          <option data-jaopt="中学1年 (G7)" data-enopt="G7">G7</option>
+          <option data-jaopt="中学2年 (G8)" data-enopt="G8">G8</option>
+          <option data-jaopt="中学3年 (G9)" data-enopt="G9">G9</option>
+          <option data-jaopt="高校1年 (G10)" data-enopt="G10">G10</option>
+          <option data-jaopt="高校2年 (G11)" data-enopt="G11">G11</option>
+          <option data-jaopt="高校3年 (G12)" data-enopt="G12">G12</option>
+          <option data-jaopt="大学生・社会人" data-enopt="University student / Adult">University student / Adult</option>
+          <option data-jaopt="その他" data-enopt="Other">Other</option>
+        </select></div>
+      <div class="field"><label><span data-inl class="en">Current School<small class="lbl-sub"> (if applicable)</small></span></label><input type="text" id="f-school"></div>
+
+      <div class="form-sec form-sec-next"><span class="n">2</span><span data-inl class="en">Choose Your Plan</span></div>
+      <p class="form-sec-note"><span data-inl class="en">If you would like a free trial lesson, you can request one in <b>step 3</b> below.</span></p>
       <div class="field"><label><span data-inl class="en">Plan of Interest</span></label>
         <select id="f-plan">
           <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
-          <option data-jaopt="家庭教師" data-enopt="Private Tutoring">Private Tutoring</option>
-          <option data-jaopt="オンライン英会話" data-enopt="Online English Conversation">Online English Conversation</option>
-          <option data-jaopt="資格対策（英検・TOEFL・TOEIC・IELTS）" data-enopt="Test Preparation (Eiken, TOEFL, TOEIC, IELTS)">Test Preparation (Eiken, TOEFL, TOEIC, IELTS)</option>
+          <option data-jaopt="家庭教師・小学生（¥8,000／60分）" data-enopt="Private Tutoring — Elementary (¥8,000 / 60 min)">Private Tutoring — Elementary (¥8,000 / 60 min)</option>
+          <option data-jaopt="家庭教師・中学生（¥10,000／60分）" data-enopt="Private Tutoring — Middle School (¥10,000 / 60 min)">Private Tutoring — Middle School (¥10,000 / 60 min)</option>
+          <option data-jaopt="家庭教師・高校生（¥12,000／60分）" data-enopt="Private Tutoring — High School (¥12,000 / 60 min)">Private Tutoring — High School (¥12,000 / 60 min)</option>
+          <option data-jaopt="家庭教師・高校生 IB・AP科目（¥15,000／60分）" data-enopt="Private Tutoring — High School IB &amp; AP (¥15,000 / 60 min)">Private Tutoring — High School IB &amp; AP (¥15,000 / 60 min)</option>
+          <option data-jaopt="資格対策 英検・TOEFL・TOEIC・IELTS（¥10,000／90分）" data-enopt="Test Preparation — Eiken, TOEFL, TOEIC, IELTS (¥10,000 / 90 min)">Test Preparation — Eiken, TOEFL, TOEIC, IELTS (¥10,000 / 90 min)</option>
+          <option data-jaopt="オンライン英会話（¥3,000／25分）" data-enopt="Online English Conversation (¥3,000 / 25 min)">Online English Conversation (¥3,000 / 25 min)</option>
+          <option data-jaopt="IB相談・保護者向け（¥5,000／60分）" data-enopt="IB Consultation for Parents (¥5,000 / 60 min)">IB Consultation for Parents (¥5,000 / 60 min)</option>
           <option data-jaopt="まだ決めていない／相談したい" data-enopt="Not Sure Yet — I'd Like to Discuss">Not Sure Yet — I'd Like to Discuss</option>
-        </select></div>
+        </select>
+        <p class="field-note plan-price" id="plan-price" hidden></p>
+        <p class="field-note"><span data-inl class="en">Prices include tax and cover lessons only; travel expenses apply to in-person lessons. <a class="pv2-iblink tablink nw" style="margin-left:0" href="#fees" data-tab="fees">See Plans and Prices</a></span></p></div>
 
       <div class="field"><label><span data-inl class="en">Lesson Format</span></label>
         <select id="f-format">
@@ -2476,31 +2503,29 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
         <p class="field-note"><span data-inl class="en">Please tell me your nearest station so I can confirm whether in-person lessons are possible and estimate travel expenses.</span></p>
       </div>
 
-      <div class="field"><label><span data-inl class="en">Name<small class="lbl-sub"> (for Private Tutoring or Test Preparation, please enter a parent's name)</small></span></label><input type="text" id="f-name"></div>
-      <div class="field"><label><span data-inl class="en">Email Address</span></label><input type="email" id="f-email"></div>
+      <div class="field"><label><span data-inl class="en">Preferred Lesson Frequency</span></label>
+        <select id="f-freq">
+          <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
+          <option data-jaopt="週1回" data-enopt="Once a week">Once a week</option>
+          <option data-jaopt="週2回" data-enopt="Twice a week">Twice a week</option>
+          <option data-jaopt="週3回以上" data-enopt="Three or more times a week">Three or more times a week</option>
+          <option data-jaopt="月2回程度" data-enopt="About twice a month">About twice a month</option>
+          <option data-jaopt="試験前など不定期" data-enopt="Occasionally (e.g. before exams)">Occasionally (e.g. before exams)</option>
+          <option data-jaopt="まだ決めていない" data-enopt="Not sure yet">Not sure yet</option>
+        </select></div>
+      <div class="field"><label><span data-inl class="en">Preferred Days and Times</span></label><input type="text" id="f-days" data-japh="例：土曜の午前、平日17時以降" data-enph="e.g. Saturday mornings" placeholder="e.g. Saturday mornings">
+        <p class="field-note"><span data-inl class="en">A rough idea is fine for now.</span></p>
+      </div>
+      <div class="field"><label><span data-inl class="en">Subjects or Areas of Interest</span></label><input type="text" id="f-subject"></div>
+      <div class="form-sec form-sec-next"><span class="n">3</span><span data-inl class="en">Free Trial or Question</span></div>
+      <div class="field"><label><span data-inl class="en">Type of Enquiry</span></label>
+        <select id="f-type">
+          <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
+          <option data-jaopt="質問" data-enopt="Question">Question</option>
+          <option data-jaopt="無料体験レッスン申し込み" data-enopt="Free Trial Lesson Application">Free Trial Lesson Application</option>
+        </select></div>
 
-      <!-- TRIAL-ONLY FIELDS -->
       <div id="trial-fields" hidden>
-        <div class="field"><label><span data-inl class="en">Student's Grade</span></label>
-          <select id="f-grade">
-            <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
-            <option data-jaopt="小学1年 (G1)" data-enopt="G1">G1</option>
-            <option data-jaopt="小学2年 (G2)" data-enopt="G2">G2</option>
-            <option data-jaopt="小学3年 (G3)" data-enopt="G3">G3</option>
-            <option data-jaopt="小学4年 (G4)" data-enopt="G4">G4</option>
-            <option data-jaopt="小学5年 (G5)" data-enopt="G5">G5</option>
-            <option data-jaopt="小学6年 (G6)" data-enopt="G6">G6</option>
-            <option data-jaopt="中学1年 (G7)" data-enopt="G7">G7</option>
-            <option data-jaopt="中学2年 (G8)" data-enopt="G8">G8</option>
-            <option data-jaopt="中学3年 (G9)" data-enopt="G9">G9</option>
-            <option data-jaopt="高校1年 (G10)" data-enopt="G10">G10</option>
-            <option data-jaopt="高校2年 (G11)" data-enopt="G11">G11</option>
-            <option data-jaopt="高校3年 (G12)" data-enopt="G12">G12</option>
-            <option data-jaopt="大学生・社会人" data-enopt="University student / Adult">University student / Adult</option>
-            <option data-jaopt="その他" data-enopt="Other">Other</option>
-          </select></div>
-        <div class="field"><label><span data-inl class="en">Current School<small class="lbl-sub"> (if applicable)</small></span></label><input type="text" id="f-school"></div>
-
         <div class="trial-slots">
           <div class="ts-head">
             <label><span data-inl class="en">Preferred Trial Dates and Times</span></label>
@@ -2541,30 +2566,6 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
         </div>
       </div>
 
-      <div class="field-pair">
-        <div class="field"><label><span data-inl class="en">Preferred Lesson Frequency</span></label>
-          <select id="f-freq">
-            <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
-            <option data-jaopt="週1回" data-enopt="Once a week">Once a week</option>
-            <option data-jaopt="週2回" data-enopt="Twice a week">Twice a week</option>
-            <option data-jaopt="週3回以上" data-enopt="Three or more times a week">Three or more times a week</option>
-            <option data-jaopt="月2回程度" data-enopt="About twice a month">About twice a month</option>
-            <option data-jaopt="試験前など不定期" data-enopt="Occasionally (e.g. before exams)">Occasionally (e.g. before exams)</option>
-            <option data-jaopt="まだ決めていない" data-enopt="Not sure yet">Not sure yet</option>
-          </select></div>
-        <div class="field"><label><span data-inl class="en">Lesson Length</span></label>
-          <select id="f-length">
-            <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
-            <option data-jaopt="60分" data-enopt="60 minutes">60 minutes</option>
-            <option data-jaopt="90分" data-enopt="90 minutes">90 minutes</option>
-            <option data-jaopt="120分" data-enopt="120 minutes">120 minutes</option>
-            <option data-jaopt="まだ決めていない" data-enopt="Not sure yet">Not sure yet</option>
-          </select></div>
-      </div>
-      <div class="field"><label><span data-inl class="en">Preferred Days and Times</span></label><input type="text" id="f-days" data-japh="例：土曜の午前、平日17時以降" data-enph="e.g. Saturday mornings" placeholder="e.g. Saturday mornings">
-        <p class="field-note"><span data-inl class="en">A rough idea is fine for now.</span></p>
-      </div>
-      <div class="field"><label><span data-inl class="en">Subjects or Areas of Interest</span></label><input type="text" id="f-subject"></div>
       <div class="field"><label><span data-inl class="en">Message</span></label><textarea id="f-msg"></textarea></div>
       <button type="submit" class="btn" style="width:100%"><span data-inl class="en">Send Message</span></button>
       <p class="form-note"><span data-inl class="en">Your message will be sent directly through this form. I'll reply within two to three business days.</span></p>
@@ -2722,12 +2723,14 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
   var brandBtn=document.querySelector('header .brand'); if(brandBtn) brandBtn.addEventListener('click',closeMenu);
   document.addEventListener('click',e=>{ if(navlinks&&navlinks.classList.contains('open')&&!navlinks.contains(e.target)&&!burger.contains(e.target)) closeMenu(); });
   setLang('en');
+
+  (function(){var sel=document.getElementById('f-plan'),out=document.getElementById('plan-price');if(!sel||!out)return;function sync(){var o=sel.options[sel.selectedIndex];var t=o&&o.value!==''?o.textContent:'';var m=t.match(/[（(](¥[^）)]+)[）)]\s*$/);var ja=document.body.classList.contains('lang-ja');if(m){out.innerHTML=(ja?'選択中のプランの料金：<b>':'Price for the selected plan: <b>')+m[1]+'</b>';out.hidden=false;}else{out.hidden=true;}}sel.addEventListener('change',sync);sync();})();
   // reveal trial-only fields when 体験レッスン申し込み is chosen
   (function(){
     const type=document.getElementById('f-type');
     const tf=document.getElementById('trial-fields');
-    function isTrial(){const o=type.options[type.selectedIndex];return o && (o.dataset.enopt==='Trial lesson application');}
-    function sync(){tf.hidden=!isTrial();}
+    function isTrial(){const o=type.options[type.selectedIndex];return o && (o.dataset.enopt==='Free Trial Lesson Application');}
+    function sync(){tf.hidden=!isTrial();var pl=document.getElementById('f-plan');if(pl)pl.required=isTrial();}
     type.addEventListener('change',sync); sync();
   })();
 
@@ -2745,7 +2748,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
     const g=v=>{const el=document.getElementById(v);return el?el.value:'';};
     const ja=document.body.classList.contains('lang-ja');
     const typeEl=document.getElementById('f-type');
-    const trial=typeEl.options[typeEl.selectedIndex] && typeEl.options[typeEl.selectedIndex].dataset.enopt==='Trial lesson application';
+    const trial=typeEl.options[typeEl.selectedIndex] && typeEl.options[typeEl.selectedIndex].dataset.enopt==='Free Trial Lesson Application';
     const subj=encodeURIComponent((trial?(ja?'体験レッスンのお申し込み — ':'Trial lesson application — '):(ja?'お問い合わせ — ':'Camino enquiry — '))+(g('f-name')||''));
     let lines=[
       (ja?'お問い合わせ内容: ':'Type: ')+g('f-type'),
@@ -2755,18 +2758,18 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
     if(g('f-station')){ lines.push((ja?'最寄駅: ':'Nearest station: ')+g('f-station')); }
     lines.push(
       (ja?'お名前: ':'Name: ')+g('f-name'),
-      (ja?'メール: ':'Email: ')+g('f-email')
+      (ja?'メール: ':'Email: ')+g('f-email'),
+      (ja?'生徒の学年: ':"Student's grade: ")+g('f-grade'),
+      (ja?'現在の学校: ':'Current school: ')+g('f-school')
     );
     if(trial){
       lines.push(
-        (ja?'生徒の学年: ':"Student's grade: ")+g('f-grade'),
-        (ja?'現在の学校: ':'Current school: ')+g('f-school'),
         (ja?'トライアル希望（第1）: ':'Trial choice 1: ')+g('f-d1')+' '+g('f-t1'),
         (ja?'トライアル希望（第2）: ':'Trial choice 2: ')+g('f-d2')+' '+g('f-t2'),
         (ja?'トライアル希望（第3）: ':'Trial choice 3: ')+g('f-d3')+' '+g('f-t3')
       );
     }
-    lines.push((ja?'希望の受講頻度: ':'Preferred frequency: ')+g('f-freq'),(ja?'1回の授業時間: ':'Lesson length: ')+g('f-length'),(ja?'希望の曜日・時間帯: ':'Preferred days/times: ')+g('f-days'));
+    lines.push((ja?'希望の受講頻度: ':'Preferred frequency: ')+g('f-freq'),(ja?'希望の曜日・時間帯: ':'Preferred days/times: ')+g('f-days'));
     lines.push((ja?'教科・ご興味: ':'Subject/interest: ')+g('f-subject'));
     const bodyText=lines.join('\n')+'\n\n'+(ja?'メッセージ:\n':'Message:\n')+g('f-msg');
     const body=encodeURIComponent(bodyText);
@@ -2786,14 +2789,13 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       fd.append((ja?'授業形式':'Lesson format'),g('f-format'));
       var _sf=document.getElementById('station-field');
       if(g('f-station')){ fd.append((ja?'最寄駅':'Nearest station'),g('f-station')); }
+      fd.append((ja?'生徒の学年':'Grade'),g('f-grade'));
+      fd.append((ja?'現在の学校':'Current school'),g('f-school'));
       if(trial){
-        fd.append((ja?'生徒の学年':'Grade'),g('f-grade'));
-        fd.append((ja?'現在の学校':'Current school'),g('f-school'));
         fd.append((ja?'トライアル希望日時':'Preferred trial times'),
           [g('f-d1')+' '+g('f-t1'), g('f-d2')+' '+g('f-t2'), g('f-d3')+' '+g('f-t3')].join(' / '));
       }
       fd.append((ja?'希望の受講頻度':'Preferred frequency'),g('f-freq'));
-      fd.append((ja?'1回の授業時間':'Lesson length'),g('f-length'));
       fd.append((ja?'希望の曜日・時間帯':'Preferred days/times'),g('f-days'));
       fd.append((ja?'教科・ご興味':'Subject/interest'),g('f-subject'));
       fd.append('message',g('f-msg'));
