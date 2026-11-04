@@ -1777,6 +1777,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 <style id="camino-headings">h1,h2,h3,h4,summary{word-break:auto-phrase;text-wrap:balance}</style>
 <style id="camino-en-copy-fit">.stats-3 .stat-cap{white-space:normal!important;max-width:16em;margin:0 auto}@media(min-width:900px){.ch-avail{flex-wrap:wrap;row-gap:10px;max-width:min(580px,46vw)}.ch-avail .ch-avail-div{display:none}.ch-avail .ch-avail-item{white-space:nowrap}}</style>
 <style id="camino-en-tag-2lines">body:not(.lang-ja) .brand-tag{max-width:none !important;white-space:nowrap !important}@media(max-width:700px){body:not(.lang-ja) .brand-tag .bt-nw{display:block}}</style>
+<style id="camino-form-pace">.field-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field-pair .field{margin-bottom:20px}@media(max-width:560px){.field-pair{grid-template-columns:1fr;gap:0}}</style>
 </head>
 <body>
 
@@ -2540,6 +2541,29 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
         </div>
       </div>
 
+      <div class="field-pair">
+        <div class="field"><label><span data-inl class="en">Preferred Lesson Frequency</span></label>
+          <select id="f-freq">
+            <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
+            <option data-jaopt="週1回" data-enopt="Once a week">Once a week</option>
+            <option data-jaopt="週2回" data-enopt="Twice a week">Twice a week</option>
+            <option data-jaopt="週3回以上" data-enopt="Three or more times a week">Three or more times a week</option>
+            <option data-jaopt="月2回程度" data-enopt="About twice a month">About twice a month</option>
+            <option data-jaopt="試験前など不定期" data-enopt="Occasionally (e.g. before exams)">Occasionally (e.g. before exams)</option>
+            <option data-jaopt="まだ決めていない" data-enopt="Not sure yet">Not sure yet</option>
+          </select></div>
+        <div class="field"><label><span data-inl class="en">Lesson Length</span></label>
+          <select id="f-length">
+            <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
+            <option data-jaopt="60分" data-enopt="60 minutes">60 minutes</option>
+            <option data-jaopt="90分" data-enopt="90 minutes">90 minutes</option>
+            <option data-jaopt="120分" data-enopt="120 minutes">120 minutes</option>
+            <option data-jaopt="まだ決めていない" data-enopt="Not sure yet">Not sure yet</option>
+          </select></div>
+      </div>
+      <div class="field"><label><span data-inl class="en">Preferred Days and Times</span></label><input type="text" id="f-days" data-japh="例：土曜の午前、平日17時以降" data-enph="e.g. Saturday mornings" placeholder="e.g. Saturday mornings">
+        <p class="field-note"><span data-inl class="en">A rough idea is fine for now.</span></p>
+      </div>
       <div class="field"><label><span data-inl class="en">Subjects or Areas of Interest</span></label><input type="text" id="f-subject"></div>
       <div class="field"><label><span data-inl class="en">Message</span></label><textarea id="f-msg"></textarea></div>
       <button type="submit" class="btn" style="width:100%"><span data-inl class="en">Send Message</span></button>
@@ -2742,6 +2766,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
         (ja?'トライアル希望（第3）: ':'Trial choice 3: ')+g('f-d3')+' '+g('f-t3')
       );
     }
+    lines.push((ja?'希望の受講頻度: ':'Preferred frequency: ')+g('f-freq'),(ja?'1回の授業時間: ':'Lesson length: ')+g('f-length'),(ja?'希望の曜日・時間帯: ':'Preferred days/times: ')+g('f-days'));
     lines.push((ja?'教科・ご興味: ':'Subject/interest: ')+g('f-subject'));
     const bodyText=lines.join('\n')+'\n\n'+(ja?'メッセージ:\n':'Message:\n')+g('f-msg');
     const body=encodeURIComponent(bodyText);
@@ -2767,6 +2792,9 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
         fd.append((ja?'トライアル希望日時':'Preferred trial times'),
           [g('f-d1')+' '+g('f-t1'), g('f-d2')+' '+g('f-t2'), g('f-d3')+' '+g('f-t3')].join(' / '));
       }
+      fd.append((ja?'希望の受講頻度':'Preferred frequency'),g('f-freq'));
+      fd.append((ja?'1回の授業時間':'Lesson length'),g('f-length'));
+      fd.append((ja?'希望の曜日・時間帯':'Preferred days/times'),g('f-days'));
       fd.append((ja?'教科・ご興味':'Subject/interest'),g('f-subject'));
       fd.append('message',g('f-msg'));
       fd.append('_subject',decodeURIComponent(subj));
