@@ -1779,7 +1779,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 <style id="camino-en-tag-2lines">body:not(.lang-ja) .brand-tag{max-width:none !important;white-space:nowrap !important}@media(max-width:700px){body:not(.lang-ja) .brand-tag .bt-nw{display:block}}</style>
 <style id="camino-form-pace">.field-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field-pair .field{margin-bottom:20px}@media(max-width:560px){.field-pair{grid-template-columns:1fr;gap:0}}</style>
 <style id="camino-form-price">.field-note.plan-price{color:#16294d;font-size:13.5px}.field-note.plan-price b{color:#c55524}.field select{padding-right:42px}.field-note .nw{display:inline-block}</style>
-<style id="camino-form-sections">.form-sec-note{margin:-8px 0 20px;padding:11px 14px;border-radius:10px;background:#fdece2;color:#8a3f18;font-size:13.5px;line-height:1.6}.form-sec-note b{color:#c55524}#enquiry #trial-fields:not([hidden]){margin-bottom:20px}#enquiry button[type=submit]{margin-top:22px}.form-sec{display:flex;align-items:center;gap:10px;margin:0 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:16.5px;font-weight:700;color:#16294d;letter-spacing:.02em}.form-sec.form-sec-next{margin-top:38px}.form-sec .n{flex:none;width:26px;height:26px;border-radius:50%;background:#e87038;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--sans,inherit)}</style>
+<style id="camino-form-sections">#enquiry .trial-note{margin:0 0 20px}.field label.trial-toggle{display:flex;align-items:center;gap:12px;margin:0;padding:15px 16px;border:1.5px solid #f3cdb5;border-radius:12px;background:#fdf3ec;font-size:15px;font-weight:700;color:#16294d;letter-spacing:0;cursor:pointer}.field label.trial-toggle input{width:20px;height:20px;flex:none;margin:0;padding:0;accent-color:#e87038}.form-sec-note{margin:-8px 0 20px;padding:11px 14px;border-radius:10px;background:#fdece2;color:#8a3f18;font-size:13.5px;line-height:1.6}.form-sec-note b{color:#c55524}#enquiry #trial-fields:not([hidden]){margin-bottom:20px}#enquiry button[type=submit]{margin-top:22px}.form-sec{display:flex;align-items:center;gap:10px;margin:0 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:16.5px;font-weight:700;color:#16294d;letter-spacing:.02em}.form-sec.form-sec-next{margin-top:38px}.form-sec .n{flex:none;width:26px;height:26px;border-radius:50%;background:#e87038;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--sans,inherit)}</style>
 </head>
 <body>
 
@@ -2475,7 +2475,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       <div class="field"><label><span data-inl class="en">Current School<small class="lbl-sub"> (if applicable)</small></span></label><input type="text" id="f-school"></div>
 
       <div class="form-sec form-sec-next"><span class="n">2</span><span data-inl class="en">Choose Your Plan</span></div>
-      <p class="form-sec-note"><span data-inl class="en">If you would like a free trial lesson, you can request one in <b>step 3</b> below.</span></p>
+      <p class="form-sec-note"><span data-inl class="en">If you would like a free trial lesson, tick the box in <b>step 3</b> below.</span></p>
       <div class="field"><label><span data-inl class="en">Plan of Interest</span></label>
         <select id="f-plan">
           <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
@@ -2517,15 +2517,19 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
         <p class="field-note"><span data-inl class="en">A rough idea is fine for now.</span></p>
       </div>
       <div class="field"><label><span data-inl class="en">Subjects or Areas of Interest</span></label><input type="text" id="f-subject"></div>
-      <div class="form-sec form-sec-next"><span class="n">3</span><span data-inl class="en">Free Trial or Question</span></div>
-      <div class="field"><label><span data-inl class="en">Type of Enquiry</span></label>
-        <select id="f-type">
-          <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
-          <option data-jaopt="質問" data-enopt="Question">Question</option>
-          <option data-jaopt="無料体験レッスン申し込み" data-enopt="Free Trial Lesson Application">Free Trial Lesson Application</option>
-        </select></div>
-
+      <div class="field"><label><span data-inl class="en">Message</span></label><textarea id="f-msg"></textarea></div>
+      <div class="form-sec form-sec-next"><span class="n">3</span><span data-inl class="en">Free Trial Lesson</span></div>
+      <div class="field trial-check"><label class="trial-toggle"><input type="checkbox" id="f-trial"><span data-inl class="en">I would like to book a free trial lesson</span></label>
+        <p class="field-note"><span data-inl class="en">Tick the box to choose your preferred dates and times.</span></p>
+      </div>
       <div id="trial-fields" hidden>
+        <p class="form-sec-note trial-note"><span data-inl class="en">Weekdays are currently fully booked, so please choose a <b>Saturday or Sunday</b>.</span></p>
+        <div class="field"><label><span data-inl class="en">Trial Lesson Format</span></label>
+          <select id="f-trial-format">
+            <option value="" data-jaopt="選択してください" data-enopt="Please select">Please select</option>
+            <option data-jaopt="オンライン" data-enopt="Online">Online</option>
+            <option data-jaopt="対面（大阪・神戸・芦屋・西宮）" data-enopt="In Person (Osaka, Kobe, Ashiya, Nishinomiya)">In Person (Osaka, Kobe, Ashiya, Nishinomiya)</option>
+          </select></div>
         <div class="trial-slots">
           <div class="ts-head">
             <label><span data-inl class="en">Preferred Trial Dates and Times</span></label>
@@ -2566,7 +2570,6 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
         </div>
       </div>
 
-      <div class="field"><label><span data-inl class="en">Message</span></label><textarea id="f-msg"></textarea></div>
       <button type="submit" class="btn" style="width:100%"><span data-inl class="en">Send Message</span></button>
       <p class="form-note"><span data-inl class="en">Your message will be sent directly through this form. I'll reply within two to three business days.</span></p>
     </form>
@@ -2727,10 +2730,10 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
   (function(){var sel=document.getElementById('f-plan'),out=document.getElementById('plan-price');if(!sel||!out)return;function sync(){var o=sel.options[sel.selectedIndex];var t=o&&o.value!==''?o.textContent:'';var m=t.match(/[（(](¥[^）)]+)[）)]\s*$/);var ja=document.body.classList.contains('lang-ja');if(m){out.innerHTML=(ja?'選択中のプランの料金：<b>':'Price for the selected plan: <b>')+m[1]+'</b>';out.hidden=false;}else{out.hidden=true;}}sel.addEventListener('change',sync);sync();})();
   // reveal trial-only fields when 体験レッスン申し込み is chosen
   (function(){
-    const type=document.getElementById('f-type');
+    const type=document.getElementById('f-trial');
     const tf=document.getElementById('trial-fields');
-    function isTrial(){const o=type.options[type.selectedIndex];return o && (o.dataset.enopt==='Free Trial Lesson Application');}
-    function sync(){tf.hidden=!isTrial();var pl=document.getElementById('f-plan');if(pl)pl.required=isTrial();}
+    function isTrial(){return type.checked;}
+    function sync(){tf.hidden=!isTrial();var pl=document.getElementById('f-plan');if(pl)pl.required=isTrial();var tfm=document.getElementById('f-trial-format');if(tfm)tfm.required=isTrial();}
     type.addEventListener('change',sync); sync();
   })();
 
@@ -2747,11 +2750,10 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
     e.preventDefault();
     const g=v=>{const el=document.getElementById(v);return el?el.value:'';};
     const ja=document.body.classList.contains('lang-ja');
-    const typeEl=document.getElementById('f-type');
-    const trial=typeEl.options[typeEl.selectedIndex] && typeEl.options[typeEl.selectedIndex].dataset.enopt==='Free Trial Lesson Application';
+    const trial=document.getElementById('f-trial').checked;
     const subj=encodeURIComponent((trial?(ja?'体験レッスンのお申し込み — ':'Trial lesson application — '):(ja?'お問い合わせ — ':'Camino enquiry — '))+(g('f-name')||''));
     let lines=[
-      (ja?'お問い合わせ内容: ':'Type: ')+g('f-type'),
+      (ja?'無料体験レッスン: ':'Free trial lesson: ')+(trial?(ja?'希望する':'Yes'):(ja?'希望しない':'No')),
       (ja?'希望プラン: ':'Plan of interest: ')+g('f-plan'),
       (ja?'授業形式: ':'Lesson format: ')+g('f-format'),
     ];
@@ -2766,6 +2768,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       lines.push(
         (ja?'トライアル希望（第1）: ':'Trial choice 1: ')+g('f-d1')+' '+g('f-t1'),
         (ja?'トライアル希望（第2）: ':'Trial choice 2: ')+g('f-d2')+' '+g('f-t2'),
+        (ja?'無料体験の実施形式: ':'Trial format: ')+g('f-trial-format'),
         (ja?'トライアル希望（第3）: ':'Trial choice 3: ')+g('f-d3')+' '+g('f-t3')
       );
     }
@@ -2784,7 +2787,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       var fd=new FormData();
       fd.append('name',g('f-name'));
       fd.append('email',g('f-email'));
-      fd.append((ja?'お問い合わせ内容':'Type'),g('f-type'));
+      fd.append((ja?'無料体験レッスン':'Free trial lesson'),trial?(ja?'希望する':'Yes'):(ja?'希望しない':'No'));
       fd.append((ja?'希望プラン':'Plan'),g('f-plan'));
       fd.append((ja?'授業形式':'Lesson format'),g('f-format'));
       var _sf=document.getElementById('station-field');
@@ -2792,6 +2795,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       fd.append((ja?'生徒の学年':'Grade'),g('f-grade'));
       fd.append((ja?'現在の学校':'Current school'),g('f-school'));
       if(trial){
+        fd.append((ja?'無料体験の実施形式':'Trial format'),g('f-trial-format'));
         fd.append((ja?'トライアル希望日時':'Preferred trial times'),
           [g('f-d1')+' '+g('f-t1'), g('f-d2')+' '+g('f-t2'), g('f-d3')+' '+g('f-t3')].join(' / '));
       }
