@@ -1793,7 +1793,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 <style id="camino-hero-desc-m">.ch-desc.ch-desc-m{display:none}@media(max-width:700px){.ch-intro .ch-desc{display:none}.ch-desc.ch-desc-m{display:block;margin:20px 0 4px;text-align:center;text-wrap:balance}}</style>
 <style id="camino-headings">h1,h2,h3,h4,summary{word-break:auto-phrase;text-wrap:balance}main{word-break:auto-phrase}</style>
 <style id="camino-form-pace">.field-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field-pair .field{margin-bottom:20px}@media(max-width:560px){.field-pair{grid-template-columns:1fr;gap:0}}</style>
-<style id="camino-form-price">.field-note.plan-price{color:#16294d;font-size:13.5px}.field-note.plan-price b{color:#c55524}.field select{padding-right:42px}.field-note .nw{display:inline-block}</style>
+<style id="camino-form-price">.field select{padding-right:42px}.field-note .nw{display:inline-block}</style>
 <style id="camino-form-sections">#enquiry .trial-note{margin:0 0 20px}.field label.trial-toggle{display:flex;align-items:center;gap:12px;margin:0;padding:15px 16px;border:1.5px solid #f3cdb5;border-radius:12px;background:#fdf3ec;font-size:15px;font-weight:700;color:#16294d;letter-spacing:0;cursor:pointer}.field label.trial-toggle input{width:20px;height:20px;flex:none;margin:0;padding:0;accent-color:#e87038}.form-sec-note{margin:-8px 0 20px;padding:11px 14px;border-radius:10px;background:#fdece2;color:#8a3f18;font-size:13.5px;line-height:1.6}.form-sec-note b{color:#c55524}#enquiry #trial-fields:not([hidden]){margin-bottom:20px}#enquiry button[type=submit]{margin-top:22px}.form-sec{display:flex;align-items:center;gap:10px;margin:0 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:16.5px;font-weight:700;color:#16294d;letter-spacing:.02em}.form-sec.form-sec-next{margin-top:38px}.form-sec .n{flex:none;width:26px;height:26px;border-radius:50%;background:#e87038;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--sans,inherit)}</style>
 </head>
 <body class="lang-ja">
@@ -2489,7 +2489,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       <div class="field"><label><span data-inl class="ja">現在の学校<small class="lbl-sub">（該当する場合）</small></span></label><input type="text" id="f-school"></div>
 
       <div class="form-sec form-sec-next"><span class="n">2</span><span data-inl class="ja">ご希望のプラン</span></div>
-      <p class="form-sec-note"><span data-inl class="ja">無料体験レッスンをご希望の方は、下の<b>③</b>にチェックを入れてください</span></p>
+      <p class="form-sec-note"><span data-inl class="ja">無料体験レッスンをご希望の方は、下の<b>③</b>にもチェックを入れてください</span></p>
       <div class="field"><label><span data-inl class="ja">希望プラン</span></label>
         <select id="f-plan">
           <option value="" data-jaopt="選択してください" data-enopt="Please select">選択してください</option>
@@ -2502,7 +2502,6 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
           <option data-jaopt="IB相談・保護者向け（¥5,000／60分）" data-enopt="IB Consultation for Parents (¥5,000 / 60 min)">IB相談・保護者向け（¥5,000／60分）</option>
           <option data-jaopt="まだ決めていない／相談したい" data-enopt="Not sure yet / want to discuss">まだ決めていない／相談したい</option>
         </select>
-        <p class="field-note plan-price" id="plan-price" hidden></p>
         <p class="field-note"><span data-inl class="ja">料金は税込・授業料のみです。<span class="nw">対面授業は別途交通費がかかります。</span><a class="pv2-iblink tablink nw" style="margin-left:0" href="#fees" data-tab="fees">プランと料金を見る</a></span></p></div>
 
       <div class="field"><label><span data-inl class="ja">授業形式</span></label>
@@ -2741,7 +2740,6 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
   document.addEventListener('click',e=>{ if(navlinks&&navlinks.classList.contains('open')&&!navlinks.contains(e.target)&&!burger.contains(e.target)) closeMenu(); });
   setLang('ja');
 
-  (function(){var sel=document.getElementById('f-plan'),out=document.getElementById('plan-price');if(!sel||!out)return;function sync(){var o=sel.options[sel.selectedIndex];var t=o&&o.value!==''?o.textContent:'';var m=t.match(/[（(](¥[^）)]+)[）)]\s*$/);var ja=document.body.classList.contains('lang-ja');if(m){out.innerHTML=(ja?'選択中のプランの料金：<b>':'Price for the selected plan: <b>')+m[1]+'</b>';out.hidden=false;}else{out.hidden=true;}}sel.addEventListener('change',sync);sync();})();
   // reveal trial-only fields when 体験レッスン申し込み is chosen
   (function(){
     const type=document.getElementById('f-trial');
