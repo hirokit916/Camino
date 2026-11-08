@@ -154,6 +154,62 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .done b{color:var(--gold);font-size:17px}
 .done p{color:var(--soft);margin-top:6px}
 
+
+/* tabs */
+.tabs{display:flex;gap:2px;margin-left:auto}
+.tabs a{font-size:14px;color:var(--soft);text-decoration:none;padding:8px 13px;border-radius:8px;position:relative}
+.tabs a:hover{color:var(--ink)}
+.tabs a.on{color:var(--gold)}
+.tabs a.on::after{content:"";position:absolute;left:13px;right:13px;bottom:-14px;height:2px;background:var(--gold)}
+.hd-cta{background:var(--gold);color:#13203a;font-weight:700;font-size:14px;padding:9px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.hd-cta:hover{background:var(--gold2)}
+.tabs-m{display:none}
+@media(max-width:860px){
+  .tabs{display:none}
+  .hd-in{height:60px}
+  .hd-cta{font-size:13px;padding:8px 14px}
+  .tabs-m{display:flex;overflow-x:auto;scrollbar-width:none;border-top:1px solid var(--line);padding:0 8px}
+  .tabs-m::-webkit-scrollbar{display:none}
+  .tabs-m a{flex:1 0 auto;text-align:center;font-size:13px;color:var(--soft);text-decoration:none;padding:11px 10px;border-bottom:2px solid transparent;white-space:nowrap}
+  .tabs-m a.on{color:var(--gold);border-bottom-color:var(--gold)}
+}
+.panel{animation:fadein .35s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ph{padding:72px 0 8px}
+.ph h1{font-size:clamp(28px,4vw,40px);line-height:1.35;margin-top:4px}
+.ph p{color:var(--soft);margin-top:12px;max-width:700px}
+.ph + .sec{padding-top:48px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:44px;max-width:760px}
+.stats div{border-left:2px solid var(--gold);padding:4px 0 4px 16px}
+.stats b{display:block;font-family:'Inter',sans-serif;font-size:34px;font-weight:700;line-height:1.1;color:var(--ink)}
+.stats b small{font-family:var(--sans);font-size:14px;font-weight:700;color:var(--gold);margin-left:3px}
+.stats span{display:block;font-size:12.5px;color:var(--soft);line-height:1.6;margin-top:6px}
+@media(max-width:600px){.stats{grid-template-columns:1fr;gap:14px}.stats span br{display:none}}
+.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.mini{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.mini{grid-template-columns:1fr}}
+.mini a{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px;text-decoration:none;transition:border-color .2s}
+.mini a:hover{border-color:rgba(212,178,106,.55)}
+.mini span{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--gold)}
+.mini b{font-size:15px;font-weight:700;flex:1}
+.mini i{font-style:normal;color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media(max-width:860px){.why{grid-template-columns:1fr}}
+.why div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.why span{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.12em}
+.why b{display:block;font-size:17px;margin:6px 0 6px}
+.why p{color:var(--soft);font-size:14px;line-height:1.85}
+.band{background:linear-gradient(120deg,#16233a,#1d2c47)}
+.band-in{display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between}
+.band b{font-size:clamp(19px,2.4vw,24px)}
+.band p{color:var(--soft);margin-top:4px}
+.faq{display:grid;gap:10px;max-width:820px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 20px;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--gold)}
+.faq details[open] summary::after{content:"－"}
+.faq details p{padding:0 20px 18px;color:var(--soft);font-size:14.5px}
 .ft{padding:40px 0 48px;text-align:center;color:var(--muted);font-size:13px}
 .ft b{color:var(--ink);letter-spacing:.04em}
 </style>
@@ -162,27 +218,38 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 
 <header class="hd">
   <div class="wrap hd-in">
-    <a class="brand" href="#top" aria-label="Camino Career"><span class="mk">CC</span><b>Camino <span>Career</span></b></a>
-    <nav class="nav" aria-label="ページ内メニュー">
-      <a href="#services">サービス</a>
-      <a href="#about">講師について</a>
-      <a href="#flow">ご利用の流れ</a>
-      <a class="cta" href="#contact">お問い合わせ</a>
+    <a class="brand" href="#home" data-go="home" aria-label="Camino Career ホーム"><span class="mk">CC</span><b>Camino <span>Career</span></b></a>
+    <nav class="tabs" aria-label="メニュー">
+      <a href="#home" data-go="home">ホーム</a>
+      <a href="#services" data-go="services">サービス</a>
+      <a href="#about" data-go="about">講師</a>
+      <a href="#flow" data-go="flow">ご利用の流れ</a>
+      <a href="#contact" data-go="contact">お問い合わせ</a>
     </nav>
+    <a class="hd-cta" href="#contact" data-go="contact">相談する</a>
   </div>
+  <nav class="tabs-m" aria-label="メニュー">
+    <a href="#home" data-go="home">ホーム</a><a href="#services" data-go="services">サービス</a><a href="#about" data-go="about">講師</a><a href="#flow" data-go="flow">流れ</a><a href="#contact" data-go="contact">お問い合わせ</a>
+  </nav>
 </header>
 
-<main id="top">
+<main>
+<!-- ===== HOME ===== -->
+<div class="panel" id="p-home" data-panel="home">
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">Camino Career</span>
     <h1>外資系コンサル出身の講師が、<br><em>面接とビジネス英語</em>を<span class="nw">実践的にサポート</span></h1>
     <p class="lead">就活・転職の面接対策から、ケース面接、英語でのビジネスコミュニケーション、伝わる資料の作り方まで。マンツーマンで、本番で使える力を身につけます</p>
     <div class="hero-btns">
-      <a class="btn btn-g" href="#contact">まずは相談する</a>
-      <a class="btn btn-o" href="#services">サービスを見る</a>
+      <a class="btn btn-g" href="#contact" data-go="contact">まずは相談する</a>
+      <a class="btn btn-o" href="#services" data-go="services">サービスを見る</a>
     </div>
-    <div class="tags"><span>就活面接</span><span>ケース面接</span><span>外資転職・英語面接</span><span>ビジネス英語</span><span>資料作成</span><span>オンライン英会話</span></div>
+    <div class="stats">
+      <div><b>3<small>社</small></b><span>外資系コンサルティング<br>ファームでの経験</span></div>
+      <div><b>2<small>言語</small></b><span>日本語・英語の<br>バイリンガル指導</span></div>
+      <div><b>1<small>対1</small></b><span>目標に合わせた<br>マンツーマン</span></div>
+    </div>
   </div>
 </section>
 
@@ -200,9 +267,46 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
   </div>
 </section>
 
-<section class="sec" id="services">
+<section class="sec">
   <div class="wrap">
-    <div class="sh"><span class="no">SERVICES</span><h2>サービス</h2><p>目的に合わせて、内容をカスタマイズします。複数のサービスを組み合わせることもできます</p></div>
+    <div class="sh"><span class="no">SERVICES</span><h2>6つのサービス</h2><p>目的に合わせて、内容をカスタマイズします</p></div>
+    <div class="mini">
+      <a href="#services" data-go="services"><span>01</span><b>就活面接対策</b><i>→</i></a>
+      <a href="#services" data-go="services"><span>02</span><b>ケース面接対策</b><i>→</i></a>
+      <a href="#services" data-go="services"><span>03</span><b>外資転職・英語面接対策</b><i>→</i></a>
+      <a href="#services" data-go="services"><span>04</span><b>ビジネス英語</b><i>→</i></a>
+      <a href="#services" data-go="services"><span>05</span><b>資料作成（PowerPoint）</b><i>→</i></a>
+      <a href="#services" data-go="services"><span>06</span><b>オンライン英会話</b><i>→</i></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sh"><span class="no">WHY CAMINO CAREER</span><h2>選ばれる理由</h2></div>
+    <div class="why">
+      <div><span>01</span><b>現場を知る講師</b><p>外資系コンサルティングファームで、実際に面接・会議・資料作成を経験してきた講師が指導します</p></div>
+      <div><span>02</span><b>日英どちらにも対応</b><p>日本語の面接も、英語の面接や会議も、同じ講師が一貫してサポートします</p></div>
+      <div><span>03</span><b>論理的に伝える力</b><p>話す内容の組み立て方から身につけるので、面接だけでなく仕事の場面でも活かせます</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec band">
+  <div class="wrap band-in">
+    <div><b>まずは、目標をお聞かせください</b><p>現在の状況やスケジュールをうかがい、内容と料金をご案内します</p></div>
+    <a class="btn btn-g" href="#contact" data-go="contact">お問い合わせ</a>
+  </div>
+</section>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<div class="panel" id="p-services" data-panel="services" hidden>
+<section class="ph">
+  <div class="wrap"><span class="eyebrow">Services</span><h1>サービス</h1><p>目的に合わせて、内容をカスタマイズします。複数のサービスを組み合わせることもできます</p></div>
+</section>
+<section class="sec">
+  <div class="wrap">
     <div class="svcs">
       <div class="svc"><span class="n">01</span><h3>就活面接対策<small>Job-hunting interviews</small></h3><p>日本語・英語の面接に対応。志望動機や自己PRの整理から、模擬面接とフィードバックまで行います</p><ul><li>志望動機・自己PRの整理</li><li>模擬面接とフィードバック</li><li>日本語・英語どちらにも対応</li></ul></div>
       <div class="svc"><span class="n">02</span><h3>ケース面接対策<small>Case interviews</small></h3><p>コンサルティングファームなどのケース面接に向けて、考え方の型と、面接官への伝え方を練習します</p><ul><li>問題の構造化と仮説の立て方</li><li>実践形式の模擬ケース面接</li><li>日本語・英語どちらにも対応</li></ul></div>
@@ -211,12 +315,24 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
       <div class="svc"><span class="n">05</span><h3>資料作成（PowerPoint）<small>Slide making</small></h3><p>伝えたいことが一目で伝わる、スライドの構成と作り方を学びます</p><ul><li>メッセージから考える構成</li><li>読みやすいスライドの作り方</li><li>実際の資料を使った添削</li></ul></div>
       <div class="svc"><span class="n">06</span><h3>オンライン英会話<small>English conversation</small></h3><p>日常会話からビジネスの場面まで、目的に合わせたマンツーマンの英会話です</p><ul><li>レベルや目的に合わせた内容</li><li>日英バイリンガルの講師</li></ul></div>
     </div>
+    <div class="price" style="margin-top:40px">
+      <div>
+        <p><b>料金について</b><br>料金は、ご希望のサービスや回数に応じてご案内します。まずはお気軽にお問い合わせください</p>
+        <div class="format"><span>オンライン（全国・海外から受講可能）</span><span>マンツーマン</span><span>日本語・英語</span></div>
+      </div>
+      <a class="btn btn-g" href="#contact" data-go="contact">お問い合わせ</a>
+    </div>
   </div>
 </section>
+</div>
 
-<section class="sec alt" id="about">
+<!-- ===== ABOUT ===== -->
+<div class="panel" id="p-about" data-panel="about" hidden>
+<section class="ph">
+  <div class="wrap"><span class="eyebrow">Instructor</span><h1>講師について</h1></div>
+</section>
+<section class="sec">
   <div class="wrap">
-    <div class="sh"><span class="no">INSTRUCTOR</span><h2>講師について</h2></div>
     <div class="about">
       <p class="lead2">外資系コンサルティングファームで、<em>面接・会議・資料作成</em>を<span class="nw">日英両方で経験</span>してきた講師が、<span class="nw">一人ひとりに合わせて指導します</span></p>
       <ul class="facts">
@@ -227,28 +343,52 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
     </div>
   </div>
 </section>
-
-<section class="sec" id="flow">
+<section class="sec alt">
   <div class="wrap">
-    <div class="sh"><span class="no">HOW IT WORKS</span><h2>ご利用の流れ</h2></div>
-    <ol class="steps">
-      <li><b>お問い合わせ</b><p>下のフォームから、ご希望のサービスや目標をお知らせください</p></li>
-      <li><b>ヒアリング</b><p>現在の状況や目標、スケジュールをうかがい、内容と料金をご案内します</p></li>
-      <li><b>レッスン開始</b><p>目標に合わせたプランで、マンツーマンのレッスンを始めます</p></li>
-    </ol>
-    <div class="price" style="margin-top:40px">
-      <div>
-        <p><b>料金について</b><br>料金は、ご希望のサービスや回数に応じてご案内します。まずはお気軽にお問い合わせください</p>
-        <div class="format"><span>オンライン（全国・海外から受講可能）</span><span>マンツーマン</span><span>日本語・英語</span></div>
-      </div>
-      <a class="btn btn-g" href="#contact">お問い合わせ</a>
+    <div class="sh"><span class="no">APPROACH</span><h2>指導で大切にしていること</h2></div>
+    <div class="why">
+      <div><span>01</span><b>まず、結論から</b><p>伝えたいことを先に示し、理由と具体例で支える。面接でも会議でも使える、話の組み立て方を身につけます</p></div>
+      <div><span>02</span><b>本番に近い練習</b><p>模擬面接や実際の資料を使い、本番を想定した練習とフィードバックを繰り返します</p></div>
+      <div><span>03</span><b>一人ひとりに合わせる</b><p>目標や現在のレベル、スケジュールに合わせて、内容と進め方を調整します</p></div>
     </div>
   </div>
 </section>
+</div>
 
-<section class="sec alt" id="contact">
+<!-- ===== FLOW ===== -->
+<div class="panel" id="p-flow" data-panel="flow" hidden>
+<section class="ph">
+  <div class="wrap"><span class="eyebrow">How it works</span><h1>ご利用の流れ</h1></div>
+</section>
+<section class="sec">
   <div class="wrap">
-    <div class="sh"><span class="no">CONTACT</span><h2>お問い合わせ</h2><p>内容を確認のうえ、2〜3営業日以内にご連絡します</p></div>
+    <ol class="steps">
+      <li><b>お問い合わせ</b><p>フォームから、ご希望のサービスや目標をお知らせください</p></li>
+      <li><b>ヒアリング</b><p>現在の状況や目標、スケジュールをうかがい、内容と料金をご案内します</p></li>
+      <li><b>レッスン開始</b><p>目標に合わせたプランで、マンツーマンのレッスンを始めます</p></li>
+    </ol>
+  </div>
+</section>
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sh"><span class="no">FAQ</span><h2>よくある質問</h2></div>
+    <div class="faq">
+      <details><summary>レッスンはどこで受けられますか？</summary><p>オンラインで受講いただけます。全国、海外からも受講可能です</p></details>
+      <details><summary>日本語と英語、どちらで受講できますか？</summary><p>どちらにも対応しています。英語の面接対策でも、説明は日本語で行うなど、ご希望に合わせて調整します</p></details>
+      <details><summary>料金はいくらですか？</summary><p>ご希望のサービスや回数に応じてご案内します。まずはお問い合わせフォームからご連絡ください</p></details>
+      <details><summary>複数のサービスを組み合わせられますか？</summary><p>はい。たとえば、ケース面接対策と英語面接対策を組み合わせるなど、目標に合わせてご提案します</p></details>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<div class="panel" id="p-contact" data-panel="contact" hidden>
+<section class="ph">
+  <div class="wrap"><span class="eyebrow">Contact</span><h1>お問い合わせ</h1><p>内容を確認のうえ、2〜3営業日以内にご連絡します</p></div>
+</section>
+<section class="sec">
+  <div class="wrap">
     <form class="form" id="career-form">
       <div class="f2">
         <div class="f"><label for="c-name">お名前<span class="req">必須</span></label><input id="c-name" name="name" required autocomplete="name"></div>
@@ -282,12 +422,32 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
     <div class="done" id="career-done" hidden><b>送信しました</b><p>お問い合わせありがとうございます。2〜3営業日以内にご連絡します</p></div>
   </div>
 </section>
+</div>
 </main>
 
 <footer class="ft">
   <div class="wrap"><b>Camino Career</b><br>© 2026 Camino Career</div>
 </footer>
 
+<script>
+(function(){
+  var names=['home','services','about','flow','contact'];
+  function show(n,scroll){
+    if(names.indexOf(n)<0)n='home';
+    document.querySelectorAll('[data-panel]').forEach(function(p){p.hidden=p.getAttribute('data-panel')!==n;});
+    document.querySelectorAll('.tabs a,.tabs-m a').forEach(function(a){a.classList.toggle('on',a.getAttribute('data-go')===n);});
+    if(scroll!==false)window.scrollTo(0,0);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('[data-go]'); if(!a)return;
+    e.preventDefault(); var n=a.getAttribute('data-go');
+    if(location.hash!=='#'+n)history.pushState(null,'','#'+n);
+    show(n);
+  });
+  window.addEventListener('popstate',function(){show(location.hash.slice(1));});
+  show(location.hash.slice(1),false);
+})();
+</script>
 <script>
 document.getElementById('career-form').addEventListener('submit',function(e){
   e.preventDefault();
