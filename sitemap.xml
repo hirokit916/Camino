@@ -17,14 +17,14 @@
   </url>
   <url>
     <loc>https://caminotutor.com/column/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/"/>
   </url>
   <url>
     <loc>https://caminotutor.com/en/column/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/"/>
@@ -73,31 +73,59 @@
   </url>
   <url>
     <loc>https://caminotutor.com/ib/myp/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/myp/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/myp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/myp/"/>
   </url>
   <url>
     <loc>https://caminotutor.com/en/ib/myp/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/myp/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/myp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/myp/"/>
   </url>
   <url>
     <loc>https://caminotutor.com/ib/dp/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/dp/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/dp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/dp/"/>
   </url>
   <url>
     <loc>https://caminotutor.com/en/ib/dp/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/dp/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/dp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/dp/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/ib/dp/tok/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/dp/tok/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/dp/tok/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/dp/tok/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/ib/dp/tok/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/dp/tok/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/dp/tok/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/dp/tok/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/ib/dp/ee/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/dp/ee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/dp/ee/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/dp/ee/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/ib/dp/ee/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/dp/ee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/dp/ee/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/dp/ee/"/>
   </url>
   <url>
     <loc>https://caminotutor.com/ib/cp/</loc>
@@ -126,5 +154,9 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/ib/university/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/ib/university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/ib/university/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/career/</loc>
+    <lastmod>2026-11-08</lastmod>
   </url>
 </urlset>
