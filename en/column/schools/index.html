@@ -841,6 +841,13 @@ a.pg:hover{border-color:var(--k)}
 .sres{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px;font-size:14.5px;line-height:1.8}
 .sres a{display:inline-block;margin-top:6px;font-weight:700;color:var(--k);text-decoration:none}
 .sres a:hover{text-decoration:underline}
+.sres+.ewrap{margin-top:12px}
+.dbar{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;display:grid;gap:8px;margin-bottom:6px}
+.db-r{display:grid;grid-template-columns:150px minmax(0,1fr) 56px;gap:12px;align-items:center;font-size:14px}
+.db-t{height:12px;background:var(--paper);border-radius:3px;overflow:hidden}
+.db-t i{display:block;height:100%;background:var(--cp)}
+.db-r b{font-family:var(--latin);text-align:right}
+@media(max-width:600px){.db-r{grid-template-columns:100px minmax(0,1fr) 46px;font-size:13px}}
 </style>
 <style id="camino-formal">
 /* 目次: vertical list in a plain box */
