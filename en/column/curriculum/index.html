@@ -989,6 +989,25 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .arts{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:900px){.arts{grid-template-columns:1fr}}
 </style>
+<style id="camino-sbc">
+.sbc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media(max-width:900px){.sbc{grid-template-columns:1fr}}
+.sbc-c{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-top:3px solid var(--k);border-radius:10px;padding:18px 20px 16px}
+.sbc-h{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.sbc-h img{height:32px;width:auto;display:block}
+.sbc-h img.lg-ib{height:44px;margin:-6px 0}
+.sbc-h b{font-size:16px;line-height:1.4}
+.sbc-h small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.sbc ul{list-style:none;margin:0 0 12px;padding:0}
+.sbc li a{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.5;color:var(--ink);text-decoration:none}
+.sbc li a:hover{color:var(--k)}
+.sbc li:last-child a{border-bottom:none}
+.sbc li span{flex:none;font-size:12px;color:var(--muted)}
+.sbc-a{margin-top:auto;font-size:13.5px;font-weight:700;color:var(--k);text-decoration:none;display:block;padding-top:4px}
+.sbc-a+.sbc-a{font-weight:600;color:var(--soft)}
+.sbc-a:hover{text-decoration:underline;text-underline-offset:3px}
+.sbc-n{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.8}
+</style>
 <style id="camino-formal">
 /* 目次: vertical list in a plain box */
 .otl{margin-top:28px;max-width:720px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 24px 8px}
@@ -1039,25 +1058,6 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .cond b{font-size:21px}
 }
 </style>
-<style id="camino-sbc">
-.sbc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-@media(max-width:900px){.sbc{grid-template-columns:1fr}}
-.sbc-c{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-top:3px solid var(--k);border-radius:10px;padding:18px 20px 16px}
-.sbc-h{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid var(--line)}
-.sbc-h img{height:32px;width:auto;display:block}
-.sbc-h img.lg-ib{height:44px;margin:-6px 0}
-.sbc-h b{font-size:16px;line-height:1.4}
-.sbc-h small{display:block;font-size:12px;color:var(--muted);font-weight:400}
-.sbc ul{list-style:none;margin:0 0 12px;padding:0}
-.sbc li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.5}
-.sbc li:last-child{border-bottom:none}
-.sbc li span{flex:none;font-size:12px;color:var(--muted)}
-.sbc li em{font-style:normal;font-size:11.5px;color:var(--muted);display:block}
-.sbc-a{margin-top:auto;font-size:13.5px;font-weight:700;color:var(--k);text-decoration:none}
-.sbc-a:hover{text-decoration:underline;text-underline-offset:3px}
-.sbc-n{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.8}
-.sbc-n a{color:var(--soft)}
-</style>
 </head>
 <body>
 
@@ -1081,7 +1081,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
   </div>
 </header>
 
-<nav class="toc gnav" aria-label="Articles"><div class="toc-in"><span class="gl">Articles</span><a href="/en/column/">All</a><a href="/en/column/curriculum/" class="on" aria-current="page"><i style="background:var(--or)"></i>Curricula</a><a href="/en/column/university/"><i style="background:var(--uni)"></i>University</a><a href="/en/column/english/"><i style="background:var(--myp)"></i>English &amp; tests</a></div></nav>
+<nav class="toc gnav" aria-label="Articles"><div class="toc-in"><span class="gl">Articles</span><a href="/en/column/">All</a><a href="/en/column/schools/"><i style="background:var(--cp)"></i>Schools</a><a href="/en/column/curriculum/" class="on" aria-current="page"><i style="background:var(--or)"></i>Curricula</a><a href="/en/column/university/"><i style="background:var(--uni)"></i>University</a><a href="/en/column/english/"><i style="background:var(--myp)"></i>English &amp; tests</a></div></nav>
 
 <main>
 <section class="phero" style="--c:var(--or);--ct:var(--tint)">
@@ -1180,9 +1180,9 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 
 <section class="sec" id="schools">
   <div class="wrap">
-    <div class="sec-h"><div class="eyebrow">Schools</div><h2>By programme: international schools in Japan</h2><p>Examples of which schools offer each upper-secondary programme, with links to the results each school publishes</p></div>
-    <div class="sbc rise"><div class="sbc-c" style="--k:var(--or)"><div class="sbc-h"><img class="lg-ib" src="/img/logos/ib.png" alt="IB"><div><b>IB (DP)</b><small>Ages 16–19, IB Diploma</small></div></div><ul><li><div>Canadian Academy</div><span>Hyogo</span></li><li><div>Osaka International School of Kwansei Gakuin</div><span>Osaka</span></li><li><div>Osaka YMCA International School</div><span>Osaka</span></li><li><div>K. International School Tokyo</div><span>Tokyo</span></li><li><div>St. Mary’s International School</div><span>Tokyo</span></li><li><div>Seisen International School</div><span>Tokyo</span></li><li><div>The British School in Tokyo<em>Alongside A Levels</em></div><span>Tokyo</span></li><li><div>Saint Maur International School</div><span>Kanagawa</span></li><li><div>Yokohama International School</div><span>Kanagawa</span></li></ul><a class="sbc-a" href="/en/column/university/ib-scores/">See each school’s IB results&nbsp;→</a></div><div class="sbc-c" style="--k:var(--cam)"><div class="sbc-h"><img src="/img/logos/cambridge.png" alt="Cambridge"><div><b>A Level and IGCSE</b><small>Ages 14–19, British qualifications</small></div></div><ul><li><div>The British School in Tokyo</div><span>Tokyo</span></li><li><div>Rugby School Japan</div><span>Chiba</span></li><li><div>Harrow International School Appi Japan</div><span>Iwate</span></li><li><div>Saint Maur International School<em>IGCSE, then the IB DP</em></div><span>Kanagawa</span></li></ul><a class="sbc-a" href="/en/column/university/a-level-results/">See each school’s A Level and IGCSE results&nbsp;→</a></div><div class="sbc-c" style="--k:var(--ap)"><div class="sbc-h"><img src="/img/logos/ap.png" alt="AP"><div><b>AP</b><small>American high school, exam by subject</small></div></div><ul><li><div>The American School in Japan</div><span>Tokyo</span></li><li><div>Christian Academy in Japan</div><span>Tokyo</span></li></ul><a class="sbc-a" href="/en/column/university/ap-results/">See each school’s AP results&nbsp;→</a></div></div>
-    <p class="sbc-n">Schools whose programmes and published results we could confirm on their official websites or school profiles. Other schools also offer these programmes. The British School in Tokyo’s IB DP is described on <a href="https://www.bst.ac.jp/school-life/secondary-school/senior-school/ib" target="_blank" rel="noopener">its official page</a></p>
+    <div class="sec-h"><div class="eyebrow">Schools</div><h2>By programme: international schools in Japan</h2><p>Grouped by the upper-secondary programme each school offers</p></div>
+    <div class="sbc rise"><div class="sbc-c" style="--k:var(--or)"><div class="sbc-h"><img class="lg-ib" src="/img/logos/ib.png" alt="IB"><div><b>IB (DP)</b><small>Ages 16–19, IB Diploma</small></div></div><ul><li><a href="/en/column/schools/aoba-japan/">Aoba-Japan International School<span>Tokyo</span></a></li><li><a href="/en/column/schools/british-school-in-tokyo/">The British School in Tokyo<span>Tokyo</span></a></li><li><a href="/en/column/schools/k-international-school-tokyo/">K. International School Tokyo<span>Tokyo</span></a></li><li><a href="/en/column/schools/malvern-college-tokyo/">Malvern College Tokyo<span>Tokyo</span></a></li><li><a href="/en/column/schools/seisen/">Seisen International School<span>Tokyo</span></a></li><li><a href="/en/column/schools/shinagawa/">Shinagawa International School<span>Tokyo</span></a></li><li><a href="/en/column/schools/st-marys/">St. Mary’s International School<span>Tokyo</span></a></li><li><a href="/en/column/schools/tokyo-international-school/">Tokyo International School<span>Tokyo</span></a></li><li><a href="/en/column/schools/saint-maur/">Saint Maur International School<span>Kanagawa</span></a></li><li><a href="/en/column/schools/yokohama-international-school/">Yokohama International School<span>Kanagawa</span></a></li><li><a href="/en/column/schools/uwc-isak-japan/">UWC ISAK Japan<span>Nagano</span></a></li><li><a href="/en/column/schools/canadian-academy/">Canadian Academy<span>Hyogo</span></a></li><li><a href="/en/column/schools/marist-brothers/">Marist Brothers International School<span>Hyogo</span></a></li><li><a href="/en/column/schools/osaka-international-school/">Osaka International School of Kwansei Gakuin<span>Osaka</span></a></li><li><a href="/en/column/schools/osaka-ymca-international-school/">Osaka YMCA International School<span>Osaka</span></a></li><li><a href="/en/column/schools/kyoto-international-school/">Kyoto International School<span>Kyoto</span></a></li><li><a href="/en/column/schools/fukuoka-international-school/">Fukuoka International School<span>Fukuoka</span></a></li><li><a href="/en/column/schools/linden-hall/">Linden Hall School (High School Division)<span>Fukuoka</span></a></li><li><a href="/en/column/schools/okinawa-international-school/">Okinawa International School<span>Okinawa</span></a></li></ul><a class="sbc-a" href="/en/column/university/ib-scores/">See each school’s IB results&nbsp;→</a><a class="sbc-a" href="/en/column/schools/">All schools&nbsp;→</a></div><div class="sbc-c" style="--k:var(--cam)"><div class="sbc-h"><img src="/img/logos/cambridge.png" alt="Cambridge"><div><b>A Level and IGCSE</b><small>Ages 14–19, British qualifications</small></div></div><ul><li><a href="/en/column/schools/british-school-in-tokyo/">The British School in Tokyo<span>Tokyo</span></a></li><li><a href="/en/column/schools/k-international-school-tokyo/">K. International School Tokyo<span>Tokyo</span></a></li><li><a href="/en/column/schools/saint-maur/">Saint Maur International School<span>Kanagawa</span></a></li><li><a href="/en/column/schools/rugby-school-japan/">Rugby School Japan<span>Chiba</span></a></li><li><a href="/en/column/schools/harrow-appi/">Harrow International School Appi Japan<span>Iwate</span></a></li></ul><a class="sbc-a" href="/en/column/university/a-level-results/">See A Level and IGCSE results&nbsp;→</a><a class="sbc-a" href="/en/column/schools/">All schools&nbsp;→</a></div><div class="sbc-c" style="--k:var(--ap)"><div class="sbc-h"><img src="/img/logos/ap.png" alt="AP"><div><b>AP</b><small>American high school, exam by subject</small></div></div><ul><li><a href="/en/column/schools/asij/">The American School in Japan<span>Tokyo</span></a></li><li><a href="/en/column/schools/christian-academy-in-japan/">Christian Academy in Japan<span>Tokyo</span></a></li><li><a href="/en/column/schools/canadian-international-school-tokyo/">Canadian International School Tokyo<span>Tokyo</span></a></li><li><a href="/en/column/schools/sacred-heart/">International School of the Sacred Heart<span>Tokyo</span></a></li></ul><a class="sbc-a" href="/en/column/university/ap-results/">See each school’s AP results&nbsp;→</a><a class="sbc-a" href="/en/column/schools/">All schools&nbsp;→</a></div></div>
+    <p class="sbc-n">Select a school for its page on grades, fees and programmes. Listed schools are those we could confirm from official sources</p>
   </div>
 </section>
 <section class="sec" id="faq">
