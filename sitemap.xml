@@ -729,4 +729,32 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/okinawa-international-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/okinawa-international-school/"/>
   </url>
+  <url>
+    <loc>https://caminotutor.com/column/schools/kanto/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/schools/kanto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/kanto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/kanto/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/schools/kanto/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/schools/kanto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/kanto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/kanto/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/schools/kansai/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/schools/kansai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/kansai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/kansai/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/schools/kansai/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/schools/kansai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/kansai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/kansai/"/>
+  </url>
 </urlset>
