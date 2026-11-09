@@ -870,6 +870,8 @@ a.pg:hover{border-color:var(--k)}
 .jm-svg .cap{font:11px var(--sans);fill:var(--muted)}
 .jm-side h4{font-size:15px;margin:0 0 8px}
 .jm-reg{display:grid;gap:10px}
+.jm-reg.rg2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:760px}
+@media(max-width:600px){.jm-reg.rg2{grid-template-columns:1fr}}
 .jm-reg a{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--cp);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--ink)}
 .jm-reg a:hover{border-color:var(--cp)}
 .jm-reg b{font-size:16px}.jm-reg span{font-size:13px;color:var(--soft)}
