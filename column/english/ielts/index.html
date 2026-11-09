@@ -908,6 +908,56 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .ph-badge.lg img{height:38px;width:auto;display:block}
 @media(max-width:600px){.ph:has(.ph-badge.lg){flex-wrap:wrap;row-gap:14px}.ph:has(.ph-badge.lg) h1{flex-basis:100%}.ph-badge.lg{height:56px;padding:0 12px;min-width:0}.ph-badge.lg img{height:30px}}
 </style>
+<style id="camino-formal">
+/* 目次: vertical list in a plain box */
+.otl{margin-top:28px;max-width:720px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 24px 8px}
+.otl p{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.1em;margin:0;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.otl ol{display:block;list-style:none;margin:0;padding:6px 0 0}
+.otl li{margin:0}
+.otl a{display:flex;align-items:baseline;gap:10px;padding:8px 0;border:0;border-radius:0;background:none;font-size:15px;line-height:1.6;color:var(--ink);text-decoration:none}
+.otl a:hover{border:0;color:var(--c);text-decoration:underline;text-underline-offset:3px}
+.otl a span{flex:none;display:inline;width:1.6em;height:auto;border-radius:0;background:none;color:var(--muted);font-family:var(--latin);font-weight:600;font-size:13.5px;text-align:right}
+.otl a span::after{content:"."}
+/* section headings: number + title on a rule, no badge */
+.step{display:flex;align-items:baseline;gap:12px;margin:68px 0 22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.step:first-of-type{margin-top:8px}
+.step-n{display:inline;width:auto;height:auto;border-radius:0;background:none;color:var(--c,var(--or2));font-family:var(--serif);font-weight:700;font-size:clamp(19px,2.2vw,23px);line-height:1.45}
+.step-n::after{content:"."}
+.step-sub{font-size:13.5px;margin-top:4px}
+/* key-point boxes */
+.cond,.th .cond{background:#fff;border:1px solid var(--line);border-radius:8px;text-align:left;padding:16px 18px}
+.cond span.no,.th .cond span.no{display:block;width:auto;height:auto;margin:0 0 6px;border-radius:0;background:none;color:var(--muted);font-family:var(--latin);font-size:12px;font-weight:600;text-align:left}
+.cond b{font-size:24px;color:var(--ink)}
+.facts{border-radius:8px}
+/* cards, blocks, tables */
+.card,.pk,.sb,.gcard,.pack,.rcard,.corec,.spec{border-radius:8px}
+.card .no{display:block;width:auto;height:auto;border-radius:0;background:none!important;color:var(--c);font-family:var(--latin);font-size:13px;font-weight:700;text-align:left}
+.card .no::after{content:"."}
+.sb-h span{background:none;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--soft)}
+.etbl{border-radius:8px}
+.etbl thead th{background:#f4f4f2;color:var(--soft)}
+.scale span{border-radius:4px}
+.pk-note.ex{border-radius:6px}
+.rlinks a{border-radius:6px;font-weight:600}
+.ul2 li::before{width:5px;height:5px;top:.8em;background:var(--soft)}
+.nx a{border-radius:10px}
+.nx .nb{border-radius:6px}
+.ty a{border-radius:10px;border-top-width:3px}
+.ty dl div{border-radius:6px}
+.tynote{border-radius:8px}
+.tynote b{border-radius:4px}
+/* IB / Cambridge / AP page components: same squarer corners, tags instead of pills */
+.ab,.agemap,.bd,.cmp-wrap,.combo,.cpcert,.cpeval,.cpt-b,.crs-ex,.crs-side,.dbn-c,.dp-note,.fbox,.fx,.lvl,.mchart,.mission,.pillar,.rpill,.s45,.sp,.tip,.warn,.calm,.res-line,.same,details.dpx,table.crit,table.sct,
+.legend>li,.nums>div,.nlist>li,.rules>li,.tl>div,.eg>li,.crs-l>li,.look>li,.stg>li,.aw>div{border-radius:8px}
+.tg,.tg2,.tag,.age,.ab ol>li,.reqs>li,.dest span{border-radius:4px!important}
+.stg>li{border-top-width:3px}
+@media(max-width:600px){
+.otl{padding:14px 16px 6px}
+.otl a{font-size:14.5px;padding:7px 0}
+.etbl.stk td[data-l]:not([data-l=""])::before{background:none;color:var(--muted);padding:0;margin-right:8px}
+.cond b{font-size:21px}
+}
+</style>
 </head>
 <body>
 
@@ -939,7 +989,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     <div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><a href="/column/english/">英語・資格</a><span>›</span><span>IELTS</span></div>
     <div class="ph"><div class="ph-badge lg"><img src="/img/logos/ielts.png" alt="IELTS"></div><h1><small>英語・資格</small>IELTS（アイエルツ）<span class="nw">とは？</span></h1></div>
     <p class="lead">British Council・IDP IELTS・Cambridge University Press &amp; Assessmentが共同で所有する英語力テストです。大学などで学ぶための<b>Academic</b>と、移住や仕事のための<b>General Training</b>があり、結果は<b>0〜9のバンドスコア</b>で示されます</p>
-    <p class="facts-h">数字で見るIELTS</p><div class="facts th-f"><div class="fact"><b>0〜9<small></small></b><span>バンドスコア</span></div><div class="fact"><b>2時間<small>45分</small></b><span>試験時間</span></div><div class="fact"><b>29,700<small>円</small></b><span>受験料<br>（2026年9月〜）</span></div><div class="fact"><b>2<small>年</small></b><span>結果の有効期限</span></div></div><nav class="otl" aria-label="このページの内容"><p>このページでわかること</p><ol><li><a href="#overview"><span>1</span>全体像</a></li><li><a href="#sections"><span>2</span>セクションごとの内容</a></li><li><a href="#score"><span>3</span>バンドスコアの見方</a></li><li><a href="#when"><span>4</span>受け方・日程・受験料</a></li><li><a href="#changes"><span>5</span>最近の変更</a></li><li><a href="#tips"><span>6</span>高得点のコツ</a></li><li><a href="#rubric"><span>7</span>採点基準（公式資料）</a></li></ol></nav>
+    <p class="facts-h">数字で見るIELTS</p><div class="facts th-f"><div class="fact"><b>0〜9<small></small></b><span>バンドスコア</span></div><div class="fact"><b>2時間<small>45分</small></b><span>試験時間</span></div><div class="fact"><b>29,700<small>円</small></b><span>受験料<br>（2026年9月〜）</span></div><div class="fact"><b>2<small>年</small></b><span>結果の有効期限</span></div></div><nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#overview"><span>1</span>全体像</a></li><li><a href="#sections"><span>2</span>セクションごとの内容</a></li><li><a href="#score"><span>3</span>バンドスコアの見方</a></li><li><a href="#when"><span>4</span>受け方・日程・受験料</a></li><li><a href="#changes"><span>5</span>最近の変更</a></li><li><a href="#tips"><span>6</span>高得点のコツ</a></li><li><a href="#rubric"><span>7</span>採点基準（公式資料）</a></li></ol></nav>
   </div>
 </section>
 

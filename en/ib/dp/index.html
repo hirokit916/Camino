@@ -827,6 +827,56 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .gnav .gsub a{padding:5px 11px;font-size:13px}
 .gnav .gsub a.on{background:#fff}
 </style>
+<style id="camino-formal">
+/* 目次: vertical list in a plain box */
+.otl{margin-top:28px;max-width:720px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 24px 8px}
+.otl p{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.1em;margin:0;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.otl ol{display:block;list-style:none;margin:0;padding:6px 0 0}
+.otl li{margin:0}
+.otl a{display:flex;align-items:baseline;gap:10px;padding:8px 0;border:0;border-radius:0;background:none;font-size:15px;line-height:1.6;color:var(--ink);text-decoration:none}
+.otl a:hover{border:0;color:var(--c);text-decoration:underline;text-underline-offset:3px}
+.otl a span{flex:none;display:inline;width:1.6em;height:auto;border-radius:0;background:none;color:var(--muted);font-family:var(--latin);font-weight:600;font-size:13.5px;text-align:right}
+.otl a span::after{content:"."}
+/* section headings: number + title on a rule, no badge */
+.step{display:flex;align-items:baseline;gap:12px;margin:68px 0 22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.step:first-of-type{margin-top:8px}
+.step-n{display:inline;width:auto;height:auto;border-radius:0;background:none;color:var(--c,var(--or2));font-family:var(--serif);font-weight:700;font-size:clamp(19px,2.2vw,23px);line-height:1.45}
+.step-n::after{content:"."}
+.step-sub{font-size:13.5px;margin-top:4px}
+/* key-point boxes */
+.cond,.th .cond{background:#fff;border:1px solid var(--line);border-radius:8px;text-align:left;padding:16px 18px}
+.cond span.no,.th .cond span.no{display:block;width:auto;height:auto;margin:0 0 6px;border-radius:0;background:none;color:var(--muted);font-family:var(--latin);font-size:12px;font-weight:600;text-align:left}
+.cond b{font-size:24px;color:var(--ink)}
+.facts{border-radius:8px}
+/* cards, blocks, tables */
+.card,.pk,.sb,.gcard,.pack,.rcard,.corec,.spec{border-radius:8px}
+.card .no{display:block;width:auto;height:auto;border-radius:0;background:none!important;color:var(--c);font-family:var(--latin);font-size:13px;font-weight:700;text-align:left}
+.card .no::after{content:"."}
+.sb-h span{background:none;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--soft)}
+.etbl{border-radius:8px}
+.etbl thead th{background:#f4f4f2;color:var(--soft)}
+.scale span{border-radius:4px}
+.pk-note.ex{border-radius:6px}
+.rlinks a{border-radius:6px;font-weight:600}
+.ul2 li::before{width:5px;height:5px;top:.8em;background:var(--soft)}
+.nx a{border-radius:10px}
+.nx .nb{border-radius:6px}
+.ty a{border-radius:10px;border-top-width:3px}
+.ty dl div{border-radius:6px}
+.tynote{border-radius:8px}
+.tynote b{border-radius:4px}
+/* IB / Cambridge / AP page components: same squarer corners, tags instead of pills */
+.ab,.agemap,.bd,.cmp-wrap,.combo,.cpcert,.cpeval,.cpt-b,.crs-ex,.crs-side,.dbn-c,.dp-note,.fbox,.fx,.lvl,.mchart,.mission,.pillar,.rpill,.s45,.sp,.tip,.warn,.calm,.res-line,.same,details.dpx,table.crit,table.sct,
+.legend>li,.nums>div,.nlist>li,.rules>li,.tl>div,.eg>li,.crs-l>li,.look>li,.stg>li,.aw>div{border-radius:8px}
+.tg,.tg2,.tag,.age,.ab ol>li,.reqs>li,.dest span{border-radius:4px!important}
+.stg>li{border-top-width:3px}
+@media(max-width:600px){
+.otl{padding:14px 16px 6px}
+.otl a{font-size:14.5px;padding:7px 0}
+.etbl.stk td[data-l]:not([data-l=""])::before{background:none;color:var(--muted);padding:0;margin-right:8px}
+.cond b{font-size:21px}
+}
+</style>
 </head>
 <body>
 
@@ -865,7 +915,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
       <div><span>Assessment</span><b>External IB assessment and school-based Internal Assessment (IA)</b></div>
       <a class="spec-link" href="https://www.ibo.org/programmes/diploma-programme/" target="_blank" rel="noopener">View the DP on the Official IB Website<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
     </div>
-    <nav class="otl" aria-label="On this page"><p>On this page</p><ol><li><a href="#s1"><span>1</span>The DP at a Glance: Six Subject Groups and Three Core Components</a></li><li><a href="#score"><span>2</span>Scores Out of 45 and Diploma Requirements</a></li><li><a href="#s4"><span>3</span>Four Rules for Choosing DP Subjects</a></li><li><a href="#s5"><span>4</span>Example Subject Combinations from the Official IB Website</a></li><li><a href="#assess"><span>5</span>How DP Assessment Works: External and Internal Assessment (IA)</a></li></ol></nav>
+    <nav class="otl" aria-label="Contents"><p>Contents</p><ol><li><a href="#s1"><span>1</span>The DP at a Glance: Six Subject Groups and Three Core Components</a></li><li><a href="#score"><span>2</span>Scores Out of 45 and Diploma Requirements</a></li><li><a href="#s4"><span>3</span>Four Rules for Choosing DP Subjects</a></li><li><a href="#s5"><span>4</span>Example Subject Combinations from the Official IB Website</a></li><li><a href="#assess"><span>5</span>How DP Assessment Works: External and Internal Assessment (IA)</a></li></ol></nav>
   </div>
 </section>
 
