@@ -763,6 +763,22 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     },
     {
      "@type": "Question",
+     "name": "学校でAPを開講していなくても受験できますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "はい。College Boardは、授業を受けていなくても受験できるとしています。AP Course Ledgerで受験できる学校を探し、その学校のAPコーディネーターに連絡します。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "AP試験の費用はいくらですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "2026–27年度は、アメリカ・カナダ以外の学校で1試験129ドルです。テストセンターでは異なる場合があります。"
+     }
+    },
+    {
+     "@type": "Question",
      "name": "条件のスコアを取れば、必ず合格できますか？",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -911,6 +927,23 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .cond b{font-size:21px}
 }
 </style>
+<style id="camino-otlside">
+.otl-side{display:none}
+@media(min-width:1180px){
+body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
+.otl-side{display:block;position:fixed;top:164px;right:max(28px,calc((100vw - 1120px)/2 + 28px));width:244px;max-height:calc(100vh - 196px);overflow:auto;z-index:20;
+ background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px 10px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility .2s}
+.otl-side.on{opacity:1;visibility:visible;transform:none}
+.otl-side p{font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--ink);margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.otl-side ol{list-style:none;margin:0;padding:0}
+.otl-side a{display:flex;gap:8px;padding:7px 0 7px 10px;margin-left:-10px;border-left:2px solid transparent;font-size:13px;line-height:1.55;color:var(--soft);text-decoration:none}
+.otl-side a span{flex:none;width:1.3em;color:var(--muted);font:600 12px/1.9 var(--latin)}
+.otl-side a span::after{content:"."}
+.otl-side a:hover{color:var(--ink)}
+.otl-side a.cur{color:var(--ink);font-weight:700;border-left-color:var(--c,var(--or))}
+.otl-side .top{display:block;margin-top:6px;padding-top:8px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+}
+</style>
 </head>
 <body>
 
@@ -944,7 +977,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     <div class="ph"><div class="ph-badge lg"><img src="/img/logos/ap.png" alt="AP"></div><h1><small>AP &amp; University</small>APと<span class="nw">大学進学</span></h1></div>
     <p class="lead">APのスコアは、アメリカの多くの大学で単位や上級クラスへの配置に使われ、100以上の国の大学でも判断に使われています。<br>大学はAPのスコアをどう使うのか、出願にはどう関わるのか。大学進学を考える際に知っておきたいポイントを、College Boardと各大学の公式情報をもとに解説します</p>
     
-    <nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#find"><span>1</span>APの単位・配置の方針の調べ方</a></li><li><a href="#target"><span>2</span>スコアの考え方と送り方</a></li><li><a href="#scores"><span>3</span>国・大学によって異なる使われ方</a></li></ol></nav>
+    <nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#find"><span>1</span>APの単位・配置の方針の調べ方</a></li><li><a href="#target"><span>2</span>スコアの考え方と送り方</a></li><li><a href="#scores"><span>3</span>国・大学によって異なる使われ方</a></li><li><a href="#dates"><span>4</span>AP試験の日程と費用（2026–27年度）</a></li><li><a href="#outside"><span>5</span>学校にAP科目がなくても受けられる？</a></li></ol></nav>
   </div>
 </section>
 <section class="sec first" id="university" style="--c:var(--ap);--ct:var(--ap-t)">
@@ -987,7 +1020,19 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
         <h4>入試ページで確認したい4つの項目</h4>
         <ol class="look v"><li><span>1</span><div><b>科目数とスコア</b>：何科目で、それぞれ何点か</div></li><li><span>2</span><div><b>指定科目</b>：Calculus BCなど、必要な科目とスコア</div></li><li><span>3</span><div><b>ほかの成績</b>：高校の成績（GPA）やSAT・ACT</div></li><li><span>4</span><div><b>数えない科目</b>：AP Seminarなど、対象外の科目</div></li></ol>
       </div>
-    </div><p class="muted">※ 条件を満たしていても、必ず合格するとは限りません。条件は年度・学部によって変わるため、出願前に必ず最新の募集要項をご確認ください</p>
+    </div><p class="muted">※ 条件を満たしていても、必ず合格するとは限りません。条件は年度・学部によって変わるため、出願前に必ず最新の募集要項をご確認ください</p><div class="step" id="dates"><span class="step-n">4</span><div><h3>申し込みは11月、試験は5月、スコアは7月</h3><p class="step-sub">AP試験は、学校のAPコーディネーターを通して申し込みます</p></div></div><div class="ewrap rise"><table class="etbl stk"><thead><tr><th>時期（2026–27年度）</th><th>できごと</th></tr></thead><tbody><tr><th>2026年11月13日</th><td data-l="できごと">学校が通年・秋学期の科目と、試験のみの受験者の試験を注文する締め切り</td></tr><tr><th>2027年3月12日</th><td data-l="できごと">後から始まる科目の注文や、秋の注文の変更の締め切り（費用がかかる場合あり）</td></tr><tr><th>2027年5月3〜7日・10〜14日</th><td data-l="できごと" class="s">AP試験（2週間）</td></tr><tr><th>2027年7月</th><td data-l="できごと" class="s">スコアの発表</td></tr></tbody></table></div><div class="dbn rise">
+      <div class="dbn-c"><svg class="flag" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#16294d" stroke-width="2.2"><circle cx="20" cy="20" r="16"/><path d="M4 20h32M20 4c5 5 5 27 0 32M20 4c-5 5-5 27 0 32"/></svg><span><b>1試験129ドル</b><small>アメリカ・カナダ以外の学校（2026–27年度）</small></span></div>
+      <div class="dbn-c"><svg class="flag" viewBox="0 0 76 40" aria-hidden="true"><rect width="76" height="40" fill="#fff"/><g fill="#B22234"><rect y="0" width="76" height="3.1"/><rect y="6.2" width="76" height="3.1"/><rect y="12.3" width="76" height="3.1"/><rect y="18.5" width="76" height="3.1"/><rect y="24.6" width="76" height="3.1"/><rect y="30.8" width="76" height="3.1"/><rect y="36.9" width="76" height="3.1"/></g><rect width="30" height="21.5" fill="#3C3B6E"/></svg><span><b>1試験99ドル</b><small>アメリカ・カナダなど</small></span></div>
+      <div class="dbn-c"><svg class="flag" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#16294d" stroke-width="2.2" stroke-linejoin="round"><rect x="5" y="9" width="30" height="22" rx="3"/><path d="m6 11 14 11 14-11"/></svg><span><b>追加40ドル</b><small>遅れての注文・受験、未使用・取り消し</small></span></div>
+    </div><p class="rs-n">※ College Board認定のテストセンターでは、費用が異なる場合があります。出典：<a href="https://apcentral.collegeboard.org/exam-administration-ordering-scores/ordering-fees/exam-fees" target="_blank" rel="noopener">AP Central: Exam fees</a>・<a href="https://apcentral.collegeboard.org/about-ap-2021/updates/2021-exam-timeline" target="_blank" rel="noopener">AP Central: 2026–27 key dates</a>・<a href="https://international.collegeboard.org/media/pdf/international-quick-reference-guide_1.pdf" target="_blank" rel="noopener">Quick Reference Guide for International Educators 2026–27</a></p><div class="step" id="outside"><span class="step-n">5</span><div><h3>授業を取っていなくても、試験は受けられる</h3><p class="step-sub">College Boardは、授業を受けてから試験を受けることを勧めつつ、必須ではないとしています</p></div></div><div class="flow rise" style="margin-top:18px">
+      <div class="fbox"><span class="tag">STEP 1</span><h4>受験できる学校を探す</h4><p>College Boardの<b>AP Course Ledger</b>で、国や都市からAP科目を開講している学校を探します</p></div>
+      <div class="fbox"><span class="tag">STEP 2</span><h4>APコーディネーターに連絡</h4><p>学校に連絡し、その年に外部の生徒の受験を受け入れているかを確認します。試験の注文や費用の支払いも、その学校を通して行います</p></div>
+      <div class="fbox"><span class="tag">STEP 3</span><h4>早めに動く</h4><p>学校の注文の締め切りは11月中旬です。間に合わなかった場合でも、学校の判断で追加してもらえることがあります</p></div>
+    </div><div class="warn rise">
+      <span class="warn-ic" aria-hidden="true">!</span>
+      <div><b>作品提出（Digital Portfolio）がある科目は要確認</b>
+        <p>AP SeminarやAP Research、アート系の科目など、<b>AP Digital Portfolioで作品や課題を提出する科目</b>には、個別の条件があります。受験する学校のAPコーディネーターに確認してください</p></div>
+    </div><p class="rs-n">出典：<a href="https://apstudents.collegeboard.org/help-center/can-i-take-ap-exam-if-i-havent-taken-ap-course" target="_blank" rel="noopener">AP Students: Can I take an AP Exam if I haven’t taken the course?</a>・<a href="https://apstudents.collegeboard.org/help-center/can-i-register-ap-exam-if-my-school-doesnt-offer-ap-courses-or-administer-ap-exams" target="_blank" rel="noopener">AP Students: If my school doesn’t offer AP</a></p>
 
   </div>
 </section>
@@ -1000,6 +1045,8 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
       <details><summary>APで、イギリスの大学に出願できますか？</summary><div class="a">はい、多くの大学がAPでの条件を公表しています。例えばケンブリッジ大学は5科目以上で5、インペリアル・カレッジは5科目で5・5・5・4・4などを求めています</div></details>
       <details><summary>APのスコアは、いつまでに送ればよいですか？</summary><div class="a">毎年1校まで、6月20日までなら無料で送れます。それ以降は、1件15ドルで送れます</div></details>
       <details><summary>AP International Diplomaとは何ですか？</summary><div class="a">5科目以上のAP試験で3以上を取り、4つの分野の条件を満たすと得られる証明です。高校の卒業資格の代わりにはなりません</div></details>
+      <details><summary>学校でAPを開講していなくても受験できますか？</summary><div class="a">はい。College Boardは、授業を受けていなくても受験できるとしています。AP Course Ledgerで受験できる学校を探し、その学校のAPコーディネーターに連絡します</div></details>
+      <details><summary>AP試験の費用はいくらですか？</summary><div class="a">2026–27年度は、アメリカ・カナダ以外の学校で1試験129ドルです。テストセンターでは異なる場合があります</div></details>
       <details><summary>条件のスコアを取れば、必ず合格できますか？</summary><div class="a">いいえ。大学が示す条件は、出願や入学審査に必要な条件であり、合格を保証するものではありません</div></details>
     </div>
   </div>
@@ -1039,6 +1086,11 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
       <li><a href="https://www.lse.ac.uk/study-at-lse/international-students/united-states-of-america" target="_blank" rel="noopener">LSE: United States of America</a></li>
       <li><a href="https://www.ucl.ac.uk/prospective-students/international/united-states-america" target="_blank" rel="noopener">UCL: United States of America (entry requirements)</a></li>
       <li><a href="https://www.ucl.ac.uk/economics/study/undergraduate/prospective/standard-reqs" target="_blank" rel="noopener">UCL Economics: Standard requirements</a></li>
+      <li><a href="https://apcentral.collegeboard.org/exam-administration-ordering-scores/ordering-fees/exam-fees" target="_blank" rel="noopener">AP Central: Exam fees</a></li>
+      <li><a href="https://apcentral.collegeboard.org/about-ap-2021/updates/2021-exam-timeline" target="_blank" rel="noopener">AP Central: 2026–27 key dates</a></li>
+      <li><a href="https://international.collegeboard.org/media/pdf/international-quick-reference-guide_1.pdf" target="_blank" rel="noopener">College Board: Quick Reference Guide for International Educators 2026–27</a></li>
+      <li><a href="https://apstudents.collegeboard.org/help-center/can-i-take-ap-exam-if-i-havent-taken-ap-course" target="_blank" rel="noopener">AP Students: Taking an exam without the course</a></li>
+      <li><a href="https://apstudents.collegeboard.org/help-center/can-i-register-ap-exam-if-my-school-doesnt-offer-ap-courses-or-administer-ap-exams" target="_blank" rel="noopener">AP Students: If your school doesn’t offer AP</a></li>
     </ul>
   </div>
 </section>
@@ -1066,6 +1118,21 @@ function set(o){m.classList.toggle('open',o);b.classList.toggle('open',o);b.setA
 b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
 document.addEventListener('click',function(e){if(!m.contains(e.target))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
+</script>
+<script id="camino-otlside">
+(function(){var o=document.querySelector('nav.otl');if(!o||!o.querySelector('a[href^="#"]'))return;
+if([].some.call(document.querySelectorAll('main table'),function(t){return t.querySelectorAll('thead th').length>=6}))return;
+var a=document.createElement('aside');a.className='otl-side';a.setAttribute('aria-hidden','true');
+var c=getComputedStyle(o.closest('[style*="--c"]')||document.body).getPropertyValue('--c');if(c)a.style.setProperty('--c',c);
+a.innerHTML='<p>'+o.querySelector('p').textContent+'</p>'+o.querySelector('ol').outerHTML+'<a class="top" href="#">'+(document.documentElement.lang=='en'?'Back to top ↑':'ページの先頭へ ↑')+'</a>';
+a.querySelectorAll('a').forEach(function(x){x.tabIndex=-1});
+document.body.appendChild(a);document.body.classList.add('has-side');
+var ls=[].slice.call(a.querySelectorAll('ol a')),ts=ls.map(function(l){return document.getElementById(l.getAttribute('href').slice(1))});
+var f=document.querySelector('.cta')||document.querySelector('footer');
+function u(){var y=innerHeight*0.42,ob=o.getBoundingClientRect().bottom,fb=f?f.getBoundingClientRect().top:1e9;
+a.classList.toggle('on',ob<0&&fb>innerHeight*0.5);var k=-1;ts.forEach(function(t,i){if(t&&t.getBoundingClientRect().top<y)k=i});
+ls.forEach(function(l,i){l.classList.toggle('cur',i==k)})}
+addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();
 </script>
 </body>
 </html>

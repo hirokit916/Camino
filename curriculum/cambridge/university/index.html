@@ -763,6 +763,22 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     },
     {
      "@type": "Question",
+     "name": "UCASの締め切りはいつですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "2027年入学の場合、オックスフォード・ケンブリッジと多くの医学・歯学・獣医学は2026年10月15日、ほとんどのコースは2027年1月13日（いずれも英国時間18時）です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "学校にない科目のA Levelを受けられますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ブリティッシュ・カウンシルが、IGCSE・AS & A Levelの個人受験（Private candidate）の申し込みを受け付けています。予想成績や実験の扱いは、事前に受験会場と志望校に確認してください。"
+     }
+    },
+    {
+     "@type": "Question",
      "name": "条件の成績を取れば、必ず合格できますか？",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -911,6 +927,23 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .cond b{font-size:21px}
 }
 </style>
+<style id="camino-otlside">
+.otl-side{display:none}
+@media(min-width:1180px){
+body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
+.otl-side{display:block;position:fixed;top:164px;right:max(28px,calc((100vw - 1120px)/2 + 28px));width:244px;max-height:calc(100vh - 196px);overflow:auto;z-index:20;
+ background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px 10px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility .2s}
+.otl-side.on{opacity:1;visibility:visible;transform:none}
+.otl-side p{font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--ink);margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.otl-side ol{list-style:none;margin:0;padding:0}
+.otl-side a{display:flex;gap:8px;padding:7px 0 7px 10px;margin-left:-10px;border-left:2px solid transparent;font-size:13px;line-height:1.55;color:var(--soft);text-decoration:none}
+.otl-side a span{flex:none;width:1.3em;color:var(--muted);font:600 12px/1.9 var(--latin)}
+.otl-side a span::after{content:"."}
+.otl-side a:hover{color:var(--ink)}
+.otl-side a.cur{color:var(--ink);font-weight:700;border-left-color:var(--c,var(--or))}
+.otl-side .top{display:block;margin-top:6px;padding-top:8px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+}
+</style>
 </head>
 <body>
 
@@ -944,7 +977,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     <div class="ph"><div class="ph-badge lg"><img src="/img/logos/cambridge.png" alt="Cambridge"></div><h1><small>Cambridge &amp; University</small>Cambridge（A Level）と<span class="nw">大学進学</span></h1></div>
     <p class="lead">Cambridge Internationalの資格は、95の国・地域にある2,400以上の機関で受け入れられています。アメリカでも、アイビーリーグのすべてを含む1,000以上の大学が受け入れています。<br>A Levelを使ってどのような大学に出願できるのか、どのくらいの成績が必要なのか。大学進学を考える際に知っておきたいポイントを、Cambridge Internationalと各大学の公式情報をもとに解説します</p>
     
-    <nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#find"><span>1</span>Cambridgeの資格を認めている大学の探し方</a></li><li><a href="#target"><span>2</span>志望校に合わせた目標成績の考え方</a></li><li><a href="#scores"><span>3</span>大学・学部によって異なる出願条件</a></li></ol></nav>
+    <nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#find"><span>1</span>Cambridgeの資格を認めている大学の探し方</a></li><li><a href="#target"><span>2</span>志望校に合わせた目標成績の考え方</a></li><li><a href="#scores"><span>3</span>大学・学部によって異なる出願条件</a></li><li><a href="#ucas"><span>4</span>UCASの締め切りから逆算する出願スケジュール</a></li><li><a href="#private"><span>5</span>学校で受けられない科目は？Private candidate</a></li></ol></nav>
   </div>
 </section>
 <section class="sec first" id="university" style="--c:var(--cam);--ct:var(--cam-t)">
@@ -994,7 +1027,16 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
         <h4>入試ページで確認したい4つの項目</h4>
         <ol class="look v"><li><span>1</span><div><b>3科目の成績</b>：A*AAなどの組み合わせ</div></li><li><span>2</span><div><b>指定科目</b>：必要な科目とその成績</div></li><li><span>3</span><div><b>受験のタイミング</b>：同じ年に受けた成績か、1回目の受験か</div></li><li><span>4</span><div><b>その他の条件</b>：英語力、入学試験、面接など</div></li></ol>
       </div>
-    </div><p class="muted">※ 条件を満たしていても、必ず合格するとは限りません。必要な成績や科目は年度・学部によって変わるため、出願前に必ず最新の募集要項をご確認ください</p>
+    </div><p class="muted">※ 条件を満たしていても、必ず合格するとは限りません。必要な成績や科目は年度・学部によって変わるため、出願前に必ず最新の募集要項をご確認ください</p><div class="step" id="ucas"><span class="step-n">4</span><div><h3>出願は「最終学年の秋」、条件は「夏の結果」で決まる</h3><p class="step-sub">イギリスの大学には、UCASを通して出願します。締め切りは大学・コースによって2つに分かれます</p></div></div><div class="ewrap rise"><table class="etbl stk"><thead><tr><th>時期（2027年入学）</th><th>できごと</th><th>ポイント</th></tr></thead><tbody><tr><th>2026年5月12日</th><td data-l="できごと">UCASの出願受付が始まる</td><td data-l="ポイント">UCAS Hubで登録・準備ができる</td></tr><tr><th>2026年10月15日 18時（英国時間）</th><td data-l="できごと">オックスフォード・ケンブリッジ、多くの医学・歯学・獣医学の締め切り</td><td data-l="ポイント">学校の予想成績（Predicted grades）をもとに出願</td></tr><tr><th>2027年1月13日 18時（英国時間）</th><td data-l="できごと">ほとんどのコースの締め切り（Equal consideration date）</td><td data-l="ポイント">この日までの出願は、同じ条件で審査される</td></tr><tr><th>2027年夏</th><td data-l="できごと">A Levelの結果が出る</td><td data-l="ポイント">条件付き合格（Conditional offer）の条件を満たせば、入学が確定</td></tr><tr><th>2027年9月23日 18時（英国時間）</th><td data-l="できごと">2027年入学の最終締め切り</td><td data-l="ポイント">6月30日以降の出願は、自動的にClearingの対象になる</td></tr></tbody></table></div><p class="rs-n">※ 日付はUCASが公表している2027年入学の日程です。出典：<a href="https://www.ucas.com/ucas/undergraduate/getting-started/when-apply" target="_blank" rel="noopener">UCAS: When to apply</a></p><p class="calm">出願の時点では、A Levelの結果はまだ出ていません。そのため大学は、<b>学校が出す予想成績（Predicted grades）とIGCSEなどのこれまでの成績</b>をもとに審査し、多くの場合「A*AAを取れば入学」という<b>条件付き合格</b>を出します</p><h4 class="mini-h"><span class="mh-b">A</span>A*はどのくらいの割合？Cambridgeの公式統計</h4>
+    <p class="mini-p">Cambridge International A Level（2025年6月）で、A*とA以上を取った受験者の割合です</p><div class="ewrap rise"><table class="etbl stk"><thead><tr><th>科目</th><th>A*</th><th>A以上（A*とAの合計）</th></tr></thead><tbody><tr><th>Further Mathematics</th><td data-l="A*" class="s">28.0%</td><td data-l="A以上（A*とAの合計）" class="s">59.9%</td></tr><tr><th>Mathematics</th><td data-l="A*" class="s">14.8%</td><td data-l="A以上（A*とAの合計）" class="s">36.9%</td></tr><tr><th>Chemistry</th><td data-l="A*" class="s">14.7%</td><td data-l="A以上（A*とAの合計）" class="s">36.7%</td></tr><tr><th>Physics</th><td data-l="A*" class="s">13.2%</td><td data-l="A以上（A*とAの合計）" class="s">32.7%</td></tr><tr><th>Biology</th><td data-l="A*" class="s">12.9%</td><td data-l="A以上（A*とAの合計）" class="s">33.1%</td></tr><tr><th>Computer Science</th><td data-l="A*" class="s">12.9%</td><td data-l="A以上（A*とAの合計）" class="s">30.8%</td></tr><tr><th>Economics</th><td data-l="A*" class="s">12.7%</td><td data-l="A以上（A*とAの合計）" class="s">29.5%</td></tr><tr><th>Psychology</th><td data-l="A*" class="s">8.4%</td><td data-l="A以上（A*とAの合計）" class="s">20.6%</td></tr><tr><th>Business</th><td data-l="A*" class="s">6.7%</td><td data-l="A以上（A*とAの合計）" class="s">16.1%</td></tr><tr><th>Literature in English</th><td data-l="A*" class="s">4.8%</td><td data-l="A以上（A*とAの合計）" class="s">16.3%</td></tr></tbody></table></div><p class="rs-n">※ 世界のCambridge International A Levelの受験者全体の数字で、科目によって受験者の層も異なります。出典：<a href="https://www.cambridgeinternational.org/Images/742380-cambridge-international-a-level-results-statistics-june-2025.pdf" target="_blank" rel="noopener">Cambridge International A Level results statistics, June 2025</a></p><div class="step" id="private"><span class="step-n">5</span><div><h3>学校にない科目も、個人で受けられる</h3><p class="step-sub">学校を通さずに受験する人は、Private candidate（個人受験者）と呼ばれます</p></div></div><p class="calm">ブリティッシュ・カウンシルは、IGCSE・O Level・AS & A Levelの<b>個人受験の申し込みを受け付けて</b>います。在籍している学校の生徒は、通常は学校を通して申し込みます</p><div class="flow rise" style="margin-top:18px">
+      <div class="fbox"><span class="tag">STEP 1</span><h4>試験と試験団体を選ぶ</h4><p>Cambridge International・Pearson Edexcel・OxfordAQAなど、試験団体によって試験の時期や締め切りが異なります</p></div>
+      <div class="fbox"><span class="tag">STEP 2</span><h4>オンラインで申し込む</h4><p>ブリティッシュ・カウンシルのSchool Registration System（SRS）でアカウントを作り、申し込みます。18歳未満は保護者が申し込みます</p></div>
+      <div class="fbox"><span class="tag">STEP 3</span><h4>受験料を支払う</h4><p>支払いが確認されるまで、申し込みは処理されません。受験料はSRSに表示されます</p></div>
+    </div><div class="ewrap rise"><table class="etbl stk"><thead><tr><th>試験団体</th><th>試験の時期（ブリティッシュ・カウンシル経由の個人受験）</th></tr></thead><tbody><tr><th>Cambridge International</th><td data-l="試験の時期（ブリティッシュ・カウンシル経由の個人受験）" class="s">6月・11月</td></tr><tr><th>Pearson Edexcel</th><td data-l="試験の時期（ブリティッシュ・カウンシル経由の個人受験）">International A Level：1月・6月・10月／International GCSE：6月・11月</td></tr><tr><th>OxfordAQA</th><td data-l="試験の時期（ブリティッシュ・カウンシル経由の個人受験）">6月・11月（International A Levelは1月も）</td></tr></tbody></table></div><div class="warn rise">
+      <span class="warn-ic" aria-hidden="true">!</span>
+      <div><b>個人受験では、予想成績と実験の扱いを先に確認</b>
+        <p>UCASの出願では、通常、学校などが予想成績を出します。また、理科の実験を伴う科目は、試験団体や会場によって扱いが異なります。<b>申し込む前に、受験会場と志望校の両方に確認</b>しておくと安心です</p></div>
+    </div><p class="rs-n">出典：<a href="https://internationalschools.britishcouncil.org/students/private-candidates/registration" target="_blank" rel="noopener">British Council: Private candidate registration</a></p>
 
   </div>
 </section>
@@ -1007,6 +1049,8 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
       <details><summary>日本の大学に、A Levelで出願できますか？</summary><div class="a">主要な国公立・私立大学の英語で学ぶ学位プログラムの多くが、Cambridgeの資格での出願を認めています。多くはA Level 3科目を条件としています。条件は大学ごとに異なるため、各大学の募集要項をご確認ください</div></details>
       <details><summary>アメリカの大学に、A Levelで出願できますか？</summary><div class="a">はい。アイビーリーグのすべてを含む1,000以上のアメリカの大学が、Cambridgeの資格を受け入れています。入学の条件や単位の扱いは、大学・コースによって異なります</div></details>
       <details><summary>Predicted grade（予想成績）とは何ですか？</summary><div class="a">学校が「生徒が取れると見込む成績」として示す成績です。UCASでは、志望校とは関係なく、専門的な判断で決めるものとされています</div></details>
+      <details><summary>UCASの締め切りはいつですか？</summary><div class="a">2027年入学の場合、オックスフォード・ケンブリッジと多くの医学・歯学・獣医学は2026年10月15日、ほとんどのコースは2027年1月13日（いずれも英国時間18時）です</div></details>
+      <details><summary>学校にない科目のA Levelを受けられますか？</summary><div class="a">ブリティッシュ・カウンシルが、IGCSE・AS & A Levelの個人受験（Private candidate）の申し込みを受け付けています。予想成績や実験の扱いは、事前に受験会場と志望校に確認してください</div></details>
       <details><summary>条件の成績を取れば、必ず合格できますか？</summary><div class="a">いいえ。大学が示す条件は、出願や入学審査に必要な条件であり、合格を保証するものではありません</div></details>
     </div>
   </div>
@@ -1045,6 +1089,9 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
       <li><a href="https://www.ucl.ac.uk/mathematical-physical-sciences/maths/study-us/bscmsci-mathematics/admissions" target="_blank" rel="noopener">UCL Mathematics: Admissions</a></li>
       <li><a href="https://www.lse.ac.uk/study-at-lse/Undergraduate/Teachers-schools-parents/admissions-advice-for-teachers" target="_blank" rel="noopener">LSE: Admissions advice for teachers</a></li>
       <li><a href="https://www.imperial.ac.uk/study/apply/undergraduate/entry-requirements/accepted-qualifications/" target="_blank" rel="noopener">Imperial College London: Accepted qualifications</a></li>
+      <li><a href="https://www.ucas.com/ucas/undergraduate/getting-started/when-apply" target="_blank" rel="noopener">UCAS: When to apply (2027 entry)</a></li>
+      <li><a href="https://www.cambridgeinternational.org/Images/742380-cambridge-international-a-level-results-statistics-june-2025.pdf" target="_blank" rel="noopener">Cambridge International A Level results statistics, June 2025</a></li>
+      <li><a href="https://internationalschools.britishcouncil.org/students/private-candidates/registration" target="_blank" rel="noopener">British Council: Private candidate registration</a></li>
     </ul>
   </div>
 </section>
@@ -1072,6 +1119,21 @@ function set(o){m.classList.toggle('open',o);b.classList.toggle('open',o);b.setA
 b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
 document.addEventListener('click',function(e){if(!m.contains(e.target))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
+</script>
+<script id="camino-otlside">
+(function(){var o=document.querySelector('nav.otl');if(!o||!o.querySelector('a[href^="#"]'))return;
+if([].some.call(document.querySelectorAll('main table'),function(t){return t.querySelectorAll('thead th').length>=6}))return;
+var a=document.createElement('aside');a.className='otl-side';a.setAttribute('aria-hidden','true');
+var c=getComputedStyle(o.closest('[style*="--c"]')||document.body).getPropertyValue('--c');if(c)a.style.setProperty('--c',c);
+a.innerHTML='<p>'+o.querySelector('p').textContent+'</p>'+o.querySelector('ol').outerHTML+'<a class="top" href="#">'+(document.documentElement.lang=='en'?'Back to top ↑':'ページの先頭へ ↑')+'</a>';
+a.querySelectorAll('a').forEach(function(x){x.tabIndex=-1});
+document.body.appendChild(a);document.body.classList.add('has-side');
+var ls=[].slice.call(a.querySelectorAll('ol a')),ts=ls.map(function(l){return document.getElementById(l.getAttribute('href').slice(1))});
+var f=document.querySelector('.cta')||document.querySelector('footer');
+function u(){var y=innerHeight*0.42,ob=o.getBoundingClientRect().bottom,fb=f?f.getBoundingClientRect().top:1e9;
+a.classList.toggle('on',ob<0&&fb>innerHeight*0.5);var k=-1;ts.forEach(function(t,i){if(t&&t.getBoundingClientRect().top<y)k=i});
+ls.forEach(function(l,i){l.classList.toggle('cur',i==k)})}
+addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();
 </script>
 </body>
 </html>

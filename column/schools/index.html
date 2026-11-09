@@ -931,6 +931,23 @@ a.pg:hover{border-color:var(--k)}
 .cond b{font-size:21px}
 }
 </style>
+<style id="camino-otlside">
+.otl-side{display:none}
+@media(min-width:1180px){
+body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
+.otl-side{display:block;position:fixed;top:164px;right:max(28px,calc((100vw - 1120px)/2 + 28px));width:244px;max-height:calc(100vh - 196px);overflow:auto;z-index:20;
+ background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px 10px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility .2s}
+.otl-side.on{opacity:1;visibility:visible;transform:none}
+.otl-side p{font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--ink);margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.otl-side ol{list-style:none;margin:0;padding:0}
+.otl-side a{display:flex;gap:8px;padding:7px 0 7px 10px;margin-left:-10px;border-left:2px solid transparent;font-size:13px;line-height:1.55;color:var(--soft);text-decoration:none}
+.otl-side a span{flex:none;width:1.3em;color:var(--muted);font:600 12px/1.9 var(--latin)}
+.otl-side a span::after{content:"."}
+.otl-side a:hover{color:var(--ink)}
+.otl-side a.cur{color:var(--ink);font-weight:700;border-left-color:var(--c,var(--or))}
+.otl-side .top{display:block;margin-top:6px;padding-top:8px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+}
+</style>
 </head>
 <body>
 
@@ -1034,6 +1051,21 @@ function go(k){bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.k=
 document.querySelectorAll('.sch-c').forEach(function(c){c.hidden=!(k==='all'||(' '+c.dataset.k+' ').indexOf(' '+k+' ')>=0)});
 document.querySelectorAll('.sch-g').forEach(function(g){var any=[].some.call(g.querySelectorAll('.sch-c'),function(c){return !c.hidden});g.hidden=!any;var h=g.previousElementSibling;if(h&&h.classList.contains('sch-r'))h.hidden=!any})}
 bs.forEach(function(b){b.addEventListener('click',function(){go(b.dataset.k)})});})();
+</script>
+<script id="camino-otlside">
+(function(){var o=document.querySelector('nav.otl');if(!o||!o.querySelector('a[href^="#"]'))return;
+if([].some.call(document.querySelectorAll('main table'),function(t){return t.querySelectorAll('thead th').length>=6}))return;
+var a=document.createElement('aside');a.className='otl-side';a.setAttribute('aria-hidden','true');
+var c=getComputedStyle(o.closest('[style*="--c"]')||document.body).getPropertyValue('--c');if(c)a.style.setProperty('--c',c);
+a.innerHTML='<p>'+o.querySelector('p').textContent+'</p>'+o.querySelector('ol').outerHTML+'<a class="top" href="#">'+(document.documentElement.lang=='en'?'Back to top ↑':'ページの先頭へ ↑')+'</a>';
+a.querySelectorAll('a').forEach(function(x){x.tabIndex=-1});
+document.body.appendChild(a);document.body.classList.add('has-side');
+var ls=[].slice.call(a.querySelectorAll('ol a')),ts=ls.map(function(l){return document.getElementById(l.getAttribute('href').slice(1))});
+var f=document.querySelector('.cta')||document.querySelector('footer');
+function u(){var y=innerHeight*0.42,ob=o.getBoundingClientRect().bottom,fb=f?f.getBoundingClientRect().top:1e9;
+a.classList.toggle('on',ob<0&&fb>innerHeight*0.5);var k=-1;ts.forEach(function(t,i){if(t&&t.getBoundingClientRect().top<y)k=i});
+ls.forEach(function(l,i){l.classList.toggle('cur',i==k)})}
+addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();
 </script>
 </body>
 </html>

@@ -735,6 +735,22 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "When are the UCAS deadlines?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For 2027 entry: 15 October 2026 for Oxford, Cambridge and most medicine, dentistry and veterinary courses, and 13 January 2027 for most other courses (18:00 UK time)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I take an A Level my school doesn’t offer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The British Council accepts private candidate entries for IGCSEs and AS & A Levels. Check predicted grades and practical work with the exam centre and your universities first."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "How many A Levels do I need?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -915,6 +931,23 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .cond b{font-size:21px}
 }
 </style>
+<style id="camino-otlside">
+.otl-side{display:none}
+@media(min-width:1180px){
+body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
+.otl-side{display:block;position:fixed;top:164px;right:max(28px,calc((100vw - 1120px)/2 + 28px));width:244px;max-height:calc(100vh - 196px);overflow:auto;z-index:20;
+ background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px 10px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility .2s}
+.otl-side.on{opacity:1;visibility:visible;transform:none}
+.otl-side p{font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--ink);margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.otl-side ol{list-style:none;margin:0;padding:0}
+.otl-side a{display:flex;gap:8px;padding:7px 0 7px 10px;margin-left:-10px;border-left:2px solid transparent;font-size:13px;line-height:1.55;color:var(--soft);text-decoration:none}
+.otl-side a span{flex:none;width:1.3em;color:var(--muted);font:600 12px/1.9 var(--latin)}
+.otl-side a span::after{content:"."}
+.otl-side a:hover{color:var(--ink)}
+.otl-side a.cur{color:var(--ink);font-weight:700;border-left-color:var(--c,var(--or))}
+.otl-side .top{display:block;margin-top:6px;padding-top:8px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+}
+</style>
 </head>
 <body>
 
@@ -948,7 +981,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
     <div class="ph"><div class="ph-badge lg"><img src="/img/logos/cambridge.png" alt="Cambridge"></div><h1><small>Cambridge &amp; University</small>Cambridge (A Level) and university</h1></div>
     <p class="lead">Cambridge qualifications are accepted by over 2,400 institutions in 95 countries and regions, including over 1,000 US universities and all of the Ivy League.<br>Which universities can you apply to with A Levels, and what grades do you need? This guide covers the key points, based on official information from Cambridge International and the universities</p>
     
-    <nav class="otl" aria-label="Contents"><p>Contents</p><ol><li><a href="#find"><span>1</span>Finding universities that accept Cambridge qualifications</a></li><li><a href="#target"><span>2</span>Setting target grades for your chosen courses</a></li><li><a href="#scores"><span>3</span>Requirements differ by university and course</a></li></ol></nav>
+    <nav class="otl" aria-label="Contents"><p>Contents</p><ol><li><a href="#find"><span>1</span>Finding universities that accept Cambridge qualifications</a></li><li><a href="#target"><span>2</span>Setting target grades for your chosen courses</a></li><li><a href="#scores"><span>3</span>Requirements differ by university and course</a></li><li><a href="#ucas"><span>4</span>Working back from UCAS deadlines</a></li><li><a href="#private"><span>5</span>Subjects your school doesn’t offer: private candidates</a></li></ol></nav>
   </div>
 </section>
 <section class="sec first" id="university" style="--c:var(--cam);--ct:var(--cam-t)">
@@ -998,7 +1031,16 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
         <h4>Four things to check on the entry requirements page</h4>
         <ol class="look v"><li><span>1</span><div><b>Three grades</b>: the combination, e.g. A*AA</div></li><li><span>2</span><div><b>Required subjects</b>: which subjects, at what grade</div></li><li><span>3</span><div><b>Timing</b>: taken together, or at the first sitting</div></li><li><span>4</span><div><b>Other conditions</b>: English, admissions tests, interviews</div></li></ol>
       </div>
-    </div><p class="muted">Meeting the requirements does not guarantee an offer. Requirements change by year and course, so always check the latest information before applying</p>
+    </div><p class="muted">Meeting the requirements does not guarantee an offer. Requirements change by year and course, so always check the latest information before applying</p><div class="step" id="ucas"><span class="step-n">4</span><div><h3>Apply in the autumn, meet the conditions in the summer</h3><p class="step-sub">UK applications go through UCAS, with two main deadlines depending on the course</p></div></div><div class="ewrap rise"><table class="etbl stk"><thead><tr><th>When (2027 entry)</th><th>What happens</th><th>Note</th></tr></thead><tbody><tr><th>12 May 2026</th><td data-l="What happens">UCAS applications open</td><td data-l="Note">Register and start in UCAS Hub</td></tr><tr><th>15 Oct 2026, 18:00 UK</th><td data-l="What happens">Deadline for Oxford, Cambridge and most medicine, dentistry and veterinary courses</td><td data-l="Note">Applications are based on predicted grades</td></tr><tr><th>13 Jan 2027, 18:00 UK</th><td data-l="What happens">Equal consideration date for most courses</td><td data-l="Note">Applications by this date are considered equally</td></tr><tr><th>Summer 2027</th><td data-l="What happens">A Level results</td><td data-l="Note">Meet the conditions of a conditional offer to confirm your place</td></tr><tr><th>23 Sep 2027, 18:00 UK</th><td data-l="What happens">Final deadline for 2027 entry</td><td data-l="Note">Applications after 30 June go into Clearing</td></tr></tbody></table></div><p class="rs-n">Dates are UCAS’s published dates for 2027 entry. Source: <a href="https://www.ucas.com/ucas/undergraduate/getting-started/when-apply" target="_blank" rel="noopener">UCAS: When to apply</a></p><p class="calm">When you apply, A Level results aren’t out yet. Universities judge applications on <b>the school’s predicted grades and results so far, such as IGCSEs</b>, and usually make a <b>conditional offer</b> such as “A*AA”</p><h4 class="mini-h"><span class="mh-b">A</span>How common is an A*? Cambridge’s official statistics</h4>
+    <p class="mini-p">Share of candidates achieving A* and A or above, Cambridge International A Level, June 2025</p><div class="ewrap rise"><table class="etbl stk"><thead><tr><th>Subject</th><th>A*</th><th>A or above</th></tr></thead><tbody><tr><th>Further Mathematics</th><td data-l="A*" class="s">28.0%</td><td data-l="A or above" class="s">59.9%</td></tr><tr><th>Mathematics</th><td data-l="A*" class="s">14.8%</td><td data-l="A or above" class="s">36.9%</td></tr><tr><th>Chemistry</th><td data-l="A*" class="s">14.7%</td><td data-l="A or above" class="s">36.7%</td></tr><tr><th>Physics</th><td data-l="A*" class="s">13.2%</td><td data-l="A or above" class="s">32.7%</td></tr><tr><th>Biology</th><td data-l="A*" class="s">12.9%</td><td data-l="A or above" class="s">33.1%</td></tr><tr><th>Computer Science</th><td data-l="A*" class="s">12.9%</td><td data-l="A or above" class="s">30.8%</td></tr><tr><th>Economics</th><td data-l="A*" class="s">12.7%</td><td data-l="A or above" class="s">29.5%</td></tr><tr><th>Psychology</th><td data-l="A*" class="s">8.4%</td><td data-l="A or above" class="s">20.6%</td></tr><tr><th>Business</th><td data-l="A*" class="s">6.7%</td><td data-l="A or above" class="s">16.1%</td></tr><tr><th>Literature in English</th><td data-l="A*" class="s">4.8%</td><td data-l="A or above" class="s">16.3%</td></tr></tbody></table></div><p class="rs-n">Figures cover all Cambridge International A Level candidates worldwide; candidate groups differ by subject. Source: <a href="https://www.cambridgeinternational.org/Images/742380-cambridge-international-a-level-results-statistics-june-2025.pdf" target="_blank" rel="noopener">Cambridge International A Level results statistics, June 2025</a></p><div class="step" id="private"><span class="step-n">5</span><div><h3>Subjects your school doesn’t offer can be taken privately</h3><p class="step-sub">Candidates who enter without their school are called private candidates</p></div></div><p class="calm">The British Council <b>accepts private candidate entries</b> for International GCSEs, O Levels and AS & A Levels. Students normally enter through their school if it offers the exam</p><div class="flow rise" style="margin-top:18px">
+      <div class="fbox"><span class="tag">STEP 1</span><h4>Choose your exam and board</h4><p>Cambridge International, Pearson Edexcel and OxfordAQA each have their own sessions and deadlines</p></div>
+      <div class="fbox"><span class="tag">STEP 2</span><h4>Register online</h4><p>Create an account on the British Council School Registration System (SRS). A parent or guardian registers candidates under 18</p></div>
+      <div class="fbox"><span class="tag">STEP 3</span><h4>Pay the fees</h4><p>Entries aren’t processed until payment is received. Fees are shown in the SRS</p></div>
+    </div><div class="ewrap rise"><table class="etbl stk"><thead><tr><th>Exam board</th><th>Sessions for private candidates via the British Council</th></tr></thead><tbody><tr><th>Cambridge International</th><td data-l="Sessions for private candidates via the British Council">June and November</td></tr><tr><th>Pearson Edexcel</th><td data-l="Sessions for private candidates via the British Council">International A Level: January, June, October / International GCSE: June, November</td></tr><tr><th>OxfordAQA</th><td data-l="Sessions for private candidates via the British Council">June and November (International A Level also January)</td></tr></tbody></table></div><div class="warn rise">
+      <span class="warn-ic" aria-hidden="true">!</span>
+      <div><b>Check predicted grades and practical work first</b>
+        <p>UCAS applications normally include predicted grades from a school or centre, and science practicals are handled differently by board and centre. <b>Check with both the exam centre and your chosen universities before entering</b></p></div>
+    </div><p class="rs-n">Source: <a href="https://internationalschools.britishcouncil.org/students/private-candidates/registration" target="_blank" rel="noopener">British Council: Private candidate registration</a></p>
 
   </div>
 </section>
@@ -1007,6 +1049,8 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
   <div class="wrap">
     <div class="sec-h c"><div class="eyebrow">FAQ</div><h2>Cambridge (A Level) and university: FAQ</h2></div>
     <div class="faq">
+      <details><summary>When are the UCAS deadlines?</summary><div class="a">For 2027 entry: 15 October 2026 for Oxford, Cambridge and most medicine, dentistry and veterinary courses, and 13 January 2027 for most other courses (18:00 UK time)</div></details>
+      <details><summary>Can I take an A Level my school doesn’t offer?</summary><div class="a">The British Council accepts private candidate entries for IGCSEs and AS & A Levels. Check predicted grades and practical work with the exam centre and your universities first</div></details>
       <details><summary>How many A Levels do I need?</summary><div class="a">UK universities usually ask for three. The University of Cambridge usually bases offers on three A Levels taken together in the final year, and says four will not normally give an advantage</div></details>
       <details><summary>Can I apply to Japanese universities with A Levels?</summary><div class="a">Most English-taught degree programmes at leading Japanese universities accept Cambridge qualifications, and many require three A Levels. Check each university’s admissions information</div></details>
       <details><summary>Can I apply to US universities with A Levels?</summary><div class="a">Yes. Over 1,000 US universities, including all of the Ivy League, accept Cambridge qualifications. Entry requirements and credit vary by institution and course</div></details>
@@ -1049,6 +1093,9 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
       <li><a href="https://www.ucl.ac.uk/mathematical-physical-sciences/maths/study-us/bscmsci-mathematics/admissions" target="_blank" rel="noopener">UCL Mathematics: Admissions</a></li>
       <li><a href="https://www.lse.ac.uk/study-at-lse/Undergraduate/Teachers-schools-parents/admissions-advice-for-teachers" target="_blank" rel="noopener">LSE: Admissions advice for teachers</a></li>
       <li><a href="https://www.imperial.ac.uk/study/apply/undergraduate/entry-requirements/accepted-qualifications/" target="_blank" rel="noopener">Imperial College London: Accepted qualifications</a></li>
+      <li><a href="https://www.ucas.com/ucas/undergraduate/getting-started/when-apply" target="_blank" rel="noopener">UCAS: When to apply (2027 entry)</a></li>
+      <li><a href="https://www.cambridgeinternational.org/Images/742380-cambridge-international-a-level-results-statistics-june-2025.pdf" target="_blank" rel="noopener">Cambridge International A Level results statistics, June 2025</a></li>
+      <li><a href="https://internationalschools.britishcouncil.org/students/private-candidates/registration" target="_blank" rel="noopener">British Council: Private candidate registration</a></li>
     </ul>
   </div>
 </section>
@@ -1076,6 +1123,21 @@ function set(o){m.classList.toggle('open',o);b.classList.toggle('open',o);b.setA
 b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
 document.addEventListener('click',function(e){if(!m.contains(e.target))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
+</script>
+<script id="camino-otlside">
+(function(){var o=document.querySelector('nav.otl');if(!o||!o.querySelector('a[href^="#"]'))return;
+if([].some.call(document.querySelectorAll('main table'),function(t){return t.querySelectorAll('thead th').length>=6}))return;
+var a=document.createElement('aside');a.className='otl-side';a.setAttribute('aria-hidden','true');
+var c=getComputedStyle(o.closest('[style*="--c"]')||document.body).getPropertyValue('--c');if(c)a.style.setProperty('--c',c);
+a.innerHTML='<p>'+o.querySelector('p').textContent+'</p>'+o.querySelector('ol').outerHTML+'<a class="top" href="#">'+(document.documentElement.lang=='en'?'Back to top ↑':'ページの先頭へ ↑')+'</a>';
+a.querySelectorAll('a').forEach(function(x){x.tabIndex=-1});
+document.body.appendChild(a);document.body.classList.add('has-side');
+var ls=[].slice.call(a.querySelectorAll('ol a')),ts=ls.map(function(l){return document.getElementById(l.getAttribute('href').slice(1))});
+var f=document.querySelector('.cta')||document.querySelector('footer');
+function u(){var y=innerHeight*0.42,ob=o.getBoundingClientRect().bottom,fb=f?f.getBoundingClientRect().top:1e9;
+a.classList.toggle('on',ob<0&&fb>innerHeight*0.5);var k=-1;ts.forEach(function(t,i){if(t&&t.getBoundingClientRect().top<y)k=i});
+ls.forEach(function(l,i){l.classList.toggle('cur',i==k)})}
+addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();
 </script>
 </body>
 </html>

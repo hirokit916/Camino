@@ -757,4 +757,32 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/kansai/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/kansai/"/>
   </url>
+  <url>
+    <loc>https://caminotutor.com/column/university/after-graduation/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/after-graduation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/after-graduation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/after-graduation/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/university/after-graduation/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/after-graduation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/after-graduation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/after-graduation/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/curriculum/accreditation/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/curriculum/accreditation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/curriculum/accreditation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/curriculum/accreditation/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/curriculum/accreditation/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/curriculum/accreditation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/curriculum/accreditation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/curriculum/accreditation/"/>
+  </url>
 </urlset>
