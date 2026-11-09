@@ -785,8 +785,10 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 @media(max-width:620px){.ty{grid-template-columns:1fr}}
 .ty a{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-top:5px solid var(--k);border-radius:20px;padding:20px 20px 16px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}
 .ty a:hover{transform:translateY(-3px);box-shadow:0 16px 30px -22px rgba(0,0,0,.4)}
-.ty .tylogo{height:64px;display:flex;align-items:center;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.ty .tylogo img{max-height:46px;max-width:78%;width:auto;height:auto;display:block}
+.ty .tylogo{height:76px;display:flex;align-items:center;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.ty .tylogo img{max-height:46px;max-width:82%;width:auto;height:auto;display:block}
+.ty .tylogo img.lg-ib{max-height:70px}
+.ty .tylogo img.lg-cambridge{max-height:44px}
 .ty .tyw{font-family:var(--latin);font-weight:700;font-size:30px;letter-spacing:-.01em;color:var(--k);line-height:1}
 .ty .tyi{flex:none;width:46px;height:46px;border-radius:14px;background:var(--kt);color:var(--k);display:grid;place-items:center}
 .ty .tyi svg{width:24px;height:24px}
@@ -805,8 +807,9 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .ur-l{grid-column:1;display:grid;gap:16px;position:relative;z-index:2}
 .ur-c{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-left:5px solid var(--k);border-radius:18px;padding:16px 18px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s,border-color .2s}
 a.ur-c:hover,a.ur-c:focus-visible{transform:translateX(4px);box-shadow:0 14px 28px -22px rgba(0,0,0,.45);border-color:var(--k)}
-.ur-logo{grid-row:1 / 4;width:96px;height:56px;display:flex;align-items:center;justify-content:center}
-.ur-logo img{max-width:96px;max-height:52px;width:auto;height:auto;display:block}
+.ur-logo{grid-row:1 / 4;width:120px;height:68px;display:flex;align-items:center;justify-content:center}
+.ur-logo img{max-width:120px;max-height:52px;width:auto;height:auto;display:block}
+.ur-logo img.lg-ib{max-height:66px}
 .ur-logo .tyw{font-family:var(--latin);font-weight:700;font-size:21px;color:var(--k);line-height:1}
 .ur-c b{font-size:16px;line-height:1.45}
 .ur-c span{font-size:13.5px;color:var(--soft);line-height:1.7;margin-top:2px}
@@ -828,7 +831,7 @@ a.ur-c:hover,a.ur-c:focus-visible{transform:translateX(4px);box-shadow:0 14px 28
 @media(max-width:700px){
 .ur-c{grid-template-columns:1fr;padding:14px 14px 13px}
 .ur-logo{grid-row:auto;width:auto;height:40px;justify-content:flex-start;margin-bottom:6px}
-.ur-logo img{max-height:36px;max-width:110px}
+.ur-logo img{max-height:36px;max-width:140px}.ur-logo img.lg-ib{max-height:46px}.ur-logo{height:50px}
 .ur-c b{font-size:14.5px}.ur-c span{font-size:12.5px}
 .ur-u{border-radius:16px;padding:14px 16px}
 .ur-u b{writing-mode:vertical-rl;font-size:19px;letter-spacing:.3em}
@@ -871,7 +874,7 @@ a.ur-c:hover,a.ur-c:focus-visible{transform:translateX(4px);box-shadow:0 14px 28
 </section>
 <section class="sec first" id="routes" style="padding-top:28px">
   <div class="wrap">
-    <div class="ur rise" id="ur"><div class="ur-l"><a class="ur-c" href="/en/ib/university/" style="--k:var(--or)"><div class="ur-logo"><img src="/img/logos/ib.png" alt="IB" loading="lazy"></div><b>IB (International Baccalaureate)</b><span>Required scores depend on the university and course</span><em>Applying to university with the IB →</em></a><a class="ur-c" href="/en/curriculum/cambridge/#university" style="--k:var(--cam)"><div class="ur-logo"><span class="tyw">Cambridge</span></div><b>Cambridge (A Level)</b><span>Three A Levels is the standard UK entry requirement</span><em>A Levels and university →</em></a><a class="ur-c" href="/en/curriculum/ap/#credit" style="--k:var(--ap)"><div class="ur-logo"><img src="/img/logos/ap.png" alt="AP" loading="lazy"></div><b>AP</b><span>Most colleges grant credit or placement for scores of 3 or higher</span><em>AP and college credit →</em></a><div class="ur-c off" style="--k:#9aa3b2"><div class="ur-logo"><span class="tyw" style="color:#7d8797">Other</span></div><b>Other routes</b><span>You can apply to university without taking any of these curricula</span><em>Coming soon</em></div></div><a class="ur-u" href="/en/column/destinations/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5Z"/><path d="M6 11.5v4.2c0 1.2 2.7 2.8 6 2.8s6-1.6 6-2.8v-4.2"/><path d="M22 9.5v5"/></svg><b>University</b><span>Where graduates go →</span></a><svg class="ur-svg" aria-hidden="true"></svg></div><p class="ur-soon"><b>Coming soon</b>Comparing IB results at international schools in Japan</p>
+    <div class="ur rise" id="ur"><div class="ur-l"><a class="ur-c" href="/en/ib/university/" style="--k:var(--or)"><div class="ur-logo"><img class="lg-ib" src="/img/logos/ib.png" alt="IB" loading="lazy"></div><b>IB (International Baccalaureate)</b><span>Required scores depend on the university and course</span><em>Applying to university with the IB →</em></a><a class="ur-c" href="/en/curriculum/cambridge/#university" style="--k:var(--cam)"><div class="ur-logo"><img src="/img/logos/cambridge.png" alt="Cambridge" loading="lazy"></div><b>Cambridge (A Level)</b><span>Three A Levels is the standard UK entry requirement</span><em>A Levels and university →</em></a><a class="ur-c" href="/en/curriculum/ap/#credit" style="--k:var(--ap)"><div class="ur-logo"><img src="/img/logos/ap.png" alt="AP" loading="lazy"></div><b>AP</b><span>Most colleges grant credit or placement for scores of 3 or higher</span><em>AP and college credit →</em></a><div class="ur-c off" style="--k:#9aa3b2"><div class="ur-logo"><span class="tyw" style="color:#7d8797">Other</span></div><b>Other routes</b><span>You can apply to university without taking any of these curricula</span><em>Coming soon</em></div></div><a class="ur-u" href="/en/column/destinations/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5Z"/><path d="M6 11.5v4.2c0 1.2 2.7 2.8 6 2.8s6-1.6 6-2.8v-4.2"/><path d="M22 9.5v5"/></svg><b>University</b><span>Where graduates go →</span></a><svg class="ur-svg" aria-hidden="true"></svg></div><p class="ur-soon"><b>Coming soon</b>Comparing IB results at international schools in Japan</p>
   </div>
 </section>
 <section class="sec" style="border-top:none;padding-top:10px">
