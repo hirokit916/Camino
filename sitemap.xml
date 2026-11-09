@@ -281,4 +281,74 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/english/toeic/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/english/toeic/"/>
   </url>
+  <url>
+    <loc>https://caminotutor.com/curriculum/cambridge/university/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/curriculum/cambridge/university/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/curriculum/cambridge/university/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/curriculum/cambridge/university/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/curriculum/cambridge/university/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/curriculum/cambridge/university/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/curriculum/cambridge/university/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/curriculum/cambridge/university/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/curriculum/ap/university/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/curriculum/ap/university/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/curriculum/ap/university/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/curriculum/ap/university/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/curriculum/ap/university/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/curriculum/ap/university/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/curriculum/ap/university/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/curriculum/ap/university/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/university/ib-scores/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/ib-scores/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/ib-scores/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/ib-scores/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/university/ib-scores/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/ib-scores/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/ib-scores/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/ib-scores/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/university/a-level-results/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/a-level-results/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/a-level-results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/a-level-results/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/university/a-level-results/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/a-level-results/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/a-level-results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/a-level-results/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/university/ap-results/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/ap-results/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/ap-results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/ap-results/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/university/ap-results/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/ap-results/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/ap-results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/ap-results/"/>
+  </url>
 </urlset>

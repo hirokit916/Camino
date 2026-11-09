@@ -825,8 +825,12 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .ur{position:relative;display:grid;grid-template-columns:minmax(0,1fr) clamp(56px,13vw,170px) clamp(92px,15vw,170px);align-items:stretch;max-width:1000px;margin:0 auto}
 .ur-l{grid-column:1;display:grid;gap:16px;position:relative;z-index:2}
 .ur-c{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-left:5px solid var(--k);border-radius:18px;padding:16px 18px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s,border-color .2s}
-a.ur-c:hover,a.ur-c:focus-visible{transform:translateX(4px);box-shadow:0 14px 28px -22px rgba(0,0,0,.45);border-color:var(--k)}
-.ur-logo{grid-row:1 / 4;width:120px;height:68px;display:flex;align-items:center;justify-content:center}
+.ur-c:not(.off):hover{box-shadow:0 14px 28px -22px rgba(0,0,0,.45);border-color:var(--k)}
+.ur-a{display:block;font-size:13.5px;font-weight:700;color:var(--k);text-decoration:none;margin-top:6px;line-height:1.5}
+.ur-a:hover{text-decoration:underline;text-underline-offset:3px}
+.ur-a.s{margin-top:4px;font-weight:600;color:var(--soft)}
+.ur-a.s::before{content:"";display:inline-block;width:8px;height:8px;margin-right:8px;border-left:2px solid var(--k);border-bottom:2px solid var(--k);vertical-align:2px}
+.ur-logo{grid-row:1 / 6;width:120px;height:68px;display:flex;align-items:center;justify-content:center}
 .ur-logo img{max-width:120px;max-height:52px;width:auto;height:auto;display:block}
 .ur-logo img.lg-ib{max-height:66px}
 .ur-logo .tyw{font-family:var(--latin);font-weight:700;font-size:21px;color:var(--k);line-height:1}
@@ -851,7 +855,7 @@ a.ur-c:hover,a.ur-c:focus-visible{transform:translateX(4px);box-shadow:0 14px 28
 .ur-c{grid-template-columns:1fr;padding:14px 14px 13px}
 .ur-logo{grid-row:auto;width:auto;height:40px;justify-content:flex-start;margin-bottom:6px}
 .ur-logo img{max-height:36px;max-width:140px}.ur-logo img.lg-ib{max-height:46px}.ur-logo{height:50px}
-.ur-c b{font-size:14.5px}.ur-c span{font-size:12.5px}
+.ur-c b{font-size:14.5px}.ur-c span{font-size:12.5px}.ur-a{font-size:13px}
 .ur-u{border-radius:16px;padding:14px 16px}
 .ur-u b{writing-mode:vertical-rl;font-size:19px;letter-spacing:.3em}
 .ur-u svg{width:34px;height:34px}
@@ -893,7 +897,7 @@ a.ur-c:hover,a.ur-c:focus-visible{transform:translateX(4px);box-shadow:0 14px 28
 </section>
 <section class="sec first" id="routes" style="padding-top:28px">
   <div class="wrap">
-    <div class="ur rise" id="ur"><div class="ur-l"><a class="ur-c" href="/ib/university/" style="--k:var(--or)"><div class="ur-logo"><img class="lg-ib" src="/img/logos/ib.png" alt="IB" loading="lazy"></div><b>IB（国際バカロレア）</b><span>必要な点数は「大学×学部」で決まる</span><em>IBで大学に出願するには？ →</em></a><a class="ur-c" href="/curriculum/cambridge/#university" style="--k:var(--cam)"><div class="ur-logo"><img src="/img/logos/cambridge.png" alt="Cambridge" loading="lazy"></div><b>Cambridge（A Level）</b><span>イギリスの大学では、A Level 3科目が標準的な入学要件</span><em>A Levelと大学進学 →</em></a><a class="ur-c" href="/curriculum/ap/#credit" style="--k:var(--ap)"><div class="ur-logo"><img src="/img/logos/ap.png" alt="AP" loading="lazy"></div><b>AP</b><span>多くの大学が、3以上のスコアで単位や上級クラスへの配置を認める</span><em>APと大学の単位認定 →</em></a><div class="ur-c off" style="--k:#9aa3b2"><div class="ur-logo"><span class="tyw" style="color:#7d8797">その他</span></div><b>IB・Cambridge・AP以外から</b><span>これらのカリキュラムを取っていなくても、大学には出願できます</span><em>今後追加予定</em></div></div><a class="ur-u" href="/column/destinations/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5Z"/><path d="M6 11.5v4.2c0 1.2 2.7 2.8 6 2.8s6-1.6 6-2.8v-4.2"/><path d="M22 9.5v5"/></svg><b>大学</b><span>卒業生の進学先の国を見る →</span></a><svg class="ur-svg" aria-hidden="true"></svg></div><p class="ur-soon"><b>準備中</b>国内インターのIBスコアの比較</p>
+    <div class="ur rise" id="ur"><div class="ur-l"><div class="ur-c" style="--k:var(--or)"><div class="ur-logo"><img class="lg-ib" src="/img/logos/ib.png" alt="IB" loading="lazy"></div><b>IB（国際バカロレア）</b><span>必要な点数は「大学×学部」で決まる</span><a class="ur-a" href="/ib/university/">IBで大学に出願するには？&nbsp;→</a><a class="ur-a s" href="/column/university/ib-scores/">国内インターのIBスコア&nbsp;→</a></div><div class="ur-c" style="--k:var(--cam)"><div class="ur-logo"><img src="/img/logos/cambridge.png" alt="Cambridge" loading="lazy"></div><b>Cambridge（A Level）</b><span>イギリスの大学では、A Level 3科目が標準的な入学要件</span><a class="ur-a" href="/curriculum/cambridge/university/">A Levelで大学に出願するには？&nbsp;→</a><a class="ur-a s" href="/column/university/a-level-results/">国内インターのA Level・IGCSEの結果&nbsp;→</a></div><div class="ur-c" style="--k:var(--ap)"><div class="ur-logo"><img src="/img/logos/ap.png" alt="AP" loading="lazy"></div><b>AP</b><span>多くの大学が、3以上のスコアで単位や上級クラスへの配置を認める</span><a class="ur-a" href="/curriculum/ap/university/">APで大学に出願するには？&nbsp;→</a><a class="ur-a s" href="/column/university/ap-results/">国内インターのAPの結果&nbsp;→</a></div><div class="ur-c off" style="--k:#9aa3b2"><div class="ur-logo"><span class="tyw" style="color:#7d8797">その他</span></div><b>IB・Cambridge・AP以外から</b><span>これらのカリキュラムを取っていなくても、大学には出願できます</span><em>今後追加予定</em></div></div><a class="ur-u" href="/column/destinations/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5Z"/><path d="M6 11.5v4.2c0 1.2 2.7 2.8 6 2.8s6-1.6 6-2.8v-4.2"/><path d="M22 9.5v5"/></svg><b>大学</b><span>卒業生の進学先の国を見る →</span></a><svg class="ur-svg" aria-hidden="true"></svg></div>
   </div>
 </section>
 <section class="sec" style="border-top:none;padding-top:10px">
