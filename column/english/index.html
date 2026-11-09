@@ -888,17 +888,33 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .ehint{font-size:12.5px;color:var(--muted);margin-bottom:6px}
 @media(min-width:900px){.ehint{display:none}}
 </style>
-<style id="camino-step1">
-.s1box{display:flex;gap:16px;align-items:flex-start;background:#fff;border:2px solid var(--myp);border-radius:20px;padding:18px 22px;margin:0 0 34px}
-.s1box .s1{flex:none;font-family:var(--latin);font-weight:700;font-size:12px;letter-spacing:.12em;color:#fff;background:var(--myp);border-radius:999px;padding:5px 12px;margin-top:2px}
-.s1box b{display:block;font-size:16.5px;line-height:1.55;color:var(--ink)}
-.s1box p{font-size:13.5px;color:var(--soft);line-height:1.8;margin-top:4px}
-.rlinks{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.rlinks a{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--myp);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px;text-decoration:none}
-.rlinks a:hover{border-color:var(--myp)}
-.rnote{font-size:12.5px;color:var(--muted);margin:8px 0 18px;line-height:1.8}
-.rh{font-size:15.5px;font-weight:700;margin:26px 0 8px;color:var(--ink)}
-@media(max-width:600px){.s1box{flex-direction:column;gap:8px;padding:16px}}
+<style id="camino-art">
+.sb{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 22px 18px;margin-top:16px}
+.sb-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:12px}
+.sb-h b{font-family:var(--latin);font-size:19px;color:var(--c)}
+.sb-h b small{font-family:var(--sans);font-size:13px;color:var(--soft);font-weight:500;margin-left:6px}
+.sb-h span{font-size:12.5px;color:var(--soft);background:var(--ct);border-radius:999px;padding:3px 10px}
+.sb .ewrap{margin-top:0}
+.sb .etbl{min-width:520px}
+.sb p.sbn{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.8}
+.etbl td.s{white-space:nowrap}
+@media(max-width:600px){.sb{padding:16px 14px}
+.ewrap:has(.stk){overflow:visible}
+.etbl.stk,.sb .etbl.stk{min-width:0}
+.etbl.stk thead{display:none}
+.etbl.stk,.etbl.stk tbody,.etbl.stk tr,.etbl.stk th,.etbl.stk td{display:block;width:auto}
+.etbl.stk tr{padding:13px 15px;border-bottom:1px solid var(--line)}
+.etbl.stk tr:last-child{border-bottom:none}
+.etbl.stk th,.etbl.stk td{padding:0;border:0;white-space:normal}
+.etbl.stk tbody th{font-size:14.5px;margin-bottom:4px}
+.etbl.stk td{font-size:13.5px;margin-top:3px;color:var(--ink)}
+.etbl.stk td[data-l]:not([data-l=""])::before{content:attr(data-l);display:inline-block;font-size:11.5px;font-weight:700;color:var(--c);background:var(--ct);border-radius:6px;padding:0 7px;margin-right:8px;line-height:1.8}
+.etbl.stk td:empty{display:none}}
+</style>
+<style id="camino-tynote">
+.tynote{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-left:4px solid var(--myp);border-radius:14px;padding:12px 16px;margin:0 0 22px;font-size:14px;line-height:1.7;color:var(--ink)}
+.tynote b{flex:none;font-size:12px;color:#fff;background:var(--myp);border-radius:999px;padding:3px 11px;letter-spacing:.04em}
+@media(max-width:600px){.tynote{flex-direction:column;align-items:flex-start;gap:6px;font-size:13.5px}}
 </style>
 </head>
 <body>
@@ -936,7 +952,7 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 <section class="sec first" id="types" style="padding-top:28px">
   <div class="wrap">
     <div class="sec-h"><div class="eyebrow">01 · 4つの資格</div><h2>英検・TOEFL・IELTS・TOEICの<span class="nw">4つ</span></h2><p>運営する団体も、測る技能も、結果の出方も異なります。くわしくは、それぞれのカードからご覧ください</p></div>
-    <div class="s1box rise"><span class="s1">STEP 1</span><div><b>試験対策の第一歩は、いつも「どんな試験で、どう採点されるのか」を知ることです</b><p>何が評価されるのかがわかると、勉強の優先順位がはっきりします。このページでは、試験のしくみと公式の採点基準をまとめました。保護者の方は、下の公式資料のリンクもあわせてご覧ください</p></div></div><div class="ty rise" style="--n:4"><a href="/column/english/eiken/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-eiken" src="/img/logos/eiken.png" alt="英検" loading="lazy" decoding="async"></div><b>英検</b><small>日本英語検定協会</small><dl><div><dt>結果</dt><dd>級の合否と英検CSEスコア</dd></div><div><dt>ひとことで</dt><dd>5級〜1級の8つの級。従来型は年3回、S-CBTは原則毎週土日</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/column/english/toefl/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-toefl" src="/img/logos/toefl.png" alt="TOEFL iBT" loading="lazy" decoding="async"></div><b>TOEFL iBT</b><small>ETS</small><dl><div><dt>結果</dt><dd>1〜6のスコア（0.5刻み）</dd></div><div><dt>ひとことで</dt><dd>4技能を約2時間で。2026年1月から新しい形式に</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/column/english/ielts/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-ielts" src="/img/logos/ielts.png" alt="IELTS" loading="lazy" decoding="async"></div><b>IELTS</b><small>British Council・IDP IELTS・Cambridgeの共同所有</small><dl><div><dt>結果</dt><dd>0〜9のバンドスコア</dd></div><div><dt>ひとことで</dt><dd>4技能を2時間45分で。AcademicとGeneral Trainingの2種類</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/column/english/toeic/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-toeic" src="/img/logos/toeic.png" alt="TOEIC L&R" loading="lazy" decoding="async"></div><b>TOEIC L&amp;R</b><small>日本ではIIBC</small><dl><div><dt>結果</dt><dd>10〜990点（合否なし）</dd></div><div><dt>ひとことで</dt><dd>リスニングとリーディングの2技能を約2時間・200問で</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+    <p class="tynote rise"><b>採点基準</b><span>とても重要な採点基準は、各資格のページの一番下に、公式資料をもとにまとめています</span></p><div class="ty rise" style="--n:4"><a href="/column/english/eiken/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-eiken" src="/img/logos/eiken.png" alt="英検" loading="lazy" decoding="async"></div><b>英検</b><small>日本英語検定協会</small><dl><div><dt>結果</dt><dd>級の合否と英検CSEスコア</dd></div><div><dt>ひとことで</dt><dd>5級〜1級の8つの級。従来型は年3回、S-CBTは原則毎週土日</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/column/english/toefl/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-toefl" src="/img/logos/toefl.png" alt="TOEFL iBT" loading="lazy" decoding="async"></div><b>TOEFL iBT</b><small>ETS</small><dl><div><dt>結果</dt><dd>1〜6のスコア（0.5刻み）</dd></div><div><dt>ひとことで</dt><dd>4技能を約2時間で。2026年1月から新しい形式に</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/column/english/ielts/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-ielts" src="/img/logos/ielts.png" alt="IELTS" loading="lazy" decoding="async"></div><b>IELTS</b><small>British Council・IDP IELTS・Cambridgeの共同所有</small><dl><div><dt>結果</dt><dd>0〜9のバンドスコア</dd></div><div><dt>ひとことで</dt><dd>4技能を2時間45分で。AcademicとGeneral Trainingの2種類</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a href="/column/english/toeic/" style="--k:var(--myp);--kt:var(--myp-t)"><div class="tylogo"><img class="lg-toeic" src="/img/logos/toeic.png" alt="TOEIC L&R" loading="lazy" decoding="async"></div><b>TOEIC L&amp;R</b><small>日本ではIIBC</small><dl><div><dt>結果</dt><dd>10〜990点（合否なし）</dd></div><div><dt>ひとことで</dt><dd>リスニングとリーディングの2技能を約2時間・200問で</dd></div></dl><span class="go">詳しく見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
   </div>
 </section>
 <section class="sec sec-alt th" id="compare" style="--c:var(--myp);--ct:var(--myp-t)">
