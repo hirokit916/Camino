@@ -1055,7 +1055,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);}
 </script>
 <script id="camino-otlside">
 (function(){var o=document.querySelector('nav.otl');if(!o||!o.querySelector('a[href^="#"]'))return;
-if([].some.call(document.querySelectorAll('main table'),function(t){return t.querySelectorAll('thead th').length>=6}))return;
 var a=document.createElement('aside');a.className='otl-side';a.setAttribute('aria-hidden','true');
 var c=getComputedStyle(o.closest('[style*="--c"]')||document.body).getPropertyValue('--c');if(c)a.style.setProperty('--c',c);
 a.innerHTML='<p>'+o.querySelector('p').textContent+'</p>'+o.querySelector('ol').outerHTML+'<a class="top" href="#">'+(document.documentElement.lang=='en'?'Back to top ↑':'ページの先頭へ ↑')+'</a>';

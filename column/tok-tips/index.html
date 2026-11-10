@@ -864,6 +864,77 @@ i.hatch-us{background:repeating-linear-gradient(135deg,#2f5d9e 0 4px,#8fb3e0 4px
 .gnav .gsub a{padding:5px 11px;font-size:13px}
 .gnav .gsub a.on{background:#fff}
 </style>
+<style id="camino-autotoc">
+.abody nav.otl{margin:6px 0 30px}
+body.has-side .wrap.prose{max-width:1120px}
+</style>
+<style id="camino-formal">
+/* 目次: vertical list in a plain box */
+.otl{margin-top:28px;max-width:720px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 24px 8px}
+.otl p{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.1em;margin:0;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.otl ol{display:block;list-style:none;margin:0;padding:6px 0 0}
+.otl li{margin:0}
+.otl a{display:flex;align-items:baseline;gap:10px;padding:8px 0;border:0;border-radius:0;background:none;font-size:15px;line-height:1.6;color:var(--ink);text-decoration:none}
+.otl a:hover{border:0;color:var(--c);text-decoration:underline;text-underline-offset:3px}
+.otl a span{flex:none;display:inline;width:1.6em;height:auto;border-radius:0;background:none;color:var(--muted);font-family:var(--latin);font-weight:600;font-size:13.5px;text-align:right}
+.otl a span::after{content:"."}
+/* section headings: number + title on a rule, no badge */
+.step{display:flex;align-items:baseline;gap:12px;margin:68px 0 22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.step:first-of-type{margin-top:8px}
+.step-n{display:inline;width:auto;height:auto;border-radius:0;background:none;color:var(--c,var(--or2));font-family:var(--serif);font-weight:700;font-size:clamp(19px,2.2vw,23px);line-height:1.45}
+.step-n::after{content:"."}
+.step-sub{font-size:13.5px;margin-top:4px}
+/* key-point boxes */
+.cond,.th .cond{background:#fff;border:1px solid var(--line);border-radius:8px;text-align:left;padding:16px 18px}
+.cond span.no,.th .cond span.no{display:block;width:auto;height:auto;margin:0 0 6px;border-radius:0;background:none;color:var(--muted);font-family:var(--latin);font-size:12px;font-weight:600;text-align:left}
+.cond b{font-size:24px;color:var(--ink)}
+.facts{border-radius:8px}
+/* cards, blocks, tables */
+.card,.pk,.sb,.gcard,.pack,.rcard,.corec,.spec{border-radius:8px}
+.card .no{display:block;width:auto;height:auto;border-radius:0;background:none!important;color:var(--c);font-family:var(--latin);font-size:13px;font-weight:700;text-align:left}
+.card .no::after{content:"."}
+.sb-h span{background:none;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--soft)}
+.etbl{border-radius:8px}
+.etbl thead th{background:#f4f4f2;color:var(--soft)}
+.scale span{border-radius:4px}
+.pk-note.ex{border-radius:6px}
+.rlinks a{border-radius:6px;font-weight:600}
+.ul2 li::before{width:5px;height:5px;top:.8em;background:var(--soft)}
+.nx a{border-radius:10px}
+.nx .nb{border-radius:6px}
+.ty a{border-radius:10px;border-top-width:3px}
+.ty dl div{border-radius:6px}
+.tynote{border-radius:8px}
+.tynote b{border-radius:4px}
+/* IB / Cambridge / AP page components: same squarer corners, tags instead of pills */
+.ab,.agemap,.bd,.cmp-wrap,.combo,.cpcert,.cpeval,.cpt-b,.crs-ex,.crs-side,.dbn-c,.dp-note,.fbox,.fx,.lvl,.mchart,.mission,.pillar,.rpill,.s45,.sp,.tip,.warn,.calm,.res-line,.same,details.dpx,table.crit,table.sct,
+.legend>li,.nums>div,.nlist>li,.rules>li,.tl>div,.eg>li,.crs-l>li,.look>li,.stg>li,.aw>div{border-radius:8px}
+.tg,.tg2,.tag,.age,.ab ol>li,.reqs>li,.dest span{border-radius:4px!important}
+.stg>li{border-top-width:3px}
+@media(max-width:600px){
+.otl{padding:14px 16px 6px}
+.otl a{font-size:14.5px;padding:7px 0}
+.etbl.stk td[data-l]:not([data-l=""])::before{background:none;color:var(--muted);padding:0;margin-right:8px}
+.cond b{font-size:21px}
+}
+</style>
+<style id="camino-otlside">
+.otl-side{display:none}
+@media(min-width:1180px){
+body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
+.otl-side{display:block;position:fixed;top:164px;right:max(28px,calc((100vw - 1120px)/2 + 28px));width:244px;max-height:calc(100vh - 196px);overflow:auto;z-index:20;
+ background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px 10px;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility .2s}
+.otl-side.on{opacity:1;visibility:visible;transform:none}
+.otl-side p{font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--ink);margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.otl-side ol{list-style:none;margin:0;padding:0}
+.otl-side a{display:flex;gap:8px;padding:7px 0 7px 10px;margin-left:-10px;border-left:2px solid transparent;font-size:13px;line-height:1.55;color:var(--soft);text-decoration:none}
+.otl-side a span{flex:none;width:1.3em;color:var(--muted);font:600 12px/1.9 var(--latin)}
+.otl-side a span::after{content:"."}
+.otl-side a:hover{color:var(--ink)}
+.otl-side a.cur{color:var(--ink);font-weight:700;border-left-color:var(--c,var(--or))}
+.otl-side .top{display:block;margin-top:6px;padding-top:8px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+}
+</style>
 </head>
 <body>
 
@@ -900,6 +971,7 @@ i.hatch-us{background:repeating-linear-gradient(135deg,#2f5d9e 0 4px,#8fb3e0 4px
 <section class="abody">
   <div class="wrap prose">
     <p class="lead">TOKは、「正しい答え」を当てる科目ではありません。問いに対して自分がどう考え、どんな根拠でそう言えるのかを示す科目です。ここでは、インター卒業生の目線から、エッセイとエキシビションで評価につながりやすいポイントをまとめました</p>
+    <nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#a1"><span>1</span>まずは「何が評価されるか」から逆算する</a></li><li><a href="#a2"><span>2</span>エッセイのコツ</a></li><li><a href="#a3"><span>3</span>エキシビションのコツ</a></li><li><a href="#a4"><span>4</span>準備の進め方</a></li><li><a href="#a5"><span>5</span>まとめ</a></li></ol></nav>
     <div class="note-box">TOKのしくみ（学ぶ内容や評価の割合など）は、IB公式情報をもとに「<a href="/ib/dp/tok/">TOK（知の理論）とは？</a>」で解説しています。このページは、その内容をふまえた実践的なTipsです</div>
     <nav class="a-toc"><b>目次</b><ol><li><a href="#a1">まずは「何が評価されるか」から逆算する</a></li><li><a href="#a2">エッセイのコツ</a></li><li><a href="#a3">エキシビションのコツ</a></li><li><a href="#a4">準備の進め方</a></li><li><a href="#a5">まとめ</a></li></ol></nav>
     <h2 id="a1">まずは「何が評価されるか」から逆算する</h2>
@@ -959,6 +1031,20 @@ function set(o){m.classList.toggle('open',o);b.classList.toggle('open',o);b.setA
 b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
 document.addEventListener('click',function(e){if(!m.contains(e.target))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
+</script>
+<script id="camino-otlside">
+(function(){var o=document.querySelector('nav.otl');if(!o||!o.querySelector('a[href^="#"]'))return;
+var a=document.createElement('aside');a.className='otl-side';a.setAttribute('aria-hidden','true');
+var c=getComputedStyle(o.closest('[style*="--c"]')||document.body).getPropertyValue('--c');if(c)a.style.setProperty('--c',c);
+a.innerHTML='<p>'+o.querySelector('p').textContent+'</p>'+o.querySelector('ol').outerHTML+'<a class="top" href="#">'+(document.documentElement.lang=='en'?'Back to top ↑':'ページの先頭へ ↑')+'</a>';
+a.querySelectorAll('a').forEach(function(x){x.tabIndex=-1});
+document.body.appendChild(a);document.body.classList.add('has-side');
+var ls=[].slice.call(a.querySelectorAll('ol a')),ts=ls.map(function(l){return document.getElementById(l.getAttribute('href').slice(1))});
+var f=document.querySelector('.cta')||document.querySelector('footer');
+function u(){var y=innerHeight*0.42,ob=o.getBoundingClientRect().bottom,fb=f?f.getBoundingClientRect().top:1e9;
+a.classList.toggle('on',ob<0&&fb>innerHeight*0.5);var k=-1;ts.forEach(function(t,i){if(t&&t.getBoundingClientRect().top<y)k=i});
+ls.forEach(function(l,i){l.classList.toggle('cur',i==k)})}
+addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();
 </script>
 </body>
 </html>

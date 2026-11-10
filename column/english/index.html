@@ -952,6 +952,10 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
 .tynote b{flex:none;font-size:12px;color:#fff;background:var(--myp);border-radius:999px;padding:3px 11px;letter-spacing:.04em}
 @media(max-width:600px){.tynote{flex-direction:column;align-items:flex-start;gap:6px;font-size:13.5px}}
 </style>
+<style id="camino-autotoc">
+.abody nav.otl{margin:6px 0 30px}
+body.has-side .wrap.prose{max-width:1120px}
+</style>
 <style id="camino-formal">
 /* 目次: vertical list in a plain box */
 .otl{margin-top:28px;max-width:720px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 24px 8px}
@@ -1050,6 +1054,7 @@ body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
     <div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><span>英語・資格</span></div>
     <div class="ph"><div class="ph-badge"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.3 7 21l5-2.6 5 2.6-1.5-7.7"/></svg></div><h1><small>コラム</small>英語・資格</h1></div>
     <p class="lead">代表的な4つの英語の資格試験を、各団体の公式情報をもとに比べました</p>
+    <nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#types"><span>1</span>英検・TOEFL・IELTS・TOEICの4つ</a></li><li><a href="#compare"><span>2</span>4つの資格を比べると？</a></li><li><a href="#choose"><span>3</span>試験を選ぶときのポイント</a></li></ol></nav>
   </div>
 </section>
 <section class="sec first" id="types" style="padding-top:28px">
@@ -1123,7 +1128,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);}
 </script>
 <script id="camino-otlside">
 (function(){var o=document.querySelector('nav.otl');if(!o||!o.querySelector('a[href^="#"]'))return;
-if([].some.call(document.querySelectorAll('main table'),function(t){return t.querySelectorAll('thead th').length>=6}))return;
 var a=document.createElement('aside');a.className='otl-side';a.setAttribute('aria-hidden','true');
 var c=getComputedStyle(o.closest('[style*="--c"]')||document.body).getPropertyValue('--c');if(c)a.style.setProperty('--c',c);
 a.innerHTML='<p>'+o.querySelector('p').textContent+'</p>'+o.querySelector('ol').outerHTML+'<a class="top" href="#">'+(document.documentElement.lang=='en'?'Back to top ↑':'ページの先頭へ ↑')+'</a>';
