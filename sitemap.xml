@@ -785,4 +785,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/curriculum/accreditation/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/curriculum/accreditation/"/>
   </url>
+  <url>
+    <loc>https://caminotutor.com/column/schools/nlcs-kobe/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/schools/nlcs-kobe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/nlcs-kobe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/nlcs-kobe/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/en/column/schools/nlcs-kobe/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/schools/nlcs-kobe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/schools/nlcs-kobe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/schools/nlcs-kobe/"/>
+  </url>
 </urlset>
