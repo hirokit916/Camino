@@ -878,8 +878,15 @@ a.pg:hover{border-color:var(--k)}
 .jm-list li i{flex:none;font-style:normal;width:20px;height:20px;border-radius:50%;background:var(--cp);color:#fff;font:700 10.5px/20px var(--latin);text-align:center}
 .jm-list a{color:var(--ink);text-decoration:none}.jm-list a:hover{color:var(--cp)}
 .jm-list small{color:var(--muted);font-size:11.5px;margin-left:auto;text-align:right}
-.jmap.rg{grid-template-columns:1fr}
-.jmap.rg .jm-svg{max-width:760px}
+.jmap.rg{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:26px}
+@media(max-width:860px){.jmap.rg{grid-template-columns:1fr}}
+.jmap.rg .jm-list{columns:1}
+.jmap.rg .jm-list li{flex-wrap:nowrap;align-items:flex-start;padding:6px 0}
+.jmap.rg .jm-list li i{margin-top:1px}
+.jmap.rg .jm-list li span{display:flex;flex-direction:column;gap:1px;min-width:0}
+.jmap.rg .jm-list small{margin-left:0;text-align:left;font-size:11.5px}
+.jm-svg .bd{fill:none;stroke:#b3a891;stroke-width:1;stroke-dasharray:4 3}
+.jm-svg .pl{font:700 15px var(--sans,sans-serif);fill:#8a8070;letter-spacing:.08em;paint-order:stroke;stroke:#f3eee4;stroke-width:4px;text-anchor:middle}
 .rg-p{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 @media(max-width:860px){.rg-p{grid-template-columns:1fr}}
 .rg-p>div{background:#fff;border:1px solid var(--line);border-top:3px solid var(--k);border-radius:8px;padding:14px 16px}
