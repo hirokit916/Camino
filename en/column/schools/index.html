@@ -889,9 +889,11 @@ a.pg:hover{border-color:var(--k)}
 .jm-list li i{flex:none;font-style:normal;width:20px;height:20px;border-radius:50%;background:var(--cp);color:#fff;font:700 10.5px/20px var(--latin);text-align:center}
 .jm-list a{color:var(--ink);text-decoration:none}.jm-list a:hover{color:var(--cp)}
 .jm-list small{color:var(--muted);font-size:11.5px;margin-left:auto;text-align:right}
-.jmap.rg{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:26px}
+.jmap.rg{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px}
 @media(max-width:860px){.jmap.rg{grid-template-columns:1fr}}
-.jmap.rg .jm-list{columns:1}
+.jmap.rg .jm-list{columns:2;column-gap:20px}
+@media(max-width:600px){.jmap.rg .jm-list{columns:1}}
+.rg-go{margin:2px 0 10px!important}
 .jmap.rg .jm-list li{flex-wrap:nowrap;align-items:flex-start;padding:6px 0}
 .jmap.rg .jm-list li i{margin-top:1px}
 .jmap.rg .jm-list li span{display:flex;flex-direction:column;gap:1px;min-width:0}
@@ -1020,7 +1022,7 @@ body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
 <section class="sec sec-alt" id="next">
   <div class="wrap">
     <div class="sec-h"><div class="eyebrow">Next</div><h2>Related articles</h2></div>
-    <div class="nx rise"><a href="/en/column/curriculum/" class="main" style="--k:var(--or)"><span class="tg">Read next</span><span class="nb">Cur</span><b>International school curricula</b><span class="d">IB, Cambridge and AP, and how they run by grade</span><span class="go">Read more →</span></a><a href="/en/column/university/ib-scores/" class="" style="--k:var(--or)"><span class="nb">IB</span><b>IB results at schools in Japan</b><span class="d">IB results each school publishes</span><span class="go">Read more →</span></a><a href="/en/column/university/" class="" style="--k:var(--uni)"><span class="nb">Uni</span><b>University</b><span class="d">University applications by curriculum</span><span class="go">Read more →</span></a></div>
+    <div class="nx rise"><a href="/en/column/curriculum/" class="main" style="--k:var(--or)"><span class="tg">Read next</span><b>International school curricula</b><span class="d">IB, Cambridge and AP, and how they run by grade</span><span class="go">Read more →</span></a><a href="/en/column/university/ib-scores/" class="" style="--k:var(--or)"><b>IB results at schools in Japan</b><span class="d">IB results each school publishes</span><span class="go">Read more →</span></a><a href="/en/column/university/" class="" style="--k:var(--uni)"><b>University</b><span class="d">University applications by curriculum</span><span class="go">Read more →</span></a></div>
   </div>
 </section>
 <section class="sec" style="border-top:none;padding-top:10px">
