@@ -922,7 +922,6 @@ a.plan:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(11,31,
 #philosophy .cs-title-en,#cs-mobile-reader .cs-title-en{font-family:var(--latin)!important;font-weight:400;letter-spacing:-.02em!important}
 #philosophy .cs-title-en em,#cs-mobile-reader .cs-title-en em{font-style:italic;color:var(--cobalt)}
 #philosophy .cs-eyebrow,#cs-mobile-reader .cs-eyebrow{text-transform:none;letter-spacing:.08em!important;font-size:13px!important;font-weight:500}
-#philosophy .cs-eyebrow::before,#philosophy .cs-eyebrow::after,#cs-mobile-reader .cs-eyebrow::before,#cs-mobile-reader .cs-eyebrow::after{display:none!important}
 #philosophy .cs-copy p,#cs-mobile-reader p{line-height:2.1}
 
 @media(max-width:1000px){
@@ -952,6 +951,60 @@ html[lang="en"] body{word-break:normal;line-break:auto}
 html[lang="en"] .worry-grid p{font-family:var(--gothic);font-size:16.5px;line-height:1.8}
 html[lang="en"] .nav{gap:26px}
 @media(max-width:1000px){.pt.nophoto{grid-template-columns:1fr}}
+
+/* ================= hero: fits the first screen, photo framed on both people, where we teach up front ================= */
+.hero{min-height:620px;height:100svh;max-height:1040px;padding:92px 0 0;display:flex;align-items:center}
+.hero .wrap{width:100%}
+.hero-field{top:-6%;right:-4%;width:66%;height:106%}
+.hero-photo{width:max(52%,calc(100vw - max(24px,(100vw - 1180px)/2) - 560px));height:100%;top:0}
+.hero-photo img{object-position:80% 42%}
+.hero-copy{max-width:min(590px,40vw)}
+.hero-who{display:block}
+.hero-who{margin-bottom:clamp(14px,2.4vh,26px)}
+.hero h1{font-size:clamp(44px,min(5.4vw,9.2vh),84px);line-height:1.22}
+.hero-en{margin-top:clamp(8px,1.6vh,20px)}
+.hero-lead{margin-top:clamp(16px,2.8vh,30px);line-height:1.9}
+.hero-area{list-style:none;margin:clamp(18px,3vh,30px) 0 0;padding:0;display:grid;gap:10px;font-size:17px;line-height:1.5;color:var(--ink)}
+.hero-area li{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-area b{font-weight:600}
+.hero-area .ha-v{color:var(--text)}
+.hero-area .ha-ic{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--mist);color:var(--cobalt);flex:none}
+.hero-area .ha-ic svg{width:19px;height:19px}
+.hero-cta{margin-top:clamp(20px,3.4vh,34px)}
+html[lang="en"] .hero h1{line-height:1.02}
+@media(max-height:760px) and (min-width:1001px){.hero-lead{font-size:15.5px}.hero-area{font-size:16px;gap:6px}}
+@media(max-width:1000px){
+  .hero{height:auto;max-height:none;min-height:0;display:block;padding:0 0 56px}
+  .hero-photo{width:100%;height:clamp(240px,34vh,300px);margin-top:72px}
+  .hero-copy{max-width:none;margin-top:28px}
+  .hero-field{width:100%;height:340px}
+  .hero-photo img{object-position:70% 40%}
+}
+@media(max-width:720px){
+  .hero-who{font-size:13.5px;margin-bottom:12px}
+  .hero h1{font-size:42px}
+  .hero-lead{margin-top:16px;font-size:15px;line-height:1.85}
+  .hero-area{font-size:15.5px;gap:8px;margin-top:20px}
+  .hero-area .ha-ic{width:30px;height:30px}
+  .hero-area li{gap:10px}
+  .hero-area .ha-v{flex-basis:100%;padding-left:40px;margin-top:-6px}
+}
+
+/* ================= philosophy: a storybook cover before the story starts ================= */
+@media(min-width:821px){
+  #philosophy .cs-hero{min-height:100svh!important}
+  /* title sits in the open page left of the illustration, like a book cover */
+  #philosophy .cs-hero-copy{top:53%!important;left:34%!important}
+  #philosophy .cs-hero h2.cs-h1{font-size:clamp(60px,min(8vw,14.5vh),136px)!important;line-height:.98!important;letter-spacing:-.035em!important;margin-bottom:34px!important}
+  #philosophy .cs-hero h2.cs-h1 em{display:block}
+  #philosophy .cs-hero .cs-title-ja{font-size:clamp(20px,1.8vw,27px)!important;margin-top:30px;letter-spacing:.24em}
+  #philosophy .cs-hero .cs-eyebrow{display:inline-flex!important;align-items:center;gap:16px;margin-bottom:34px!important}
+  #philosophy .cs-hero .cs-eyebrow::before,#philosophy .cs-hero .cs-eyebrow::after{display:block!important;content:"";width:40px;height:1px;background:var(--cobalt);opacity:.55}
+}
+@media(min-width:821px) and (max-width:1100px){#philosophy .cs-hero-copy{left:30%!important}}
+#cs-mobile-reader .cs-hero-copy h2.cs-h1{font-size:clamp(44px,12.5vw,58px)!important;line-height:1!important;margin-bottom:18px!important}
+#cs-mobile-reader .cs-hero-copy h2.cs-h1 em{display:block}
+#cs-mobile-reader .cs-hero-copy .cs-title-ja{font-size:17px!important;margin-top:14px;letter-spacing:.2em}
 </style>
 <style id="camino-philosophy-css">
 
@@ -1219,8 +1272,8 @@ body.cs-philosophy-active #cs-progress{display:flex}
 <h1>Carve your<br/>own path.</h1>
 
 <p class="hero-lead">Personalized academic support and mentoring to help students build confidence, discover what motivates them, and carve their own path.</p>
+<ul class="hero-area"><li><span class="ha-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.500 2.600 3.800 5.600 3.800 9s-1.300 6.400-3.800 9c-2.500-2.600-3.800-5.600-3.800-9S9.500 5.600 12 3Z"></path></svg></span><b>Online</b><span class="ha-v">Available worldwide</span></li><li><span class="ha-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 21s-6.500-6.100-6.500-11.200a6.500 6.500 0 0 1 13 0C18.500 14.900 12 21 12 21Z"></path><circle cx="12" cy="9.800" r="2.300"></circle></svg></span><b>In person</b><span class="ha-v">Osaka, Kobe, Ashiya &amp; Nishinomiya</span></li></ul>
 <div class="hero-cta"><a class="btn btn-solid tablink" data-tab="contact" href="#contact">Book a Free Trial Lesson</a><a class="btn btn-line tablink" data-tab="fees" href="#fees">Explore Plans</a></div>
-<p class="hero-area">In-person lessons: Osaka, Kobe, Ashiya &amp; Nishinomiya<br/>Online lessons: Available worldwide</p>
 </div></div>
 </section>
 <section class="facts"><div class="wrap">
