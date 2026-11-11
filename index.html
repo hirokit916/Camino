@@ -1017,6 +1017,85 @@ html[lang="en"] .hero h1{line-height:1.02}
 @media(max-width:380px){.top .btn{padding:0 12px}.bm-t small{letter-spacing:.14em}}
 .top .btn{white-space:nowrap}
 @media(max-width:720px){.top .bt-x{display:none}}
+
+/* ================= header: solid bar, larger links, language at the far right ================= */
+.top,.top.pinned{background:rgba(253,252,250,.97);box-shadow:0 1px 0 var(--rule)}
+.top .wrap{height:84px}
+.top.pinned .wrap{height:72px}
+.nav{gap:28px;font-size:15.5px;font-weight:500}
+.nav a{color:var(--ink);display:inline-flex;align-items:center;gap:7px}
+.nav a:hover,.nav a.on{color:var(--cobalt)}
+.nv-ic{width:17px;height:17px;flex:none}
+.lang{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-family:var(--ui);font-weight:600;font-size:14.5px;color:var(--cobalt);white-space:nowrap}
+.lang:hover{color:var(--ink)}
+.nav .lang-m{display:none}
+.top .lang-d{order:9}
+.top .menu{order:10}
+.hero{padding-top:84px}
+.phead{padding-top:170px}
+@media(max-width:1180px) and (min-width:1001px){.nav{gap:20px;font-size:14.5px}.top .wrap{gap:22px}}
+@media(max-width:1000px){
+  .top .lang-d{display:none}
+  .nav .lang-m{display:flex}
+  .top .wrap{height:72px}
+}
+
+/* ================= impact band: navy, white figures, schools drifting right to left ================= */
+.impact{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:64px 0 54px}
+.impact::before{content:"";position:absolute;right:-220px;top:-300px;width:640px;height:640px;border-radius:50%;border:1.5px solid rgba(124,166,255,.35);pointer-events:none}
+.impact .facts{border:0}
+.impact .facts .wrap{gap:0}
+.impact .fact{border-left:1px solid rgba(255,255,255,.18);padding:6px 40px 8px}
+.impact .fact:first-child{border-left:0;padding-left:0}
+.impact .fact b{color:#fff;font-size:56px;line-height:1}
+.impact .fact b.sm{font-size:44px;padding:6px 0 0}
+.impact .fact b small{color:#8fb4ff;font-family:var(--latin);font-size:.55em;margin-left:.08em}
+.impact .fact span{color:#c9d6f2;font-size:15px;margin-top:14px}
+.impact .schools{padding:52px 0 0}
+.impact .schools p{color:#8fb4ff;font-size:13.5px;letter-spacing:.06em;margin:0 0 18px}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14);padding:20px 0}
+.mq-track{display:flex;width:max-content;animation:mq 46s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+.impact .mq ul{list-style:none;margin:0;padding:0;display:flex;gap:0;font-family:var(--latin);font-size:24px;line-height:1.3;color:#fff;flex:none}
+.impact .mq li{white-space:nowrap;padding:0 30px;display:flex;align-items:center;gap:30px}
+.impact .mq li::after{content:"";width:6px;height:6px;border-radius:50%;background:#5b8cf0;margin-left:30px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq-track{animation:none}.mq{overflow-x:auto}}
+@media(max-width:1000px){
+  .impact{padding:44px 0 40px}
+  .impact .fact,.impact .fact:first-child{border-left:0;border-top:1px solid rgba(255,255,255,.16);padding:22px 0}
+  .impact .fact:first-child{border-top:0;padding-top:0}
+  .impact .fact b{font-size:46px}.impact .fact b.sm{font-size:36px}
+  .impact .schools{padding-top:30px}
+  .impact .mq ul{font-size:20px}.impact .mq li{padding:0 20px;gap:20px}.impact .mq li::after{margin-left:20px}
+}
+
+/* ================= contact: form left, LINE on the right, tighter ================= */
+#contact .phead{padding-bottom:28px}
+#contact .sec-tight{padding-top:20px}
+.wrap.contact{max-width:var(--w);display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 48px;align-items:start}
+.wrap.contact>.form,.wrap.contact>.form-done{grid-column:1;grid-row:1}
+.wrap.contact>.line-card{grid-column:2;grid-row:1;position:sticky;top:96px;flex-direction:column;align-items:flex-start;gap:16px;padding:26px 24px}
+.wrap.contact>.line-or{display:none}
+.line-qr{width:150px;padding:8px}
+.line-qr img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain}
+.line-txt h3{font-size:21px}
+.line-txt .line-btn{margin-top:14px}
+.form{padding:36px 40px 40px}
+.form-sec.form-sec-next{margin-top:38px}
+.field{margin-bottom:20px}
+@media(max-width:1000px){
+  .wrap.contact{grid-template-columns:1fr;gap:20px}
+  .wrap.contact>.line-card{grid-column:1;grid-row:1;position:static;flex-direction:row;align-items:center}
+  .wrap.contact>.form,.wrap.contact>.form-done{grid-row:2}
+}
+@media(max-width:720px){
+  .wrap.contact>.line-card{flex-direction:row;align-items:flex-start;padding:20px 18px;gap:16px}
+  .line-qr{width:96px;padding:5px}
+  .line-txt h3{font-size:18px}
+  .line-txt p{font-size:13.5px}
+  .form{padding:26px 20px 28px}
+}
 </style>
 <style id="camino-philosophy-css">
 
@@ -1284,8 +1363,9 @@ body.cs-philosophy-active #cs-progress{display:flex}
 
 <header class="top" id="top"><div class="wrap">
   <a class="mark brand tablink" data-tab="home" href="./" aria-label="CAMINO Private Tutor — Home"><img class="bm-ic" src="logo-mark.png" alt="" width="44" height="44"><span class="bm-t"><b>CAMINO</b><small>Private Tutor</small></span></a>
-  <nav class="nav" id="nav" aria-label="メインメニュー"><a class="tablink" data-tab="philosophy" href="#philosophy">私たちの理念</a><a class="tablink" data-tab="why" href="#why">5つの強み</a><a class="tablink" data-tab="fees" href="#fees">プラン</a><a class="tablink" data-tab="profile" href="#profile">講師</a><a href="/column/">コラム</a><a class="tablink" data-tab="contact" href="#contact">お問い合わせ</a><a class="lang" href="/en/" hreflang="en">EN</a></nav>
+  <nav class="nav" id="nav" aria-label="メインメニュー"><a class="tablink" data-tab="philosophy" href="#philosophy">私たちの理念</a><a class="tablink" data-tab="why" href="#why">5つの強み</a><a class="tablink" data-tab="fees" href="#fees">プラン</a><a class="tablink" data-tab="profile" href="#profile">講師</a><a href="/column/">コラム</a><a class="tablink nv-contact" data-tab="contact" href="#contact"><svg class="nv-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>お問い合わせ</a><a class="lang lang-m" href="/en/" hreflang="en"><svg class="nv-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>English</a></nav>
   <a class="btn btn-solid tablink" data-tab="contact" href="#contact">無料体験<span class="bt-x">レッスン</span></a>
+  <a class="lang lang-d" href="/en/" hreflang="en"><svg class="nv-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>EN</a>
   <button class="menu" id="menu" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="nav"><span></span></button>
 </div></header>
 <main>
@@ -1294,7 +1374,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
   <div class="hero-photo"><img src="hero.jpg" alt="机に向かって一緒に学ぶ講師と生徒"></div>
   <div class="hero-path" aria-hidden="true"><svg viewBox="0 0 1440 760" preserveAspectRatio="none"><path d="M1440,430 C1330,470 1250,640 1050,694 C880,740 720,700 570,716 C430,731 330,760 230,760"/></svg></div>
   <div class="wrap"><div class="hero-copy">
-    <span class="hero-who"><span class="nw">インター生・帰国子女向け</span>　<span class="nw">家庭教師<i>×</i>メンタリング</span></span>
+    <span class="hero-who"><span class="nw">インター生・帰国子女向け</span><br><span class="nw">家庭教師<i>×</i>メンタリング</span></span>
     <h1>自分の道を、<br>切り拓く</h1>
     <p class="hero-en">Carve your own path.</p>
     <p class="hero-lead">豊富な指導経験を活かしたマンツーマンの対話と指導を通じ、生徒自身が心から進みたいと思える道を切り拓きます</p>
@@ -1303,15 +1383,15 @@ body.cs-philosophy-active #cs-progress{display:flex}
   </div></div>
 </section>
 
-<section class="facts"><div class="wrap">
+<section class="impact"><div class="facts"><div class="wrap">
   <div class="fact"><b>G1<small>〜</small>G12</b><span>全学年の課題・テスト支援に対応</span></div>
   <div class="fact"><b>50<small>名+</small></b><span>指導実績（国内・国外の学生）</span></div>
   <div class="fact"><b class="sm">IB, AP, Cambridge</b><span>数学・英語・物理・化学・経済など幅広く対応</span></div>
-</div></section>
+</div></div>
 <div class="schools"><div class="wrap">
   <p>支援してきた生徒の学校の例</p>
-  <ul><li>Canadian Academy</li><li>Marist Brothers International School</li><li>British School in Tokyo</li><li>K. International School Tokyo</li><li>Keio Academy of New York</li><li>Laurus International School</li><li>One World International School</li></ul>
-</div></div>
+  </div><div class="mq" aria-label="schools"><div class="mq-track"><ul><li>Canadian Academy</li><li>Marist Brothers International School</li><li>British School in Tokyo</li><li>K. International School Tokyo</li><li>Keio Academy of New York</li><li>Laurus International School</li><li>One World International School</li></ul><ul aria-hidden="true"><li>Canadian Academy</li><li>Marist Brothers International School</li><li>British School in Tokyo</li><li>K. International School Tokyo</li><li>Keio Academy of New York</li><li>Laurus International School</li><li>One World International School</li></ul></div></div><div class="wrap">
+</div></div></section>
 
 <section class="sec" id="tutor"><div class="wrap tutor">
   <div class="tutor-photo"><img src="tutor.jpg" alt="高島 宏樹"></div>
