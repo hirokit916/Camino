@@ -815,8 +815,7 @@ body.lang-ja .brand-tag{white-space:nowrap;max-width:none}
         "英検・TOEFL・TOEIC・IELTS対策",
         "エッセイ・プレゼンテーション指導",
         "進路相談・大学進学サポート",
-        "帰国子女の学習支援",
-        "オンライン英会話"
+        "帰国子女の学習支援"
       ],
       "knowsLanguage": [
         "ja",
@@ -933,24 +932,6 @@ body.lang-ja .brand-tag{white-space:nowrap;max-width:none}
             "itemOffered": {
               "@type": "Service",
               "name": "家庭教師（高校生 IB DP・AP・Cambridge A Level科目・60分）",
-              "provider": {
-                "@id": "https://caminotutor.com/#organization"
-              },
-              "audience": {
-                "@type": "EducationalAudience",
-                "educationalRole": "student",
-                "audienceType": "インターナショナルスクール生・帰国子女"
-              }
-            }
-          },
-          {
-            "@type": "Offer",
-            "url": "https://caminotutor.com/",
-            "price": "3000",
-            "priceCurrency": "JPY",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "オンライン英会話（25分）",
               "provider": {
                 "@id": "https://caminotutor.com/#organization"
               },
@@ -1798,6 +1779,221 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 <style id="camino-stat-wrap">.stats-3 .stat-cap{white-space:normal!important}.stat-cap .ph{display:inline-block}</style>
 <style id="camino-v-subj">.vcard .v-subj{margin-top:4px;font-family:var(--jpsans,var(--sans));font-size:12.5px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);line-height:1.5}body:not(.lang-ja) .vcard .v-subj{font-family:var(--sans)}</style>
 <style id="camino-pvfix">.pv2-lbl{white-space:normal;min-width:0}.pv2-lbl .pv-nw{white-space:normal}@media(max-width:600px){.pv2-lbl .pv-nw{display:block;font-size:12.5px}}</style>
+<style id="camino-plan3">#fees .aud-q{text-align:center;font-weight:700;font-size:15px;color:var(--navy);margin:34px 0 14px}
+#fees .aud{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#fees .aud button{all:unset;box-sizing:border-box;cursor:pointer;position:relative;background:#fff;border:1px solid #ebe3d6;border-radius:18px;padding:18px 18px 16px;display:flex;gap:14px;align-items:flex-start;
+ box-shadow:0 1px 2px rgba(22,41,77,.04),0 10px 26px -20px rgba(22,41,77,.25);transition:box-shadow .2s,transform .2s,border-color .2s}
+#fees .aud button:hover{transform:translateY(-2px)}
+#fees .aud button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+#fees .aud .ic{flex:none;width:44px;height:44px;border-radius:13px;background:#f8f6f2;color:#71695f;display:grid;place-items:center;transition:background .2s,color .2s}
+#fees .aud .num{display:block;font:700 12px/1.2 var(--sans);letter-spacing:.06em;color:#a59b8e;margin-bottom:3px}
+#fees .aud b{display:block;font-size:16.5px;color:var(--navy);line-height:1.4}
+#fees .aud small{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.6;margin-top:4px}
+#fees .aud .fr{display:inline-block;margin-top:8px;font:700 10.5px/1 var(--sans);letter-spacing:.08em;color:#fff;background:var(--acc);border-radius:99px;padding:4px 9px}
+#fees .aud .fr.jp{font-family:var(--jpsans);letter-spacing:.02em}
+#fees .aud button.on{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc),0 16px 34px -20px rgba(197,85,36,.5)}
+#fees .aud button.on .ic{background:var(--acc);color:#fff}
+#fees .aud button.on .num{color:var(--acc)}
+#fees .aud button.on::after{content:"";position:absolute;left:calc(50% - 9px);bottom:-10px;width:16px;height:16px;background:#fff;border-right:1px solid var(--acc);border-bottom:1px solid var(--acc);transform:rotate(45deg);box-shadow:1px 1px 0 0 var(--acc)}
+#fees .panel{display:none;margin-top:30px}
+#fees .panel.on{display:block;animation:pl3fd .3s ease}
+@keyframes pl3fd{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#fees .pv2-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+#fees .pv2-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+#fees .pv2-grid+.pv2-grid{margin-top:20px}
+#fees .pv2-grid.one{grid-template-columns:1fr}
+#fees .pv2-card{--c:#16294d;--tint:#eef2f8;background:#fff;border:1px solid #ebe3d6;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(22,41,77,.04),0 12px 32px -18px rgba(22,41,77,.22)}
+#fees .pv2-tutor{--c:#16294d;--tint:#eef2f8}
+#fees .pv2-test{--c:#2f6db5;--tint:#eaf2fb}
+#fees .pv2-eng{--c:#2a7f73;--tint:#e8f4f1}
+#fees .pv2-cur{--c:#2f5d9e;--tint:#e9eef8}
+#fees .pv2-uni{--c:#16294d;--tint:#eef2f8}
+#fees .pv2-job{--c:#4f7351;--tint:#e8f0e6}
+#fees .pv2-trial{--c:#e2672e;--tint:#fdf0e6}
+#fees .pv2-head{display:flex;align-items:center;gap:14px;padding:22px 24px 20px;background:var(--tint);border-top:5px solid var(--c)}
+#fees .pv2-ic{flex:none;width:46px;height:46px;border-radius:14px;background:#fff;color:var(--c);display:grid;place-items:center;box-shadow:0 2px 8px -4px rgba(0,0,0,.18)}
+#fees .pv2-kicker{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--c);opacity:.85;margin-bottom:2px}
+#fees .pv2-head h3{word-break:keep-all;line-break:strict;margin:0;font-size:21px;font-weight:700;color:var(--navy);line-height:1.35}
+#fees .pv2-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+#fees .pv2-lead{font-size:13.5px;color:var(--ink-soft);line-height:1.65;margin:0 0 14px}
+#fees .pv2-lead strong,#fees .pv2-text strong{color:var(--navy)}
+#fees .pv2-table{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:6px}
+#fees .pv2-table li{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border-radius:12px;background:#f8f6f2;min-width:0}
+#fees .pv2-lbl{min-width:0;font-size:14px;color:var(--ink);font-weight:500;word-break:keep-all;line-break:strict}
+#fees .pv-nw{display:inline-block;white-space:nowrap}
+#fees .pv2-amt{flex:none;font-family:var(--sans);font-size:21px;font-weight:700;color:#e2672e;white-space:nowrap}
+#fees .pv2-amt i,#fees .pv2-price i{font-style:normal;font-family:var(--jpsans);font-size:13px;font-weight:700;color:var(--navy);margin-left:5px}
+#fees .pv2-price{font-family:var(--sans);font-size:40px;font-weight:700;color:#e2672e;line-height:1.1;margin:2px 0 14px}
+#fees .pv2-price i{font-size:15px;margin-left:6px}
+#fees .pv2-chips{display:flex;flex-wrap:wrap;gap:6px;margin:-4px 0 14px}
+#fees .pv2-chips span{font-size:12px;font-weight:700;color:var(--c);background:var(--tint);padding:5px 11px;border-radius:999px}
+#fees .pv2-text{font-size:13.5px;line-height:1.75;color:var(--ink-soft);margin:0 0 8px}
+#fees .pv2-note{display:flex;align-items:center;gap:10px;margin:0 0 20px;padding:11px 14px;border-radius:12px;background:var(--tint);color:var(--navy);font-size:13.5px;font-weight:700;line-height:1.5}
+#fees .pv2-note svg{flex:none;color:var(--c)}
+#fees .pv2-also{display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12.5px;color:var(--ink-soft)}
+#fees .pv2-also b{font-weight:700;color:var(--c);background:var(--tint);border-radius:6px;padding:3px 8px;font-size:12px}
+#fees .pv2-h{font-size:13px;font-weight:700;color:var(--c);margin:4px 0 8px}
+#fees .pv2-list{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px}
+#fees .pv2-list li{display:flex;gap:10px;align-items:flex-start;background:var(--tint);border-radius:10px;padding:10px 14px;font-size:14px;line-height:1.6}
+#fees .pv2-list li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--c);margin-top:.6em}
+#fees .pv2-btn{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:999px;background:var(--c);color:#fff;font-weight:700;font-size:14.5px;text-decoration:none;transition:filter .2s,transform .2s}
+#fees .pv2-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+#fees .pv2-trial .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:34px;align-items:start;flex:1}
+#fees .pv2-trial .main{display:flex;flex-direction:column;height:100%}
+#fees .pv2-trial .start{font-size:13.5px;font-weight:700;color:var(--c);margin:0 0 6px}
+#fees .pv2-trial .pv2-btn{margin-top:14px}
+#fees .pv2-trial .pv2-table{margin:0}
+#fees .pv2-trial .pv2-lbl{display:flex;flex-direction:column;gap:1px}
+#fees .pv2-who{font-size:12px;font-weight:400;color:var(--ink-soft)}
+#fees .steps{list-style:none;margin:0;padding:0;display:grid;gap:6px;counter-reset:s}
+#fees .steps li{display:flex;gap:12px;align-items:flex-start;background:#f8f6f2;border-radius:12px;padding:10px 12px}
+#fees .steps li::before{counter-increment:s;content:counter(s);flex:none;width:24px;height:24px;border-radius:50%;background:#fff;color:var(--c);border:1.5px solid var(--c);font:700 12px/21px var(--sans);text-align:center;margin-top:1px}
+#fees .steps li.hl{background:var(--tint)}
+#fees .steps li.hl::before{background:var(--c);color:#fff}
+#fees .steps b{display:block;font-size:14px;color:var(--ink)}
+#fees .steps span{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+#fees .steps .tag{display:inline-block;margin-left:6px;font:700 10.5px/1 var(--sans);letter-spacing:.08em;color:#fff;background:var(--c);border-radius:99px;padding:3px 7px;vertical-align:2px}
+#fees .cs-top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:6px}
+#fees .cs-top .pv2-price{margin:0}
+#fees .cs-top .pv2-lead{margin:0;font-weight:700;color:var(--navy);font-size:14.5px}
+#fees .topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0 22px}
+#fees .tp{border:1px solid #ebe3d6;border-top:4px solid var(--k);border-radius:14px;padding:16px 16px 14px;background:#fff}
+#fees .tp-h{display:flex;align-items:center;gap:9px;font-size:16.5px;font-weight:700;color:var(--navy)}
+#fees .tp-n{flex:none;width:24px;height:24px;border-radius:7px;background:var(--k);color:#fff;font:700 12.5px/24px var(--sans);text-align:center}
+#fees .tp-s{font-size:13px;color:var(--ink-soft);line-height:1.65;margin:8px 0 10px}
+#fees .tp ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+#fees .tp li{display:flex;gap:9px;align-items:flex-start;background:var(--kt);border-radius:9px;padding:8px 11px;font-size:13.5px;line-height:1.55}
+#fees .tp li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--k);margin-top:.6em}
+#fees .cs-btn{max-width:420px;width:100%;margin:0 auto}
+@media(max-width:860px){#fees .topics{grid-template-columns:1fr}}
+#fees .pv2-pc{--c:#9a6a2f;--tint:#f6eee2}
+#fees .topics.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:860px){#fees .topics.two{grid-template-columns:1fr}}
+@media(max-width:960px){#fees .pv2-grid.three{grid-template-columns:1fr}}
+@media(max-width:860px){#fees .pv2-grid{grid-template-columns:1fr}
+#fees .pv2-trial .cols{grid-template-columns:1fr;gap:18px}}
+@media(max-width:640px){#fees .aud{gap:8px}
+#fees .aud button{flex-direction:column;align-items:center;text-align:center;gap:8px;padding:14px 6px 12px;border-radius:14px}
+#fees .aud .ic{width:38px;height:38px;border-radius:11px}
+#fees .aud b{font-size:13.5px}
+#fees .aud small{display:none}
+#fees .aud .num{display:none}
+#fees .aud .fr{margin-top:6px;font-size:9.5px;padding:3px 7px}
+#fees .pv2-head{padding:18px 18px 16px}
+#fees .pv2-body{padding:18px 18px 20px}
+#fees .pv2-price{font-size:34px}
+#fees .pv2-amt{font-size:19px}
+#fees .pv-nw{display:inline;white-space:normal}}
+#fees .h-sub{display:block;font-size:13px;font-weight:500;color:var(--ink-soft);margin-top:2px}
+#fees .pv2-fine2{font-size:12.5px}
+#fees .pv2-text,#fees .pv2-lead,#fees .tp-s,#fees .steps span,#fees .aud small{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+#fees .pv2-list.m0{margin:0}
+#fees .pv2-card .pv2-text.pv2-fine{font-size:12.5px;line-height:1.75;color:#7a7068;background:var(--tint);border-radius:10px;padding:10px 12px;margin:4px 0 16px}
+#fees .pv2-body > .pv2-note{margin-top:8px}
+#fees .cs-l{font-weight:700;color:var(--navy);margin:6px 0 0}
+#fees .tp .tp-s+.tp-s{margin-top:-4px}
+#fees .aud b{font-size:15.5px;word-break:keep-all}
+#fees .aud .age{font-size:.82em;font-weight:700;white-space:nowrap}
+#fees .aud .sh{display:none}
+@media(max-width:640px){#fees .aud .age{white-space:normal;display:block;word-break:normal;font-size:10.5px}
+#fees .aud .lg{display:none}
+#fees .aud .sh{display:inline}
+#fees .aud b{font-size:13px;line-height:1.45}
+#fees .aud button{padding:12px 5px 10px}}
+@media(min-width:861px){#fees .pv2-table.hz{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:20px}
+#fees .pv2-table.hz li{flex-direction:column;align-items:flex-start;justify-content:space-between;gap:14px;padding:16px 18px;border-radius:14px;background:var(--tint);border-top:3px solid var(--c)}
+#fees .pv2-table.hz .pv2-lbl{font-weight:700;color:var(--navy);font-size:15px}
+#fees .pv2-table.hz .pv-nw{display:block;white-space:normal;font-size:12.5px;font-weight:500;color:var(--ink-soft);margin-top:2px}
+#fees .pv2-table.hz .pv2-amt{font-size:34px}
+#fees .pv2-table.hz .pv2-amt i{font-size:14px}}
+#fees .nw2{white-space:nowrap}
+#fees .more{margin:6px 0 18px}
+#fees .more summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:12px;background:var(--tint);color:var(--c);font-weight:700;font-size:14px}
+#fees .more summary::-webkit-details-marker{display:none}
+#fees .more summary::after{content:"＋";font-size:16px}
+#fees .more[open] summary::after{content:"－"}
+#fees .more .topics,#fees .more .topics.two{grid-template-columns:1fr;margin-bottom:4px}
+#fees .lg-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:2px 0 16px}
+#fees .lg-b{display:grid;place-items:center;height:64px;background:#fff;border:1px solid #ebe3d6;border-radius:12px;padding:10px 12px}
+#fees .lg-b img{max-width:100%;max-height:40px;object-fit:contain}
+@media(max-width:640px){#fees .lg-b{height:52px;padding:8px}
+#fees .lg-b img{max-height:32px}}
+#fees .cs-btn{margin:auto auto 0!important}
+#fees .aud button>span:last-child{display:flex;flex-direction:column;align-self:stretch;flex:1}
+#fees .aud b{min-height:2.9em}
+#fees .aud small{min-height:3.2em;margin-bottom:10px}
+#fees .pv2-grid:not(.one) .pv2-head{min-height:112px;box-sizing:border-box}
+#fees .aud .fr{margin-top:auto;align-self:flex-start}
+#fees .aud button{align-items:stretch}
+#fees .aud button .ic{align-self:flex-start}
+@media(max-width:640px){#fees .aud b{min-height:4.4em;display:flex;flex-direction:column;justify-content:center}
+#fees .aud small{min-height:0}
+#fees .aud .fr{align-self:center}
+#fees .aud button>span:last-child{align-items:center}}
+#fees .pv2-A{--c:#16294d;--tint:#eef2f8}
+#fees .pv2-Q{--c:#2f6db5;--tint:#eaf2fb}
+#fees .pv2-P{--c:#4f7351;--tint:#e8f0e6}
+#fees .tp{--k:var(--c);--kt:var(--tint)}
+#fees .aud button.on{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac),0 16px 34px -20px rgba(22,41,77,.35)}
+#fees .aud button.on .ic{background:var(--ac)}
+#fees .aud button.on .num{color:var(--ac)}
+#fees .aud button.on::after{border-color:var(--ac);box-shadow:1px 1px 0 0 var(--ac)}
+#fees .aud button .ic{color:var(--ac)}
+#fees .aud button{border:1.5px solid var(--ac)!important;padding:17px 17px 15px}
+#fees .aud button.on{border-width:3.5px!important;padding:15px 15px 13px;box-shadow:0 16px 34px -20px rgba(22,41,77,.4)!important}
+#fees .aud .fr{background:var(--ac)}
+#fees .aud button.on::after{border-right:3.5px solid var(--ac);border-bottom:3.5px solid var(--ac);box-shadow:none;bottom:-11px}
+#fees .pv2-head{position:relative}
+#fees .fbadge{all:unset;box-sizing:border-box;cursor:pointer;margin-left:auto;align-self:center;display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;background:#e2672e;color:#fff;font-weight:700;font-size:13.5px;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(226,103,46,.7);transition:transform .2s,filter .2s}
+#fees .fbadge{font-size:17.5px!important;padding:12px 22px!important;gap:9px!important;border:2.5px solid #fff;animation:pl3rim 1.4s ease-in-out infinite}
+@keyframes pl3rim{0%,100%{box-shadow:0 0 0 0 rgba(226,103,46,.75),0 8px 18px -8px rgba(226,103,46,.7)}50%{box-shadow:0 0 0 7px rgba(226,103,46,0),0 8px 18px -8px rgba(226,103,46,.7);background:#f07a3e}}
+#fees .fbadge[aria-expanded="true"]{animation:none}
+#fees .fbadge:hover{transform:translateY(-1px);filter:brightness(1.06)}
+#fees .fbadge:focus-visible{outline:2px solid #e2672e;outline-offset:3px}
+#fees .fb-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pl3pl 1.6s infinite}
+@keyframes pl3pl{0%,100%{opacity:1}50%{opacity:.35}}
+#fees .fb-t{display:flex;flex-direction:column;align-items:flex-start;line-height:1.25}
+#fees .fb-t small{font-size:11px;font-weight:500;opacity:.9}
+#fees .fb-ar{transition:transform .2s;font-size:16px;line-height:1}
+#fees .fbadge[aria-expanded="true"] .fb-t{display:flex;flex-direction:column;align-items:flex-start;line-height:1.25}
+#fees .fb-t small{font-size:11px;font-weight:500;opacity:.9}
+#fees .fb-ar{transform:rotate(90deg)}
+#fees .tpop{--c:#e2672e;--tint:#fdf0e6;border:1.5px solid #f2c6ab;background:#fffaf6;border-radius:16px;padding:16px 18px 18px;margin:0 0 20px;animation:pl3fd .25s ease}
+#fees .tpop-h{display:flex;align-items:center;justify-content:space-between;font-weight:700;color:#c55524;font-size:15px;margin-bottom:12px}
+#fees .tpop-x{all:unset;cursor:pointer;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#c55524;font-size:18px}
+#fees .tpop-x:hover{background:#fdf0e6}
+#fees .tpop .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:26px}
+#fees .pv2-grid:not(.one) .tpop .cols{grid-template-columns:1fr;gap:16px}
+#fees .tpop .pv2-btn{background:#e2672e;margin-top:12px}
+#fees .tpop .pv2-price{font-size:34px}
+@media(max-width:860px){#fees .tpop .cols{grid-template-columns:1fr;gap:16px}}
+@media(max-width:640px){#fees .pv2-head{flex-wrap:wrap}
+#fees .fbadge{margin-left:60px;padding:9px 16px!important;font-size:14.5px!important}}
+#fees .free-t{font-weight:700;color:#e2672e;font-size:26px;line-height:1.35;margin:0 0 10px}
+#fees .free-t.en{font-size:18px}
+#fees .tpop .pv2-lbl{display:flex;flex-direction:column;gap:1px}
+#fees .tpop .pv2-table{margin:0}
+#fees .why-h2.long{font-size:clamp(24px,2.7vw,36px)}
+#fees .pv2-text,#fees .pv2-lead,#fees .tp-s,#fees .aud small,#fees .tp li{word-break:normal;overflow-wrap:normal;line-break:strict}
+#fees .pv2-grid:has(details.more[open]){align-items:start}
+#fees .th-sub{margin:14px auto 0;max-width:680px}
+#fees .plan-topnotes{line-height:1.8}
+#fees .why-h2.long{font-size:clamp(24px,2.7vw,36px)}
+#fees .pv2-grid.one{grid-template-columns:1fr !important}
+#fees .aud .fr{white-space:nowrap}
+@media(max-width:640px){#fees .aud .fr{font-size:8.5px;letter-spacing:.04em;padding:3px 6px}
+#fees .pv2-head>div{flex:1 1 calc(100% - 62px);min-width:0}#fees .fbadge{margin-left:0 !important}}
+#fees .pv2-text,#fees .pv2-lead,#fees .tp-s,#fees .th-sub,#fees .plan-topnotes,#fees .aud small,#fees .tp li{word-break:normal;overflow-wrap:normal;line-break:strict}
+#fees .pv2-grid:has(details.more[open]){align-items:start}
+#fees .aud-q{scroll-margin-top:110px}
+#fees .panel{scroll-margin-top:110px}
+#enquiry .f-hl{animation:pl3hl 1.6s ease}
+@keyframes pl3hl{0%,60%{box-shadow:0 0 0 3px rgba(232,112,56,.55)}100%{box-shadow:0 0 0 0 rgba(232,112,56,0)}}
+#enquiry .picked{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:-6px 0 18px;padding:10px 14px;border-radius:10px;background:#eef2f8;color:#16294d;font-size:13.5px;font-weight:700}
+#enquiry .picked[hidden]{display:none}
+#enquiry .field[hidden]{display:none !important}
+#enquiry .picked small{font-weight:500;color:#5d6470}
+</style>
 </head>
 <body class="lang-ja">
 
@@ -2275,74 +2471,49 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 <div class="tab" id="fees">
   <section>
     <div class="tab-head">
-      <div class="th-eyebrow"><span data-inl class="ja">プラン</span></div>
-      <h2 class="why-h2"><span data-inl class="ja"><span class="th-nw">目的に合わせて選べる</span><span class="th-accent th-nw">学びのプラン</span></span></h2>
-      <div class="plan-topnotes"><span data-inl class="ja">料金は税込 ｜ 授業料以外の入会金・解約金・月額利用料は不要（対面授業の交通費・教材費は別途）</span></div>
-    </div>
+ <div class="th-eyebrow">サービス・料金</div>
+ <h2 class="why-h2 long"><span class="th-nw">目的に応じて選べる、</span><span class="th-accent"><span class="th-nw">個別最適化された</span><span class="th-nw">学習・教育サポート</span></span></h2>
+ <p class="th-sub">お子さまの学習状況や目標、ご家庭のご要望を丁寧に伺い、一人ひとりに適した指導・サポートをご提供します</p>
+ <div class="plan-topnotes">料金はすべて税込です ｜ 入会金・解約金・月額利用料はいただいておりません<br><span class="nw2">※対面授業の</span>交通費および教材費は別途ご負担いただきます</div>
+</div>
 
-    <nav class="pl-nav" aria-label="プラン一覧"><a href="#plan-tutor" data-pl="plan-tutor"><span class="pl-num">01</span><span class="pl-lbl">家庭教師</span></a><a href="#plan-test" data-pl="plan-test"><span class="pl-num">02</span><span class="pl-lbl">資格対策</span></a><a href="#plan-eng" data-pl="plan-eng"><span class="pl-num">03</span><span class="pl-lbl"><span class="pl-nw">オンライン</span><span class="pl-nw">英会話</span></span></a><a href="#plan-ib" data-pl="plan-ib" class="pl-ib"><span class="pl-num">04</span><span class="pl-lbl">IB相談</span></a><a href="#plan-trial" data-pl="plan-trial" class="pl-free"><span class="pl-num">FREE</span><span class="pl-lbl">無料体験</span></a></nav>
-    <div class="pv2-grid">
-      <article class="pv2-card pv2-tutor" id="plan-tutor">
-        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M8 7h8M8 11h6"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 01</span></div><h3><span data-inl class="ja">家庭教師</span></h3></div></header>
-        <div class="pv2-body">
-          <p class="pv2-lead"><span data-inl class="ja">全科目対応。IB・AP・Cambridge科目は対応科目を要相談</span></p>
-          <ul class="pv2-table">
-            <li><span class="pv2-lbl"><span data-inl class="ja">小学生</span></span><span class="pv2-amt">¥8,000<i><span data-inl class="ja">/ 60分</span></i></span></li>
-            <li><span class="pv2-lbl"><span data-inl class="ja">中学生</span></span><span class="pv2-amt">¥10,000<i><span data-inl class="ja">/ 60分</span></i></span></li>
-            <li><span class="pv2-lbl"><span data-inl class="ja">高校生</span></span><span class="pv2-amt">¥12,000<i><span data-inl class="ja">/ 60分</span></i></span></li>
-            <li><span class="pv2-lbl"><span data-inl class="ja">高校生<span class="pv-nw">（IB DP・AP・Cambridge A Level科目）</span></span></span><span class="pv2-amt">¥15,000<i><span data-inl class="ja">/ 60分</span></i></span></li>
-          </ul>
-          <div class="pv2-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><span><span data-inl class="ja">90分・120分のレッスンも、同一時間単価で受講可能</span></span></div>
-          <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
+<p class="aud-q">ご利用いただけるサービス</p>
+<div class="aud" role="tablist">
+ <button class="on" role="tab" aria-selected="true" data-t="intl" style="--ac:#16294d"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5Z"/><path d="M6 11.5v4.2c0 1.2 2.7 2.8 6 2.8s6-1.6 6-2.8v-4.2"/></svg></span><span><span class="num">01</span><b>インター生・<wbr>帰国子女</b><small>インターナショナルスクールの授業・課題・定期試験から、日々の学習習慣づくりまで、幅広い科目に対応する個別指導</small><span class="fr">FREE TRIAL</span></span></button>
+ <button role="tab" aria-selected="false" data-t="parent" style="--ac:#4f7351"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5M14.5 19c.4-2.2 1.6-3.5 3.3-3.5 1.6 0 2.8 1.3 3.2 3.5"/></svg></span><span><span class="num">02</span><b>保護者の方</b><small>日々の学習やカリキュラム、進路選択に関する個別相談のほか、学校との保護者面談への同席・代理出席</small><span class="fr">FREE CALL</span></span></button>
+ <button role="tab" aria-selected="false" data-t="exam" style="--ac:#2f6db5"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg></span><span><span class="num">03</span><b>資格・<wbr>検定対策</b><small>英検・TOEFL・TOEIC・IELTSなど、目標スコアや現在の英語力に応じた個別対策。大人の方も受講いただけます</small><span class="fr">FREE TRIAL</span></span></button>
+</div>
 
-      <article class="pv2-card pv2-test" id="plan-test">
-        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 02</span></div><h3><span data-inl class="ja">資格対策</span></h3></div></header>
-        <div class="pv2-body">
-          <div class="pv2-price">¥10,000<i><span data-inl class="ja">/ 90分</span></i></div>
-          <div class="pv2-chips"><span><span data-inl class="ja">英検</span></span><span>TOEFL</span><span>TOEIC</span><span>IELTS</span></div>
-          <p class="pv2-text"><span data-inl class="ja">マンツーマンだからこそ、Listening・Writingなど、<strong>一人ひとりの苦手な領域をピンポイントで見極めて改善</strong></span></p>
-          <p class="pv2-text"><span data-inl class="ja">参考書だけでは気づきにくい改善点も、その場で具体的にお伝えします</span></p>
-          <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
+<div class="panel on" id="p-intl" role="tabpanel">
+ <div class="pv2-grid one">
+  <article id="plan-tutor" class="pv2-card pv2-A">
+   <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M8 7h8M8 11h6"/></svg></span><div><h3>家庭教師</h3></div><button class="fbadge" type="button" aria-expanded="false"><span class="fb-t">無料体験あり<small>詳細はクリック</small></span><span class="fb-ar">›</span></button></header>
+   <div class="pv2-body"><div class="tpop" hidden><div class="tpop-h">無料体験レッスン（家庭教師）<button class="tpop-x" type="button" aria-label="閉じる">×</button></div><div class="cols"><div class="main"><div class="free-t">初回60分無料</div><p class="pv2-text">初回は、お子さまと保護者の方から現在の学習状況やご要望を伺ったうえで、実際の授業を体験していただきます</p><p class="pv2-text pv2-fine2">※対面の場合、交通費のみご負担いただきます</p><a class="pv2-btn tablink" data-tab="contact" href="#contact" data-plan="tutor" data-free="1">無料体験を申し込む<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div><div class="pv2-h">体験レッスンの流れ</div><ul class="pv2-table"><li><span class="pv2-lbl">ヒアリング<small class="pv2-who">保護者・生徒</small></span><span class="pv2-amt">10<i>分</i></span></li><li><span class="pv2-lbl">体験授業<small class="pv2-who">生徒</small></span><span class="pv2-amt">40<i>分</i></span></li><li><span class="pv2-lbl">今後の学習方針・指導内容のご提案<small class="pv2-who">保護者・生徒</small></span><span class="pv2-amt">10<i>分</i></span></li></ul></div></div></div><p class="pv2-lead"><strong>学校の授業内容の理解から、宿題・課題・試験対策まで、お子さまの学習状況に応じた個別指導を行います</strong></p><ul class="pv2-table hz"><li><span class="pv2-lbl">小学生<span class="pv-nw">（G1〜G5）</span></span><span class="pv2-amt">¥8,000<i>/ 60分</i></span></li><li><span class="pv2-lbl">中学生<span class="pv-nw">（G6〜G8）</span></span><span class="pv2-amt">¥10,000<i>/ 60分</i></span></li><li><span class="pv2-lbl">高校生<span class="pv-nw">（G9〜G12）</span></span><span class="pv2-amt">¥12,000<i>/ 60分</i></span></li><li><span class="pv2-lbl">高校生<span class="pv-nw">（IB DP・AP・<span class="nw2">Cambridge A Level</span>）</span></span><span class="pv2-amt">¥15,000<i>/ 60分</i></span></li></ul><p class="pv2-text">国語・算数・数学・理科・社会・英語など、幅広い科目に対応します</p><p class="pv2-text">IB・AP・Cambridge A Levelについては、科目および指導内容に応じて個別にご相談ください</p><div class="pv2-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><span>90分・120分など、60分を超える授業も同一の時間単価でご利用いただけます</span></div><a class="pv2-btn cs-btn tablink" data-tab="contact" href="#contact" data-plan="tutor">申し込む<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </article>
+ </div>
+</div>
 
-      <article class="pv2-card pv2-eng" id="plan-eng">
-        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 03</span></div><h3><span data-inl class="ja">オンライン英会話</span></h3></div></header>
-        <div class="pv2-body">
-          <div class="pv2-price">¥3,000<i><span data-inl class="ja">/ 25分</span></i></div>
-          <p class="pv2-lead"><span data-inl class="ja"><strong>英語初心者の方や、気軽に英会話を始めたい方に</strong></span></p>
-          <p class="pv2-text"><span data-inl class="ja">インターナショナルスクールへの入学を考えているお子さまから、英語を一から学びたい・学び直したい大人の方まで、幅広くご利用いただけます</span></p>
-          <p class="pv2-text"><span data-inl class="ja">日常会話を中心に、英語で話すことに慣れるためのレッスンです。入学前の簡単な受け答えや、面接を意識した会話練習にも対応します</span></p>
-          <div class="pv2-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg><span><span data-inl class="ja">50分・75分のレッスンも、同一時間単価で受講可能</span></span></div>
-          <p class="pv2-text pv2-fine"><span data-inl class="ja">※ インターナショナルスクール在校生の授業・宿題・IB科目などの学習サポートは、オンラインでの受講も含め、PLAN 01「家庭教師」の対象となります</span></p>
-          <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
+<div class="panel" id="p-parent" role="tabpanel">
+ <div class="pv2-grid">
+  <article id="plan-ib" class="pv2-card pv2-P">
+   <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></span><div><h3>個別相談</h3></div><button class="fbadge" type="button" aria-expanded="false"><span class="fb-t">無料電話相談あり<small>詳細はクリック</small></span><span class="fb-ar">›</span></button></header>
+   <div class="pv2-body"><div class="tpop" hidden><div class="tpop-h">無料電話相談<button class="tpop-x" type="button" aria-label="閉じる">×</button></div><div class="cols"><div class="main"><div class="pv2-price">¥0<i>/ 15分</i></div><p class="pv2-text">お子さまの学習状況や学校生活、進路に関するお悩みやご相談内容をお電話で伺います</p><p class="pv2-text">正式なお申し込みの前に、まずはお気軽にご相談ください</p><a class="pv2-btn tablink" data-tab="contact" href="#contact" data-plan="consult" data-free="1">無料電話相談を申し込む<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div><div class="cs-top"><div class="pv2-price">¥5,000<i>/ 60分</i></div></div><p class="pv2-text">インターナショナルスクールでの学習・カリキュラム・進路選択など、保護者の方が抱える疑問や課題を整理し、今後の方針や具体的な対応策を一緒に検討します</p><details class="more"><summary>ご相談テーマ</summary><p class="pv2-lead cs-l">ご家庭の状況やご関心に応じて、以下のテーマを中心に幅広くご相談いただけます</p><div class="topics"><div class="tp"><div class="tp-h"><span class="tp-n">A</span>日々の学習・カリキュラム</div><p class="tp-s">日々の宿題や家庭学習から、IB・Cambridge・APなどのカリキュラムや履修科目の選択まで</p><ul><li>学校の宿題・課題への家庭での取り組み方</li><li>家庭学習の進め方や学習習慣の定着</li><li>カリキュラム・履修科目の選択とその判断基準</li></ul></div><div class="tp"><div class="tp-h"><span class="tp-n">B</span>大学進学・受験</div><p class="tp-s">国内外の大学進学に向けた情報整理から、志望校選択・出願準備まで</p><ul><li>志望大学・学部の選定と出願プロセス</li><li>IB・A Levelなどの成績が大学入試で評価される仕組み</li><li>学年や進路に応じた準備事項と具体的なスケジュール</li></ul></div><div class="tp"><div class="tp-h"><span class="tp-n">C</span>就職活動・キャリア</div><p class="tp-s">インターナショナルスクール卒業生・帰国生としての経験を踏まえ、国内外の就職活動やキャリア選択をサポートします</p><ul><li>就職活動の進め方とスケジュール</li><li>英語面接・応募書類（エントリーシート等）の準備</li><li>自身の経験や強みを踏まえた業界・企業選び</li></ul></div></div></details><a class="pv2-btn cs-btn tablink" data-tab="contact" href="#contact" data-plan="consult">申し込む<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </article>
+  <article id="plan-pc" class="pv2-card pv2-P">
+   <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2.5 20c.5-3.3 2.7-5.5 5.5-5.5s5 2.2 5.5 5.5M10.5 20c.5-3.3 2.7-5.5 5.5-5.5s5 2.2 5.5 5.5"/></svg></span><div><h3>ペアレント・カンファレンス<span class="h-sub">学校の保護者面談への同席・代理出席</span></h3></div></header>
+   <div class="pv2-body"><div class="cs-top"><div class="pv2-price">¥5,000<i>/ 1科目</i></div><p class="pv2-lead">※面談対象となる科目ごとの料金です</p></div><p class="pv2-text">インターナショナルスクールの保護者面談において、学校とご家庭との円滑なコミュニケーションをサポートします。英語での先生とのやりとりをはじめ、授業の進捗や学習状況、学校生活に関する確認など、ご家庭のご要望に応じて対応します。面談への同席または代理出席を通じて、話し合った内容や確認事項、今後の対応方針を報告書にまとめ、ご家庭に共有します</p><a class="pv2-btn cs-btn tablink" data-tab="contact" href="#contact" data-plan="conference">申し込む<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </article>
+ </div>
+</div>
 
-      <article class="pv2-card pv2-ib" id="plan-ib">
-        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">PLAN 04 ｜ 保護者向け</span></div><h3><span data-inl class="ja">国際バカロレア（IB）に関する相談</span></h3></div></header>
-        <div class="pv2-body">
-          <div class="pv2-price">¥5,000<i><span data-inl class="ja">/ 60分</span></i></div>
-          
-          <p class="pv2-text"><span data-inl class="ja"><a class="pv2-iblink" href="/column/">コラム</a>だけではわからない、お子さま一人ひとりの状況に合わせたIBのご相談に、IBを学んだインター卒業生の講師がお答えします</span></p>
-          <div class="pv2-ib-h"><span data-inl class="ja">ご相談の例</span></div>
-          <ul class="pv2-ib-list"><li><span data-inl class="ja">IBの課題やテストに向けた、家庭での学習の進め方</span></li><li><span data-inl class="ja">HL・SLの科目選びと、進路との関係</span></li><li><span data-inl class="ja">EE（課題論文）・TOK（知の理論）の準備の進め方</span></li><li><span data-inl class="ja">大学進学を見据えて、今からできること</span></li></ul>
-          <a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-    </div>
-        <div class="pv2-grid pv2-grid-trial">
-      <article class="pv2-card pv2-trial" id="plan-trial">
-        <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8" width="17" height="12.5" rx="2"/><path d="M2.5 8h19v4h-19zM12 8v12.5M12 8c-1.6-3.4-6.2-3.6-6.2-1.2C5.8 8 8.4 8 12 8zm0 0c1.6-3.4 6.2-3.6 6.2-1.2C18.2 8 15.6 8 12 8z"/></svg></span><div><div class="pv2-kicker"><span data-inl class="ja">FREE TRIAL</span></div><h3><span data-inl class="ja">無料体験レッスン</span></h3></div></header>
-        <div class="pv2-body"><div class="pv2-trial-cols">
-          <div class="pv2-trial-main"><p class="pv2-lead pv2-start"><span data-inl class="ja">まずはここから</span></p><div class="pv2-price">¥0<i><span data-inl class="ja">/ 60分</span></i></div><p class="pv2-text"><span data-inl class="ja">※交通費のみ頂戴いたします</span></p><a class="pv2-btn tablink" data-tab="contact" href="#contact"><span data-inl class="ja">申し込む</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <div class="pv2-trial-flow"><div class="pv2-flow-h"><span data-inl class="ja">時間配分のイメージ</span></div><ul class="pv2-table"><li><span class="pv2-lbl"><span data-inl class="ja">ヒアリング</span><small class="pv2-who"><span data-inl class="ja">保護者＋生徒</span></small></span><span class="pv2-amt">10<i><span data-inl class="ja">分</span></i></span></li><li><span class="pv2-lbl"><span data-inl class="ja">体験授業</span><small class="pv2-who"><span data-inl class="ja">生徒（保護者：任意参加）</span></small></span><span class="pv2-amt">40<i><span data-inl class="ja">分</span></i></span></li><li><span class="pv2-lbl"><span data-inl class="ja">今後の進め方</span><small class="pv2-who"><span data-inl class="ja">保護者＋生徒</span></small></span><span class="pv2-amt">10<i><span data-inl class="ja">分</span></i></span></li></ul></div>
-        </div></div>
-      </article>
-    </div>
+<div class="panel" id="p-exam" role="tabpanel">
+ <div class="pv2-grid one">
+  <article id="plan-test" class="pv2-card pv2-Q">
+   <header class="pv2-head"><span class="pv2-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg></span><div><h3>英語資格・検定対策</h3></div><button class="fbadge" type="button" aria-expanded="false"><span class="fb-t">無料体験あり<small>詳細はクリック</small></span><span class="fb-ar">›</span></button></header>
+   <div class="pv2-body"><div class="tpop" hidden><div class="tpop-h">無料体験レッスン（英語資格・検定対策）<button class="tpop-x" type="button" aria-label="閉じる">×</button></div><div class="cols"><div class="main"><div class="free-t">初回60分無料</div><p class="pv2-text">初回は、現在の英語力や目標スコア、ご要望を伺ったうえで、実際の授業を体験していただきます</p><p class="pv2-text pv2-fine2">※対面の場合、交通費のみご負担いただきます</p><a class="pv2-btn tablink" data-tab="contact" href="#contact" data-plan="exam" data-free="1">無料体験を申し込む<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div><div class="pv2-h">体験レッスンの流れ</div><ul class="pv2-table"><li><span class="pv2-lbl">ヒアリング<small class="pv2-who">受講者。お子さまの場合は保護者の方も</small></span><span class="pv2-amt">10<i>分</i></span></li><li><span class="pv2-lbl">体験授業<small class="pv2-who">受講者</small></span><span class="pv2-amt">40<i>分</i></span></li><li><span class="pv2-lbl">今後の学習方針・対策内容のご提案<small class="pv2-who">受講者。お子さまの場合は保護者の方も</small></span><span class="pv2-amt">10<i>分</i></span></li></ul></div></div></div><div class="pv2-price">¥10,000<i>/ 90分</i></div><div class="lg-row"><span class="lg-b"><img src="img/logos/eiken.png" alt="英検" loading="lazy"></span><span class="lg-b"><img src="img/logos/toefl.png" alt="TOEFL" loading="lazy"></span><span class="lg-b"><img src="img/logos/toeic.png" alt="TOEIC" loading="lazy"></span><span class="lg-b"><img src="img/logos/ielts.png" alt="IELTS" loading="lazy"></span></div><p class="pv2-text">目標スコアや現在の英語力に応じて、一人ひとりに合わせた個別対策を行います</p><p class="pv2-text">各試験の出題形式や評価基準を踏まえ、現在の得点状況や技能別の課題を分析。目標達成に向けて、優先的に取り組むべき分野を明確にし、重点的に指導します</p><p class="pv2-text">実際の解答や発話内容に基づいて具体的なフィードバックを行い、独学では把握しにくい弱点や改善点を明らかにするとともに、効果的な学習方法をご提案します</p><a class="pv2-btn cs-btn tablink" data-tab="contact" href="#contact" data-plan="exam">申し込む<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </article>
+ </div>
+</div>
     <div class="details-block">
       <h3 class="details-h"><span data-inl class="ja">その他の詳細</span></h3>
       <p class="details-sub"><span data-inl class="ja">各項目をタップすると開きます</span></p>
@@ -2468,7 +2639,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
 
     <form class="form" id="enquiry">
       <div class="form-sec"><span class="n">1</span><span data-inl class="ja">お客様情報</span></div>
-      <div class="field"><label><span data-inl class="ja">お名前<small class="lbl-sub">（家庭教師・資格対策の場合は保護者のお名前）</small></span></label><input type="text" id="f-name"></div>
+      <div class="field"><label><span data-inl class="ja">お名前<small class="lbl-sub">（お子さまが受講される場合は保護者のお名前）</small></span></label><input type="text" id="f-name"></div>
       <div class="field"><label><span data-inl class="ja">メールアドレス</span></label><input type="email" id="f-email"></div>
 
       <div class="field"><label><span data-inl class="ja">生徒の学年</span></label>
@@ -2492,18 +2663,19 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       <div class="field"><label><span data-inl class="ja">現在の学校<small class="lbl-sub">（該当する場合）</small></span></label><input type="text" id="f-school"></div>
 
       <div class="form-sec form-sec-next"><span class="n">2</span><span data-inl class="ja">ご希望のプラン</span></div>
-      <p class="form-sec-note"><span data-inl class="ja">無料体験レッスンをご希望の方は、下の<b>③</b>にもチェックを入れてください</span></p>
+      <p class="picked" id="f-picked" hidden></p>
+      <p class="form-sec-note"><span data-inl class="ja">無料体験レッスン・無料電話相談をご希望の方は、下の<b>③</b>にもチェックを入れてください</span></p>
       <div class="field"><label><span data-inl class="ja">希望プラン</span></label>
         <select id="f-plan">
           <option value="" data-jaopt="選択してください" data-enopt="Please select">選択してください</option>
-          <option data-jaopt="家庭教師・小学生（¥8,000／60分）" data-enopt="Private Tutoring — Elementary (¥8,000 / 60 min)">家庭教師・小学生（¥8,000／60分）</option>
-          <option data-jaopt="家庭教師・中学生（¥10,000／60分）" data-enopt="Private Tutoring — Middle School (¥10,000 / 60 min)">家庭教師・中学生（¥10,000／60分）</option>
-          <option data-jaopt="家庭教師・高校生（¥12,000／60分）" data-enopt="Private Tutoring — High School (¥12,000 / 60 min)">家庭教師・高校生（¥12,000／60分）</option>
-          <option data-jaopt="家庭教師・高校生 IB DP・AP・Cambridge A Level科目（¥15,000／60分）" data-enopt="Private Tutoring — High School IB DP, AP &amp; Cambridge A Level (¥15,000 / 60 min)">家庭教師・高校生 IB DP・AP・Cambridge A Level科目（¥15,000／60分）</option>
-          <option data-jaopt="資格対策 英検・TOEFL・TOEIC・IELTS（¥10,000／90分）" data-enopt="Test Preparation — Eiken, TOEFL, TOEIC, IELTS (¥10,000 / 90 min)">資格対策 英検・TOEFL・TOEIC・IELTS（¥10,000／90分）</option>
-          <option data-jaopt="オンライン英会話（¥3,000／25分）" data-enopt="Online English Conversation (¥3,000 / 25 min)">オンライン英会話（¥3,000／25分）</option>
-          <option data-jaopt="IB相談・保護者向け（¥5,000／60分）" data-enopt="IB Consultation for Parents (¥5,000 / 60 min)">IB相談・保護者向け（¥5,000／60分）</option>
-          <option data-jaopt="まだ決めていない／相談したい" data-enopt="Not sure yet / want to discuss">まだ決めていない／相談したい</option>
+          <option data-key="tutor" data-free="trial" data-jaopt="家庭教師・小学生 G1〜G5（¥8,000／60分）" data-enopt="Private Tutoring — Elementary School G1–G5 (¥8,000 / 60 min)">家庭教師・小学生 G1〜G5（¥8,000／60分）</option>
+          <option data-key="tutor" data-free="trial" data-jaopt="家庭教師・中学生 G6〜G8（¥10,000／60分）" data-enopt="Private Tutoring — Middle School G6–G8 (¥10,000 / 60 min)">家庭教師・中学生 G6〜G8（¥10,000／60分）</option>
+          <option data-key="tutor" data-free="trial" data-jaopt="家庭教師・高校生 G9〜G12（¥12,000／60分）" data-enopt="Private Tutoring — High School G9–G12 (¥12,000 / 60 min)">家庭教師・高校生 G9〜G12（¥12,000／60分）</option>
+          <option data-key="tutor" data-free="trial" data-jaopt="家庭教師・高校生 IB DP・AP・Cambridge A Level（¥15,000／60分）" data-enopt="Private Tutoring — High School IB DP, AP, Cambridge A Level (¥15,000 / 60 min)">家庭教師・高校生 IB DP・AP・Cambridge A Level（¥15,000／60分）</option>
+          <option data-key="consult" data-free="call" data-jaopt="個別相談・保護者の方（¥5,000／60分）" data-enopt="Individual Consultation for Parents (¥5,000 / 60 min)">個別相談・保護者の方（¥5,000／60分）</option>
+          <option data-key="conference" data-free="none" data-jaopt="ペアレント・カンファレンス（¥5,000／1科目）" data-enopt="Parent Conference Support (¥5,000 / subject)">ペアレント・カンファレンス（¥5,000／1科目）</option>
+          <option data-key="exam" data-free="trial" data-jaopt="英語資格・検定対策 英検・TOEFL・TOEIC・IELTS（¥10,000／90分）" data-enopt="English Language Test Preparation — Eiken, TOEFL, TOEIC, IELTS (¥10,000 / 90 min)">英語資格・検定対策 英検・TOEFL・TOEIC・IELTS（¥10,000／90分）</option>
+          <option data-key="" data-free="trial" data-jaopt="まだ決めていない／相談したい" data-enopt="Not sure yet / want to discuss">まだ決めていない／相談したい</option>
         </select>
         <p class="field-note"><span data-inl class="ja">料金は税込・授業料のみです。<span class="nw">対面授業は別途交通費がかかります。</span><a class="pv2-iblink tablink nw" style="margin-left:0" href="#fees" data-tab="fees">プランと料金を見る</a></span></p></div>
 
@@ -2534,13 +2706,13 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       </div>
       <div class="field"><label><span data-inl class="ja">教科・ご興味</span></label><input type="text" id="f-subject"></div>
       <div class="field"><label><span data-inl class="ja">メッセージ</span></label><textarea id="f-msg"></textarea></div>
-      <div class="form-sec form-sec-next"><span class="n">3</span><span data-inl class="ja">無料体験レッスン</span></div>
-      <div class="field trial-check"><label class="trial-toggle"><input type="checkbox" id="f-trial"><span data-inl class="ja">無料体験レッスンを希望する</span></label>
+      <div id="free-sec"><div class="form-sec form-sec-next"><span class="n">3</span><span data-inl class="ja" id="free-title">無料体験レッスン</span></div>
+      <div class="field trial-check"><label class="trial-toggle"><input type="checkbox" id="f-trial"><span data-inl class="ja" id="free-label">無料体験レッスンを希望する</span></label>
         <p class="field-note"><span data-inl class="ja">チェックを入れると、<span class="nw">希望日時の入力欄が表示されます</span></span></p>
       </div>
       <div id="trial-fields" hidden>
-        <p class="form-sec-note trial-note"><span data-inl class="ja">現在、平日は満員のため、<b>土日</b>でご希望日時をお選びください</span></p>
-        <div class="field"><label><span data-inl class="ja">無料体験の実施形式</span></label>
+        <p class="form-sec-note trial-note" id="trial-note"><span data-inl class="ja">現在、平日は満員のため、<b>土日</b>でご希望日時をお選びください</span></p>
+        <div class="field" id="trial-format-field"><label><span data-inl class="ja">無料体験の実施形式</span></label>
           <select id="f-trial-format">
             <option value="" data-jaopt="選択してください" data-enopt="Please select">選択してください</option>
             <option data-jaopt="オンライン" data-enopt="Online">オンライン</option>
@@ -2548,7 +2720,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
           </select></div>
         <div class="trial-slots">
           <div class="ts-head">
-            <label><span data-inl class="ja">トライアル希望日時</span></label>
+            <label><span data-inl class="ja" id="slots-label">トライアル希望日時</span></label>
           </div>
           <div class="slot">
             <span class="slot-n"><span data-inl class="ja">第1希望</span></span>
@@ -2584,6 +2756,8 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
             </select>
           </div>
         </div>
+      </div>
+
       </div>
 
       <button type="submit" class="btn" style="width:100%"><span data-inl class="ja">送信する</span></button>
@@ -2743,13 +2917,30 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
   document.addEventListener('click',e=>{ if(navlinks&&navlinks.classList.contains('open')&&!navlinks.contains(e.target)&&!burger.contains(e.target)) closeMenu(); });
   setLang('ja');
 
-  // reveal trial-only fields when 体験レッスン申し込み is chosen
+  // free option follows the chosen plan: trial lesson / free phone call / none
   (function(){
-    const type=document.getElementById('f-trial');
-    const tf=document.getElementById('trial-fields');
-    function isTrial(){return type.checked;}
-    function sync(){tf.hidden=!isTrial();var pl=document.getElementById('f-plan');if(pl)pl.required=isTrial();var tfm=document.getElementById('f-trial-format');if(tfm)tfm.required=isTrial();}
-    type.addEventListener('change',sync); sync();
+    var type=document.getElementById('f-trial'), tf=document.getElementById('trial-fields'), pl=document.getElementById('f-plan');
+    var sec=document.getElementById('free-sec'), ttl=document.getElementById('free-title'), lbl=document.getElementById('free-label');
+    var hideForParent=['f-format','f-station','f-freq'].map(function(i){var e=document.getElementById(i);return e&&e.closest('.field');}).filter(Boolean);
+    var fmF=document.getElementById('trial-format-field'), fm=document.getElementById('f-trial-format'), note=document.getElementById('trial-note');
+    function mode(){ var o=pl.options[pl.selectedIndex]; return (o&&o.dataset.free)||'trial'; }
+    function sync(){
+      var m=mode(), ja=document.body.classList.contains('lang-ja');
+      var o=pl.options[pl.selectedIndex], k=(o&&o.dataset.key)||'', par=(k==='consult'||k==='conference');
+      hideForParent.forEach(function(f){ f.hidden=par; if(par){ var c=f.querySelector('select,input'); if(c) c.value=''; } });
+      window.caminoFreeMode=m;
+      sec.hidden=(m==='none'); if(m==='none') type.checked=false;
+      var call=(m==='call');
+      ttl.textContent=call?(ja?'無料電話相談（15分）':'Free Introductory Call (15 min)'):(ja?'無料体験レッスン':'Free Trial Lesson');
+      lbl.textContent=call?(ja?'無料電話相談（15分）を希望する':'I would like to book a free introductory call (15 min)'):(ja?'無料体験レッスンを希望する':'I would like to book a free trial lesson');
+      var on=type.checked;
+      tf.hidden=!on; pl.required=on;
+      fmF.hidden=call; fm.required=on&&!call;
+      note.hidden=call;
+      var sl=document.getElementById('slots-label'); if(sl) sl.textContent=call?(ja?'お電話の希望日時':'Preferred Call Dates and Times'):(ja?'トライアル希望日時':'Preferred Trial Dates and Times');
+    }
+    type.addEventListener('change',sync); pl.addEventListener('change',sync); sync();
+    window.caminoFreeSync=sync;
   })();
 
   // reveal 最寄駅 field only when in-person is selected
@@ -2766,9 +2957,11 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
     const g=v=>{const el=document.getElementById(v);return el?el.value:'';};
     const ja=document.body.classList.contains('lang-ja');
     const trial=document.getElementById('f-trial').checked;
-    const subj=encodeURIComponent((trial?(ja?'体験レッスンのお申し込み — ':'Trial lesson application — '):(ja?'お問い合わせ — ':'Camino enquiry — '))+(g('f-name')||''));
+    const call=(window.caminoFreeMode==='call');
+    const freeName=call?(ja?'無料電話相談':'Free introductory call'):(ja?'無料体験レッスン':'Free trial lesson');
+    const subj=encodeURIComponent((trial?(call?(ja?'無料電話相談のお申し込み — ':'Free introductory call request — '):(ja?'体験レッスンのお申し込み — ':'Trial lesson application — ')):(ja?'お問い合わせ — ':'Camino enquiry — '))+(g('f-name')||''));
     let lines=[
-      (ja?'無料体験レッスン: ':'Free trial lesson: ')+(trial?(ja?'希望する':'Yes'):(ja?'希望しない':'No')),
+      freeName+': '+(trial?(ja?'希望する':'Yes'):(ja?'希望しない':'No')),
       (ja?'希望プラン: ':'Plan of interest: ')+g('f-plan'),
       (ja?'授業形式: ':'Lesson format: ')+g('f-format'),
     ];
@@ -2781,10 +2974,10 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
     );
     if(trial){
       lines.push(
-        (ja?'トライアル希望（第1）: ':'Trial choice 1: ')+g('f-d1')+' '+g('f-t1'),
-        (ja?'トライアル希望（第2）: ':'Trial choice 2: ')+g('f-d2')+' '+g('f-t2'),
-        (ja?'無料体験の実施形式: ':'Trial format: ')+g('f-trial-format'),
-        (ja?'トライアル希望（第3）: ':'Trial choice 3: ')+g('f-d3')+' '+g('f-t3')
+        (call?(ja?'お電話の希望日時（第1）: ':'Call choice 1: '):(ja?'トライアル希望（第1）: ':'Trial choice 1: '))+g('f-d1')+' '+g('f-t1'),
+        (call?(ja?'お電話の希望日時（第2）: ':'Call choice 2: '):(ja?'トライアル希望（第2）: ':'Trial choice 2: '))+g('f-d2')+' '+g('f-t2'),
+        (call?'':(ja?'無料体験の実施形式: ':'Trial format: ')+g('f-trial-format')),
+        (call?(ja?'お電話の希望日時（第3）: ':'Call choice 3: '):(ja?'トライアル希望（第3）: ':'Trial choice 3: '))+g('f-d3')+' '+g('f-t3')
       );
     }
     lines.push((ja?'希望の受講頻度: ':'Preferred frequency: ')+g('f-freq'),(ja?'希望の曜日・時間帯: ':'Preferred days/times: ')+g('f-days'));
@@ -2802,7 +2995,7 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       var fd=new FormData();
       fd.append('name',g('f-name'));
       fd.append('email',g('f-email'));
-      fd.append((ja?'無料体験レッスン':'Free trial lesson'),trial?(ja?'希望する':'Yes'):(ja?'希望しない':'No'));
+      fd.append(freeName,trial?(ja?'希望する':'Yes'):(ja?'希望しない':'No'));
       fd.append((ja?'希望プラン':'Plan'),g('f-plan'));
       fd.append((ja?'授業形式':'Lesson format'),g('f-format'));
       var _sf=document.getElementById('station-field');
@@ -2810,8 +3003,8 @@ dialog#ab-cs-pop::backdrop{background:rgba(22,41,77,.45)}
       fd.append((ja?'生徒の学年':'Grade'),g('f-grade'));
       fd.append((ja?'現在の学校':'Current school'),g('f-school'));
       if(trial){
-        fd.append((ja?'無料体験の実施形式':'Trial format'),g('f-trial-format'));
-        fd.append((ja?'トライアル希望日時':'Preferred trial times'),
+        if(!call) fd.append((ja?'無料体験の実施形式':'Trial format'),g('f-trial-format'));
+        fd.append(call?(ja?'お電話の希望日時':'Preferred call times'):(ja?'トライアル希望日時':'Preferred trial times'),
           [g('f-d1')+' '+g('f-t1'), g('f-d2')+' '+g('f-t2'), g('f-d3')+' '+g('f-t3')].join(' / '));
       }
       fd.append((ja?'希望の受講頻度':'Preferred frequency'),g('f-freq'));
@@ -3640,6 +3833,61 @@ if(window.MutationObserver){mo=new MutationObserver(go);mo.observe(t,{attributes
     b.addEventListener('click',function(){d.showModal();});
     d.addEventListener('click',function(e){ if(e.target===d||e.target.closest('.ab-pop-x')) d.close(); });
   });
+})();
+</script>
+<script id="camino-plan3-js">
+(function(){
+  var fees=document.getElementById('fees'); if(!fees) return;
+  var tabs=[].slice.call(fees.querySelectorAll('.aud button')), panels=[].slice.call(fees.querySelectorAll('.panel'));
+  function pick(t){
+    tabs.forEach(function(x){ var on=x.dataset.t===t; x.classList.toggle('on',on); x.setAttribute('aria-selected',on); });
+    panels.forEach(function(p){ p.classList.toggle('on',p.id==='p-'+t); });
+  }
+  tabs.forEach(function(b){ b.addEventListener('click',function(){ pick(b.dataset.t); }); });
+  fees.querySelectorAll('.fbadge').forEach(function(b){
+    var pop=b.closest('.pv2-card').querySelector('.tpop');
+    function set(o){ pop.hidden=!o; b.setAttribute('aria-expanded',o); }
+    b.addEventListener('click',function(){ set(pop.hidden); });
+    pop.querySelector('.tpop-x').addEventListener('click',function(){ set(false); });
+  });
+  // links such as /#plan-ib: open the right group first, then scroll to the card
+  function deep(){
+    var h=decodeURIComponent(location.hash.replace('#','')); if(!h) return;
+    var el=document.getElementById(h); if(!el) return;
+    var p=el.closest('#fees .panel'); if(!p) return;
+    pick(p.id.replace('p-',''));
+    setTimeout(function(){ var hd=document.querySelector('body > header'), off=(hd?hd.offsetHeight:0)+16;
+      window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-off)}); },140);
+  }
+  deep(); window.addEventListener('load',deep); window.addEventListener('hashchange',deep);
+  // apply buttons: carry the plan (and the free option) into the contact form
+  var NAMES={tutor:'家庭教師',exam:'英語資格・検定対策',consult:'個別相談',conference:'ペアレント・カンファレンス'};
+  fees.querySelectorAll('a[data-plan]').forEach(function(a){ a.addEventListener('click',function(){
+    var key=a.dataset.plan, free=a.dataset.free==='1';
+    var sel=document.getElementById('f-plan'), tr=document.getElementById('f-trial'), box=document.getElementById('f-picked');
+    if(!sel) return;
+    var opts=[].slice.call(sel.options).filter(function(o){ return o.dataset.key===key; });
+    var cur=sel.options[sel.selectedIndex];
+    if(opts.length===1) sel.selectedIndex=opts[0].index;
+    else if(!(cur&&cur.dataset.key===key)) sel.selectedIndex=0;
+    if(tr) tr.checked=free;
+    sel.dispatchEvent(new Event('change',{bubbles:true}));
+    if(window.caminoFreeSync) window.caminoFreeSync();
+    if(box){
+      var mode=(opts[0]&&opts[0].dataset.free)||'trial';
+      box.hidden=false;
+      box.innerHTML='選択中：'+NAMES[key]+(free?(mode==='call'?' ＋ 無料電話相談':' ＋ 無料体験レッスン'):'')
+        +(opts.length>1?'<small>'+'下の「希望プラン」で学年をお選びください'+'</small>':'');
+    }
+    setTimeout(function(){
+      var target=document.querySelector('#enquiry .form-sec-next')||sel;
+      var hd=document.querySelector('body > header'), off=(hd?hd.offsetHeight:0)+16;
+      window.scrollTo({top:Math.max(0,target.getBoundingClientRect().top+window.scrollY-off),behavior:'smooth'});
+      sel.classList.remove('f-hl'); void sel.offsetWidth; sel.classList.add('f-hl');
+    },160);
+  }); });
+  var sel=document.getElementById('f-plan');
+  if(sel) sel.addEventListener('change',function(e){ if(e.isTrusted){ var box=document.getElementById('f-picked'); if(box) box.hidden=true; } });
 })();
 </script>
 </body>
