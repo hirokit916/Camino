@@ -1104,6 +1104,10 @@ html[lang="en"] .hero h1{line-height:1.02}
 .impact .mq li::after{display:none}
 .impact .schools p{text-align:center}
 @media(max-width:1000px){.impact .mq li{padding:14px 22px;font-size:14px}}
+
+/* mobile menu: a blurred/pinned header must not become the containing block of the full-screen menu */
+.top,.top.pinned{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+@media(max-width:1000px){.nav{position:fixed;top:0;left:0;right:0;bottom:0;height:100vh;height:100dvh}}
 </style>
 <style id="camino-philosophy-css">
 
@@ -1385,7 +1389,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
     <span class="hero-who"><span class="nw">インター生・帰国子女向け</span>　<span class="nw">家庭教師<i>×</i>メンタリング</span></span>
     <h1>自分の道を<br>切り拓く</h1>
     <p class="hero-en">Carve your own path</p>
-    <p class="hero-lead">豊富な指導経験を活かしたマンツーマンの対話と指導を通じ、生徒自身が心から進みたいと思える道を切り拓きます</p>
+    <p class="hero-lead">豊富な指導経験を活かした対話と指導を通じ、生徒自身が心から進みたいと思える道を切り拓きます</p>
     <ul class="hero-area"><li><span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.500 2.600 3.800 5.600 3.800 9s-1.300 6.400-3.800 9c-2.500-2.600-3.800-5.600-3.800-9S9.500 5.600 12 3Z"/></svg></span><b>オンライン授業</b><span class="ha-v">グローバル対応</span></li><li><span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.500-6.100-6.500-11.200a6.500 6.500 0 0 1 13 0C18.500 14.900 12 21 12 21Z"/><circle cx="12" cy="9.800" r="2.300"/></svg></span><b>対面授業</b><span class="ha-v">大阪・神戸・芦屋・西宮</span></li></ul>
     <div class="hero-cta"><a class="btn btn-solid tablink" data-tab="contact" href="#contact">無料体験レッスンを予約</a><a class="btn btn-line tablink" data-tab="fees" href="#fees">プランを見る</a></div>
   </div></div>
