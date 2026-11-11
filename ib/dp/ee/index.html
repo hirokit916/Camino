@@ -904,7 +904,10 @@ body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
 }
 </style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Shippori+Mincho:wght@500;600&display=swap">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&family=Shippori+Mincho:wght@500;600&display=swap">
 <style id="camino-skin">
 :root{--paper:#fdfcfa;--card:#fff;--ink:#0b1f4b;--soft:#27344f;--muted:#5c6984;--line:#d8e0ee;--or:#1d5bd8;--or2:#1d5bd8;--tint:#eef4fd;--navy:#0b1f4b;
 --pyp:#b9770e;--pyp-t:#fbf3e2;--myp:#0f6b70;--myp-t:#e9f4f3;--dp:#1d5bd8;--dp-t:#eaf1fd;--cp:#6a4fb0;--cp-t:#f0ecfa;
@@ -916,22 +919,27 @@ h1,h2,h3{font-weight:500;letter-spacing:0}
 html[lang="en"] h1,html[lang="en"] h2{letter-spacing:-.01em}
 .hd{background:rgba(253,252,250,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:none}
 .hd-brand{display:inline-flex;align-items:center;text-decoration:none}
-.hd-brand .wm{font-family:'Newsreader','Shippori Mincho',serif;font-size:30px;line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.hd-brand,.ft-wm{gap:11px}
+.bm-ic{width:40px;height:40px;display:block;flex:none}
+.bm-t{display:flex;flex-direction:column;gap:5px;line-height:1}
+.bm-t b{font-family:'Newsreader',serif;font-weight:700;font-size:24px;line-height:.9;letter-spacing:.08em;color:var(--ink)}
+.bm-t small{font-family:var(--sans);font-weight:600;font-size:10px;line-height:1;letter-spacing:.24em;text-transform:uppercase;color:#1d5bd8}
 .bar-trial{background:var(--ink)!important;color:#fff!important;border-radius:999px!important;box-shadow:none!important;border:0!important;font-weight:600}
 .bar-trial:hover{background:#1d5bd8!important}
 .hd-en2{color:#1d5bd8!important;border-color:var(--line)!important}
 .hd-burger span{background:var(--ink)!important}
 .hd-menu a.on{color:#1d5bd8}
-.ft-wm{font-family:'Newsreader','Shippori Mincho',serif;font-size:30px;line-height:1;letter-spacing:-.02em;color:var(--ink);justify-content:center}
+.ft-wm{display:flex!important;align-items:center;justify-content:center}
+.ft-name{display:none}
 .cta{border-radius:4px 64px 4px 4px}
-@media(max-width:600px){.hd-brand .wm{font-size:25px}}
+@media(max-width:600px){.bm-ic{width:34px;height:34px}.bm-t b{font-size:20px}.bm-t small{font-size:8.5px;letter-spacing:.18em}}
 </style>
 </head>
 <body>
 
 <header class="hd">
   <div class="hd-in">
-    <a class="brand hd-brand" href="/" aria-label="Camino トップへ"><span class="wm">Camino</span></a>
+    <a class="brand hd-brand" href="/" aria-label="Camino トップへ"><img class="bm-ic" src="/logo-mark.png" alt="" width="40" height="40"><span class="bm-t"><b>CAMINO</b><small>Private Tutor</small></span></a>
     <div class="hd-actions">
       <a class="bar-trial" href="/#contact"><span class="bt-l">無料体験レッスン</span><span class="bt-s">無料体験</span></a>
       <a class="hd-en2" href="/en/ib/dp/ee/" hreflang="en" lang="en" aria-label="Switch to English"><svg class="hd-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>EN</a>
@@ -1058,7 +1066,7 @@ html[lang="en"] h1,html[lang="en"] h2{letter-spacing:-.01em}
 </main>
 
 <footer class="ft">
-  <div class="brand ft-wm">Camino</div>
+  <div class="brand ft-wm"><img class="bm-ic" src="/logo-mark.png" alt="" width="40" height="40"><span class="bm-t"><b>CAMINO</b><small>Private Tutor</small></span></div>
   <p class="ft-name">Camino Private Tutor</p>
 </footer>
 
