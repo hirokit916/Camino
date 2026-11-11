@@ -1060,7 +1060,6 @@ html[lang="en"] .hero h1{line-height:1.02}
 .impact .mq li{white-space:nowrap;padding:0 30px;display:flex;align-items:center;gap:30px}
 .impact .mq li::after{content:"";width:6px;height:6px;border-radius:50%;background:#5b8cf0;margin-left:30px}
 @keyframes mq{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.mq-track{animation:none}.mq{overflow-x:auto}}
 @media(max-width:1000px){
   .impact{padding:44px 0 40px}
   .impact .fact,.impact .fact:first-child{border-left:0;border-top:1px solid rgba(255,255,255,.16);padding:22px 0}
@@ -1096,6 +1095,15 @@ html[lang="en"] .hero h1{line-height:1.02}
   .line-txt p{font-size:13.5px}
   .form{padding:26px 20px 28px}
 }
+
+/* schools: the original right-to-left marquee (JS loop, pauses on hover) with boxed names */
+.mq{border:0;padding:6px 0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%)}
+.mq-track{animation:none;gap:16px}
+.impact .mq ul{gap:16px}
+.impact .mq li{padding:18px 32px;gap:0;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:14px;font-family:var(--gothic);font-size:15px;font-weight:500;color:#eef2fb;letter-spacing:.01em}
+.impact .mq li::after{display:none}
+.impact .schools p{text-align:center}
+@media(max-width:1000px){.impact .mq li{padding:14px 22px;font-size:14px}}
 </style>
 <style id="camino-philosophy-css">
 
@@ -1872,6 +1880,49 @@ body.cs-philosophy-active #cs-progress{display:flex}
   document.querySelectorAll('dialog.ab-pop').forEach(function(d){
     d.addEventListener('click',function(e){ if(e.target===d||e.target.closest('.ab-pop-x')) d.close(); });
   });
+})();
+
+
+/* Robust school marquee — JS transform loop so it runs on desktop regardless of
+   CSS animation quirks; pauses on hover; respects reduced-motion. */
+(function(){
+  var vp=document.querySelector('.impact .mq');
+  var track=vp&&vp.querySelector('.mq-track');
+  if(!vp||!track) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var onScreen=true, raf=0;
+  // take over from CSS animation
+  track.style.animation='none';
+  track.style.flexWrap='nowrap';
+  track.style.width='max-content';
+  track.style.willChange='transform';
+  var x=0, paused=false, last=null, started=false;
+  var SPEED=reduce?30:45; // px per second (a little slower when the device asks for less motion)
+  function half(){ return track.scrollWidth/2; }
+  vp.addEventListener('mouseenter',function(){paused=true;});
+  vp.addEventListener('mouseleave',function(){paused=false;});
+  function frame(t){
+    if(last==null) last=t;
+    var dt=(t-last)/1000; last=t;
+    if(dt>0.1) dt=0.1; // guard against tab-switch jumps
+    if(!paused){
+      var h=half();
+      if(h>0){
+        x-=SPEED*dt;
+        if(-x>=h){ x+=h; }   // seamless loop (track is duplicated)
+        track.style.transform='translateX('+x.toFixed(2)+'px)';
+      }
+    }
+    if(onScreen && !document.hidden){ raf=requestAnimationFrame(frame); } else { raf=0; last=null; }
+  }
+  function wake(){ if(started && !raf && onScreen && !document.hidden){ last=null; raf=requestAnimationFrame(frame); } }
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ onScreen=es[0].isIntersecting; wake(); }).observe(vp); }
+  document.addEventListener('visibilitychange',wake);
+  // start once layout is ready (scrollWidth measured); retry until it is
+  function start(){ if(started) return; started=true; raf=requestAnimationFrame(frame); }
+  if(half()>0){ start(); }
+  window.addEventListener('load', start);
+  setTimeout(start, 400);
 })();
 
     // Trial date calendar picker (labels follow the page language, not the browser)
