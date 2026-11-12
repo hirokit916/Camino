@@ -3,17 +3,33 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://caminotutor.com/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/"/>
   </url>
   <url>
     <loc>https://caminotutor.com/en/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/area/kobe/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/area/ashiya/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/area/nishinomiya/</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/area/osaka/</loc>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://caminotutor.com/column/</loc>
