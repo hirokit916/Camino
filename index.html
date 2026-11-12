@@ -1171,6 +1171,11 @@ html[lang="ja"] .spt-en{display:none!important}
 html[lang="ja"] .spt-ja{font-family:var(--gothic);font-weight:700;color:var(--cobalt);letter-spacing:.02em}
 html[lang="ja"] .spt-ja i{color:var(--ink)}
 html[lang="ja"] .spt-ja .hl{background:linear-gradient(transparent 62%,#cfe2fb 62%);padding:0 .08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* hero title: blue text in the original Mincho, no highlight (JA + EN) */
+html[lang="ja"] .spt-ja{font-family:var(--mincho);font-weight:600;letter-spacing:0;color:var(--cobalt)}
+html[lang="ja"] .spt-ja i{color:var(--cobalt)}
+html[lang="ja"] .spt-ja .hl{background:none;padding:0}
+html[lang="en"] .spt-en{color:var(--cobalt)!important}
 /* ================= five strengths pentagon ================= */
 .pg{position:relative;width:100%;max-width:1000px;aspect-ratio:10/7;margin:0 auto}
 .pg-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
