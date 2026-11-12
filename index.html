@@ -1281,6 +1281,13 @@ html[lang="en"] .hero-area b{min-width:5.2em}
 #fees .aud-notes{margin:0 0 14px!important}
 #fees .panel{margin-top:22px}
 @media(min-width:1001px){html[lang="ja"] #fees .aud-notes{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+/* fee notes: plain bold blue line, centred on desktop */
+#fees .aud-notes{border:0!important;background:none!important;padding:0!important;color:var(--cobalt)!important;font-weight:600;font-size:13.5px!important}
+@media(min-width:1001px){#fees .aud-notes{text-align:center;margin:4px 0 18px!important}}
+@media(max-width:1000px){#fees .aud-notes{font-size:12.5px!important;margin:0 0 14px!important}}
+/* selected audience: tinted fill in its own colour */
+#fees .aud button.on{background:color-mix(in srgb,var(--ac) 9%,#fff)}
+#fees .aud button[data-t=intl].on{background:#e9edf6}
 /* ================= five strengths pentagon ================= */
 .pg{position:relative;width:100%;max-width:1000px;aspect-ratio:10/7;margin:0 auto}
 .pg-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
