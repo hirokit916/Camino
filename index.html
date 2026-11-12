@@ -1152,6 +1152,20 @@ html[lang="en"] .hero h1{line-height:1.02}
   html[lang="en"] .spt-en{font-size:clamp(22px,6.3vw,30px);color:var(--ink);line-height:1.35}
   .hero-lead{margin-top:18px}
 }
+
+/* desktop too: the simple JA/EN title replaces the band and the tagline */
+@media(min-width:1001px){
+  .hero-who,.hero h1.h1-en{display:none!important}
+  .sp-title{display:flex;flex-direction:column;gap:16px;margin:0}
+  .spt-ja{font-family:var(--mincho);font-weight:500;font-size:clamp(34px,3.4vw,50px);line-height:1.4;color:var(--ink)}
+  .spt-ja i{font-style:normal;color:var(--cobalt);margin:0 .12em}
+  .spt-en{font-family:var(--latin);font-size:clamp(19px,1.7vw,24px);line-height:1.4;color:var(--cobalt)}
+  html[lang="en"] .spt-ja{display:none}
+  html[lang="en"] .spt-en{font-size:clamp(28px,2.7vw,40px);line-height:1.22;color:var(--ink)}
+  .hero-copy{max-width:min(620px,44vw)}
+}
+.pc-br{display:none}
+@media(min-width:1001px){.pc-br{display:inline}}
 /* ================= five strengths pentagon ================= */
 .pg{position:relative;width:100%;max-width:1000px;aspect-ratio:10/7;margin:0 auto}
 .pg-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
@@ -1547,7 +1561,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
     <h1 class="h1-en">Carve your<br>own path</h1>
     <p class="sp-title"><span class="spt-ja">インター生・帰国子女向け<br>家庭教師<i>×</i>メンタリング</span><span class="spt-en">Private tutoring &amp; mentoring<br>for international school students</span></p>
     
-    <p class="hero-lead">豊富な指導経験を活かした対話と指導を通じ、生徒自身が心から進みたいと思える道を切り拓きます</p>
+    <p class="hero-lead">豊富な指導経験を活かした対話と指導を通じ、<br class="pc-br">生徒自身が心から進みたいと思える道を切り拓きます</p>
     <ul class="hero-area"><li><span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.500 2.600 3.800 5.600 3.800 9s-1.300 6.400-3.800 9c-2.500-2.600-3.800-5.600-3.800-9S9.500 5.600 12 3Z"/></svg></span><b>オンライン授業</b><span class="ha-v">グローバル対応</span></li><li><span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.500-6.100-6.500-11.200a6.500 6.500 0 0 1 13 0C18.500 14.900 12 21 12 21Z"/><circle cx="12" cy="9.800" r="2.300"/></svg></span><b>対面授業</b><span class="ha-v">大阪・神戸・芦屋・西宮</span></li></ul>
     <div class="hero-cta"><a class="btn btn-solid tablink" data-tab="contact" href="#contact">無料体験レッスンを予約</a><a class="btn btn-line tablink" data-tab="fees" href="#fees">プランを見る</a></div>
   </div></div>

@@ -1152,6 +1152,20 @@ html[lang="en"] .hero h1{line-height:1.02}
   html[lang="en"] .spt-en{font-size:clamp(22px,6.3vw,30px);color:var(--ink);line-height:1.35}
   .hero-lead{margin-top:18px}
 }
+
+/* desktop too: the simple JA/EN title replaces the band and the tagline */
+@media(min-width:1001px){
+  .hero-who,.hero h1.h1-en{display:none!important}
+  .sp-title{display:flex;flex-direction:column;gap:16px;margin:0}
+  .spt-ja{font-family:var(--mincho);font-weight:500;font-size:clamp(34px,3.4vw,50px);line-height:1.4;color:var(--ink)}
+  .spt-ja i{font-style:normal;color:var(--cobalt);margin:0 .12em}
+  .spt-en{font-family:var(--latin);font-size:clamp(19px,1.7vw,24px);line-height:1.4;color:var(--cobalt)}
+  html[lang="en"] .spt-ja{display:none}
+  html[lang="en"] .spt-en{font-size:clamp(28px,2.7vw,40px);line-height:1.22;color:var(--ink)}
+  .hero-copy{max-width:min(620px,44vw)}
+}
+.pc-br{display:none}
+@media(min-width:1001px){.pc-br{display:inline}}
 /* ================= five strengths pentagon ================= */
 .pg{position:relative;width:100%;max-width:1000px;aspect-ratio:10/7;margin:0 auto}
 .pg-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
