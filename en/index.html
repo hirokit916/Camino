@@ -1176,6 +1176,70 @@ html[lang="ja"] .spt-ja{font-family:var(--mincho);font-weight:600;letter-spacing
 html[lang="ja"] .spt-ja i{color:var(--cobalt)}
 html[lang="ja"] .spt-ja .hl{background:none;padding:0}
 html[lang="en"] .spt-en{color:var(--cobalt)!important}
+
+/* what I offer: three services in a row; online / in-person side by side */
+.hero-svc{list-style:none;margin:clamp(18px,2.8vh,28px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,auto);justify-content:start}
+.hero-svc li{display:flex;align-items:center;gap:10px;padding:2px 18px}
+.hero-svc li:first-child{padding-left:0}
+.hero-svc li+li{border-left:1px solid #c5d3ec}
+.hs-ic{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center}
+.hs-ic svg{width:22px;height:22px}
+.hs-t{font-size:14px;font-weight:600;line-height:1.45;color:var(--ink);white-space:nowrap}
+.hero-area{display:flex!important;flex-wrap:wrap;gap:10px 26px}
+.hero-area li{flex-wrap:nowrap!important}
+.hero-area .ha-v{flex-basis:auto!important;padding-left:0!important;margin-top:0!important}
+@media(max-width:720px){
+  .hero-svc{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:20px}
+  .hero-svc li{flex-direction:column;text-align:center;gap:8px;padding:0 6px}
+  .hero-svc li:first-child{padding-left:6px}
+  .hs-ic{width:42px;height:42px}
+  .hs-t{font-size:12px;white-space:normal}
+  .hero-area{font-size:14px!important;gap:8px 18px;margin-top:20px!important}
+  .hero-area li{gap:7px!important}
+  .hero-area .ha-ic{width:28px!important;height:28px!important}
+  .hero-area b{white-space:nowrap}
+  .hero-area .ha-v{white-space:nowrap}
+}
+/* online / in-person as two columns side by side: icon, label over value */
+.hero-area{display:grid!important;grid-template-columns:auto auto;justify-content:start;gap:0!important}
+.hero-area li{display:grid!important;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding-right:22px}
+.hero-area li+li{padding-left:22px;border-left:1px solid #c5d3ec}
+.hero-area .ha-ic{grid-row:1/3}
+.hero-area b{font-size:14.5px;line-height:1.4}
+.hero-area .ha-v{font-size:14px;line-height:1.45;white-space:nowrap}
+@media(max-width:720px){
+  .hero-area{grid-template-columns:1fr 1fr;width:100%}
+  .hero-area li{padding-right:10px;column-gap:8px}
+  .hero-area li+li{padding-left:12px}
+  .hero-area b{font-size:13.5px}
+  .hero-area .ha-v{font-size:12.5px;white-space:normal}
+}
+.hero-area li{row-gap:1px;align-content:center}
+.hero-area b,.hero-area .ha-v{margin:0!important;align-self:end}
+.hero-area .ha-v{align-self:start}
+@media(max-width:720px){
+  .hero-area{grid-template-columns:auto 1fr}
+  html[lang="ja"] .hero-area .ha-v{font-size:12px;white-space:nowrap;letter-spacing:-.02em}
+}
+/* services: bare icons; area line under the buttons */
+.hs-ic{background:none!important;color:var(--cobalt)!important;width:auto!important;height:auto!important}
+.hs-ic svg{width:30px!important;height:30px!important;stroke-width:1.5}
+.hero-area{margin-top:clamp(18px,2.6vh,26px)!important}
+@media(max-width:720px){.hs-ic svg{width:32px!important;height:32px!important}.hero-svc li{gap:6px}}
+/* area: text only, no icons */
+.hero-area .ha-ic{display:none!important}
+.hero-area li{grid-template-columns:1fr!important;column-gap:0!important}
+@media(min-width:1001px){.hero-cta{margin-top:clamp(28px,4.4vh,44px)!important}}
+/* area: stacked rows, label then value */
+.hero-area{display:flex!important;flex-direction:column;gap:6px!important;width:auto!important}
+.hero-area li{display:flex!important;align-items:baseline;gap:14px!important;padding:0!important;border:0!important}
+.hero-area b{min-width:6.5em}
+html[lang="en"] .hero-area b{min-width:5.2em}
+.hero-area .ha-v{white-space:nowrap}
+@media(max-width:720px){.hero-area .ha-v{font-size:13.5px!important}.hero-area b{font-size:14px}}
+.hero-area{display:grid!important;grid-template-columns:auto auto;justify-content:start;column-gap:18px!important;row-gap:6px!important}
+.hero-area li{display:contents!important}
+.hero-area b{min-width:0!important}
 /* ================= five strengths pentagon ================= */
 .pg{position:relative;width:100%;max-width:1000px;aspect-ratio:10/7;margin:0 auto}
 .pg-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
@@ -1557,8 +1621,9 @@ body.cs-philosophy-active #cs-progress{display:flex}
 <h1 class="h1-en">Carve your<br/>own path</h1>
 <p class="sp-title"><span class="spt-ja"><span class="hl">インター生・帰国子女向け</span><br/><span class="hl">家庭教師<i>×</i>メンタリング</span></span><span class="spt-en">Private tutoring &amp; mentoring<br/>for international school students</span></p>
 <p class="hero-lead">Personalized academic support and mentoring to help students build confidence, discover what motivates them, and carve their own path.</p>
-<ul class="hero-area"><li><span class="ha-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.500 2.600 3.800 5.600 3.800 9s-1.300 6.400-3.800 9c-2.500-2.600-3.800-5.600-3.800-9S9.500 5.600 12 3Z"></path></svg></span><b>Online</b><span class="ha-v">Available worldwide</span></li><li><span class="ha-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 21s-6.500-6.100-6.500-11.200a6.500 6.500 0 0 1 13 0C18.500 14.900 12 21 12 21Z"></path><circle cx="12" cy="9.800" r="2.300"></circle></svg></span><b>In person</b><span class="ha-v">Osaka, Kobe, Ashiya &amp; Nishinomiya</span></li></ul>
+<ul aria-label="Tutoring services" class="hero-svc"><li><span class="hs-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24"><path d="M12 6.5c-1.5-1.3-3.8-2-7-2-.6 0-1.5.1-1.5.1v13s.9-.1 1.5-.1c3.2 0 5.5.7 7 2"></path><path d="M12 6.5c1.5-1.3 3.8-2 7-2 .6 0 1.5.1 1.5.1v13s-.9-.1-1.5-.1c-3.2 0-5.5.7-7 2"></path><path d="M12 6.5v13"></path></svg></span><span class="hs-t">Everyday Schoolwork<br/>&amp; Homework</span></li><li><span class="hs-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24"><path d="M2.5 9.5 12 5l9.5 4.5L12 14 2.5 9.5Z"></path><path d="M6.5 11.6v4.2c0 1.2 2.5 2.7 5.5 2.7s5.5-1.5 5.5-2.7v-4.2"></path><path d="M21.5 9.5v5"></path></svg></span><span class="hs-t">IB, AP &amp;<br/>Cambridge</span></li><li><span class="hs-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24"><circle cx="12" cy="9" r="5.5"></circle><path d="m9.5 9 1.8 1.8L14.8 7.3"></path><path d="m8.6 13.6-1.6 7 5-2.6 5 2.6-1.6-7"></path></svg></span><span class="hs-t">Eiken, TOEFL,<br/>TOEIC &amp; IELTS Prep</span></li></ul>
 <div class="hero-cta"><a class="btn btn-solid tablink" data-tab="contact" href="#contact">Book a Free Trial Lesson</a><a class="btn btn-line tablink" data-tab="fees" href="#fees">Explore Plans</a></div>
+<ul class="hero-area"><li><span class="ha-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.500 2.600 3.800 5.600 3.800 9s-1.300 6.400-3.800 9c-2.500-2.600-3.800-5.600-3.800-9S9.500 5.600 12 3Z"></path></svg></span><b>Online</b><span class="ha-v">Available worldwide</span></li><li><span class="ha-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 21s-6.500-6.100-6.500-11.200a6.500 6.500 0 0 1 13 0C18.500 14.900 12 21 12 21Z"></path><circle cx="12" cy="9.800" r="2.300"></circle></svg></span><b>In person</b><span class="ha-v">Osaka, Kobe, Ashiya &amp; Nishinomiya</span></li></ul>
 </div></div>
 </section>
 <section class="impact"><div class="facts"><div class="wrap">
