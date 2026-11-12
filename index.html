@@ -1166,6 +1166,11 @@ html[lang="en"] .hero h1{line-height:1.02}
 }
 .pc-br{display:none}
 @media(min-width:1001px){.pc-br{display:inline}}
+/* JA hero title: bold cobalt with a soft marker highlight; no English subtitle */
+html[lang="ja"] .spt-en{display:none!important}
+html[lang="ja"] .spt-ja{font-family:var(--gothic);font-weight:700;color:var(--cobalt);letter-spacing:.02em}
+html[lang="ja"] .spt-ja i{color:var(--ink)}
+html[lang="ja"] .spt-ja .hl{background:linear-gradient(transparent 62%,#cfe2fb 62%);padding:0 .08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 /* ================= five strengths pentagon ================= */
 .pg{position:relative;width:100%;max-width:1000px;aspect-ratio:10/7;margin:0 auto}
 .pg-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
@@ -1559,7 +1564,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
   <div class="wrap"><div class="hero-copy">
     <span class="hero-who"><span class="nw">インター生・帰国子女向け</span>　<span class="nw">家庭教師<i>×</i>メンタリング</span></span>
     <h1 class="h1-en">Carve your<br>own path</h1>
-    <p class="sp-title"><span class="spt-ja">インター生・帰国子女向け<br>家庭教師<i>×</i>メンタリング</span><span class="spt-en">Private tutoring &amp; mentoring<br>for international school students</span></p>
+    <p class="sp-title"><span class="spt-ja"><span class="hl">インター生・帰国子女向け</span><br><span class="hl">家庭教師<i>×</i>メンタリング</span></span><span class="spt-en">Private tutoring &amp; mentoring<br>for international school students</span></p>
     
     <p class="hero-lead">豊富な指導経験を活かした対話と指導を通じ、<br class="pc-br">生徒自身が心から進みたいと思える道を切り拓きます</p>
     <ul class="hero-area"><li><span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.500 2.600 3.800 5.600 3.800 9s-1.300 6.400-3.800 9c-2.500-2.600-3.800-5.600-3.800-9S9.500 5.600 12 3Z"/></svg></span><b>オンライン授業</b><span class="ha-v">グローバル対応</span></li><li><span class="ha-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.500-6.100-6.500-11.200a6.500 6.500 0 0 1 13 0C18.500 14.900 12 21 12 21Z"/><circle cx="12" cy="9.800" r="2.300"/></svg></span><b>対面授業</b><span class="ha-v">大阪・神戸・芦屋・西宮</span></li></ul>
