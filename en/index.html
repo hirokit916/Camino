@@ -1122,6 +1122,20 @@ html[lang="en"] .hero h1{line-height:1.02}
   .hero-copy>*:not(.hero-who){order:2;margin-left:24px;margin-right:24px}
   .hero h1{margin-top:30px}
 }
+
+/* plans tab on phones: tighter head so the three audience choices show on the first screen */
+.sp-br{display:none}
+@media(max-width:720px){
+  .sp-br{display:inline}
+  #fees .phead{padding:100px 0 18px}
+  #fees .phead h1{font-size:25px;line-height:1.5}
+  #fees .phead-lead{margin-top:12px;font-size:14px;line-height:1.85}
+  #fees .phead-notes{margin-top:10px;font-size:12px;line-height:1.75}
+  #fees .phead-field{top:-380px}
+  #fees .phead+.sec-tight,#fees .phead~section:first-of-type{padding-top:14px}
+  #fees .aud-q{margin-bottom:10px;font-size:14px}
+  #fees .aud b{word-break:keep-all;overflow-wrap:normal}
+}
 </style>
 <style id="camino-philosophy-css">
 
