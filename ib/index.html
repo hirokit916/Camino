@@ -908,6 +908,17 @@ html[lang="en"] h1,html[lang="en"] h2{letter-spacing:-.01em}
   .hd-menu a.on{color:#1d5bd8;font-weight:500}
   .hd-menu .hd-lang-m{display:block!important;font-family:var(--sans);font-size:15px;font-weight:600;color:#1d5bd8}
 }
+
+/* column hub head: same look as the main pages' tab heads */
+.hubh{position:relative;overflow-x:clip;background:none!important;padding:72px 0 34px!important}
+.hubh::before{content:"";position:absolute;top:-360px;right:-220px;width:760px;height:760px;border-radius:50%;background:#cfe2fb;z-index:0}
+.hubh::after{content:"";position:absolute;top:-424px;right:-284px;width:888px;height:888px;border-radius:50%;border:1.5px solid #1d5bd8;opacity:.55;clip-path:inset(50% 50% 0 0);z-index:0}
+.hubh .wrap{position:relative;z-index:1}
+.hubh .ph{display:block!important}
+.hub-eb{margin:0 0 18px;font-family:var(--sans);font-size:14px;letter-spacing:.1em;color:#1d5bd8}
+.hubh h1{font-family:var(--serif)!important;font-weight:500!important;font-size:clamp(32px,4.2vw,56px)!important;line-height:1.4!important;letter-spacing:0!important;color:var(--ink)!important;margin:0!important}
+#topics{position:relative;z-index:1}
+@media(max-width:720px){.hubh{padding:44px 0 20px!important}.hubh::before{width:440px;height:440px;top:-250px;right:-210px}.hubh::after{display:none}.hubh h1{font-size:28px!important}}
 @media(max-width:600px){.bm-ic{width:34px;height:34px}.bm-t b{font-size:20px}.bm-t small{font-size:8.5px;letter-spacing:.18em}}
 </style>
 </head>
@@ -927,8 +938,7 @@ html[lang="en"] h1,html[lang="en"] h2{letter-spacing:-.01em}
       <a href="/#fees">プラン</a>
       <a href="/#profile">講師</a>
       <a class="on" href="/column/" aria-current="true">コラム</a>
-      <a href="/#contact"><svg class="hd-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>お問い合わせ</a>
-     <a class="hd-lang-m" href="/en/ib/"><svg class="hd-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>English</a></nav>
+      <a href="/#contact"><svg class="hd-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>お問い合わせ</a> <a class="hd-lang-m" href="/en/ib/"><svg class="hd-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>English</a></nav>
   </div>
 </header>
 
