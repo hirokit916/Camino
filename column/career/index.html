@@ -697,6 +697,11 @@ i.hi{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f
      "@type": "Article",
      "headline": "適性検査と面接",
      "url": "https://caminotutor.com/column/career/japan-tests/"
+    },
+    {
+     "@type": "Article",
+     "headline": "日系と外資の選考の違い",
+     "url": "https://caminotutor.com/column/career/japanese-vs-foreign/"
     }
    ]
   },
@@ -984,7 +989,19 @@ body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
 .cr-two>div.hl{border:2px solid var(--c)}
 .cr-two h4{margin:0 0 8px;font-size:16px;color:var(--ink)}
 .cr-two p{margin:0;font-size:14px;line-height:1.9;color:var(--ink)}
-.cr-hub{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cr-cot{table-layout:fixed;width:100%}
+.cr-cot th,.cr-cot td{white-space:normal!important;word-break:normal;overflow-wrap:anywhere}
+.cr-cot thead th:nth-child(1){width:17%}.cr-cot thead th:nth-child(2){width:11%}.cr-cot thead th:nth-child(3){width:40%}
+.cr-tt thead th:nth-child(1){width:16%}.cr-tt thead th:nth-child(2){width:17%}.cr-tt thead th:nth-child(3){width:42%}
+@media (max-width:760px){.cr-cot{table-layout:auto}.cr-cot thead th{width:auto!important}}
+.cr-el{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:8px 0 10px}
+.cr-el div{background:#fff;border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;padding:14px 14px 12px;display:flex;flex-direction:column;gap:6px}
+.cr-el h4{margin:0;font-size:16px;color:var(--ink)}
+.cr-el p{margin:0;font-size:13.5px;line-height:1.75;color:var(--ink)}
+.cr-el span{margin-top:auto;font-size:12px;line-height:1.6;color:var(--soft);padding-top:6px;border-top:1px dashed var(--line)}
+@media (max-width:900px){.cr-el{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cr-el{grid-template-columns:1fr}}
+.cr-hub{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .cr-hub a{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid var(--line);border-top:5px solid var(--c);border-radius:20px;padding:22px 22px 18px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}
 .cr-hub a:hover{transform:translateY(-3px);box-shadow:0 16px 30px -22px rgba(0,0,0,.4)}
 .cr-hub b{font-size:18px;line-height:1.5}.cr-hub span{font-size:14px;line-height:1.85;color:var(--soft)}
@@ -995,6 +1012,49 @@ body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
 .cr-flow li:not(:last-child)::after{right:auto;left:22px;top:auto;bottom:-12px;transform:rotate(135deg)}
 .cr-co .cr-flow{gap:0}.cr-co .cr-flow li:not(:last-child)::after{left:6.5px;bottom:-.6em;transform:none}
 .cr-co dl div{grid-template-columns:76px minmax(0,1fr)}}
+
+.pm{margin:26px 0 6px;--g:16px}
+.pm-cap{margin:0 0 12px;font-size:13px;color:var(--soft)}
+.pmap{display:grid;grid-template-columns:150px minmax(0,1fr) 112px;align-items:center;gap:0}
+.pm-n{display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .2s,transform .2s,box-shadow .2s}
+a.pm-n:hover,a.pm-n:focus-visible{border-color:var(--k,var(--c));transform:translateY(-2px);box-shadow:0 12px 22px -18px rgba(0,0,0,.45)}
+.pm-n b{font-size:14.5px;line-height:1.45}.pm-n span{font-size:12px;line-height:1.6;color:var(--soft)}
+.pm-start .pm-n{background:var(--ct);border-color:transparent}
+.pm-start,.pm-end{position:relative}
+.pm-start::after,.pm-end::before{content:"";position:absolute;top:50%;width:16px;height:2px;background:#c9d3e3}
+.pm-start::after{right:-15px}.pm-end::before{left:-15px}
+.pm-end .pm-n{background:var(--ink);border-color:var(--ink);color:#fff;text-align:center;align-items:center;padding:18px 10px}
+.pm-end .pm-n b{font-size:18px;letter-spacing:.1em}.pm-end .pm-n span{color:rgba(255,255,255,.75)}
+.pm-lanes{position:relative;display:grid;grid-auto-rows:1fr;gap:var(--g);padding:0 34px}
+.pm-lanes::before,.pm-lanes::after{content:"";position:absolute;top:calc((100% - 2*var(--g))/6);bottom:calc((100% - 2*var(--g))/6);width:2px;background:#c9d3e3}
+.pm-lanes::before{left:14px}.pm-lanes::after{right:14px}
+.pm-lane{position:relative;display:grid;grid-template-columns:172px minmax(0,1fr);align-items:center;gap:22px;background:color-mix(in srgb,var(--k) 6%,#fff);border:1px solid color-mix(in srgb,var(--k) 22%,#fff);border-radius:18px;padding:14px 16px}
+.pm-lane::before,.pm-lane::after{content:"";position:absolute;top:50%;width:20px;height:2px;background:#c9d3e3}
+.pm-lane::before{left:-21px}.pm-lane::after{right:-21px}
+.pm-lh{background:var(--k)!important;border-color:var(--k)!important;color:#fff!important}
+.pm-lh span{color:rgba(255,255,255,.82)!important}
+.pm-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.pm-steps li{position:relative;display:flex}
+.pm-steps li .pm-n{flex:1;justify-content:center}
+.pm-steps li:not(:last-child)::after{content:"";position:absolute;right:-15px;top:50%;width:8px;height:8px;border-top:2px solid var(--k);border-right:2px solid var(--k);transform:translateY(-50%) rotate(45deg)}
+.pm-br{grid-column:2;margin:-4px 0 0;font-size:12px;color:var(--k);font-weight:600;display:flex;align-items:center;gap:6px}
+.pm-br::before{content:"";width:14px;height:0;border-top:1.5px dashed var(--k)}
+.pm-more{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.pm-more a{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;border:1.5px solid var(--c);color:var(--c);font-weight:700;font-size:14px;text-decoration:none;background:#fff}
+.pm-more a:hover{background:var(--c);color:#fff}
+@media (max-width:960px){
+ .pmap{grid-template-columns:1fr;gap:26px}
+ .pm-lanes{padding:0;grid-auto-rows:auto;gap:12px}.pm-lanes::after,.pm-lane::after,.pm-lane::before{display:none}
+ .pm-lanes::before{content:"ここから3つのルートに分かれます（並行して進めることもできます）";position:static;display:block;width:auto;height:auto;background:none;font-size:12.5px;font-weight:700;color:var(--soft);text-align:center;margin:-14px 0 2px}
+ .pm-start::after{display:none}
+ .pm-end::before{left:50%;top:-22px;width:2px;height:18px}
+ .pm-lane{grid-template-columns:1fr;gap:12px}
+ .pm-br{grid-column:1}
+}
+@media (max-width:560px){
+ .pm-steps{grid-template-columns:1fr;gap:14px}
+ .pm-steps li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-12px;transform:translateX(-50%) rotate(135deg)}
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&family=Shippori+Mincho:wght@500;600&display=swap">
 <style id="camino-skin">
@@ -1100,11 +1160,12 @@ footer.ft p.ft-area a{font-weight:400!important;padding:0!important;margin:0!imp
     <div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><span>就職活動</span></div>
     <div class="ph"><h1><small>コラム</small>就職活動</h1></div>
     <p class="lead">海外の大学に通う学生やインター出身者が、日本の企業や外資系企業の日本オフィスで働くための就職活動について、公式情報をもとにまとめました</p>
+    <div class="pm rise"><p class="pm-cap">図の項目を押すと、くわしい記事に移動します</p><div class="pmap" role="group" aria-label="就職活動の流れ"><div class="pm-start"><a class="pm-n" href="/column/career/routes/"><b>情報収集</b><span>説明会・カジュアル面談・OB/OG訪問</span></a></div><div class="pm-lanes"><div class="pm-lane" style="--k:var(--cam)"><a class="pm-n pm-lh" href="/column/career/routes/#intern"><b>インターン</b><span>早いと卒業前年の夏から</span></a><ol class="pm-steps"><li><a class="pm-n" href="/column/career/japan-tests/#tests"><b>応募</b><span>ES・テスト・面接</span></a></li><li><a class="pm-n" href="/column/career/routes/#intern"><b>インターンに参加</b><span>数日〜数週間</span></a></li><li><a class="pm-n" href="/column/career/routes/#intern"><b>特別選考</b><span>早期選考・配属確約など</span></a></li></ol><p class="pm-br">選考に進めなくても、本選考に応募できる企業もあります</p></div><div class="pm-lane" style="--k:var(--cp)"><a class="pm-n pm-lh" href="/column/career/career-forum/"><b>キャリアフォーラム</b><span>ボストン11月・ロンドン2月・東京6月</span></a><ol class="pm-steps"><li><a class="pm-n" href="/column/career/career-forum/#flow"><b>事前応募</b><span>CFNに登録・レジュメ</span></a></li><li><a class="pm-n" href="/column/career/japan-tests/#tests"><b>Webテスト・面談</b><span>事前面接・カジュアル面談</span></a></li><li><a class="pm-n" href="/column/career/career-forum/#flow"><b>会場で面接</b><span>数日間で複数の企業</span></a></li></ol><p class="pm-br">事前に応募していない企業は、当日のウォークインも</p></div><div class="pm-lane" style="--k:var(--ap)"><a class="pm-n pm-lh" href="/column/career/routes/#japan"><b>本選考</b><span>日系は3月ごろ〜／外資は前年の夏〜秋</span></a><ol class="pm-steps"><li><a class="pm-n" href="/column/career/japanese-vs-foreign/#jp"><b>エントリー・ES</b><span>採用サイトから応募</span></a></li><li><a class="pm-n" href="/column/career/japan-tests/#elements"><b>適性検査</b><span>SPI・玉手箱・GABなど</span></a></li><li><a class="pm-n" href="/column/career/japan-tests/#interview"><b>面接</b><span>複数回・日本語と英語</span></a></li></ol></div></div><div class="pm-end"><a class="pm-n" href="/column/career/japanese-vs-foreign/"><b>内定</b><span>日系と外資の違い</span></a></div></div><div class="pm-more"><a href="/column/career/japanese-vs-foreign/">日系と外資で、選考はどう違う？ →</a><a href="/column/career/japan-tests/#tests">適性検査の種類と試される要素 →</a></div></div>
   </div>
 </section>
 <section class="sec first" style="--c:var(--ap);--ct:var(--ap-t);padding-top:28px">
   <div class="wrap">
-    <div class="cr-hub rise"><a href="/column/career/routes/"><b>就職までの3つのルート</b><span>日本の就活生と同じ流れ、キャリアフォーラム、インターンからの特別選考。それぞれの進め方と日本の就職活動の日程</span><em>詳しく見る →</em></a><a href="/column/career/career-forum/"><b>キャリアフォーラムとは？</b><span>ボストン・ロンドン・東京の開催時期、応募から内定までの流れ、主要企業の選考の例、参加している業界</span><em>詳しく見る →</em></a><a href="/column/career/japan-tests/"><b>適性検査と面接</b><span>SPIなどのWebテストの内容と準備のしかた、日本語と英語の面接</span><em>詳しく見る →</em></a></div>
+    <div class="cr-hub rise"><a href="/column/career/routes/"><b>就職までの3つのルート</b><span>日本の就活生と同じ流れ、キャリアフォーラム、インターンからの特別選考。それぞれの進め方と日本の就職活動の日程</span><em>詳しく見る →</em></a><a href="/column/career/career-forum/"><b>キャリアフォーラムとは？</b><span>ボストン・ロンドン・東京の開催時期、応募から内定までの流れ、参加している業界</span><em>詳しく見る →</em></a><a href="/column/career/japan-tests/"><b>適性検査と面接</b><span>SPI３・玉手箱・GAB・TG-WEBなどの検査と試される要素、日本語と英語の面接</span><em>詳しく見る →</em></a><a href="/column/career/japanese-vs-foreign/"><b>日系と外資の選考の違い</b><span>日系企業9社と外資系企業9社の公式の募集要項から、選考の流れを比べる</span><em>詳しく見る →</em></a></div>
   </div>
 </section>
 <section class="sec" style="border-top:none;padding-top:10px"><div class="wrap"><div class="cta rise"><div><h2>就職活動について、相談したい方へ</h2><p>インターや海外の大学から日本で働きたい方に、応募の進め方から面接の準備まで、日本語と英語でサポートします</p></div><div class="cta-btns"><a class="btn btn-or" href="/#contact">無料体験・ご相談</a></div></div></div></section>
