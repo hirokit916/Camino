@@ -1067,7 +1067,10 @@ body.has-side main>section:not(.phero)>.wrap{padding-right:308px}
 .cr-co .cr-flow{gap:0}.cr-co .cr-flow li:not(:last-child)::after{left:6.5px;bottom:-.6em;transform:none}
 .cr-co dl div{grid-template-columns:76px minmax(0,1fr)}}
 
-.pm{margin:26px 0 6px;--g:16px}
+.pm{margin:8px 0 6px;--g:16px}
+.cr-hubp .lead{margin-bottom:6px}
+.cr-hubp{padding-top:22px!important;padding-bottom:24px!important}
+.cr-hubp .ph{margin-bottom:6px}
 .pm-cap{margin:0 0 12px;font-size:13px;color:var(--soft)}
 .pmap{display:grid;grid-template-columns:150px minmax(0,1fr) 112px;align-items:center;gap:0}
 .pm-n{display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .2s,transform .2s,box-shadow .2s}
@@ -1099,16 +1102,37 @@ a.pm-n:hover,a.pm-n:focus-visible{border-color:var(--k,var(--c));transform:trans
 .pmap2{grid-template-columns:minmax(0,1fr) 112px}
 .pmap2 .pm-lanes{padding:0 34px 0 0}
 .pmap2 .pm-lanes::before,.pmap2 .pm-lane::before{display:none}
-.pmap2 .pm-lane{grid-template-columns:250px minmax(0,1fr)}
+.pmap2 .pm-lane{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;padding:8px 10px;border-radius:16px}
+.pmap2 .pm-lanes{--g:10px;gap:10px}
+.pmap2 .pm-lh{display:grid!important;grid-template-columns:auto auto 1fr;column-gap:10px;align-items:baseline;padding:9px 14px!important}
+.pmap2 .pm-lh em{grid-column:1;background:rgba(255,255,255,.18);border-radius:999px;padding:1px 8px}
+.pmap2 .pm-lh b{grid-column:2;font-size:17px!important}
+.pmap2 .pm-lh small{grid-column:3}
+.pmap2 .pm-lh span{grid-column:1/-1;margin-top:3px!important;font-size:12.5px!important;line-height:1.6!important}
+.pmap2 .pm-steps{gap:20px}
+.pmap2 .pm-steps .pm-n{padding:8px 8px;align-items:center;text-align:center}
+.pmap2 .pm-steps .pm-n b{font-size:14.5px}
+.pmap2 .pm-end .pm-n{padding:14px 8px}
 .pm-lh{gap:4px!important;padding:14px 16px!important}
 .pm-lh em{font-style:normal;font-size:11.5px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.8)}
 .pm-lh b{font-size:18px!important}
 .pm-lh small{font-family:var(--latin,serif);font-style:italic;font-size:13px;color:rgba(255,255,255,.85)}
 .pm-lh span{margin-top:4px;font-size:12.5px!important;line-height:1.7!important;color:rgba(255,255,255,.92)!important}
-.pm-intro{margin:0 0 14px;font-size:16px;line-height:1.9;color:var(--ink)}
+.pm-intro{margin:0 0 10px;font-size:16px;line-height:1.9;color:var(--ink)}
 .pm-intro b{color:var(--c)}
-.pm-note{margin:16px 0 4px;padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:13.5px;line-height:1.85;color:var(--ink)}
+.pm-note{margin:10px 0 4px;padding:9px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:13.5px;line-height:1.85;color:var(--ink)}
 .pm-note b{color:var(--c);margin-right:6px}
+@media (max-width:560px){
+ .pmap2 .pm-steps{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+ .pmap2 .pm-steps li:not(:last-child)::after{right:-11px!important;left:auto!important;top:50%!important;bottom:auto!important;width:6px!important;height:6px!important;transform:translateY(-50%) rotate(45deg)!important}
+ .pmap2 .pm-steps .pm-n{padding:8px 4px}
+ .pmap2 .pm-steps .pm-n b{font-size:13px;line-height:1.35}
+ .pmap2 .pm-steps .pm-n span{font-size:10.5px}
+ .pmap2 .pm-lane{gap:8px;padding:8px}
+ .pmap2 .pm-lh span{font-size:12px!important}
+ .pmap2{gap:14px}
+ .pmap2 .pm-lanes{gap:8px}
+}
 @media (max-width:960px){
  .pmap{grid-template-columns:1fr;gap:26px}
  .pmap2 .pm-lanes{padding:0}
@@ -1224,12 +1248,12 @@ footer.ft p.ft-area a{font-weight:400!important;padding:0!important;margin:0!imp
 <nav class="toc gnav" aria-label="コラム"><div class="toc-in"><span class="gl">コラム</span><a href="/column/">すべて</a><a href="/column/schools/"><i style="background:var(--cp)"></i>スクール選び</a><a href="/column/curriculum/"><i style="background:var(--or)"></i>インターのカリキュラム</a><a href="/column/university/"><i style="background:var(--uni)"></i>大学進学</a><a href="/column/english/"><i style="background:var(--myp)"></i>英語・資格</a><a href="/column/career/" class="on" aria-current="page"><i style="background:var(--ap)"></i>就職活動</a></div></nav>
 
 <main>
-<section class="phero" style="--c:var(--ap);--ct:var(--ap-t)">
+<section class="phero cr-hubp" style="--c:var(--ap);--ct:var(--ap-t)">
   <div class="wrap">
     <div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><span>就職活動</span></div>
     <div class="ph"><h1><small>コラム</small>就職活動</h1></div>
     <p class="lead">海外の大学に通う学生やインター出身者が、日本の企業や外資系企業の日本オフィスで働くための就職活動について、公式情報をもとにまとめました</p>
-    <div class="pm rise"><p class="pm-intro">就職までの入り口はいろいろありますが、主なものは次の<b>3つ</b>です。並行して進めることもできます</p><div class="pmap pmap2" role="group" aria-label="就職までの3つのルート"><div class="pm-lanes"><div class="pm-lane" style="--k:var(--ap)"><div class="pm-n pm-lh"><em>ルート1</em><b>通常選考</b><small>Official Route</small><span>企業の採用ページから応募し、企業が決めた日程で選考を受ける、いちばん一般的な道</span></div><ol class="pm-steps"><li><a class="pm-n" href="/column/career/selection-steps/#p2"><b>応募</b><span>エントリーシートなど</span></a></li><li><a class="pm-n" href="/column/career/japan-tests/#tests"><b>適性検査</b><span>Webかテスト会場で受ける</span></a></li><li><a class="pm-n" href="/column/career/selection-steps/#p4"><b>面接</b><span>複数回</span></a></li></ol></div><div class="pm-lane" style="--k:var(--cp)"><div class="pm-n pm-lh"><em>ルート2</em><b>就活イベント</b><small>Job Hunting Event</small><span>多くの企業が集まるイベント（キャリアフォーラムなど）で、本選考より前に、たくさんの企業にまとめて応募できる</span></div><ol class="pm-steps"><li><a class="pm-n" href="/column/career/career-forum/#flow"><b>事前に応募</b><span>イベントの前に</span></a></li><li><a class="pm-n" href="/column/career/japan-tests/#tests"><b>適性検査・面談</b><span>Webで</span></a></li><li><a class="pm-n" href="/column/career/career-forum/#flow"><b>会場で面接</b><span>数日間で複数の企業</span></a></li></ol></div><div class="pm-lane" style="--k:var(--cam)"><div class="pm-n pm-lh"><em>ルート3</em><b>インターン</b><small>Internship</small><span>企業のインターンに参加し、そこでの評価をもとに、特別選考に進む道</span></div><ol class="pm-steps"><li><a class="pm-n" href="/column/career/selection-steps/#p5"><b>応募</b><span>適性検査・面接など</span></a></li><li><a class="pm-n" href="/column/career/selection-steps/#p5"><b>インターンに参加</b><span>数日〜数週間</span></a></li><li><a class="pm-n" href="/column/career/routes/#intern"><b>特別選考</b><span>通常より早い選考など</span></a></li></ol><p class="pm-br">特別選考に進めなくても、通常選考に応募できる企業もあります</p></div></div><div class="pm-end"><div class="pm-n"><b>内定</b></div></div></div><p class="pm-note"><b>適性検査とは</b>　応募のあとに、Webやテスト会場で受ける試験です。言葉や計算の問題、性格についての質問などに答えます</p><p class="pm-cap">各ステップを押すと、くわしい記事に移動します</p><div class="pm-more"><a href="/column/career/selection-steps/">選考の流れをステップごとに見る →</a><a href="/column/career/japanese-vs-foreign/">日系と外資で、選考はどう違う？ →</a><a href="/column/career/timeline/">就職活動はいつから？ →</a></div></div>
+    <div class="pm rise"><p class="pm-intro">就職までの入り口はいろいろありますが、主なものは次の<b>3つ</b>です。並行して進めることもできます</p><div class="pmap pmap2" role="group" aria-label="就職までの3つのルート"><div class="pm-lanes"><div class="pm-lane" style="--k:var(--ap)"><div class="pm-n pm-lh"><em>ルート1</em><b>通常選考</b><small>Official Route</small><span>企業の採用ページから応募し、企業が決めた日程で選考を受ける、いちばん一般的な道</span></div><ol class="pm-steps"><li><a class="pm-n" href="/column/career/selection-steps/#p2"><b>応募</b></a></li><li><a class="pm-n" href="/column/career/japan-tests/#tests"><b>適性検査</b></a></li><li><a class="pm-n" href="/column/career/selection-steps/#p4"><b>面接</b></a></li></ol></div><div class="pm-lane" style="--k:var(--cp)"><div class="pm-n pm-lh"><em>ルート2</em><b>就活イベント</b><small>Job Hunting Event</small><span>多くの企業が集まるイベント（キャリアフォーラムなど）で、本選考より前に、たくさんの企業にまとめて応募できる</span></div><ol class="pm-steps"><li><a class="pm-n" href="/column/career/career-forum/#flow"><b>応募</b></a></li><li><a class="pm-n" href="/column/career/japan-tests/#tests"><b>適性検査</b></a></li><li><a class="pm-n" href="/column/career/career-forum/#flow"><b>面談</b><span>会場またはWeb</span></a></li></ol></div><div class="pm-lane" style="--k:var(--cam)"><div class="pm-n pm-lh"><em>ルート3</em><b>インターン</b><small>Internship</small><span>企業のインターンに参加し、そこでの評価をもとに、特別選考に進む道</span></div><ol class="pm-steps"><li><a class="pm-n" href="/column/career/selection-steps/#p2"><b>応募</b></a></li><li><a class="pm-n" href="/column/career/selection-steps/#p5"><b>インターン参加</b></a></li><li><a class="pm-n" href="/column/career/routes/#intern"><b>特別選考</b></a></li></ol></div></div><div class="pm-end"><div class="pm-n"><b>内定</b></div></div></div><p class="pm-note"><b>適性検査とは</b>　応募のあとに、Webやテスト会場で受ける試験です。言葉や計算の問題、性格についての質問などに答えます</p><p class="pm-cap">各ステップを押すと、くわしい記事に移動します</p><div class="pm-more"><a href="/column/career/selection-steps/">選考の流れをステップごとに見る →</a><a href="/column/career/japanese-vs-foreign/">日系と外資で、選考はどう違う？ →</a><a href="/column/career/timeline/">就職活動はいつから？ →</a></div></div>
   </div>
 </section>
 <section class="sec first" style="--c:var(--ap);--ct:var(--ap-t);padding-top:28px">
