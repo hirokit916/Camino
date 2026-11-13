@@ -215,7 +215,7 @@
   </url>
   <url>
     <loc>https://caminotutor.com/column/university/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/"/>
@@ -845,6 +845,10 @@
   </url>
   <url>
     <loc>https://caminotutor.com/column/career/japan-hiring-system/</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/university/without-ib-ap/</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
 </urlset>
