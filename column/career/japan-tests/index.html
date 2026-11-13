@@ -1187,9 +1187,12 @@ a.pm-n:hover,a.pm-n:focus-visible{border-color:var(--k,var(--c));transform:trans
 .pm-plain .pm-steps li:not(:last-child)::after{border-color:#a9b4c6!important}
 .cr-hubp{--hl:#1d5bd8}.pm-intro b{color:var(--hl)}
 .pm-lane.pm-key{--k:var(--hl);background:color-mix(in srgb,var(--hl) 7%,#fff);border:2px solid var(--hl);box-shadow:0 18px 34px -26px color-mix(in srgb,var(--hl) 80%,#000)}
-.pm-hl{grid-column:1/-1;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;padding:8px 14px;border-radius:12px;background:#fff;border:1px solid color-mix(in srgb,var(--hl) 30%,#fff)}
-.pm-hl b{font-size:14.5px;color:var(--hl)}
-.pm-hl span{font-size:13px;line-height:1.7;color:var(--ink)}
+.pm-lane.pm-key{padding-bottom:24px;margin-bottom:18px}
+.pm-hl{position:absolute;left:14px;bottom:-1px;transform:translateY(50%);z-index:2;margin:0;display:flex;align-items:center;gap:0;max-width:calc(100% - 28px);padding:6px 14px;border-radius:18px;background:#fff;border:2px solid var(--hl);box-shadow:0 8px 18px -12px color-mix(in srgb,var(--hl) 80%,#000)}
+.pm-hl b{flex:none;font-size:12.5px;font-weight:700;color:var(--hl);line-height:1.5}
+.pm-hl span{font-size:12px;line-height:1.5;color:var(--ink);margin-left:10px;padding-left:10px;border-left:1px solid color-mix(in srgb,var(--hl) 30%,#fff)}
+@media (min-width:961px){.pmap2 .pm-lane.pm-key::before{bottom:calc(-1 * var(--g) - 20px)}}
+@media (max-width:960px){.pm-lane.pm-key{padding-bottom:60px;margin-bottom:44px}.pm-hl{left:12px;right:12px;max-width:none;flex-direction:column;align-items:flex-start;gap:3px;padding:8px 14px 9px}.pm-hl span{margin:0;padding:0;border:0}}
 button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .pm-plain .pm-q{--k:#0b1f4b}
 .pm-cap2{margin:10px 0 0;font-size:13px;color:var(--soft)}
@@ -1209,7 +1212,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .pmap2 .pm-lane:last-child::before{top:-2px;bottom:50%}
 .pm-key .pm-q.q-head{top:-20px}}
 .cr-hub1{grid-template-columns:minmax(0,560px)}
-@media (max-width:560px){.pm-ans{padding:22px 20px 20px}.pm-ans h3{font-size:18px}.pm-ans p{font-size:14.5px}.pm-hl{padding:8px 12px}}
+@media (max-width:560px){.pm-ans{padding:22px 20px 20px}.pm-ans h3{font-size:18px}.pm-ans p{font-size:14.5px}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&family=Shippori+Mincho:wght@500;600&display=swap">
 <style id="camino-skin">
