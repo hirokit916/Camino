@@ -1109,7 +1109,7 @@ a.pm-n:hover,a.pm-n:focus-visible{border-color:var(--k,var(--c));transform:trans
 .pmap2 .pm-lanes{padding:0 34px 0 0}
 .pmap2 .pm-lanes::before,.pmap2 .pm-lane::before{display:none}
 .pmap2 .pm-lane{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;padding:8px 10px;border-radius:16px}
-.pmap2 .pm-lanes{--g:10px;gap:10px}
+.pmap2 .pm-lanes{--g:14px;gap:14px}
 .pmap2 .pm-lh{display:grid!important;grid-template-columns:auto auto 1fr;column-gap:10px;align-items:baseline;padding:9px 14px!important}
 .pmap2 .pm-lh em{grid-column:1;background:rgba(255,255,255,.18);border-radius:999px;padding:1px 8px}
 .pmap2 .pm-lh b{grid-column:2;font-size:17px!important}
@@ -1128,6 +1128,21 @@ a.pm-n:hover,a.pm-n:focus-visible{border-color:var(--k,var(--c));transform:trans
 .pm-intro b{color:var(--c)}
 .pm-note{margin:10px 0 4px;padding:9px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:13.5px;line-height:1.85;color:var(--ink)}
 .pm-note b{color:var(--c);margin-right:6px}
+.pmap2 .pm-n{position:relative}
+.pmap2 .pm-steps .pm-n,.pmap2 .pm-lh{cursor:default}
+.pmap2 .pm-n:hover{transform:none;box-shadow:none}
+.pmap2 .pm-steps .pm-n:hover{border-color:var(--line)}
+.pm-q{position:absolute;z-index:3;white-space:nowrap;font-size:12px;font-weight:700;line-height:1.3;color:var(--k);background:#fff;border:1.5px solid var(--k);border-radius:999px;padding:5px 11px;text-decoration:none;box-shadow:0 6px 14px -8px rgba(11,31,75,.45);transition:background .15s,color .15s,transform .15s}
+.pm-q::after{content:"";position:absolute;width:8px;height:8px;background:#fff;border-right:1.5px solid var(--k);border-bottom:1.5px solid var(--k)}
+.pm-q:hover,.pm-q:focus-visible{background:var(--k);color:#fff}
+.pm-q:hover::after,.pm-q:focus-visible::after{background:var(--k)}
+.pm-q.q-top{left:50%;bottom:calc(100% + 9px);transform:translateX(-50%)}
+.pm-q.q-top::after{left:50%;bottom:-5.5px;transform:translateX(-50%) rotate(45deg)}
+.pm-q.q-head{right:-14px;top:-14px;color:var(--k)}
+.pm-q.q-head::after{left:18px;bottom:-5.5px;transform:rotate(45deg)}
+.pm-q.q-head:hover{color:#fff}
+.pmap2 .pm-lanes{padding-top:0}
+@media (max-width:560px){.pm-q{font-size:11px;padding:4px 9px}.pm-q.q-head{right:6px;top:-12px}.pm-q.q-top{bottom:calc(100% + 7px)}.pm-steps li:last-child .pm-q.q-top{left:auto;right:-4px;transform:none}.pm-steps li:last-child .pm-q.q-top::after{left:auto;right:22px;transform:rotate(45deg)}}
 @media (max-width:560px){
  .pmap2 .pm-steps{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
  .pmap2 .pm-steps li:not(:last-child)::after{right:-11px!important;left:auto!important;top:50%!important;bottom:auto!important;width:6px!important;height:6px!important;transform:translateY(-50%) rotate(45deg)!important}
@@ -1256,8 +1271,7 @@ footer.ft p.ft-area a{font-weight:400!important;padding:0!important;margin:0!imp
 <main>
 <section class="phero" style="--c:var(--ap);--ct:var(--ap-t)">
   <div class="wrap">
-    <div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><a href="/column/career/">就職活動</a><span>›</span><span>就職までの3つのルート</span></div>
-    <div class="ph"><h1><small>就職活動</small>海外大生・インター出身者の<br class="sp-br">就職ルート<span class="nw">3つの進め方</span></h1></div>
+    <div class="ph"><h1>海外大生・インター出身者の<br class="sp-br">就職ルート<span class="nw">3つの進め方</span></h1></div>
     <p class="lead">海外の大学に通う学生やインター出身者が、日本の企業や外資系企業の日本オフィスに就職するルートは、大きく3つあります。<b>日本の就活生と同じ流れで受ける</b>、<b>キャリアフォーラムで短期間に終える</b>、<b>インターンからの特別選考</b>です。それぞれの流れを、公式の情報をもとに整理しました</p><nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#routes"><span>1</span>3つのルート</a></li><li><a href="#japan"><span>2</span>日本の就活生と同じ流れで受ける</a></li><li><a href="#events"><span>3</span>キャリアフォーラムで短期間に終える</a></li><li><a href="#intern"><span>4</span>インターンからの特別選考</a></li><li><a href="#combine"><span>5</span>ルートの組み合わせ方</a></li></ol></nav>
   </div>
 </section>
