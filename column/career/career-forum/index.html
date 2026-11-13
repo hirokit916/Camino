@@ -1178,6 +1178,37 @@ a.pm-n:hover,a.pm-n:focus-visible{border-color:var(--k,var(--c));transform:trans
  .pm-steps{grid-template-columns:1fr;gap:14px}
  .pm-steps li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-12px;transform:translateX(-50%) rotate(135deg)}
 }
+/* hub v3: plain lanes, highlighted forum lane, answer popovers */
+.pm-lane.pm-plain{--k:#0b1f4b;background:#f8f9fb;border-color:#e3e7ee}
+.pm-plain .pm-lh{background:#fff!important;border-color:#dfe4ec!important;color:var(--ink)!important}
+.pm-plain .pm-lh em{background:#eef1f6!important;color:#5c6984!important}
+.pm-plain .pm-lh small{color:#5c6984!important}
+.pm-plain .pm-lh span{color:var(--soft)!important}
+.pm-plain .pm-steps li:not(:last-child)::after{border-color:#a9b4c6!important}
+.pm-lane.pm-key{--k:var(--ap);background:color-mix(in srgb,var(--ap) 9%,#fff);border:2px solid var(--ap);box-shadow:0 18px 34px -26px color-mix(in srgb,var(--ap) 80%,#000)}
+.pm-hl{grid-column:1/-1;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;padding:8px 14px;border-radius:12px;background:#fff;border:1px solid color-mix(in srgb,var(--ap) 30%,#fff)}
+.pm-hl b{font-size:14.5px;color:var(--ap)}
+.pm-hl span{font-size:13px;line-height:1.7;color:var(--ink)}
+button.pm-q{font-family:inherit;cursor:pointer;margin:0}
+.pm-plain .pm-q{--k:#0b1f4b}
+.pm-cap2{margin:10px 0 0;font-size:13px;color:var(--soft)}
+.pm-ans{width:min(560px,calc(100vw - 32px));max-height:calc(100dvh - 48px);overflow:auto;margin:auto;border:0;border-radius:20px;padding:26px 28px 24px;background:#fff;color:var(--ink);box-shadow:0 30px 60px -20px rgba(11,31,75,.45);border-top:6px solid var(--ap)}
+.pm-ans::backdrop{background:rgba(11,31,75,.38)}
+.pm-ans h3{margin:0 36px 12px 0;font-family:var(--mincho,serif);font-size:21px;line-height:1.5;font-weight:600;color:var(--ink)}
+.pm-ans p{margin:0 0 12px;font-size:15px;line-height:1.95}
+.pm-ans p:last-of-type{margin-bottom:0}
+.pm-ans-link{display:inline-flex;margin-top:16px;padding:9px 16px;border-radius:999px;border:1.5px solid var(--ap);color:var(--ap);font-weight:700;font-size:14px;text-decoration:none}
+.pm-ans-link:hover{background:var(--ap);color:#fff}
+.pm-x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:20px;line-height:1;color:var(--ink);cursor:pointer;font-family:inherit}
+.pm-x:hover{background:#f1f3f7}
+.pmap2 .pm-lanes{grid-auto-rows:auto}
+@media (min-width:961px){.pmap2 .pm-lanes::after{display:none}
+.pmap2 .pm-lane::before{display:block!important;content:"";position:absolute;left:auto;right:-22px;width:2px;height:auto;background:#c9d3e3;top:0;bottom:calc(-1 * var(--g) - 2px)}
+.pmap2 .pm-lane:first-child::before{top:50%}
+.pmap2 .pm-lane:last-child::before{top:-2px;bottom:50%}
+.pm-key .pm-q.q-head{top:-20px}}
+.cr-hub1{grid-template-columns:minmax(0,560px)}
+@media (max-width:560px){.pm-ans{padding:22px 20px 20px}.pm-ans h3{font-size:18px}.pm-ans p{font-size:14.5px}.pm-hl{padding:8px 12px}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&family=Shippori+Mincho:wght@500;600&display=swap">
 <style id="camino-skin">
