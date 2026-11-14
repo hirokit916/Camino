@@ -1322,6 +1322,12 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .sj-top li{background:#fff;border:1px solid var(--line);border-left:3px solid var(--c);border-radius:8px;padding:9px 12px;font-size:14px;line-height:1.6;min-width:0}
 .sj-top.one{grid-template-columns:minmax(0,1fr)}.sj-top.two,.sj-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:640px){.sj-top.two,.sj-grid.two{grid-template-columns:minmax(0,1fr)}}
+.sj-off{margin:14px 0 4px;display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.sj-off>p{margin:6px 0 0;font-size:12.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+.sj-off>div{display:flex;flex-wrap:wrap;gap:8px;min-width:0;flex:1}
+.sj-off a{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px 6px 6px;font-size:13px;color:var(--ink);text-decoration:none;max-width:100%}
+.sj-off a:hover{border-color:var(--c)}
+.sj-off i{font-style:normal;font-size:11px;font-weight:700;color:#fff;background:var(--c);border-radius:999px;padding:2px 8px;white-space:nowrap}
 .sj-note{background:var(--ct);border-radius:12px;padding:14px 18px;margin:6px 0 16px;font-size:15px;line-height:1.85}
 .sj-cam{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;margin:8px 0 18px}
 .sj-cam>div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
@@ -1374,7 +1380,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
   <div class="wrap">
     <div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><a href="/curriculum/ap/">AP</a><span>›</span><a href="/subjects/ap/">科目別ガイド</a><span>›</span><span>マクロ経済</span></div>
     <div class="ph"><h1><small>AP（アドバンスト・プレースメント）・科目別ガイド</small>AP マクロ経済<span class="nw">（AP Macroeconomics）</span></h1></div>
-    <p class="lead">College Boardが実施するAP マクロ経済（Macroeconomics）の、2027年5月の試験の形式と学ぶ内容を、公式情報をもとにまとめました。Caminoでは、インター生・帰国子女を対象に、<b>AP マクロ経済の家庭教師</b>を行っています</p><dl class="sj-facts"><div><dt>2027年の試験日</dt><dd>2027年5月7日（金）午後</dd></div><div><dt>試験の形式</dt><dd>ハイブリッド形式（選択問題はBluebookアプリ、記述は紙の解答冊子に手書き）</dd></div><div><dt>スコア</dt><dd>1〜5（多くの大学は3以上を単位認定の目安に）</dd></div></dl><nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#exam"><span>1</span>試験の形式</a></li><li><a href="#content"><span>2</span>学ぶ内容</a></li><li><a href="#point"><span>3</span>ポイント</a></li><li><a href="#camino"><span>4</span>Caminoの家庭教師</a></li></ol></nav>
+    <p class="lead">College Boardが実施するAP マクロ経済（Macroeconomics）の、2027年5月の試験の形式と学ぶ内容を、公式情報をもとにまとめました。Caminoでは、インター生・帰国子女を対象に、<b>AP マクロ経済の家庭教師</b>を行っています</p><dl class="sj-facts"><div><dt>2027年の試験日</dt><dd>2027年5月7日（金）午後</dd></div><div><dt>試験の形式</dt><dd>ハイブリッド形式（選択問題はBluebookアプリ、記述は紙の解答冊子に手書き）</dd></div><div><dt>スコア</dt><dd>1〜5（多くの大学は3以上を単位認定の目安に）</dd></div></dl><div class="sj-off"><p>公式資料</p><div><a href="https://apcentral.collegeboard.org/courses/ap-macroeconomics" target="_blank" rel="noopener"><i>公式ページ</i>College Board（AP Central）</a><a href="https://Apcentral.Collegeboard.org/media/pdf/ap-macroeconomics-course-and-exam-description.pdf" target="_blank" rel="noopener"><i>PDF</i>Course and Exam Description</a></div></div><nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#exam"><span>1</span>試験の形式</a></li><li><a href="#content"><span>2</span>学ぶ内容</a></li><li><a href="#point"><span>3</span>ポイント</a></li><li><a href="#camino"><span>4</span>Caminoの家庭教師</a></li></ol></nav>
   </div>
 </section>
 <section class="sec first th" style="--c:#16294d;--ct:#e9edf5">
@@ -1406,7 +1412,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
   <div class="wrap src">
     <h2>出典</h2>
     <p>本ページの試験構成と出題範囲は、College Boardの公式の資料をもとに、Caminoが日本語で整理したものです。CaminoはCollege Boardと提携していません。試験の形式や時間は改訂されることがあるため、受験する年の最新の公式資料をあわせてご確認ください</p>
-    <ul><li><a href="https://apcentral.collegeboard.org/courses/ap-macroeconomics/exam" target="_blank" rel="noopener">College Board（AP Central）：AP Macroeconomics Exam</a></li></ul>
+    <ul><li><a href="https://apcentral.collegeboard.org/courses/ap-macroeconomics/exam" target="_blank" rel="noopener">College Board（AP Central）：AP Macroeconomics Exam</a></li><li><a href="https://apcentral.collegeboard.org/courses/ap-macroeconomics" target="_blank" rel="noopener">College Board（AP Central）</a></li><li><a href="https://Apcentral.Collegeboard.org/media/pdf/ap-macroeconomics-course-and-exam-description.pdf" target="_blank" rel="noopener">Course and Exam Description</a></li></ul>
   </div>
 </section>
 </main>

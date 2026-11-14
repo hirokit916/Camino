@@ -1322,6 +1322,12 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .sj-top li{background:#fff;border:1px solid var(--line);border-left:3px solid var(--c);border-radius:8px;padding:9px 12px;font-size:14px;line-height:1.6;min-width:0}
 .sj-top.one{grid-template-columns:minmax(0,1fr)}.sj-top.two,.sj-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:640px){.sj-top.two,.sj-grid.two{grid-template-columns:minmax(0,1fr)}}
+.sj-off{margin:14px 0 4px;display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.sj-off>p{margin:6px 0 0;font-size:12.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+.sj-off>div{display:flex;flex-wrap:wrap;gap:8px;min-width:0;flex:1}
+.sj-off a{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px 6px 6px;font-size:13px;color:var(--ink);text-decoration:none;max-width:100%}
+.sj-off a:hover{border-color:var(--c)}
+.sj-off i{font-style:normal;font-size:11px;font-weight:700;color:#fff;background:var(--c);border-radius:999px;padding:2px 8px;white-space:nowrap}
 .sj-note{background:var(--ct);border-radius:12px;padding:14px 18px;margin:6px 0 16px;font-size:15px;line-height:1.85}
 .sj-cam{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;margin:8px 0 18px}
 .sj-cam>div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
@@ -1374,7 +1380,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
   <div class="wrap">
     <div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><a href="/ib/dp/">国際バカロレア（IB）DP</a><span>›</span><a href="/subjects/ib/">科目別ガイド</a><span>›</span><span>物理</span></div>
     <div class="ph"><h1><small>国際バカロレア（IB）DP・科目別ガイド</small>IB DP 物理<span class="nw">（Physics）</span></h1></div>
-    <p class="lead">国際バカロレア（IB）ディプロマ・プログラム（DP）の 物理（Physics）の試験の構成と学ぶ内容を、IBの公式資料をもとにまとめました。Caminoでは、インター生・帰国子女を対象に、<b>IB 物理の家庭教師</b>を行っています</p><dl class="sj-facts"><div><dt>このページの対象</dt><dd>2025年からの試験</dd></div><div><dt>成績</dt><dd>1〜7（DP全体は45点満点の一部）</dd></div><div><dt>授業時間の目安</dt><dd>SL 150時間／HL 240時間</dd></div><div><dt>一般的な学年</dt><dd>G11〜G12（16〜19歳）</dd></div></dl><nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#exam"><span>1</span>試験と評価の構成</a></li><li><a href="#content"><span>2</span>学ぶ内容</a></li><li><a href="#point"><span>3</span>ポイント</a></li><li><a href="#camino"><span>4</span>Caminoの家庭教師</a></li></ol></nav>
+    <p class="lead">国際バカロレア（IB）ディプロマ・プログラム（DP）の 物理（Physics）の試験の構成と学ぶ内容を、IBの公式資料をもとにまとめました。Caminoでは、インター生・帰国子女を対象に、<b>IB 物理の家庭教師</b>を行っています</p><dl class="sj-facts"><div><dt>このページの対象</dt><dd>2025年からの試験</dd></div><div><dt>成績</dt><dd>1〜7（DP全体は45点満点の一部）</dd></div><div><dt>授業時間の目安</dt><dd>SL 150時間／HL 240時間</dd></div><div><dt>一般的な学年</dt><dd>G11〜G12（16〜19歳）</dd></div></dl><div class="sj-off"><p>公式資料</p><div><a href="https://ibo.org/programmes/diploma-programme/curriculum/sciences/physics/" target="_blank" rel="noopener"><i>公式ページ</i>国際バカロレア機構（IB）</a><a href="https://ibo.org/globalassets/new-structure/recognition/pdfs/dp_sciences_physics_subject-brief_jan_2022_e.pdf" target="_blank" rel="noopener"><i>PDF</i>Subject brief</a></div></div><nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#exam"><span>1</span>試験と評価の構成</a></li><li><a href="#content"><span>2</span>学ぶ内容</a></li><li><a href="#point"><span>3</span>ポイント</a></li><li><a href="#camino"><span>4</span>Caminoの家庭教師</a></li></ol></nav>
   </div>
 </section>
 <section class="sec first th" style="--c:#1d5bd8;--ct:#eaf1fd">
@@ -1406,7 +1412,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
   <div class="wrap src">
     <h2>出典</h2>
     <p>本ページの試験構成と出題範囲は、国際バカロレア機構（IB）の公式の資料をもとに、Caminoが日本語で整理したものです。CaminoはIBと提携していません。試験の形式や時間は改訂されることがあるため、受験する年の最新の公式資料をあわせてご確認ください</p>
-    <ul><li><a href="https://ibo.org/globalassets/new-structure/recognition/pdfs/dp_sciences_physics_subject-brief_jan_2022_e.pdf" target="_blank" rel="noopener">IB：DP Physics subject brief（first assessment 2025）</a></li></ul>
+    <ul><li><a href="https://ibo.org/globalassets/new-structure/recognition/pdfs/dp_sciences_physics_subject-brief_jan_2022_e.pdf" target="_blank" rel="noopener">IB：DP Physics subject brief（first assessment 2025）</a></li><li><a href="https://ibo.org/programmes/diploma-programme/curriculum/sciences/physics/" target="_blank" rel="noopener">国際バカロレア機構（IB）</a></li></ul>
   </div>
 </section>
 </main>
