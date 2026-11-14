@@ -920,18 +920,21 @@ footer.ft p.ft-area a{font-weight:400!important;padding:0!important;margin:0!imp
 </style>
 
 <style id="byline-css">
-.bl-row{width:100%;max-width:none!important;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:22px}
+.bl-row{width:100%;max-width:none!important;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-bottom:24px}
 .bl-row .crumb{margin-bottom:0}
-.byline{margin-left:auto;display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink,#0b1f4b);padding:5px 14px 5px 5px;border:1px solid rgba(11,31,75,.12);border-radius:999px;background:rgba(255,255,255,.72);line-height:1.35;transition:border-color .15s,background .15s}
-.byline:hover{border-color:rgba(11,31,75,.32);background:#fff}
-.byline:focus-visible{outline:2px solid var(--navy,#0b1f4b);outline-offset:2px}
-.byline img{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:none;display:block}
-.byline span{display:flex;flex-direction:column;min-width:0}
-.byline b{font-size:12.5px;font-weight:700;letter-spacing:.02em}
-.byline b i{font-style:normal;font-weight:500;color:var(--muted,#5c6984);margin-right:.5em}
-.byline small{font-size:11px;color:var(--muted,#5c6984);letter-spacing:.01em}
+.byline{margin-left:auto;display:inline-flex;align-items:center;gap:13px;text-decoration:none;color:var(--navy,#0b1f4b);line-height:1.3}
+.byline img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none;display:block;border:2px solid #fff;box-shadow:0 0 0 1px rgba(11,31,75,.14),0 6px 16px rgba(11,31,75,.14)}
+.byline span{display:flex;flex-direction:column;gap:2px;min-width:0;padding-left:13px;border-left:1px solid rgba(11,31,75,.16)}
+.byline i{font-style:normal;font-size:10px;font-weight:600;letter-spacing:.22em;color:var(--muted,#5c6984)}
+.byline b{font-family:var(--serif,'Shippori Mincho',serif);font-size:16px;font-weight:600;letter-spacing:.06em;color:var(--navy,#0b1f4b)}
+.byline small{display:block;overflow:hidden;font-size:11px;color:var(--soft,#3f4b66);letter-spacing:.02em}
+.byline small s{display:flex;flex-wrap:wrap;margin-left:-1.2em;text-decoration:none}
+.byline small em{font-style:normal;white-space:nowrap;margin-left:1.2em;position:relative}
+.byline small em::before{content:"";position:absolute;left:-.62em;top:.32em;width:1px;height:.85em;background:currentColor;opacity:.3}
+.byline:hover b{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.byline:focus-visible{outline:2px solid var(--navy,#0b1f4b);outline-offset:4px;border-radius:6px}
 @media (min-width:1180px){body.has-side .ahero .bl-row{width:calc(100% + 280px);margin-right:-280px}}
-@media (max-width:640px){.bl-row{margin-bottom:18px}.byline{padding:4px 12px 4px 4px;gap:8px}.byline img{width:32px;height:32px}.byline b{font-size:12px}.byline small{font-size:10.5px}}
+@media (max-width:640px){.bl-row{margin-bottom:18px}.byline{gap:10px}.byline img{width:40px;height:40px}.byline span{padding-left:10px}.byline b{font-size:14.5px}.byline small{font-size:10.5px}}
 </style>
 </head>
 <body>
@@ -959,7 +962,7 @@ footer.ft p.ft-area a{font-weight:400!important;padding:0!important;margin:0!imp
 <main>
 <section class="phero" style="--c:var(--pyp);--ct:var(--pyp-t)">
   <div class="wrap">
-    <div class="bl-row"><div class="crumb"><a href="/en/">Camino</a><span>›</span><a href="/en/column/">Articles</a><span>›</span><a href="/en/ib/">IB</a><span>›</span><span>PYP</span></div><!--byline--><a class="byline" href="/en/#profile" aria-label="About the author, Hiroki Takashima"><img src="/img/author.jpg" alt="" width="38" height="38" loading="lazy" decoding="async"><span><b><i>Written by</i>Hiroki Takashima</b><small>Canadian Academy alum · IB Diploma · UCL</small></span></a><!--/byline--></div>
+    <div class="bl-row"><div class="crumb"><a href="/en/">Camino</a><span>›</span><a href="/en/column/">Articles</a><span>›</span><a href="/en/ib/">IB</a><span>›</span><span>PYP</span></div><!--byline--><a class="byline" href="/en/#profile" aria-label="About the author, Hiroki Takashima"><img src="/img/author.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span><i>WRITTEN BY</i><b>Hiroki Takashima</b><small><s><em>Canadian Academy alum</em><em>IB Diploma</em><em>UCL</em><em>US teaching certification</em></s></small></span></a><!--/byline--></div>
     <div class="ph"><div class="ph-badge">PYP</div><h1><small>International Baccalaureate (IB)</small>What Is the Primary Years Programme (PYP)?</h1></div>
     <p class="lead">The Primary Years Programme is designed for children aged 3–12 (typically Pre-K through Grade 5 at international schools). Rather than treating every subject as a separate area of study, it encourages children to inquire across subjects through six broad themes that matter in the world around them.</p>
     <div class="spec">

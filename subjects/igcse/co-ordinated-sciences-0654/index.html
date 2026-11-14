@@ -1372,18 +1372,21 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 </style>
 
 <style id="byline-css">
-.bl-row{width:100%;max-width:none!important;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:22px}
+.bl-row{width:100%;max-width:none!important;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-bottom:24px}
 .bl-row .crumb{margin-bottom:0}
-.byline{margin-left:auto;display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink,#0b1f4b);padding:5px 14px 5px 5px;border:1px solid rgba(11,31,75,.12);border-radius:999px;background:rgba(255,255,255,.72);line-height:1.35;transition:border-color .15s,background .15s}
-.byline:hover{border-color:rgba(11,31,75,.32);background:#fff}
-.byline:focus-visible{outline:2px solid var(--navy,#0b1f4b);outline-offset:2px}
-.byline img{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:none;display:block}
-.byline span{display:flex;flex-direction:column;min-width:0}
-.byline b{font-size:12.5px;font-weight:700;letter-spacing:.02em}
-.byline b i{font-style:normal;font-weight:500;color:var(--muted,#5c6984);margin-right:.5em}
-.byline small{font-size:11px;color:var(--muted,#5c6984);letter-spacing:.01em}
+.byline{margin-left:auto;display:inline-flex;align-items:center;gap:13px;text-decoration:none;color:var(--navy,#0b1f4b);line-height:1.3}
+.byline img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none;display:block;border:2px solid #fff;box-shadow:0 0 0 1px rgba(11,31,75,.14),0 6px 16px rgba(11,31,75,.14)}
+.byline span{display:flex;flex-direction:column;gap:2px;min-width:0;padding-left:13px;border-left:1px solid rgba(11,31,75,.16)}
+.byline i{font-style:normal;font-size:10px;font-weight:600;letter-spacing:.22em;color:var(--muted,#5c6984)}
+.byline b{font-family:var(--serif,'Shippori Mincho',serif);font-size:16px;font-weight:600;letter-spacing:.06em;color:var(--navy,#0b1f4b)}
+.byline small{display:block;overflow:hidden;font-size:11px;color:var(--soft,#3f4b66);letter-spacing:.02em}
+.byline small s{display:flex;flex-wrap:wrap;margin-left:-1.2em;text-decoration:none}
+.byline small em{font-style:normal;white-space:nowrap;margin-left:1.2em;position:relative}
+.byline small em::before{content:"";position:absolute;left:-.62em;top:.32em;width:1px;height:.85em;background:currentColor;opacity:.3}
+.byline:hover b{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.byline:focus-visible{outline:2px solid var(--navy,#0b1f4b);outline-offset:4px;border-radius:6px}
 @media (min-width:1180px){body.has-side .ahero .bl-row{width:calc(100% + 280px);margin-right:-280px}}
-@media (max-width:640px){.bl-row{margin-bottom:18px}.byline{padding:4px 12px 4px 4px;gap:8px}.byline img{width:32px;height:32px}.byline b{font-size:12px}.byline small{font-size:10.5px}}
+@media (max-width:640px){.bl-row{margin-bottom:18px}.byline{gap:10px}.byline img{width:40px;height:40px}.byline span{padding-left:10px}.byline b{font-size:14.5px}.byline small{font-size:10.5px}}
 </style>
 </head>
 <body>
@@ -1411,7 +1414,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 <main>
 <section class="phero" style="--c:#1d7f86;--ct:#e1f1f1">
   <div class="wrap">
-    <div class="bl-row"><div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><a href="/curriculum/cambridge/">Cambridge</a><span>›</span><a href="/subjects/igcse/">IGCSE</a><span>›</span><span>理科（ダブル・アワード）（0654）</span></div><!--byline--><a class="byline" href="/#profile" aria-label="執筆者 高島 宏樹のプロフィール"><img src="/img/author.jpg" alt="" width="38" height="38" loading="lazy" decoding="async"><span><b><i>執筆</i>高島 宏樹</b><small>Canadian Academy卒・IB取得・UCL修了</small></span></a><!--/byline--></div>
+    <div class="bl-row"><div class="crumb"><a href="/">Camino</a><span>›</span><a href="/column/">コラム</a><span>›</span><a href="/curriculum/cambridge/">Cambridge</a><span>›</span><a href="/subjects/igcse/">IGCSE</a><span>›</span><span>理科（ダブル・アワード）（0654）</span></div><!--byline--><a class="byline" href="/#profile" aria-label="執筆者 高島 宏樹のプロフィール"><img src="/img/author.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"><span><i>執筆</i><b>高島 宏樹</b><small><s><em>Canadian Academy卒</em><em>IB取得</em><em>UCL修了</em><em>米国教員資格</em></s></small></span></a><!--/byline--></div>
     <div class="ph"><h1><small>Cambridge IGCSE・科目別ガイド</small>IGCSE 理科（ダブル・アワード）<span class="nw">（Co-ordinated Sciences (Double Award) 0654）</span></h1></div>
     <p class="lead">Cambridge IGCSE Co-ordinated Sciences (Double Award)（シラバスコード0654）の試験の構成と出題範囲を、Cambridge Internationalの公式シラバスをもとにまとめました。Caminoでは、インター生・帰国子女を対象に、<b>IGCSE 理科（ダブル・アワード）の家庭教師</b>を行っています</p><dl class="sj-facts"><div><dt>シラバスコード</dt><dd>0654</dd></div><div><dt>このページの対象</dt><dd>2025〜2027年の試験</dd></div><div><dt>成績</dt><dd>Core：CC〜GG　／　Extended：A*A*〜GG（2科目分の成績）</dd></div><div><dt>一般的な学年</dt><dd>14〜16歳（G9〜G10ごろ）</dd></div></dl><div class="sj-off"><p>公式資料</p><div><a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-sciences-co-ordinated-double-0654/" target="_blank" rel="noopener"><i>公式ページ</i>Cambridge International</a><a href="https://www.cambridgeinternational.org/Images/664572-2025-2027-syllabus.pdf" target="_blank" rel="noopener"><i>PDF</i>Syllabus</a><a href="https://help.cambridgeinternational.org/hc/en-gb/articles/23172961927698-What-is-the-difference-between-the-IGCSEs-in-Combined-Science-and-Coordinated-Science" target="_blank" rel="noopener"><i>公式ページ</i>Combined と Co-ordinated の違い（Cambridge）</a></div></div><nav class="otl" aria-label="目次"><p>目次</p><ol><li><a href="#exam"><span>1</span>試験の構成</a></li><li><a href="#content"><span>2</span>出題範囲</a></li><li><a href="#point"><span>3</span>ポイント</a></li><li><a href="#camino"><span>4</span>Caminoの家庭教師</a></li></ol></nav>
   </div>
