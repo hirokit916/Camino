@@ -1,0 +1,84 @@
+{
+  "redirects": [
+    {
+      "source": "/column/english/compare",
+      "destination": "/column/english/",
+      "permanent": true
+    },
+    {
+      "source": "/column/english/compare/",
+      "destination": "/column/english/",
+      "permanent": true
+    },
+    {
+      "source": "/column/curriculum/compare",
+      "destination": "/column/curriculum/",
+      "permanent": true
+    },
+    {
+      "source": "/column/curriculum/compare/",
+      "destination": "/column/curriculum/",
+      "permanent": true
+    },
+    {
+      "source": "/column/study",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
+      "source": "/column/study/",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
+      "source": "/en/column/english/compare",
+      "destination": "/en/column/english/",
+      "permanent": true
+    },
+    {
+      "source": "/en/column/english/compare/",
+      "destination": "/en/column/english/",
+      "permanent": true
+    },
+    {
+      "source": "/en/column/curriculum/compare",
+      "destination": "/en/column/curriculum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/column/curriculum/compare/",
+      "destination": "/en/column/curriculum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/column/study",
+      "destination": "/en/column/",
+      "permanent": true
+    },
+    {
+      "source": "/en/column/study/",
+      "destination": "/en/column/",
+      "permanent": true
+    },
+    {
+      "source": "/en/curriculum",
+      "destination": "/en/column/curriculum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/curriculum/",
+      "destination": "/en/column/curriculum/",
+      "permanent": true
+    },
+    {
+      "source": "/curriculum",
+      "destination": "/column/curriculum/",
+      "permanent": true
+    },
+    {
+      "source": "/curriculum/",
+      "destination": "/column/curriculum/",
+      "permanent": true
+    }
+  ]
+}
