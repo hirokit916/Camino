@@ -364,7 +364,7 @@ p{margin:0}
 @keyframes draw{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
 .hero .wrap{position:relative;z-index:2}
 .hero-copy{max-width:600px}
-.hero h1{font-size:clamp(46px,5.6vw,82px);line-height:1.28;letter-spacing:.02em;white-space:nowrap}
+.hero .h1-en{font-size:clamp(46px,5.6vw,82px);line-height:1.28;letter-spacing:.02em;white-space:nowrap}
 .hero-en{font-family:var(--latin);font-style:italic;font-size:clamp(20px,2vw,27px);color:var(--cobalt);margin:20px 0 0;line-height:1.3}
 .hero-lead{margin:34px 0 0;max-width:27em;font-size:16.5px;line-height:2.05;color:var(--text)}
 .hero-who{display:inline-block;margin:0 0 26px;font-weight:600;font-size:15px;letter-spacing:.08em;color:var(--ink)}
@@ -507,7 +507,7 @@ p{margin:0}
   .hero-photo img{object-position:42% 40%}
   .hero-path{display:none}
   .hero-copy{margin-top:44px;max-width:none}
-  .hero h1{font-size:44px}
+  .hero .h1-en{font-size:44px}
   .hero-lead{font-size:15.5px;margin-top:26px}
   .hero-cta .btn{flex:1 1 100%}
   .facts .wrap{grid-template-columns:1fr}
@@ -967,7 +967,7 @@ a.plan:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(11,31,
 /* English page: Latin display face for headings */
 html[lang="en"]{--mincho:'Newsreader','Shippori Mincho',serif}
 html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{letter-spacing:-.01em;line-height:1.25}
-html[lang="en"] .hero h1{line-height:1.05}
+html[lang="en"] .hero .h1-en{line-height:1.05}
 html[lang="en"] body{word-break:normal;line-break:auto}
 html[lang="en"] .worry-grid p{font-family:var(--gothic);font-size:16.5px;line-height:1.8}
 html[lang="en"] .nav{gap:26px}
@@ -982,7 +982,7 @@ html[lang="en"] .nav{gap:26px}
 .hero-copy{max-width:min(590px,40vw)}
 .hero-who{display:block}
 .hero-who{margin-bottom:clamp(14px,2.4vh,26px)}
-.hero h1{font-size:clamp(44px,min(5.4vw,9.2vh),84px);line-height:1.22}
+.hero .h1-en{font-size:clamp(44px,min(5.4vw,9.2vh),84px);line-height:1.22}
 .hero-en{margin-top:clamp(8px,1.6vh,20px)}
 .hero-lead{margin-top:clamp(16px,2.8vh,30px);line-height:1.9}
 .hero-area{list-style:none;margin:clamp(18px,3vh,30px) 0 0;padding:0;display:grid;gap:10px;font-size:17px;line-height:1.5;color:var(--ink)}
@@ -992,7 +992,7 @@ html[lang="en"] .nav{gap:26px}
 .hero-area .ha-ic{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--mist);color:var(--cobalt);flex:none}
 .hero-area .ha-ic svg{width:19px;height:19px}
 .hero-cta{margin-top:clamp(20px,3.4vh,34px)}
-html[lang="en"] .hero h1{line-height:1.02}
+html[lang="en"] .hero .h1-en{line-height:1.02}
 @media(max-height:760px) and (min-width:1001px){.hero-lead{font-size:15.5px}.hero-area{font-size:16px;gap:6px}}
 @media(max-width:1000px){
   .hero{height:auto;max-height:none;min-height:0;display:block;padding:0 0 56px}
@@ -1003,7 +1003,7 @@ html[lang="en"] .hero h1{line-height:1.02}
 }
 @media(max-width:720px){
   .hero-who{font-size:13.5px;margin-bottom:12px}
-  .hero h1{font-size:42px}
+  .hero .h1-en{font-size:42px}
   .hero-lead{margin-top:16px;font-size:15px;line-height:1.85}
   .hero-area{font-size:15.5px;gap:8px;margin-top:20px}
   .hero-area .ha-ic{width:30px;height:30px}
@@ -1141,7 +1141,7 @@ html[lang="en"] .hero h1{line-height:1.02}
   html[lang="ja"] .hero-who{white-space:nowrap}
   .hero-photo{order:1;margin:0;position:relative;width:100%;height:clamp(240px,58vw,420px)}
   .hero-copy>*:not(.hero-who){order:2;margin-left:24px;margin-right:24px}
-  .hero h1{margin-top:30px}
+  .hero .h1-en{margin-top:30px}
 }
 
 /* plans tab on phones: tighter head so the three audience choices show on the first screen */
@@ -1158,12 +1158,15 @@ html[lang="en"] .hero h1{line-height:1.02}
   #fees .aud b{word-break:keep-all;overflow-wrap:normal}
 }
 
-.hero h1.h1-en{font-family:var(--latin);font-weight:400;letter-spacing:-.01em;line-height:1.02}
+.hero .h1-en.h1-en{font-family:var(--latin);font-weight:400;letter-spacing:-.01em;line-height:1.02}
 
 /* phone hero: simple two-language title instead of the band and the big tagline */
+.h1-en{font-family:var(--mincho);font-weight:500;color:var(--ink);margin:0;letter-spacing:0;font-feature-settings:"palt";word-break:auto-phrase;text-wrap:balance}
+
+.hero-copy h1.sp-title{font-family:inherit;font-size:inherit;font-weight:inherit;color:inherit;letter-spacing:inherit;line-height:inherit;font-feature-settings:inherit;word-break:inherit;text-wrap:inherit}
 .sp-title{display:none}
 @media(max-width:1000px){
-  .hero-who,.hero h1.h1-en{display:none!important}
+  .hero-who,.hero .h1-en.h1-en{display:none!important}
   .hero{padding-top:72px}
   .sp-title{display:flex;flex-direction:column;gap:12px;margin-top:28px!important}
   .spt-ja{font-family:var(--mincho);font-weight:500;font-size:clamp(24px,7vw,34px);line-height:1.45;color:var(--ink)}
@@ -1176,7 +1179,7 @@ html[lang="en"] .hero h1{line-height:1.02}
 
 /* desktop too: the simple JA/EN title replaces the band and the tagline */
 @media(min-width:1001px){
-  .hero-who,.hero h1.h1-en{display:none!important}
+  .hero-who,.hero .h1-en.h1-en{display:none!important}
   .sp-title{display:flex;flex-direction:column;gap:16px;margin:0}
   .spt-ja{font-family:var(--mincho);font-weight:500;font-size:clamp(34px,3.4vw,50px);line-height:1.4;color:var(--ink)}
   .spt-ja i{font-style:normal;color:var(--cobalt);margin:0 .12em}
@@ -1766,8 +1769,8 @@ body.cs-philosophy-active #cs-progress{display:flex}
 <div aria-hidden="true" class="hero-path"><svg preserveaspectratio="none" viewbox="0 0 1440 760"><path d="M1440,430 C1330,470 1250,640 1050,694 C880,740 720,700 570,716 C430,731 330,760 230,760"></path></svg></div>
 <div class="wrap"><div class="hero-copy">
 <span class="hero-who">One-on-one tutoring <i>&amp;</i> mentoring<br/>for international school students</span>
-<h1 class="h1-en">Carve your<br/>own path</h1>
-<p class="sp-title"><span class="spt-ja"><span class="hl">インター生・帰国子女向け</span><br/><span class="hl">家庭教師<i>×</i>メンタリング</span></span><span class="spt-en">Private tutoring &amp; mentoring<br/>for international school students</span></p>
+<p class="h1-en">Carve your<br/>own path</p>
+<h1 class="sp-title"><span class="spt-ja"><span class="hl">インター生・帰国子女向け</span><br/><span class="hl">家庭教師<i>×</i>メンタリング</span></span><span class="spt-en">Private tutoring &amp; mentoring<br/>for international school students</span></h1>
 <p class="hero-lead">Personalized academic support and mentoring to help students build confidence, discover what motivates them, and carve their own path.</p>
 <ul aria-label="Tutoring services" class="hero-svc"><li><span class="hs-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24"><path d="M12 6.5c-1.5-1.3-3.8-2-7-2-.6 0-1.5.1-1.5.1v13s.9-.1 1.5-.1c3.2 0 5.5.7 7 2"></path><path d="M12 6.5c1.5-1.3 3.8-2 7-2 .6 0 1.5.1 1.5.1v13s-.9-.1-1.5-.1c-3.2 0-5.5.7-7 2"></path><path d="M12 6.5v13"></path></svg></span><span class="hs-t">Everyday Schoolwork<br/>&amp; Homework</span></li><li><span class="hs-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24"><path d="M2.5 9.5 12 5l9.5 4.5L12 14 2.5 9.5Z"></path><path d="M6.5 11.6v4.2c0 1.2 2.5 2.7 5.5 2.7s5.5-1.5 5.5-2.7v-4.2"></path><path d="M21.5 9.5v5"></path></svg></span><span class="hs-t">IB, AP &amp;<br/>Cambridge</span></li><li><span class="hs-ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24"><circle cx="12" cy="9" r="5.5"></circle><path d="m9.5 9 1.8 1.8L14.8 7.3"></path><path d="m8.6 13.6-1.6 7 5-2.6 5 2.6-1.6-7"></path></svg></span><span class="hs-t">Eiken, TOEFL,<br/>TOEIC &amp; IELTS Prep</span></li></ul>
 <div class="hero-cta"><a class="btn btn-solid tablink" data-tab="contact" href="#contact">Book a Free Trial Lesson</a><a class="btn btn-line tablink" data-tab="fees" href="#fees">Explore Plans</a></div>
