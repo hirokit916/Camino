@@ -215,7 +215,7 @@
   </url>
   <url>
     <loc>https://caminotutor.com/column/university/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/"/>
@@ -257,7 +257,7 @@
   </url>
   <url>
     <loc>https://caminotutor.com/column/english/toefl/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/english/toefl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/english/toefl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/english/toefl/"/>
@@ -271,7 +271,7 @@
   </url>
   <url>
     <loc>https://caminotutor.com/column/english/ielts/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/english/ielts/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caminotutor.com/en/column/english/ielts/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/english/ielts/"/>
@@ -1270,5 +1270,17 @@
     <loc>https://caminotutor.com/privacy/</loc>
     <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/university/us-uk-requirements/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/university/us-uk-requirements/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/university/us-uk-requirements/"/>
+  </url>
+  <url>
+    <loc>https://caminotutor.com/column/english/toefl/rubric/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://caminotutor.com/column/english/toefl/rubric/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caminotutor.com/column/english/toefl/rubric/"/>
   </url>
 </urlset>
