@@ -79,6 +79,16 @@
       "source": "/curriculum/",
       "destination": "/column/curriculum/",
       "permanent": true
+    },
+    {
+      "source": "/column/university/ib-alevel-scores",
+      "destination": "/column/university/ib-scores-by-major/",
+      "permanent": true
+    },
+    {
+      "source": "/column/university/ib-alevel-scores/",
+      "destination": "/column/university/ib-scores-by-major/",
+      "permanent": true
     }
   ]
 }
