@@ -1653,17 +1653,18 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .amx-link>span{position:relative}
 .amx-back{margin:0 0 10px}.amx-back a{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--c,#16294d);text-decoration:none;border-bottom:1px dotted currentColor}
 @media(max-width:700px){.amx-link::before{left:calc(72% - 8px)}.amx-link{padding:12px 12px;gap:10px}.amx-link b{font-size:13.5px}}
-.apk{margin:0 0 14px}
+.apk{margin:0 0 14px;position:sticky;top:144px;z-index:15;background:var(--bg,#fbfaf7);padding:8px 0 8px;box-shadow:0 6px 8px -8px rgba(11,31,75,.25)}
 .apk-h{margin:0 0 6px;font-size:13px;font-weight:700;color:var(--navy,#0b1f4b)}.apk-h small{margin-left:8px;font-size:11.5px;font-weight:500;color:var(--muted,#5c6984)}
 .apk-b{display:flex;gap:3px}
 .apk-b a{min-width:0;display:flex;flex-direction:column;gap:2px;padding:9px 10px;background:#dce9f8;color:var(--navy,#0b1f4b);text-decoration:none;border-radius:4px}
 .apk-b a:first-child{border-radius:10px 4px 4px 10px}.apk-b a:last-child{border-radius:4px 10px 10px 4px}
 .apk-b a:nth-child(even){background:#c4d6ee}
-.apk-b a:hover{background:var(--c,#16294d);color:#fff}
+.apk-b a:hover,.apk-b a.cur{background:var(--c,#16294d);color:#fff}
 .apk-b b{font-size:18px;line-height:1.1}.apk-b b small{font-size:10.5px;margin-left:1px}
 .apk-b span{font-size:12px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
-.apc{scroll-margin-top:170px}
-@media(max-width:700px){.apk-b a{padding:7px 5px}.apk-b span{font-size:10.5px}.apk-b b{font-size:15px}}
+.apc{scroll-margin-top:240px}
+@media(max-width:900px){.apk{top:var(--apk-top,220px)}.apc{scroll-margin-top:310px}}
+@media(max-width:700px){.apk-h small{display:none}.apk-b a{padding:7px 5px}.apk-b span{font-size:10.5px}.apk-b b{font-size:15px}}
 /* scoring panels */
 .aps{display:grid;grid-template-columns:200px minmax(0,1fr);gap:22px;align-items:start;margin:8px 0 10px}
 .aps-nav{position:sticky;top:160px;display:grid;gap:6px}
@@ -1841,6 +1842,7 @@ w.querySelectorAll('.aps-p').forEach(function(p){p.classList.toggle('on',p.id===
 if(scroll){var t=w.getBoundingClientRect().top;if(t<150||t>window.innerHeight*.6)window.scrollTo({top:window.scrollY+t-170,behavior:'smooth'})}}
 w.addEventListener('click',function(e){var b=e.target.closest('.aps-b');if(b){show(b.getAttribute('data-p'),true)}});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#tip-q"],a[href^="#r-"]');if(!a)return;var m=a.getAttribute('href').match(/#tip-(q\d)/);if(m)show(m[1],false)},true);
-})();(function(){var o=document.querySelector('nav.otl'),b=o&&o.querySelector('.otl-sw');if(!b)return;b.addEventListener('click',function(){var on=!o.classList.contains('sum');o.classList.toggle('sum',on);b.setAttribute('aria-pressed',on?'true':'false');b.textContent=on?'目次に戻る':'まとめ'})})();</script>
+})();(function(){var nav=document.querySelector('.aps-nav');function setTop(){if(nav&&innerWidth<=900){document.documentElement.style.setProperty('--apk-top',(136+nav.offsetHeight)+'px')}}setTop();addEventListener('resize',setTop);function spy(){document.querySelectorAll('.aps-p.on .apk-b').forEach(function(b){var as=[].slice.call(b.querySelectorAll('a')),y=b.getBoundingClientRect().bottom+60,k=-1;as.forEach(function(a,i){var t=document.getElementById(a.getAttribute('href').slice(1));if(t&&t.getBoundingClientRect().top<y)k=i});as.forEach(function(a,i){a.classList.toggle('cur',i==k)})})}addEventListener('scroll',spy,{passive:true});document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.apk-b a');if(!a){setTimeout(spy,50);return}var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;e.preventDefault();var k=a.closest('.apk'),sb=parseFloat(getComputedStyle(k).top)+k.offsetHeight;window.scrollTo({top:t.getBoundingClientRect().top+scrollY-sb-12,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});a.parentNode.querySelectorAll('a').forEach(function(x){x.classList.toggle('cur',x===a)})});spy()})();
+(function(){var o=document.querySelector('nav.otl'),b=o&&o.querySelector('.otl-sw');if(!b)return;b.addEventListener('click',function(){var on=!o.classList.contains('sum');o.classList.toggle('sum',on);b.setAttribute('aria-pressed',on?'true':'false');b.textContent=on?'目次に戻る':'まとめ'})})();</script>
 </body>
 </html>
