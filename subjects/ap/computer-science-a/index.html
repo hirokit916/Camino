@@ -1397,6 +1397,24 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .sj-cam .sj-plan .fine{color:#c9d8ee}
 .sj-plan-cta{display:block;margin:8px 0 0;padding:11px 14px;border-radius:999px;background:#7cc0ff;color:#0b1f4b;font-weight:800;font-size:15px;text-align:center;text-decoration:none}
 .sj-plan-cta:hover{background:#a3d3ff}.sj-plan-cta:focus-visible{outline:2px solid #fff;outline-offset:2px}</style>
+<style id="apc-units">.apu2{margin:6px 0 8px;border:2px solid var(--c,#16294d);background:#fff}
+.apu2-h,.apu2-r{display:grid;grid-template-columns:minmax(0,1fr) 210px;align-items:center;column-gap:18px}
+.apu2-h{background:var(--c,#16294d);color:#fff;padding:10px 16px;font-size:12.5px;font-weight:700}
+.apu2-h span:last-child{text-align:left}
+.apu2-r{padding:12px 16px;border-top:1px solid #dde5f1}
+.apu2-r:nth-child(odd){background:#f6f9fd}
+.apu2-u{display:flex;align-items:center;gap:12px;min-width:0}
+.apu2-n{flex:none;width:34px;height:34px;display:grid;place-items:center;background:#dce9f8;color:var(--c,#16294d);font-weight:800;font-size:14px;font-family:var(--latin)}
+.apu2-u b{display:block;font-size:15px;color:var(--navy,#0b1f4b);line-height:1.4}
+.apu2-u small{display:block;font-size:11.5px;color:var(--muted,#5c6984);line-height:1.4}
+.apu2-w{display:grid;grid-template-columns:72px 1fr;align-items:center;gap:10px}
+.apu2-p{font-size:16px;font-weight:800;color:var(--navy,#0b1f4b);font-variant-numeric:tabular-nums;white-space:nowrap}
+.apu2-bar{position:relative;height:8px;background:#e6edf7}
+.apu2-bar i{position:absolute;top:0;bottom:0;background:var(--c,#16294d)}
+.apu2-x{background:#fafafa}.apu2-x .apu2-p{font-size:12px;font-weight:700;color:var(--muted,#5c6984)}
+.apu2-src{font-size:11.5px;color:var(--muted,#5c6984);margin:6px 0 18px;line-height:1.7}
+@media(max-width:700px){.apu2-h,.apu2-r{grid-template-columns:minmax(0,1fr) 92px;column-gap:10px}.apu2-r{padding:11px 12px}.apu2-h{padding:9px 12px}
+.apu2-w{grid-template-columns:1fr;gap:4px}.apu2-u{gap:9px}.apu2-n{width:28px;height:28px;font-size:12px}.apu2-u b{font-size:14px}.apu2-p{font-size:14px}}</style>
 </head>
 <body>
 
@@ -1433,7 +1451,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 <div class="step" id="exam"><span class="step-n">1</span><div><h3>試験の形式（2027年5月）</h3><p class="step-sub">セクションごとの問題数・時間・スコアに占める比重です</p></div></div>
 <div class="ewrap rise"><table class="etbl stk"><thead><tr><th>セクション</th><th>問題数</th><th>時間</th><th>比重</th><th>内容</th></tr></thead><tbody><tr><th>Section I　選択問題</th><td data-l="問題数">42問</td><td data-l="時間">1時間30分</td><td data-l="比重">55%</td><td data-l="内容">—</td></tr><tr><th>Section II　記述（プログラミング）</th><td data-l="問題数">4問</td><td data-l="時間">1時間30分</td><td data-l="比重">45%</td><td data-l="内容">Javaでコードを書く</td></tr></tbody></table></div>
 <div class="step" id="content"><span class="step-n">2</span><div><h3>学ぶ内容</h3></div></div>
-<ul class="sj-top rise"><li>Using objects and methods</li><li>Selection and iteration</li><li>Class creation</li><li>Data collections（配列・ArrayList・2次元配列）</li></ul>
+<div class="apu2 rise" role="table" aria-label="単元と出題比率"><div class="apu2-h"><span>単元</span><span>試験での出題比率</span></div><div class="apu2-r"><div class="apu2-u"><span class="apu2-n">1</span><div><b>オブジェクトとメソッドの利用</b><small lang="en">Unit 1: Using Objects and Methods</small></div></div><div class="apu2-w"><span class="apu2-p">15〜25%</span><span class="apu2-bar" aria-hidden="true"><i style="left:37.5%;width:25.0%"></i></span></div></div><div class="apu2-r"><div class="apu2-u"><span class="apu2-n">2</span><div><b>条件分岐と繰り返し</b><small lang="en">Unit 2: Selection and Iteration</small></div></div><div class="apu2-w"><span class="apu2-p">25〜35%</span><span class="apu2-bar" aria-hidden="true"><i style="left:62.5%;width:25.0%"></i></span></div></div><div class="apu2-r"><div class="apu2-u"><span class="apu2-n">3</span><div><b>クラスの作成</b><small lang="en">Unit 3: Class Creation</small></div></div><div class="apu2-w"><span class="apu2-p">10〜18%</span><span class="apu2-bar" aria-hidden="true"><i style="left:25.0%;width:20.0%"></i></span></div></div><div class="apu2-r"><div class="apu2-u"><span class="apu2-n">4</span><div><b>データコレクション（配列・リストなど）</b><small lang="en">Unit 4: Data Collections</small></div></div><div class="apu2-w"><span class="apu2-p">30〜40%</span><span class="apu2-bar" aria-hidden="true"><i style="left:75.0%;width:25.0%"></i></span></div></div></div><p class="apu2-src">出典：College Board「AP Computer Science A」コースページ（AP Students）。比率は幅で示されたもの</p>
 <div class="step" id="camino"><span class="step-n">3</span><div><h3>AP コンピュータサイエンスAの家庭教師によるサポート</h3><p class="step-sub">講師は、インターナショナルスクール卒業生です</p></div></div>
 <div class="sj-cam rise"><div><h4>AP コンピュータサイエンスAの授業でできること</h4><ul><li>学校の授業内容の理解と、わからないところの解説（日本語・英語）</li><li>宿題・小テスト・定期試験に向けたサポート</li><li>College Boardの過去の記述問題（free-response questions）と採点基準を使った対策</li><li>5月の本番に向けた学習計画と模試形式の練習</li></ul></div><div class="sj-price sj-plan"><p class="sj-plan-tg">プラン</p><h4>家庭教師<small>インター生・帰国子女</small></h4><p><span>高校生（IB DP・AP・Cambridge A Level）</span><b>¥15,000<small> / 60分（税込）</small></b></p><a class="sj-plan-cta" href="/#contact">無料体験を申し込む</a></div></div>
   </div>
