@@ -1389,6 +1389,29 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .sj-cam .sj-plan .fine{color:#c9d8ee}
 .sj-plan-cta{display:block;margin:8px 0 0;padding:11px 14px;border-radius:999px;background:#7cc0ff;color:#0b1f4b;font-weight:800;font-size:15px;text-align:center;text-decoration:none}
 .sj-plan-cta:hover{background:#a3d3ff}.sj-plan-cta:focus-visible{outline:2px solid #fff;outline-offset:2px}</style>
+<style id="slc-css">.slc{margin:6px 0 10px;border:2px solid var(--c,#16294d);background:#fff}
+.slc-h{display:flex;justify-content:space-between;background:var(--c,#16294d);color:#fff;padding:10px 16px;font-size:12.5px;font-weight:700}
+.slc-r{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:14px 16px;border-top:1px solid #dde5f1}
+.slc-r:nth-child(even){background:#f6f9fd}
+.slc-n{width:34px;height:34px;display:grid;place-items:center;background:#dce9f8;color:var(--c,#16294d);font-weight:800;font-size:14px;font-family:var(--latin)}
+.slc-t{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;min-height:34px;align-content:center}
+.slc-t b{font-size:15.5px;color:var(--navy,#0b1f4b);line-height:1.45}.slc-t b small{font-size:12px;font-weight:500;color:var(--muted,#5c6984);margin-left:2px}
+.slc-tag{font-size:11px;font-weight:800;color:#fff;background:var(--c,#16294d);padding:2px 8px;letter-spacing:.02em}
+.slc-c{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.slc-c li{font-size:12.5px;line-height:1.5;color:var(--ink,#1d2b45);background:#fff;border:1px solid #cfdbec;padding:3px 9px}
+.slc-r:nth-child(even) .slc-c li{background:#fff}
+.slc-one{grid-template-columns:1fr}
+.slc-c li.slc-w{flex:1 1 100%;display:grid;grid-template-columns:minmax(110px,auto) 1fr;gap:10px;padding:6px 10px}.slc-w b{font-size:12.5px;color:var(--navy,#0b1f4b)}.slc-w span{font-size:12px;color:var(--muted,#5c6984)}
+.slc+.apb{margin-top:14px}
+.slc-p{margin:6px 0 0;font-size:13.5px;line-height:1.8;color:var(--ink,#1d2b45)}
+.slc-g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.slc-g li{display:flex;align-items:center;gap:12px;padding:12px 14px;border-top:1px solid #dde5f1;border-left:1px solid #dde5f1;min-width:0}
+.slc-g li:nth-child(3n+1){border-left:0}
+.slc-g b{font-size:14px;line-height:1.45;color:var(--navy,#0b1f4b);overflow-wrap:anywhere}.slc-g b small{display:block;font-size:11.5px;font-weight:500;color:var(--muted,#5c6984)}
+.slc-g .slc-n{flex:none;width:30px;height:30px;font-size:13px}
+@media(max-width:760px){.slc-c li.slc-w{grid-template-columns:1fr;gap:2px}.slc-g{grid-template-columns:repeat(2,minmax(0,1fr))}.slc-g li:nth-child(3n+1){border-left:1px solid #dde5f1}.slc-g li:nth-child(2n+1){border-left:0}
+.slc-r{grid-template-columns:30px minmax(0,1fr);gap:10px;padding:12px}.slc-n{width:28px;height:28px;font-size:12px}.slc-t b{font-size:14.5px}.slc-g li{padding:10px;gap:8px}.slc-g b{font-size:13px}}
+@media(max-width:420px){.slc-g{grid-template-columns:1fr}.slc-g li{border-left:0!important}}</style>
 </head>
 <body>
 
@@ -1425,7 +1448,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 <div class="step" id="exam"><span class="step-n">1</span><div><h3>評価規準（A〜D）</h3><p class="step-sub">4つの規準は同じ重みで、それぞれ1〜8の8段階で評価されます</p></div></div>
 <div class="ewrap rise"><table class="etbl stk"><thead><tr><th>規準</th><th>英語の名前</th><th>内容</th></tr></thead><tbody><tr><th>A</th><td data-l="英語の名前">Knowing and understanding</td><td data-l="内容">知識と理解</td></tr><tr><th>B</th><td data-l="英語の名前">Investigating patterns</td><td data-l="内容">パターンの探究</td></tr><tr><th>C</th><td data-l="英語の名前">Communicating</td><td data-l="内容">数学的な表現と伝達</td></tr><tr><th>D</th><td data-l="英語の名前">Applying mathematics in real-life contexts</td><td data-l="内容">現実の場面への応用</td></tr></tbody></table></div>
 <div class="step" id="content"><span class="step-n">2</span><div><h3>学ぶ内容と授業の形</h3></div></div>
-<ul class="sj-top rise"><li>Standard mathematics（基本）と Extended mathematics（発展）の2つのレベルがあります。Extendedは、Standardに追加の内容とスキルを加えたものです</li><li>学ぶ分野：Number／Algebra／Geometry and trigonometry／Statistics and probability</li></ul>
+<div class="slc rise"><div class="slc-h"><span>学ぶ内容</span></div><div class="slc-r slc-one"><div class="slc-b"><div class="slc-t"><b>学ぶ分野</b></div><ul class="slc-c"><li>Number</li><li>Algebra</li><li>Geometry and trigonometry</li><li>Statistics and probability</li></ul></div></div></div><ul class="apb rise"><li>Standard mathematics（基本）と Extended mathematics（発展）の2つのレベルがあります。Extendedは、Standardに追加の内容とスキルを加えたものです</li></ul>
 <div class="step" id="ea"><span class="step-n">3</span><div><h3>eAssessment（任意のオンスクリーン試験）</h3><p class="step-sub">MYP 5年目の任意のeAssessment（オンスクリーン試験）は、3つの課題で構成されます。各課題は31〜35点で、規準C（Communicating）は全課題を通して合計25点分が評価されます</p></div></div>
 <p class="sj-note rise">4つの評価規準は同じ重みで、それぞれ1〜8の8段階で評価されます。規準BとDでは、答えだけでなく、考え方を言葉で説明する力が求められます。DPで数学AA・AIのどちらを選ぶかは、MYPでStandardかExtendedかとも関係します</p>
 <div class="step" id="camino"><span class="step-n">4</span><div><h3>MYP 数学の家庭教師によるサポート</h3><p class="step-sub">講師は、インターナショナルスクールでIBディプロマを取得したインター卒業生です</p></div></div>

@@ -1389,6 +1389,29 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .sj-cam .sj-plan .fine{color:#c9d8ee}
 .sj-plan-cta{display:block;margin:8px 0 0;padding:11px 14px;border-radius:999px;background:#7cc0ff;color:#0b1f4b;font-weight:800;font-size:15px;text-align:center;text-decoration:none}
 .sj-plan-cta:hover{background:#a3d3ff}.sj-plan-cta:focus-visible{outline:2px solid #fff;outline-offset:2px}</style>
+<style id="slc-css">.slc{margin:6px 0 10px;border:2px solid var(--c,#16294d);background:#fff}
+.slc-h{display:flex;justify-content:space-between;background:var(--c,#16294d);color:#fff;padding:10px 16px;font-size:12.5px;font-weight:700}
+.slc-r{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:14px 16px;border-top:1px solid #dde5f1}
+.slc-r:nth-child(even){background:#f6f9fd}
+.slc-n{width:34px;height:34px;display:grid;place-items:center;background:#dce9f8;color:var(--c,#16294d);font-weight:800;font-size:14px;font-family:var(--latin)}
+.slc-t{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;min-height:34px;align-content:center}
+.slc-t b{font-size:15.5px;color:var(--navy,#0b1f4b);line-height:1.45}.slc-t b small{font-size:12px;font-weight:500;color:var(--muted,#5c6984);margin-left:2px}
+.slc-tag{font-size:11px;font-weight:800;color:#fff;background:var(--c,#16294d);padding:2px 8px;letter-spacing:.02em}
+.slc-c{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.slc-c li{font-size:12.5px;line-height:1.5;color:var(--ink,#1d2b45);background:#fff;border:1px solid #cfdbec;padding:3px 9px}
+.slc-r:nth-child(even) .slc-c li{background:#fff}
+.slc-one{grid-template-columns:1fr}
+.slc-c li.slc-w{flex:1 1 100%;display:grid;grid-template-columns:minmax(110px,auto) 1fr;gap:10px;padding:6px 10px}.slc-w b{font-size:12.5px;color:var(--navy,#0b1f4b)}.slc-w span{font-size:12px;color:var(--muted,#5c6984)}
+.slc+.apb{margin-top:14px}
+.slc-p{margin:6px 0 0;font-size:13.5px;line-height:1.8;color:var(--ink,#1d2b45)}
+.slc-g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.slc-g li{display:flex;align-items:center;gap:12px;padding:12px 14px;border-top:1px solid #dde5f1;border-left:1px solid #dde5f1;min-width:0}
+.slc-g li:nth-child(3n+1){border-left:0}
+.slc-g b{font-size:14px;line-height:1.45;color:var(--navy,#0b1f4b);overflow-wrap:anywhere}.slc-g b small{display:block;font-size:11.5px;font-weight:500;color:var(--muted,#5c6984)}
+.slc-g .slc-n{flex:none;width:30px;height:30px;font-size:13px}
+@media(max-width:760px){.slc-c li.slc-w{grid-template-columns:1fr;gap:2px}.slc-g{grid-template-columns:repeat(2,minmax(0,1fr))}.slc-g li:nth-child(3n+1){border-left:1px solid #dde5f1}.slc-g li:nth-child(2n+1){border-left:0}
+.slc-r{grid-template-columns:30px minmax(0,1fr);gap:10px;padding:12px}.slc-n{width:28px;height:28px;font-size:12px}.slc-t b{font-size:14.5px}.slc-g li{padding:10px;gap:8px}.slc-g b{font-size:13px}}
+@media(max-width:420px){.slc-g{grid-template-columns:1fr}.slc-g li{border-left:0!important}}</style>
 </head>
 <body>
 
@@ -1425,7 +1448,7 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 <div class="step" id="exam"><span class="step-n">1</span><div><h3>評価規準（A〜D）</h3><p class="step-sub">4つの規準は同じ重みで、それぞれ1〜8の8段階で評価されます</p></div></div>
 <div class="ewrap rise"><table class="etbl stk"><thead><tr><th>規準</th><th>英語の名前</th><th>内容</th></tr></thead><tbody><tr><th>A</th><td data-l="英語の名前">Knowing and understanding</td><td data-l="内容">知識と理解</td></tr><tr><th>B</th><td data-l="英語の名前">Inquiring and designing</td><td data-l="内容">探究と実験の計画</td></tr><tr><th>C</th><td data-l="英語の名前">Processing and evaluating</td><td data-l="内容">データの処理と評価</td></tr><tr><th>D</th><td data-l="英語の名前">Reflecting on the impacts of science</td><td data-l="内容">科学が社会に与える影響の考察</td></tr></tbody></table></div>
 <div class="step" id="content"><span class="step-n">2</span><div><h3>学ぶ内容と授業の形</h3></div></div>
-<ul class="sj-top rise"><li>学校によって、生物・化学・物理を別々に学ぶ（discrete）、いくつかを組み合わせて順番に学ぶ（modular）、まとめて学ぶ（integrated）などの形があります</li><li>主要概念（key concepts）：Change、Relationships、Systems。関連概念には、energy、movement、transformation、models などがあります</li></ul>
+<div class="slc rise"><div class="slc-h"><span>学ぶ内容</span></div><div class="slc-r slc-one"><div class="slc-b"><div class="slc-t"><b>主要概念<small>（key concepts）</small></b></div><ul class="slc-c"><li>Change</li><li>Relationships</li><li>Systems</li></ul></div></div></div><ul class="apb rise"><li>学校によって、生物・化学・物理を別々に学ぶ（discrete）、いくつかを組み合わせて順番に学ぶ（modular）、まとめて学ぶ（integrated）などの形があります</li><li>関連概念には、energy、movement、transformation、models などがあります</li></ul>
 <div class="step" id="ea"><span class="step-n">3</span><div><h3>eAssessment（任意のオンスクリーン試験）</h3><p class="step-sub">MYP 5年目の任意のeAssessment（オンスクリーン試験）は、生物・化学・物理・総合理科で実施されます</p></div></div>
 <div class="ewrap rise"><table class="etbl stk"><thead><tr><th>課題</th><th>配点</th></tr></thead><tbody><tr><th>Knowing and understanding</th><td data-l="配点">25点</td></tr><tr><th>Investigation skills</th><td data-l="配点">50点</td></tr><tr><th>Applying science</th><td data-l="配点">25点</td></tr></tbody></table></div>
 <p class="sj-note rise">4つの評価規準は同じ重みで、それぞれ1〜8の8段階で評価されます。中学の理科のうちに、実験レポートの書き方（仮説・変数・データ処理・考察）を身につけておくと、IGCSEやDPの理科に進んでから大きな差になります</p>
