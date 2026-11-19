@@ -1559,6 +1559,22 @@ button.pm-q{font-family:inherit;cursor:pointer;margin:0}
 .apex-part th{padding-left:14px!important}.apex-q th{padding-left:24px!important}.apex-tag{display:block;min-width:0}
 .apex th small{display:block;margin:0}.apex .apex-d,.apex-q .apex-d,.apex-part .apex-d{margin-left:0}.apex thead th:not(:first-child),.apex td{width:52px}}
 @media(max-width:760px){.apu-g,.apdef{grid-template-columns:1fr}.apc{padding:14px 15px}.apc-d>div{grid-template-columns:1fr;gap:2px}.apc-ts{margin-left:0;width:100%}.apr-h{padding:14px 15px}}
+/* flat: no boxes */
+.apx{gap:0}
+.apx-lv{border:0;border-radius:0;border-top:1px solid #eef1f6;padding:8px 0;grid-template-columns:72px minmax(0,1fr);gap:10px;background:none}
+.apx-lv:first-child{border-top:0}
+.apx-top{background:none}.apx-top .apx-s b{color:var(--c,#16294d)}
+.apx-lv:not(.apx-top) .apx-s b{color:var(--muted,#5c6984)}
+.apx-s b{font-size:17px}.apx-s span{display:none}
+.apx-l li{padding:2px 0 2px 15px}.apx-l li::before{top:12px}
+.apx-note,.apx-dir{background:none;border:0;border-radius:0;padding:0;margin:10px 0 0}
+.apx-dir{margin:12px 20px 0}
+.apdef{display:block;margin:0 0 22px}
+.apdef div{background:none;border:0;border-radius:0;padding:5px 0 5px 15px;position:relative}
+.apdef div::before{content:"";position:absolute;left:0;top:14px;width:5px;height:5px;border-radius:1px;background:var(--c,#16294d);opacity:.7}
+.apdef dt{display:inline;font-size:14px}.apdef dt small{display:inline;margin-left:6px}
+.apdef dd{margin:2px 0 0}
+@media(max-width:760px){.apx-lv{grid-template-columns:1fr;gap:0;padding:8px 0}.apdef{display:block}}
 </style>
 </head>
 <body>
