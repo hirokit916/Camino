@@ -2004,7 +2004,7 @@ body.cs-philosophy-active #cs-progress{display:flex}
 <div class="form-sec"><span class="n">1</span><span class="ja" data-inl="">お客様情報</span></div>
 <div class="field"><label><span class="ja" data-inl="">お名前<small class="lbl-sub">（お子さまが受講される場合は保護者のお名前）</small></span></label><input id="f-name" type="text"/></div>
 <div class="field"><label><span class="ja" data-inl="">メールアドレス</span></label><input id="f-email" type="email"/></div>
-<div class="field"><label><span class="ja" data-inl="">メールアドレス（確認用）</span></label><input id="f-email2" type="email" autocomplete="off" onpaste="return false"/></div>
+<div class="field"><label><span class="ja" data-inl="">メールアドレス（確認用）</span></label><input id="f-email2" type="email" autocomplete="off" onpaste="return false" ondrop="return false"/><p id="f-email2-err" style="display:none;margin:6px 0 0;font-size:12.5px;color:#c0392b"></p></div>
 <div class="field"><label><span class="ja" data-inl="">生徒の学年</span></label>
 <select id="f-grade">
 <option data-enopt="Please select" data-jaopt="選択してください" value="">選択してください</option>
@@ -3004,6 +3004,6 @@ window.__caminoPhilosophyInit=function () {
 (function(){var t=document.getElementById('philosophy');if(!t||!window.__caminoPhilosophyInit)return;var started=false,mo=null;
 function go(){if(started||!t.classList.contains('active'))return;started=true;if(mo)mo.disconnect();window.__caminoPhilosophyInit();}
 if(window.MutationObserver){mo=new MutationObserver(go);mo.observe(t,{attributes:true,attributeFilter:['class']});}go();})();</script>
-<script>(function(){var a=document.getElementById('f-email'),b=document.getElementById('f-email2');if(!a||!b)return;function c(){var ja=document.body.classList.contains('lang-ja');b.setCustomValidity(b.value.trim()===a.value.trim()?'':(ja?'メールアドレスが一致しません':'Email addresses do not match'));}a.addEventListener('input',c);b.addEventListener('input',c);c();})();</script>
+<script>(function(){var a=document.getElementById('f-email'),b=document.getElementById('f-email2'),er=document.getElementById('f-email2-err');if(!a||!b)return;function c(){var ja=document.body.classList.contains('lang-ja'),m=ja?'メールアドレスが一致しません':'Email addresses do not match',x=b.value.trim(),y=a.value.trim(),bad=x!==y,show=bad&&x!==''&&!(y.indexOf(x)===0&&document.activeElement===b);b.setCustomValidity(bad?m:'');er.textContent=m;er.style.display=show?'block':'none';b.style.borderColor=show?'#c0392b':'';}a.addEventListener('input',c);b.addEventListener('input',c);a.addEventListener('blur',c);b.addEventListener('blur',c);c();})();</script>
 </body>
 </html>
