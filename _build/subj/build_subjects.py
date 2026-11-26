@@ -76,7 +76,7 @@ def cambridge_page(d, level):
              '宿題・課題%sの進め方のサポート' % ('・コースワーク' if level == 'igcse' else ''),
              '過去問（past papers）と採点基準（mark scheme）を使った試験対策',
              '記述問題の答案の添削と、得点につながる書き方の練習']
-    keys = ['ms', 'hs'] if level == 'igcse' else ['adv']
+    keys = ['ms', 'hs'] if level == 'igcse' else ['dp']
     body.append(step(4, 'camino', '%sの家庭教師によるサポート' % name, '講師は、インターナショナルスクールでIBディプロマを取得したインター卒業生です'))
     body.append(camino_block('igcse', name, keys, items))
     ex = ''
@@ -87,7 +87,7 @@ def cambridge_page(d, level):
     else:
         ex = ('どの年度のシラバスを確認すればいいですか？', '受験する年のシラバスを確認します。このページは%sのシラバスをもとにしています。シラバスはCambridge Internationalの公式サイトから確認できます' % d['years'])
     faq = [('%sの家庭教師は、オンラインでも受けられますか？' % name, 'はい。神戸・芦屋・西宮・大阪は対面、それ以外の地域や海外からはオンラインで受講いただけます。初回60分は無料体験です'), ex,
-           ('%sの授業の料金はいくらですか？' % name, ('中学生（G6〜G8）は60分¥12,000、高校生（G9〜G12）は60分¥15,000です（税込・授業料のみ）' if level == 'igcse' else 'A Levelの授業は60分¥18,000です（税込・授業料のみ）') + '。入会金や月額利用料はありません')]
+           ('%sの授業の料金はいくらですか？' % name, ('中学生（G6〜G8）は60分¥12,000、高校生（G9〜G12）は60分¥15,000です（税込・授業料のみ）' if level == 'igcse' else 'A Levelの授業は60分¥15,000です（税込・授業料のみ）') + '。入会金や月額利用料はありません')]
     lst = IGCSE if level == 'igcse' else ALEVEL
     sib = [('/subjects/%s/%s/' % (level, x['slug']), '%s %s（%s）' % (lv, x['ja'], x['code'].split('（')[0]), x['en'], False) for x in lst if x is not d][:3]
     nxt = [('/subjects/%s/' % level, '%sの科目一覧' % lv, '%sの全科目の試験構成と出題範囲' % lv, True)] + sib + \
@@ -125,10 +125,10 @@ def ib_page(d):
              '内部評価（IA）%sのテーマ選びと進め方のサポート' % ('・口頭試験' if 'Individual oral' in str(d['papers']) else ''),
              'IBの評価規準（markbands）にもとづいた答案・レポートの見直し', '過去問を使った試験対策と、Predicted gradeを意識した学習計画']
     body.append(step(4, 'camino', '%sの家庭教師によるサポート' % name, '講師は、インターナショナルスクールでIBディプロマを取得したインター卒業生です'))
-    body.append(camino_block('ib', name, ['adv'], items))
+    body.append(camino_block('ib', name, ['dp'], items))
     faq = [('%sの家庭教師は、オンラインでも受けられますか？' % name, 'はい。神戸・芦屋・西宮・大阪は対面、それ以外の地域や海外からはオンラインで受講いただけます。初回60分は無料体験です'),
            ('SLとHLでは何が違いますか？', 'IBの目安では、授業時間がSLは150時間、HLは240時間です。この科目では、上の表のとおり試験の時間や評価の比重もSLとHLで異なります'),
-           ('%sの授業の料金はいくらですか？' % name, 'IB DPの授業は60分¥18,000です（税込・授業料のみ）。入会金や月額利用料はありません')]
+           ('%sの授業の料金はいくらですか？' % name, 'IB DPの授業は60分¥15,000です（税込・授業料のみ）。入会金や月額利用料はありません')]
     sib = [('/subjects/ib/%s/' % x['slug'], 'IB %s' % x['ja'], x['en'], False) for x in DP if x is not d][:3]
     nxt = [('/subjects/ib/', 'IB DPの科目一覧', 'IB DPの全科目の試験構成と学ぶ内容', True)] + sib + \
           [('/ib/dp/', 'IBのDPとは？', '科目・HL/SL・TOK・EE・CAS・45点満点', False), ('/services/ib/', 'IBの家庭教師', 'Caminoの指導内容と料金', False)]

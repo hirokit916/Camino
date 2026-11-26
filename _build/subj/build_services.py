@@ -30,7 +30,7 @@ POLICY = ('<ul class="sj-top two rise"><li><b>お支払い</b>：毎月末に、
           '<li><b>入会金・解約金</b>：入会金・解約金・月額利用料はいただいておりません。対面授業の交通費と教材費は別途ご負担いただきます</li></ul>')
 
 TUTOR_PRICE = price_tbl([('小学生（G1〜G5）', '¥10,000 / 60分', '国語・算数・理科・社会・英語など'), ('中学生（G6〜G8）', '¥12,000 / 60分', 'MYP・Lower Secondaryなど'),
-                         ('高校生（G9〜G12）', '¥15,000 / 60分', 'IGCSE・MYP 4〜5年など'), ('高校生（IB DP・AP・Cambridge A Level）', '¥18,000 / 60分', '科目と指導内容に応じてご相談ください')])
+                         ('高校生（G9〜G12）', '¥15,000 / 60分', 'IGCSE・MYP 4〜5年・IB DP・Cambridge A Levelなど'), ('高校生（AP）', '¥18,000 / 60分', '科目と指導内容に応じてご相談ください')])
 LONG = '<p class="muted">90分・120分など、60分を超える授業も同じ時間単価でご利用いただけます</p>'
 ONLINE = '神戸・芦屋・西宮・大阪は対面、それ以外の地域や海外からはオンラインで受講いただけます'
 
@@ -99,7 +99,7 @@ def build():
          ('trial', '無料体験レッスンの流れ', '', TRIAL)],
         [('IBの家庭教師は、オンラインでも受けられますか？', 'はい。' + ONLINE),
          ('IA・EEを代わりに書いてもらえますか？', 'いいえ。IBの規則に反するため、代筆や答えの提供は行いません。テーマの考え方、構成、書き方の改善点を一緒に整理し、お子さんが自分で書き進められるようにサポートします'),
-         ('IB DPの授業の料金はいくらですか？', 'IB DPの授業は60分¥18,000です（税込・授業料のみ）。MYPは中学生（G6〜G8）60分¥12,000、G9〜G10は60分¥15,000です')],
+         ('IB DPの授業の料金はいくらですか？', 'IB DPの授業は60分¥15,000です（税込・授業料のみ）。MYPは中学生（G6〜G8）60分¥12,000、G9〜G10は60分¥15,000です')],
         [('/subjects/ib/', 'IB DPの科目別ガイド', '18科目の試験構成とIA', True), ('/ib/dp/', 'IBのDPとは？', '科目・HL/SL・TOK・EE・CAS', False), ('/ib/university/', 'IBと大学進学', '大学が求めるIBスコアの例', False)],
         CTA_T, [('what', 'できること'), ('subjects', '科目別ガイド'), ('price', '料金'), ('trial', '無料体験')], 'IBの家庭教師')
 
@@ -112,11 +112,11 @@ def build():
           '<ul class="sj-top one rise"><li><b>授業の理解</b>：学校で習った単元を、日本語と英語で解説</li><li><b>過去問演習</b>：past papersを使い、mark schemeにもとづいて答案を見直します</li><li><b>CoreとExtended</b>：IGCSEで受けるレベルと、目標の成績に合わせた対策</li><li><b>コースワーク</b>：英語・地理・歴史などの課題の進め方</li><li><b>ASからA Levelへ</b>：AS Levelの内容を2年目まで保つ復習計画</li></ul>'),
          ('igcse', 'IGCSEの科目別ガイド', 'シラバスコード、ペーパーごとの時間・配点・比重をまとめています', sublinks(cards_cam()[:len(IGCSE)])),
          ('alevel', 'A Levelの科目別ガイド', 'ASとA Levelのペーパーの組み合わせをまとめています', sublinks(cards_cam()[len(IGCSE):])),
-         ('price', '料金', '全プラン税込・授業料のみです', price_tbl([('高校生（IGCSE）', '¥15,000 / 60分', 'IGCSEの各科目'), ('高校生（Cambridge A Level）', '¥18,000 / 60分', 'A Levelの各科目。科目と指導内容に応じてご相談ください')]) + LONG),
+         ('price', '料金', '全プラン税込・授業料のみです', price_tbl([('高校生（IGCSE）', '¥15,000 / 60分', 'IGCSEの各科目'), ('高校生（Cambridge A Level）', '¥15,000 / 60分', 'A Levelの各科目。科目と指導内容に応じてご相談ください')]) + LONG),
          ('trial', '無料体験レッスンの流れ', '', TRIAL)],
         [('IGCSE・A Levelの家庭教師は、オンラインでも受けられますか？', 'はい。' + ONLINE),
          ('Cambridge以外の試験団体（Edexcelなど）のIGCSEにも対応していますか？', '科目の内容は共通する部分が多いため、対応できる場合があります。試験の形式は試験団体ごとに異なるため、まずはご相談ください'),
-         ('料金はいくらですか？', 'IGCSEは高校生（G9〜G12）60分¥15,000、A Levelは60分¥18,000です（税込・授業料のみ）')],
+         ('料金はいくらですか？', 'IGCSE・A Levelは60分¥15,000です（税込・授業料のみ）')],
         [('/subjects/igcse/', 'IGCSEの科目一覧', '14科目のシラバスと試験構成', True), ('/subjects/a-level/', 'A Levelの科目一覧', '13科目のシラバスと試験構成', False), ('/curriculum/cambridge/', 'Cambridgeのカリキュラムとは？', 'IGCSE・AS & A Level・AICE', False)],
         CTA_T, [('what', 'できること'), ('igcse', 'IGCSEの科目'), ('alevel', 'A Levelの科目'), ('price', '料金'), ('trial', '無料体験')], 'IGCSE・A Levelの家庭教師')
 
@@ -128,7 +128,7 @@ def build():
         [('what', 'APの家庭教師でできること', '',
           '<ul class="sj-top one rise"><li><b>授業の理解</b>：大学1年生レベルの内容を、日本語と英語で解説</li><li><b>記述問題の対策</b>：College Boardが公開している過去の free-response questions と採点基準を使った練習</li><li><b>エッセイ</b>：English Language・Literature、History のエッセイ（DBQ・LEQ）の構成</li><li><b>学習計画</b>：5月の試験から逆算した、科目ごとの計画づくり</li><li><b>大学進学</b>：スコアの使われ方と、送るスコアの考え方。<a href="/curriculum/ap/university/">APと大学進学</a></li></ul>'),
          ('subjects', 'APの科目別ガイド', '2027年5月の試験の日程と形式をまとめています', sublinks(cards_ap())),
-         ('price', '料金', '全プラン税込・授業料のみです', price_tbl([('高校生（IB DP・AP・Cambridge A Level）', '¥18,000 / 60分', 'APの各科目。科目と指導内容に応じてご相談ください')]) + LONG),
+         ('price', '料金', '全プラン税込・授業料のみです', price_tbl([('高校生（AP）', '¥18,000 / 60分', 'APの各科目。科目と指導内容に応じてご相談ください')]) + LONG),
          ('trial', '無料体験レッスンの流れ', '', TRIAL)],
         [('APの家庭教師は、オンラインでも受けられますか？', 'はい。' + ONLINE),
          ('学校でAPの授業がなくても、試験の対策はできますか？', 'APの試験は、学校を通して申し込むのが一般的です。受験の方法は学校や試験会場に確認したうえで、学習内容と試験の対策をサポートします'),
@@ -186,7 +186,7 @@ def build():
 
     # ---------------------------------------------------- hub
     cards = [('/services/international-school/', '小学生〜高校生', 'インター生・帰国子女の家庭教師', '授業・宿題・課題・試験対策。60分¥10,000〜'),
-             ('/services/ib/', 'PYP・MYP・DP', 'IBの家庭教師', '各科目とIA・EE・TOK。DPは60分¥18,000'),
+             ('/services/ib/', 'PYP・MYP・DP', 'IBの家庭教師', '各科目とIA・EE・TOK。DPは60分¥15,000'),
              ('/services/igcse-a-level/', 'Cambridge', 'IGCSE・A Levelの家庭教師', 'past papersを使った試験対策'),
              ('/services/ap/', 'AP', 'APの家庭教師', '授業と5月の試験対策。60分¥18,000'),
              ('/services/english-tests/', '大人も受講可', '英検・TOEFL・IELTS・TOEIC対策', '目標スコアに向けた個別対策。60分¥10,000'),
