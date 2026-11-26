@@ -16,7 +16,7 @@ COL = {'igcse': ('#1d7f86', '#e1f1f1'), 'a-level': ('#1d7f86', '#e1f1f1'), 'ib':
        'mid': ('#0f6b70', '#e3f1ea'), 'svc': ('#1d5bd8', '#eaf1fd'), 'legal': ('#16294d', '#e9edf5')}
 
 PRICE = {'el': ('小学生（G1〜G5）', '¥10,000'), 'ms': ('中学生（G6〜G8）', '¥12,000'), 'hs': ('高校生（G9〜G12）', '¥15,000'),
-         'adv': ('高校生（IB DP・AP・Cambridge A Level）', '¥16,000')}
+         'adv': ('高校生（IB DP・AP・Cambridge A Level）', '¥18,000')}
 
 EXTRA_CSS = '''
 .sj-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:18px 0 6px;padding:0}
